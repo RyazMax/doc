@@ -1,0 +1,312 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../doc/book/admin/troubleshoot.rst:6
+msgid "Troubleshooting guide"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:8
+msgid "For this guide, you need to install Tarantool `stat <https://github.com/tarantool/stat>`_ module:"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:11
+msgid "$ sudo yum install tarantool-stat\n"
+"$ # -- OR --\n"
+"$ sudo apt-get install tarantool-stat"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:21
+msgid "Problem: INSERT/UPDATE-requests result in ER_MEMORY_ISSUE error"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:23
+#: ../doc/book/admin/troubleshoot.rst:81
+#: ../doc/book/admin/troubleshoot.rst:127
+#: ../doc/book/admin/troubleshoot.rst:189
+#: ../doc/book/admin/troubleshoot.rst:212
+#: ../doc/book/admin/troubleshoot.rst:237
+#: ../doc/book/admin/troubleshoot.rst:254
+#: ../doc/book/admin/troubleshoot.rst:289
+msgid "**Possible reasons**"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:25
+msgid "Lack of RAM (parameters ``arena_used_ratio`` and ``quota_used_ratio`` in :ref:`box.slab.info() <box_slab_info>` report are getting close to 100%)."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:28
+msgid "To check these parameters, say:"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:30
+#: ../doc/book/admin/troubleshoot.rst:92
+#: ../doc/book/admin/troubleshoot.rst:149
+#: ../doc/book/admin/troubleshoot.rst:266
+#: ../doc/book/admin/troubleshoot.rst:302
+msgid "$ # attaching to a Tarantool instance\n"
+"$ tarantoolctl enter <instance_name>\n"
+"$ # -- OR --\n"
+"$ tarantoolctl connect <URI>"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:37
+msgid "-- requesting arena_used_ratio value\n"
+"tarantool> require('stat').stat()['slab.arena_used_ratio']\n"
+"\n"
+"-- requesting quota_used_ratio value\n"
+"tarantool> require('stat').stat()['slab.quota_used_ratio']"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:45
+#: ../doc/book/admin/troubleshoot.rst:86
+#: ../doc/book/admin/troubleshoot.rst:137
+#: ../doc/book/admin/troubleshoot.rst:170
+#: ../doc/book/admin/troubleshoot.rst:194
+#: ../doc/book/admin/troubleshoot.rst:217
+#: ../doc/book/admin/troubleshoot.rst:241
+#: ../doc/book/admin/troubleshoot.rst:262
+#: ../doc/book/admin/troubleshoot.rst:293
+msgid "**Solution**"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:47
+#: ../doc/book/admin/troubleshoot.rst:139
+msgid "Try either of the following measures:"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:49
+msgid "In Tarantool's :ref:`instance file <admin-instance_config>`, increase the value of :ref:`box.cfg{memtx_memory} <cfg_storage-memtx_memory>` (if memory resources are available)."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:53
+msgid "In versions of Tarantool before 1.10, the server needs to be restarted to change this parameter. The Tarantool server will be unavailable while restarting from .xlog files, unless you restart it using :ref:`hot standby <index-hot_standby>` mode. In the latter case, nearly 100% server availability is guaranteed."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:59
+msgid "Clean up the database."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:61
+msgid "Check the indicators of memory fragmentation:"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:63
+msgid "-- requesting quota_used_ratio value\n"
+"tarantool> require('stat').stat()['slab.quota_used_ratio']\n"
+"\n"
+"-- requesting items_used_ratio value\n"
+"tarantool> require('stat').stat()['slab.items_used_ratio']"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:71
+msgid "In case of heavy memory fragmentation (``quota_used_ratio`` is getting close to 100%, ``items_used_ratio`` is about 50%), we recommend restarting Tarantool in the :ref:`hot standby <index-hot_standby>` mode."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:79
+msgid "Problem: Tarantool generates too heavy CPU load"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:83
+msgid "The :ref:`transaction processor thread <atomic-threads_fibers_yields>` consumes over 60% CPU."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:88
+msgid "Attach to the Tarantool instance with :ref:`tarantoolctl <tarantoolctl>` utility, analyze the query statistics with :ref:`box.stat() <box_introspection-box_stat>` and spot the CPU consumption leader. The following commands can help:"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:99
+msgid "-- checking the RPS of calling stored procedures\n"
+"tarantool> require('stat').stat()['stat.op.call.rps']"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:104
+msgid "The critical RPS value is 75 000, boiling down to 10 000 - 20 000 for a rich Lua application (a Lua module of 200+ lines)."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:107
+msgid "-- checking RPS per query type\n"
+"tarantool> require('stat').stat()['stat.op.<query_type>.rps']"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:112
+msgid "The critical RPS value for SELECT/INSERT/UPDATE/DELETE requests is 100 000."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:114
+msgid "If the load is mostly generated by SELECT requests, we recommend adding a :ref:`slave server <replication-bootstrap>` and let it process part of the queries."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:118
+msgid "If the load is mostly generated by INSERT/UPDATE/DELETE requests, we recommend :ref:`sharding the database <shard-module>`."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:125
+msgid "Problem: Query processing times out"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:131
+msgid "All reasons that we discuss here can be identified by messages in Tarantool's log file, all starting with the words ``'Too long...'``."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:134
+msgid "Both fast and slow queries are processed within a single connection, so the readahead buffer is cluttered with slow queries."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:141
+msgid "Increase the readahead buffer size (:ref:`box.cfg{readahead} <cfg_networking-readahead>` parameter)."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:144
+msgid "This parameter can be changed on the fly, so you don't need to restart Tarantool. Attach to the Tarantool instance with :ref:`tarantoolctl <tarantoolctl>` utility and call ``box.cfg{}`` with a new ``readahead`` value:"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:156
+msgid "-- changing the readahead value\n"
+"tarantool> box.cfg{readahead = 10 * 1024 * 1024}"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:161
+msgid "**Example:** Given 1000 RPS, 1 Кbyte of query size, and 10 seconds of maximal query processing time, the minimal readahead buffer size must be 10 Mbytes."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:165
+msgid "On the business logic level, split fast and slow queries processing by different connections."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:168
+msgid "Slow disks."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:172
+msgid "Check disk performance (use `iostat <https://linux.die.net/man/1/iostat>`_, `iotop <https://linux.die.net/man/1/iotop>`_ or `strace <https://linux.die.net/man/1/strace>`_ utility to check ``iowait`` parameter) and try to put .xlog files and snapshot files on different physical disks (i.e. use different locations for :ref:`wal_dir <cfg_basic-wal_dir>` and :ref:`memtx_dir <cfg_basic-memtx_dir>`)."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:183
+msgid "Problem: Replication \"lag\" and \"idle\" contain negative values"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:185
+msgid "This is about ``box.info.replication.(upstream.)lag`` and ``box.info.replication.(upstream.)idle`` values in :ref:`box.info.replication <box_info_replication>` section."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:191
+msgid "Operating system clock on the hosts is not synchronized, or the NTP server is faulty."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:196
+msgid "Check NTP server settings."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:198
+msgid "If you found no problems with the NTP server, just do nothing then. Lag calculation uses operating system clock from two different machines. If they get out of sync, the remote master clock can get consistently behind the local instance’s clock."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:207
+msgid "Problem: Replication \"idle\" keeps growing, but no related log messages appear"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:209
+msgid "This is about ``box.info.replication.(upstream.)idle`` value in :ref:`box.info.replication <box_info_replication>` section."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:214
+msgid "Some server was assigned different IP addresses, or some server was specified twice in ``box.cfg{}``, so duplicate connections were established."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:219
+msgid ":ref:`Upgrade Tarantool 1.6 to 1.7 <admin-upgrades_instance>`, where this error is fixed: in case of duplicate connections, replication is stopped and the following message is added to the log: ``'Incorrect value for option ''replication_source'': duplicate connection with the same replica UUID'``."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:229
+msgid "Problem: Replication statistics differ on replicas within a replica set"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:231
+msgid "This is about a replica set that consists of one master and several replicas. In a replica set of this type, values in :ref:`box.info.replication <box_info_replication>` section, like ``box.info.replication.lsn``, come from the master and must be the same on all replicas within the replica set. The problem is that they get different."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:239
+msgid "Replication is broken."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:243
+msgid ":ref:`Restart replication <replication-recover>`."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:249
+msgid "Problem: Master-master replication is stopped"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:251
+msgid "This is about :ref:`box.info.replication(.upstream).status <box_info_replication>` = stopped."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:256
+msgid "In a master-master replica set of two Tarantool instances, one of the masters has tried to perform an action already performed by the other server, for example re-insert a tuple with the same unique key. This would cause an error message like ``'Duplicate key exists in unique index 'primary' in space <space_name>'``."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:264
+msgid "Restart replication with the following commands (at each master instance):"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:273
+msgid "-- restarting replication\n"
+"tarantool> original_value = box.cfg.replication\n"
+"tarantool> box.cfg{replication={}}\n"
+"tarantool> box.cfg{replication=original_value}"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:280
+msgid "We also recommend using text primary keys or setting up :ref:`master-slave replication <replication-master_replica_bootstrap>`."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:287
+msgid "Problem: Tarantool works much slower than before"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:291
+msgid "Inefficient memory usage (RAM is cluttered with a huge amount of unused objects)."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:295
+msgid "Call the Lua garbage collector with the `collectgarbage('count') function <https://www.lua.org/manual/5.1/manual.html#pdf-collectgarbage>`_ and measure its execution time with the Tarantool functions :ref:`clock.bench() <clock-bench>` or :ref:`clock.proc() <clock-proc>`."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:300
+msgid "Example of calculating memory usage statistics:"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:309
+msgid "-- loading Tarantool's \"clock\" module with time-related routines\n"
+"tarantool> local clock = require 'clock'\n"
+"-- starting the timer\n"
+"tarantool> local b = clock.proc()\n"
+"-- launching garbage collection\n"
+"tarantool> local c = collectgarbage('count')\n"
+"-- stopping the timer after garbage collection is completed\n"
+"tarantool> return c, clock.proc() - b"
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:320
+msgid "If the returned ``clock.proc()`` value is greater than 0.001, this may be an indicator of inefficient memory usage (no active measures are required, but we recommend to optimize your Tarantool application code)."
+msgstr ""
+
+#: ../doc/book/admin/troubleshoot.rst:324
+msgid "If the value is greater than 0.01, your application definitely needs thorough code analysis aimed at optimizing memory usage."
+msgstr ""
+

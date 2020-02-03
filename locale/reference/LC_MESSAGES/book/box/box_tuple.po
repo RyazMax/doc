@@ -1,0 +1,871 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../doc/book/box/box_tuple.rst:5
+msgid "Submodule `box.tuple`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:11
+msgid "Overview"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:13
+msgid ""
+"The ``box.tuple`` submodule provides read-only access for the ``tuple`` "
+"userdata type. It allows, for a single :ref:`tuple <index-box_tuple>`: "
+"selective retrieval of the field contents, retrieval of information about"
+" size, iteration over all the fields, and conversion to a `Lua table "
+"<https://www.lua.org/pil/2.5.html>`_."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:20
+msgid "Index"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:22
+msgid "Below is a list of all ``box.tuple`` functions."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:30
+msgid "Name"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:30
+msgid "Use"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:32
+msgid ":ref:`box.tuple.new() <box_tuple-new>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:32
+msgid "Create a tuple"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:35
+msgid ":ref:`#tuple_object <box_tuple-count_fields>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:35
+msgid "Count tuple fields"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:38
+msgid ":ref:`tuple_object:bsize() <box_tuple-bsize>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:38
+msgid "Get count of bytes in a tuple"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:41
+msgid ":ref:`tuple_object[field-number] <box_tuple-field_number>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:41
+msgid "Get a tuple's field by specifying a number"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:44
+msgid ":ref:`tuple_object[field-name] <box_tuple-field_name>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:44
+msgid "Get a tuple's field by specifying a name"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:47
+msgid ":ref:`tuple_object[field-path] <box_tuple-field_path>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:47
+msgid "Get a tuple's fields or parts by specifying a path"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:50
+msgid ":ref:`tuple_object:find() <box_tuple-find>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:50
+msgid "Get the number of the first field matching the search value"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:53
+msgid ":ref:`tuple_object:findall() <box_tuple-find>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:53
+msgid "Get the number of all fields matching the search value"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:56
+msgid ":ref:`tuple_object:transform() <box_tuple-transform>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:56
+msgid "Remove (and replace) a tuple's fields"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:59
+msgid ":ref:`tuple_object:unpack() <box_tuple-unpack>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:59
+msgid "Get a tuple's fields"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:62
+msgid ":ref:`tuple_object:totable() <box_tuple-totable>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:62
+msgid "Get a tuple's fields as a table"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:65
+msgid ":ref:`tuple_object:tomap() <box_tuple-tomap>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:65
+msgid "Get a tuple's fields as a table along with key:value pairs"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:68
+msgid ":ref:`tuple_object:pairs() <box_tuple-pairs>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:68
+msgid "Prepare for iterating"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:71
+msgid ":ref:`tuple_object:update() <box_tuple-update>`"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:71
+msgid "Update a tuple"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:79
+msgid ""
+"Construct a new tuple from either a scalar or a Lua table. Alternatively,"
+" one can get new tuples from tarantool's :ref:`select <box_space-select>`"
+" or :ref:`insert <box_space-insert>` or :ref:`replace <box_space-"
+"replace>` or :ref:`update <box_space-update>` requests, which can be "
+"regarded as statements that do ``new()`` implicitly."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst
+msgid "Parameters"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:86
+msgid "the value that will become the tuple contents."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst
+msgid "return"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:88
+msgid "a new tuple"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst
+msgid "rtype"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:89 ../doc/book/box/box_tuple.rst:364
+#: ../doc/book/box/box_tuple.rst:365 ../doc/book/box/box_tuple.rst:552
+msgid "tuple"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:91
+msgid ""
+"In the following example, ``x`` will be a new table object containing one"
+" tuple and ``t`` will be a new tuple object. Saying ``t`` returns the "
+"entire tuple ``t``."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:95
+msgid "**Example:**"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:97
+msgid ""
+"tarantool> x = box.space.tester:insert{\n"
+"         >   33,\n"
+"         >   tonumber('1'),\n"
+"         >   tonumber64('2')\n"
+"         > }:totable()\n"
+"---\n"
+"...\n"
+"tarantool> t = box.tuple.new{'abc', 'def', 'ghi', 'abc'}\n"
+"---\n"
+"...\n"
+"tarantool> t\n"
+"---\n"
+"- ['abc', 'def', 'ghi', 'abc']\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:120
+msgid ""
+"The ``#`` operator in Lua means \"return count of components\". So, if "
+"``t`` is a tuple instance, ``#t`` will return the number of fields."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:123 ../doc/book/box/box_tuple.rst:157
+#: ../doc/book/box/box_tuple.rst:320
+msgid "number"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:125
+msgid ""
+"In the following example, a tuple named ``t`` is created and then the "
+"number of fields in ``t`` is returned."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:128
+msgid ""
+"tarantool> t = box.tuple.new{'Fld#1', 'Fld#2', 'Fld#3', 'Fld#4'}\n"
+"---\n"
+"...\n"
+"tarantool> #t\n"
+"---\n"
+"- 4\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:142
+msgid ""
+"If ``t`` is a tuple instance, ``t:bsize()`` will return the number of "
+"bytes in the tuple. With both the memtx storage engine and the vinyl "
+"storage engine the default maximum is one megabyte "
+"(:ref:`memtx_max_tuple_size <cfg_storage-memtx_max_tuple_size>` or "
+":ref:`vinyl_max_tuple_size <cfg_storage-vinyl_max_tuple_size>`). Every "
+"field has one or more \"length\" bytes preceding the actual contents, so "
+"``bsize()`` returns a value which is slightly greater than the sum of the"
+" lengths of the contents."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:151
+msgid ""
+"The value does not include the size of \"struct tuple\" (for the current "
+"size of this structure look in the `tuple.h "
+"<https://github.com/tarantool/tarantool/blob/2.1/src/box/tuple.h>`_ file "
+"in Tarantool's source code)."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:156
+msgid "number of bytes"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:159
+msgid ""
+"In the following example, a tuple named ``t`` is created which has three "
+"fields, and for each field it takes one byte to store the length and "
+"three bytes to store the contents, and then there is one more byte to "
+"store a count of the number of fields, so ``bsize()`` returns "
+"``3*(1+3)+1``. This is the same as the size of the string that "
+":ref:`msgpack.encode({'aaa','bbb','ccc'}) <msgpack-encode>` would return."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:166
+msgid ""
+"tarantool> t = box.tuple.new{'aaa', 'bbb', 'ccc'}\n"
+"---\n"
+"...\n"
+"tarantool> t:bsize()\n"
+"---\n"
+"- 13\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:180
+msgid ""
+"If ``t`` is a tuple instance, ``t[field-number]`` will return the field "
+"numbered field-number in the tuple. The first field is ``t[1]``."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:183 ../doc/book/box/box_tuple.rst:214
+msgid "field value."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:184 ../doc/book/box/box_tuple.rst:215
+msgid "lua-value"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:186
+msgid ""
+"In the following example, a tuple named ``t`` is created and then the "
+"second field in ``t`` is returned."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:189
+msgid ""
+"tarantool> t = box.tuple.new{'Fld#1', 'Fld#2', 'Fld#3', 'Fld#4'}\n"
+"---\n"
+"...\n"
+"tarantool> t[2]\n"
+"---\n"
+"- Fld#2\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:203
+msgid ""
+"If ``t`` is a tuple instance, ``t['field-name']`` will return the field "
+"named 'field-name' in the tuple. Fields have names if the tuple has been "
+"retrieved from a space that has an associated :ref:`format <box_space-"
+"format>`. :samp:`t[{lua-variable-name}]` will do the same thing if ``lua-"
+"variable-name`` contains ``'field-name'``."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:209
+msgid ""
+"There is a variation which the `Lua manual "
+"<https://www.lua.org/pil/2.5.html>`_ calls \"syntactic sugar\": use ``t"
+".field-name`` as an equivalent of ``t['field-name']``."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:217
+msgid ""
+"In the following example, a tuple named ``t`` is returned from "
+"``replace`` and then the second field in ``t`` named 'field2' is "
+"returned."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:220
+msgid ""
+"tarantool> format = {}\n"
+"---\n"
+"...\n"
+"tarantool> format[1] = {name = 'field1', type = 'unsigned'}\n"
+"---\n"
+"...\n"
+"tarantool> format[2] = {name = 'field2', type = 'string'}\n"
+"---\n"
+"...\n"
+"tarantool> s = box.schema.space.create('test', {format = format})\n"
+"---\n"
+"...\n"
+"tarantool> pk = s:create_index('pk')\n"
+"---\n"
+"...\n"
+"tarantool> t = s:replace{1, 'Я'}\n"
+"---\n"
+"...\n"
+"tarantool> t['field2']\n"
+"---\n"
+"- Я\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:249
+msgid ""
+"If ``t`` is a tuple instance, ``t['path']`` will return the field or "
+"subset of fields that are in ``path``. ``path`` must be a well formed "
+"JSON specification. ``path`` may contain field names if the tuple has "
+"been retrieved from a space that has an associated :ref:`format "
+"<box_space-format>`."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:254
+msgid ""
+"To prevent ambiguity, Tarantool first tries to interpret the request as "
+":ref:`tuple_object[field-number] <box_tuple-field_number>` or "
+":ref:`tuple_object[field-name] <box_tuple-field_name>`. If and only if "
+"that fails, Tarantool tries to interpret the request as ``tuple_object"
+"[field-path]``."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:260
+msgid ""
+"The path must be a well formed JSON specification, but it may be preceded"
+" by '.'. The '.' is a signal that the path acts as a suffix for the "
+"tuple."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:264
+msgid ""
+"The advantage of specifying a path is that Tarantool will use it to "
+"search through a tuple body and get only the tuple part, or parts, that "
+"are actually necessary."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:268
+msgid ""
+"In the following example, a tuple named ``t`` is returned from "
+"``replace`` and then only the relevant part (in this case, matching a "
+"name) of a relevant field is returned. Namely: the second field, the "
+"sixth part, the value following 'value='."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:273
+msgid ""
+"tarantool> format = {}\n"
+"---\n"
+"...\n"
+"tarantool> format[1] = {name = 'field1', type = 'unsigned'}\n"
+"---\n"
+"...\n"
+"tarantool> format[2] = {name = 'field2', type = 'array'}\n"
+"---\n"
+"...\n"
+"tarantool> format[3] = {name = 'field4', type = 'string' }\n"
+"---\n"
+"...\n"
+"tarantool> format[4] = {name = \"[2][6]['пw']['Я']\", type = 'string'}\n"
+"---\n"
+"...\n"
+"tarantool> s = box.schema.space.create('test', {format = format})\n"
+"---\n"
+"...\n"
+"tarantool> pk = s:create_index('pk')\n"
+"---\n"
+"...\n"
+"tarantool> field2 = {1, 2, 3, \"4\", {5,6,7}, {пw={Я=\"п\"}, key=\"V!\", "
+"value=\"K!\"}}\n"
+"---\n"
+"...\n"
+"tarantool> t = s:replace{1, field2, \"123456\", \"Not K!\"}\n"
+"---\n"
+"...\n"
+"tarantool> t[\"[2][6]['value']\"]\n"
+"---\n"
+"- K!\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:312
+msgid ""
+"If ``t`` is a tuple instance, ``t:find(search-value)`` will return the "
+"number of the first field in ``t`` that matches the search value, and "
+"``t:findall(search-value [, search-value ...])`` will return numbers of "
+"all fields in ``t`` that match the search value. Optionally one can put a"
+" numeric argument ``field-number`` before the search-value to indicate "
+"“start searching at field number ``field-number``.”"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:319
+msgid "the number of the field in the tuple."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:322
+msgid ""
+"In the following example, a tuple named ``t`` is created and then: the "
+"number of the first field in ``t`` which matches 'a' is returned, then "
+"the numbers of all the fields in ``t`` which match 'a' are returned, then"
+" the numbers of all the fields in t which match 'a' and are at or after "
+"the second field are returned."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:328
+msgid ""
+"tarantool> t = box.tuple.new{'a', 'b', 'c', 'a'}\n"
+"---\n"
+"...\n"
+"tarantool> t:find('a')\n"
+"---\n"
+"- 1\n"
+"...\n"
+"tarantool> t:findall('a')\n"
+"---\n"
+"- 1\n"
+"- 4\n"
+"...\n"
+"tarantool> t:findall(2, 'a')\n"
+"---\n"
+"- 4\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:351
+msgid ""
+"If ``t`` is a tuple instance, :samp:`t:transform({start-field-number"
+"},{fields-to-remove})` will return a tuple where, starting from field "
+"``start-field-number``, a number of fields (``fields-to-remove``) are "
+"removed. Optionally one can add more arguments after ``fields-to-remove``"
+" to indicate new values that will replace what was removed."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:357
+msgid ""
+"If the original tuple comes from a space that has been formatted with a "
+":ref:`format clause <box_space-format>`, the formatting will not be "
+"preserved for the result tuple."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:361
+msgid "base 1, may be negative"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:367
+msgid ""
+"In the following example, a tuple named ``t`` is created and then, "
+"starting from the second field, two fields are removed but one new one is"
+" added, then the result is returned."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:371
+msgid ""
+"tarantool> t = box.tuple.new{'Fld#1', 'Fld#2', 'Fld#3', 'Fld#4', 'Fld#5'}"
+"\n"
+"---\n"
+"...\n"
+"tarantool> t:transform(2, 2, 'x')\n"
+"---\n"
+"- ['Fld#1', 'x', 'Fld#4', 'Fld#5']\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:385
+msgid ""
+"If ``t`` is a tuple instance, ``t:unpack()`` will return all fields, "
+"``t:unpack(1)`` will return all fields starting with field number 1, "
+"``t:unpack(1,5)`` will return all fields between field number 1 and field"
+" number 5."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:389
+msgid "field(s) from the tuple."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:390
+msgid "lua-value(s)"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:392
+msgid ""
+"In the following example, a tuple named ``t`` is created and then all its"
+" fields are selected, then the result is returned."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:395
+msgid ""
+"tarantool> t = box.tuple.new{'Fld#1', 'Fld#2', 'Fld#3', 'Fld#4', 'Fld#5'}"
+"\n"
+"---\n"
+"...\n"
+"tarantool> t:unpack()\n"
+"---\n"
+"- Fld#1\n"
+"- Fld#2\n"
+"- Fld#3\n"
+"- Fld#4\n"
+"- Fld#5\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:413
+msgid ""
+"If ``t`` is a tuple instance, ``t:totable()`` will return all fields, "
+"``t:totable(1)`` will return all fields starting with field number 1, "
+"``t:totable(1,5)`` will return all fields between field number 1 and "
+"field number 5."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:417
+msgid "It is preferable to use ``t:totable()`` rather than ``t:unpack()``."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:419
+msgid "field(s) from the tuple"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:420 ../doc/book/box/box_tuple.rst:469
+msgid "lua-table"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:422
+msgid ""
+"In the following example, a tuple named ``t`` is created, then all its "
+"fields are selected, then the result is returned."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:425
+msgid ""
+"tarantool> t = box.tuple.new{'Fld#1', 'Fld#2', 'Fld#3', 'Fld#4', 'Fld#5'}"
+"\n"
+"---\n"
+"...\n"
+"tarantool> t:totable()\n"
+"---\n"
+"- ['Fld#1', 'Fld#2', 'Fld#3', 'Fld#4', 'Fld#5']\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:439
+msgid ""
+"A `Lua table <https://www.lua.org/pil/2.5.html>`_ can have indexed "
+"values, also called key:value pairs. For example, here:"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:443
+msgid "a = {}; a['field1'] = 10; a['field2'] = 20"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:447
+msgid "``a`` is a table with \"field1: 10\" and \"field2: 20\"."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:449
+msgid ""
+"The :ref:`tuple_object:totable() <box_tuple-totable>` function only "
+"returns a table containing the values. But the ``tuple_object:tomap()`` "
+"function returns a table containing not only the values, but also the "
+"key:value pairs."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:454
+msgid ""
+"This only works if the tuple comes from a space that has been formatted "
+"with a :ref:`format clause <box_space-format>`."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:457
+msgid ""
+"the only possible option is ``names_only``.  If ``names_only`` is false "
+"or omitted (default), then all the fields will appear twice, first with "
+"numeric headings and second with name headings.  If ``names_only`` is "
+"true, then all the fields will appear only once, with name headings."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:457
+msgid "the only possible option is ``names_only``."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:459
+msgid ""
+"If ``names_only`` is false or omitted (default), then all the fields will"
+" appear twice, first with numeric headings and second with name headings."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:464
+msgid ""
+"If ``names_only`` is true, then all the fields will appear only once, "
+"with name headings."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:468
+msgid "field-number:value pair(s) and key:value pair(s) from the tuple"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:471
+msgid ""
+"In the following example, a tuple named ``t1`` is returned from a space "
+"that has been formatted, then tables named ``t1map1`` and ``t1map2`` are "
+"produced from ``t1``."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:475
+msgid ""
+"format = {{'field1', 'unsigned'}, {'field2', 'unsigned'}}\n"
+"s = box.schema.space.create('test', {format = format})\n"
+"s:create_index('pk',{parts={1,'unsigned',2,'unsigned'}})\n"
+"t1 = s:insert{10, 20}\n"
+"t1map = t1:tomap()\n"
+"t1map_names_only = t1:tomap({names_only=true})"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:484
+msgid ""
+"``t1map`` will contain \"1: 10\", \"2: 20\", \"field1: 10\", \"field2: "
+"20\"."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:486
+msgid "``t1map_names_only`` will contain \"field1: 10\", \"field2: 20\"."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:492
+msgid ""
+"In Lua, `lua-table-value:pairs() <https://www.lua.org/pil/7.3.html>`_ is "
+"a method which returns: ``function``, ``lua-table-value``, ``nil``."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:496
+msgid ""
+"Tarantool has extended this so that ``tuple-value:pairs()`` returns: "
+"``function``, ``tuple-value``, ``nil``. It is useful for Lua iterators, "
+"because Lua iterators traverse a value's components until an end marker "
+"is reached."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:501
+msgid "function, tuple-value, nil"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:502
+msgid "function, lua-value, nil"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:504
+msgid ""
+"In the following example, a tuple named ``t`` is created and then all its"
+" fields are selected using a Lua for-end loop."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:507
+msgid ""
+"tarantool> t = box.tuple.new{'Fld#1', 'Fld#2', 'Fld#3', 'Fld#4', 'Fld#5'}"
+"\n"
+"---\n"
+"...\n"
+"tarantool> tmp = ''\n"
+"---\n"
+"...\n"
+"tarantool> for k, v in t:pairs() do\n"
+"         >   tmp = tmp .. v\n"
+"         > end\n"
+"---\n"
+"...\n"
+"tarantool> tmp\n"
+"---\n"
+"- Fld#1Fld#2Fld#3Fld#4Fld#5\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:529
+msgid "Update a tuple."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:531
+msgid ""
+"This function updates a tuple which is not in a space. Compare the "
+"function :extsamp:`box.space.{*{space-name}*}:update({*{key}*}, "
+"{{{*{format}*}, {*{field_no}*}, {*{value}*}}, ...})` which updates a "
+"tuple in a space."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:535
+msgid ""
+"For details: see the description for ``operator``, ``field_no``, and "
+"``value`` in the section :ref:`box.space.space-name:update{key, format, "
+"{field_number, value}...) <box_space-update>`."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:539
+msgid ""
+"If the original tuple comes from a space that has been formatted with a "
+":ref:`format clause <box_space-format>`, the formatting will be preserved"
+" for the result tuple."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:543
+msgid "operation type represented in string (e.g. '``=``' for 'assign new value')"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:545
+msgid ""
+"what field the operation will apply to. The field number can be negative,"
+" meaning the position from the end of tuple. (#tuple + negative field "
+"number + 1)"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:549
+msgid "what value will be applied"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:551
+msgid "new tuple"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:554
+msgid ""
+"In the following example, a tuple named ``t`` is created and then its "
+"second field is updated to equal 'B'."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:557
+msgid ""
+"tarantool> t = box.tuple.new{'Fld#1', 'Fld#2', 'Fld#3', 'Fld#4', 'Fld#5'}"
+"\n"
+"---\n"
+"...\n"
+"tarantool> t:update({{'=', 2, 'B'}})\n"
+"---\n"
+"- ['Fld#1', 'B', 'Fld#3', 'Fld#4', 'Fld#5']\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:569
+msgid "Example"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:571
+msgid ""
+"This function will illustrate how to convert tuples to/from Lua tables "
+"and lists of scalars:"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:574
+msgid ""
+"tuple = box.tuple.new({scalar1, scalar2, ... scalar_n}) -- scalars to "
+"tuple\n"
+"lua_table = {tuple:unpack()}                            -- tuple to Lua "
+"table\n"
+"lua_table = tuple:totable()                             -- tuple to Lua "
+"table\n"
+"scalar1, scalar2, ... scalar_n = tuple:unpack()         -- tuple to "
+"scalars\n"
+"tuple = box.tuple.new(lua_table)                        -- Lua table to "
+"tuple"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:582
+msgid ""
+"Then it will find the field that contains 'b', remove that field from the"
+" tuple, and display how many bytes remain in the tuple. The function uses"
+" Tarantool ``box.tuple`` functions ``new()``, ``unpack()``, ``find()``, "
+"``transform()``, ``bsize()``."
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:587
+msgid ""
+"function example()\n"
+"  local tuple1, tuple2, lua_table_1, scalar1, scalar2, scalar3, "
+"field_number\n"
+"  local luatable1 = {}\n"
+"  tuple1 = box.tuple.new({'a', 'b', 'c'})\n"
+"  luatable1 = tuple1:totable()\n"
+"  scalar1, scalar2, scalar3 = tuple1:unpack()\n"
+"  tuple2 = box.tuple.new(luatable1[1],luatable1[2],luatable1[3])\n"
+"  field_number = tuple2:find('b')\n"
+"  tuple2 = tuple2:transform(field_number, 1)\n"
+"  return 'tuple2 = ' , tuple2 , ' # of bytes = ' , tuple2:bsize()\n"
+"end"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:601
+msgid "... And here is what happens when one invokes the function:"
+msgstr ""
+
+#: ../doc/book/box/box_tuple.rst:603
+msgid ""
+"tarantool> example()\n"
+"---\n"
+"- tuple2 =\n"
+"- ['a', 'c']\n"
+"- ' # of bytes = '\n"
+"- 5\n"
+"..."
+msgstr ""
+

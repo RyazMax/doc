@@ -1,0 +1,241 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: 2019-12-20 21:24+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:3
+msgid "Module `lua/utils`"
+msgstr "Модуль `lua/utils`"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:9
+msgid "Push cdata of given ``ctypeid`` onto the stack."
+msgstr "Принудительная передача cdata заданного ``ctypeid`` в стек."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:11
+msgid ""
+"CTypeID must be used from FFI at least once. Allocated memory returned "
+"uninitialized. Only numbers and pointers are supported."
+msgstr ""
+"CTypeID должен быть использован хотя бы один раз из FFI. Выделенная область "
+"памяти возвращается неинициализированной. Поддерживаются только числа и "
+"указатели."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:0
+msgid "Parameters"
+msgstr "Параметры"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:14
+#: ../doc/dev_guide/reference_capi/utils.rst:27
+#: ../doc/dev_guide/reference_capi/utils.rst:42
+#: ../doc/dev_guide/reference_capi/utils.rst:49
+#: ../doc/dev_guide/reference_capi/utils.rst:62
+#: ../doc/dev_guide/reference_capi/utils.rst:74
+#: ../doc/dev_guide/reference_capi/utils.rst:81
+#: ../doc/dev_guide/reference_capi/utils.rst:116
+#: ../doc/dev_guide/reference_capi/utils.rst:128
+msgid "Lua State"
+msgstr "Lua_State"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:15
+msgid "FFI's CTypeID of this cdata"
+msgstr "CTypeID из FFI для cdata "
+
+#: ../doc/dev_guide/reference_capi/utils.rst:0
+msgid "Returns"
+msgstr "Возвращает"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:17
+#: ../doc/dev_guide/reference_capi/utils.rst:31
+msgid "memory associated with this cdata"
+msgstr "область памяти, ассоциированная с cdata"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:19
+msgid "See also: :ref:`luaL_checkcdata()<c_api-utils-luaL_checkcdata>`"
+msgstr "См. также :ref:`luaL_checkcdata()<c_api-utils-luaL_checkcdata>`"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:25
+msgid "Check whether the function argument ``idx`` is a cdata."
+msgstr "Проверка, является ли аргумент функции ``idx`` cdata."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:28
+#: ../doc/dev_guide/reference_capi/utils.rst:43
+msgid "stack index"
+msgstr "индекс стека"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:29
+msgid "output argument. FFI's CTypeID of returned cdata"
+msgstr "аргумент вывода. CTypeID из FFI для возвращаемого cdata "
+
+#: ../doc/dev_guide/reference_capi/utils.rst:33
+msgid "See also: :ref:`luaL_pushcdata()<c_api-utils-luaL_pushcdata>`"
+msgstr "См. также :ref:`luaL_pushcdata()<c_api-utils-luaL_pushcdata>`"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:37
+msgid "Set finalizer function on a cdata object."
+msgstr "Определение функции-финализатора для cdata."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:39
+msgid ""
+"Equivalent to call `ffi.gc(obj, function)`. Finalizer function must be on "
+"the top of the stack."
+msgstr ""
+"Аналог вызова `ffi.gc(obj, function)`. Функция-финализатор должна быть на "
+"вершине стека."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:47
+msgid "Return CTypeID (FFI) of given СDATA type."
+msgstr "Возврат CTypeID (FFI) заданного типа СDATA."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:50
+msgid "C type name as string (e.g. \"struct request\" or \"uint32_t\")"
+msgstr ""
+"Имя типа в C в виде строки (например, \"struct request\" или \"uint32_t\")"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:53
+msgid "CTypeID"
+msgstr "CTypeID"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:55
+msgid ""
+"See also: :ref:`luaL_pushcdata()<c_api-utils-luaL_pushcdata>`, :ref:"
+"`luaL_checkcdata()<c_api-utils-luaL_checkcdata>`"
+msgstr ""
+"См. также :ref:`luaL_pushcdata()<c_api-utils-luaL_pushcdata>`, :ref:"
+"`luaL_checkcdata()<c_api-utils-luaL_checkcdata>`"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:60
+msgid "Declare symbols for FFI."
+msgstr "Объявление символов для FFI."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:63
+msgid "C definitions (e.g. \"struct stat\")"
+msgstr "C-определения (например, \"struct stat\")"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:65
+msgid "0 on success"
+msgstr "0, если выполнено"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:66
+msgid "``LUA_ERRRUN``, ``LUA_ERRMEM` or ``LUA_ERRERR`` otherwise."
+msgstr "``LUA_ERRRUN``, ``LUA_ERRMEM` или ``LUA_ERRERR``, в противном случае."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:68
+msgid "See also: ``ffi.cdef(def)``"
+msgstr "См. также ``ffi.cdef(def)``"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:72
+msgid "Push uint64_t onto the stack."
+msgstr "Принудительная передача uint64_t в стек."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:75
+#: ../doc/dev_guide/reference_capi/utils.rst:82
+msgid "value to push"
+msgstr "передаваемое значение"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:79
+msgid "Push int64_t onto the stack."
+msgstr "Принудительная передача int64_t в стек."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:86
+#: ../doc/dev_guide/reference_capi/utils.rst:100
+msgid ""
+"Check whether the argument idx is a uint64 or a convertable string and "
+"returns this number."
+msgstr ""
+"Проверка, является ли аргумент idx uint64 или конвертируемой строкой, и "
+"возврат этого числа."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:0
+msgid "throws"
+msgstr "выбрасывает"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:89
+#: ../doc/dev_guide/reference_capi/utils.rst:96
+msgid "error if the argument can't be converted"
+msgstr "ошибку, если аргумент нельзя конвертировать"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:93
+#: ../doc/dev_guide/reference_capi/utils.rst:107
+msgid ""
+"Check whether the argument idx is a int64 or a convertable string and "
+"returns this number."
+msgstr ""
+"Проверка, является ли аргумент idx int64 или конвертируемой строкой, и "
+"возврат этого числа."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:103
+#: ../doc/dev_guide/reference_capi/utils.rst:110
+msgid "the converted number or 0 of argument can't be converted"
+msgstr "конвертированное число или 0, если аргумент нельзя конвертировать"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:114
+msgid "Push a tuple onto the stack."
+msgstr "Принудительная передача кортежа в стек."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:118
+msgid "error on OOM"
+msgstr "ошибка при нехватке памяти"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:120
+msgid "See also: :ref:`luaT_istuple <c_api-utils-luaT_istuple>`"
+msgstr "См. также :ref:`luaT_istuple <c_api-utils-luaT_istuple>`"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:126
+msgid "Check whether ``idx`` is a tuple."
+msgstr "Проверка, является ли ``idx`` кортежем."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:129
+msgid "the stack index"
+msgstr "индекс стека"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:131
+msgid "non-NULL if ``idx`` is a tuple"
+msgstr "не NULL, если ``idx`` -- это кортеж"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:132
+msgid "NULL if ``idx`` is not a tuple"
+msgstr "NULL, если ``idx`` -- это не кортеж"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:136
+msgid "Re-throw the last Tarantool error as a Lua object."
+msgstr "Повторение последней ошибки в Tarantool'е в виде Lua-объекта."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:138
+msgid ""
+"See also: `lua_error() <https://www.lua.org/manual/5.1/manual."
+"html#lua_error>`_,"
+msgstr ""
+"См. также `lua_error() <https://www.lua.org/manual/5.1/manual."
+"html#lua_error>`_,"
+
+#: ../doc/dev_guide/reference_capi/utils.rst:139
+msgid ":ref:`box_error_last() <c_api-error-box_error_last>`."
+msgstr ":ref:`box_error_last() <c_api-error-box_error_last>`."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:143
+msgid ""
+"Similar to `lua_cpcall() <https://www.lua.org/manual/5.1/manual."
+"html#lua_cpcall>`_, but with the proper support of Tarantool errors."
+msgstr ""
+"Аналог `lua_cpcall() <https://www.lua.org/manual/5.1/manual."
+"html#lua_cpcall>`_, но с соответствующей поддержкой ошибок Tarantool'а."
+
+#: ../doc/dev_guide/reference_capi/utils.rst:148
+msgid "Get the global Lua state used by Tarantool."
+msgstr "Получение глобального состояния Lua, используемого Tarantool'ом."

@@ -1,0 +1,457 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:3
+msgid "Module `tuple`"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:11
+msgid "Tuple format."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:13
+msgid "Each Tuple has an associated format (class). Default format is used to create tuples which are not attached to any particular space."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:18
+msgid "Tuple"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:24
+msgid "Allocate and initialize a new tuple from raw MsgPack Array data."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:26
+msgid "tuple format. Use :ref:`box_tuple_format_default()<c_api-tuple-box_tuple_format_default>` to create space-independent tuple."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:29
+msgid "tuple data in MsgPack Array format ([field1, field2, ...])"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:30
+msgid "the end of ``data``"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+#: ../doc/dev_guide/reference_capi/tuple.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:32
+msgid "NULL on out of memory"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:33
+msgid "tuple otherwise"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:35
+msgid "See also: :ref:`box.tuple.new()<box_tuple-new>`"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:39
+msgid "When working with tuples, it is the developer's responsibility to ensure that enough space is allocated, taking especial caution when writing to them with msgpuck functions such as ``mp_encode_array()``."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:48
+msgid "Increase the reference counter of tuple."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:50
+msgid "Tuples are reference counted. All functions that return tuples guarantee that the last returned tuple is reference counted internally until the next call to API function that yields or returns another tuple."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:54
+msgid "You should increase the reference counter before taking tuples for long processing in your code. The Lua garbage collector will not destroy a tuple that has references, even if another fiber removes them from a space. After processing, decrement the reference counter using :ref:`box_tuple_unref()<c_api-tuple-box_tuple_unref>`, otherwise the tuple will leak."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:62
+#: ../doc/dev_guide/reference_capi/tuple.rst:75
+#: ../doc/dev_guide/reference_capi/tuple.rst:88
+#: ../doc/dev_guide/reference_capi/tuple.rst:94
+#: ../doc/dev_guide/reference_capi/tuple.rst:113
+#: ../doc/dev_guide/reference_capi/tuple.rst:128
+msgid "a tuple"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:64
+#: ../doc/dev_guide/reference_capi/tuple.rst:77
+#: ../doc/dev_guide/reference_capi/tuple.rst:106
+msgid "-1 on error"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:65
+#: ../doc/dev_guide/reference_capi/tuple.rst:78
+msgid "0 otherwise"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:67
+msgid "See also: :ref:`box_tuple_unref()<c_api-tuple-box_tuple_unref>`"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:73
+msgid "Decrease the reference counter of tuple."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:80
+msgid "See also: :ref:`box_tuple_ref()<c_api-tuple-box_tuple_ref>`"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:86
+msgid "Return the number of fields in a tuple (the size of MsgPack Array)."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:92
+msgid "Return the number of bytes used to store internal tuple data (MsgPack Array)."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:98
+msgid "Dump raw MsgPack data to the memory buffer ``buf`` of size ``size``."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:100
+msgid "Store tuple fields in the memory buffer."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:102
+msgid "Upon successful return, the function returns the number of bytes written. If buffer size is not enough then the return value is the number of bytes which would have been written if enough space had been available."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:107
+msgid "number of bytes written on success."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:111
+msgid "Return the associated format."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:115
+msgid "tuple format"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:121
+msgid "Return the raw tuple field in MsgPack format. The result is a pointer to raw MessagePack data which can be decoded with mp_decode functions, for an example see the tutorial program :ref:`read.c <f_c_tutorial-read>`."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:126
+msgid "The buffer is valid until the next call to a ``box_tuple_*`` function."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:129
+msgid "zero-based index in MsgPack array."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:131
+msgid "NULL if i >= :ref:`box_tuple_field_count()<c_api-tuple-box_tuple_field_count>`"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:132
+msgid "msgpack otherwise"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:147
+msgid "Possible data types for tuple fields."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:149
+msgid "One cannot use STRS/ENUM macros for types because there is a mismatch between enum name (STRING) and type name literal (\"STR\"). STR is already used as a type in Objective C."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:157
+msgid "Key definition"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:161
+msgid "Create a key definition with the key fields with passed types on passed positions."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:163
+msgid "May be used for tuple format creation and/or tuple comparison."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:165
+msgid "array with key field identifiers"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:166
+msgid "array with key :ref:`field types <capi-tuple_field_type>`"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:167
+msgid "the number of key fields"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:169
+msgid "key definition on success"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:170
+#: ../doc/dev_guide/reference_capi/tuple.rst:188
+msgid "NULL on error"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:174
+msgid "Delete a key definition"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:176
+msgid "key definition to delete"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:182
+msgid "Return new in-memory tuple format based on passed key definitions"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:184
+msgid "array of keys defined for the format"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:185
+msgid "count of keys"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:187
+msgid "new tuple format on success"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:192
+msgid "Increment tuple format reference count"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:194
+msgid "tuple format to ref"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:198
+msgid "Decrement tuple format reference count"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:200
+msgid "tuple format to unref"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:206
+msgid "Compare tuples using key definition"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:208
+msgid "the first tuple"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:209
+msgid "the second tuple"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:210
+#: ../doc/dev_guide/reference_capi/tuple.rst:224
+msgid "key definition"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:212
+msgid "0  if ``key_fields(tuple_a)`` == ``key_fields(tuple_b)``"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:213
+msgid "<0 if ``key_fields(tuple_a)`` < ``key_fields(tuple_b)``"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:214
+msgid ">0 if ``key_fields(tuple_a)`` > ``key_fields(tuple_b)``"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:216
+#: ../doc/dev_guide/reference_capi/tuple.rst:230
+msgid "See also: enum :ref:`field_type <capi-tuple_field_type>`"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:220
+msgid "Compare a tuple with a key using key definition"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:222
+msgid "tuple"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:223
+msgid "key with MessagePack array header"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:226
+msgid "0  if ``key_fields(tuple)`` == ``parts(key)``"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:227
+msgid "<0 if ``key_fields(tuple)`` < ``parts(key)``"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:228
+msgid ">0 if ``key_fields(tuple)`` > ``parts(key)``"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:234
+msgid "Tuple iterator"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:238
+msgid "Allocate and initialize a new tuple iterator. The tuple iterator allows iterating over fields at the root level of a MsgPack array."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:241
+msgid "**Example:**"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:243
+msgid "box_tuple_iterator_t* it = box_tuple_iterator(tuple);\n"
+"if (it == NULL) {\n"
+"    // error handling using box_error_last()\n"
+"}\n"
+"const char* field;\n"
+"while (field = box_tuple_next(it)) {\n"
+"    // process raw MsgPack data\n"
+"}\n"
+"\n"
+"// rewind the iterator to the first position\n"
+"box_tuple_rewind(it)\n"
+"assert(box_tuple_position(it) == 0);\n"
+"\n"
+"// rewind three fields\n"
+"field = box_tuple_seek(it, 3);\n"
+"assert(box_tuple_position(it) == 4);\n"
+"\n"
+"box_iterator_free(it);"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:266
+msgid "Destroy and free tuple iterator"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:272
+msgid "Return zero-based next position in iterator. That is, this function returnы the field id of the field that will be returned by the next call to :ref:`box_tuple_next()<c_api-tuple-box_tuple_next>`. Returned value is zero after initialization or rewind and :ref:`box_tuple_field_count()<c_api-tuple-box_tuple_field_count>` after the end of iteration."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:279
+#: ../doc/dev_guide/reference_capi/tuple.rst:286
+#: ../doc/dev_guide/reference_capi/tuple.rst:301
+#: ../doc/dev_guide/reference_capi/tuple.rst:322
+msgid "a tuple iterator"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:280
+msgid "position"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:284
+msgid "Rewind iterator to the initial position."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:288
+msgid "After: ``box_tuple_position(it) == 0``"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:292
+msgid "Seek the tuple iterator."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:294
+msgid "The result is a pointer to raw MessagePack data which can be decoded with mp_decode functions, for an example see the tutorial program :ref:`read.c <f_c_tutorial-read>`. The returned buffer is valid until the next call to ``box_tuple_*`` API. The requested ``field_no`` is returned by the next call to ``box_tuple_next(it)``."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:302
+msgid "field number - zero-based position in MsgPack array"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:305
+msgid "After:"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:307
+msgid "``box_tuple_position(it) == field_not`` if returned value is not NULL."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:308
+msgid "``box_tuple_position(it) == box_tuple_field_count(tuple)`` if returned value is NULL."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:315
+msgid "Return the next tuple field from tuple iterator."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:317
+msgid "The result is a pointer to raw MessagePack data which can be decoded with mp_decode functions, for an example see the tutorial program :ref:`read.c <f_c_tutorial-read>`. The returned buffer is valid until next call to ``box_tuple_*`` API."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:323
+msgid "NULL if there are no more fields"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:324
+msgid "MsgPack otherwise"
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:326
+msgid "Before: :ref:`box_tuple_position()<c_api-tuple-box_tuple_position>` is zero-based ID of returned field."
+msgstr ""
+
+#: ../doc/dev_guide/reference_capi/tuple.rst:329
+msgid "After: ``box_tuple_position(it) == box_tuple_field_count(tuple)`` if returned value is NULL."
+msgstr ""
+

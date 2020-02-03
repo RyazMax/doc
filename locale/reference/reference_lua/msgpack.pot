@@ -1,0 +1,461 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../doc/reference/reference_lua/msgpack.rst:5
+msgid "Module `msgpack`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:9
+msgid "Overview"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:11
+msgid "The ``msgpack`` module takes strings in MsgPack_ format and decodes them, or takes a series of non-MsgPack values and encodes them. Tarantool makes heavy internal use of MsgPack because tuples in Tarantool are :ref:`stored <index-box_lua-vs-msgpack>` as MsgPack arrays."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:18
+msgid "Index"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:20
+msgid "Below is a list of all ``msgpack`` functions and members."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:28
+msgid "Name"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:28
+msgid "Use"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:30
+msgid ":ref:`msgpack.encode() <msgpack-encode>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:30
+msgid "Convert a Lua object to an MsgPack string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:33
+msgid ":ref:`msgpack.decode() <msgpack-decode>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:33
+#: ../doc/reference/reference_lua/msgpack.rst:36
+msgid "Convert a MsgPack string to a Lua object"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:36
+msgid ":ref:`msgpack.decode_unchecked() <msgpack-decode_unchecked>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:39
+msgid ":ref:`msgpack.NULL <msgpack-null>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:39
+msgid "Analog of Lua's \"nil\""
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:42
+msgid ":ref:`msgpack.decode_array_header <msgpack-decode_array_header>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:42
+msgid "Skip array header in a MsgPack string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:45
+msgid ":ref:`msgpack.decode_map_header <msgpack-decode_map_header>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:45
+msgid "Skip map header in a MsgPack string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:48
+msgid ":ref:`msgpack.cfg <msgpack-cfg>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:48
+msgid "Change configuration"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:58
+msgid "Convert a Lua object to a MsgPack string."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:0
+#: ../doc/reference/reference_lua/msgpack.rst:0
+#: ../doc/reference/reference_lua/msgpack.rst:0
+#: ../doc/reference/reference_lua/msgpack.rst:0
+#: ../doc/reference/reference_lua/msgpack.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:60
+msgid "either a scalar value or a Lua table value."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:0
+#: ../doc/reference/reference_lua/msgpack.rst:0
+#: ../doc/reference/reference_lua/msgpack.rst:0
+#: ../doc/reference/reference_lua/msgpack.rst:0
+#: ../doc/reference/reference_lua/msgpack.rst:0
+msgid "return"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:61
+msgid "the original value reformatted as a MsgPack string."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:0
+#: ../doc/reference/reference_lua/msgpack.rst:0
+#: ../doc/reference/reference_lua/msgpack.rst:0
+msgid "rtype"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:62
+msgid "string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:68
+msgid "Convert a MsgPack string to a Lua object."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:70
+#: ../doc/reference/reference_lua/msgpack.rst:98
+msgid "a string formatted as MsgPack."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:71
+msgid "where to start, minimum = 1, maximum = string length, default = 1."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:76
+msgid "(if ``msgpack_string`` is in valid MsgPack format) the original contents of ``msgpack_string``, formatted as a Lua table, (otherwise) a scalar value, such as a string or a number;"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:79
+msgid "\"next_start_position\". If ``decode`` stops after parsing as far as byte N in ``msgpack_string``, then \"next_start_position\" will equal N + 1, and ``decode(msgpack_string, next_start_position)`` will continue parsing from where the previous ``decode`` stopped, plus 1. Normally ``decode`` parses all of ``msgpack_string``, so \"next_start_position\" will equal ``string.len(msgpack_string)`` + 1."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:86
+msgid "table and number"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:92
+msgid "Convert a MsgPack string to a Lua object. Because checking is skipped, ``decode_unchecked()`` can operate with string pointers to buffers which ``decode()`` cannot handle. For an example see the :ref:`buffer <buffer-module>` module."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:102
+msgid "the original contents formatted as a Lua table;"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:103
+msgid "the number of bytes that were decoded."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:105
+msgid "lua object"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:111
+msgid "A value comparable to Lua \"nil\" which may be useful as a placeholder in a tuple."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:118
+msgid "Call the mp_decode_array function in the `MsgPuck <http://rtsisyk.github.io/msgpuck/>`_ library and return the array size and a pointer to the first array component. A subsequent call to ``msgpack_decode`` can decode the component instead of the whole array."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:122
+#: ../doc/reference/reference_lua/msgpack.rst:150
+msgid "a pointer to a byte array formatted as MsgPack."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:123
+msgid "a number greater than or equal to the string's length"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:127
+msgid "the size of the array;"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:128
+msgid "a pointer to after the array header."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:130
+msgid "-- Example of decode_array_header\n"
+"-- Suppose we have the raw data '\\x93\\x01\\x02\\x03'.\n"
+"-- \\x93 is MsgPack encoding for a header of a three-item array.\n"
+"-- We want to skip it and decode the next three items.\n"
+"msgpack=require('msgpack'); ffi=require('ffi')\n"
+"x,y=msgpack.decode_array_header(ffi.cast('char*','\\x93\\x01\\x02\\x03'),4)\n"
+"a=msgpack.decode(y,1);b=msgpack.decode(y+1,1);c=msgpack.decode(y+2,1);\n"
+"a,b,c\n"
+"-- The result will be: 1,2,3."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:146
+msgid "Call the mp_decode_map function in the `MsgPuck <http://rtsisyk.github.io/msgpuck/>`_ library and return the map size and a pointer to the first map component. A subsequent call to ``msgpack_decode`` can decode the component instead of the whole map."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:151
+msgid "a number greater than or equal to the byte array's length"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:155
+msgid "the size of the map;"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:156
+msgid "a pointer to after the map header."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:158
+msgid "-- Example of decode_map_header\n"
+"-- Suppose we have the raw data '\\x81\\xa2\\x41\\x41\\xc3'.\n"
+"-- \\x81 is MsgPack encoding for a header of a one-item map.\n"
+"-- We want to skip it and decode the next map item.\n"
+"msgpack=require('msgpack'); ffi=require('ffi')\n"
+"x,y=msgpack.decode_map_header(ffi.cast('char*','\\x81\\xa2\\x41\\x41\\xc3'),5)\n"
+"a=msgpack.decode(y,3);b=msgpack.decode(y+3,1)\n"
+"x,a,b\n"
+"-- The result will be: 1,\"AA\", true."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:172
+msgid "Example"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:174
+msgid "tarantool> msgpack = require('msgpack')\n"
+"---\n"
+"...\n"
+"tarantool> y = msgpack.encode({'a',1,'b',2})\n"
+"---\n"
+"...\n"
+"tarantool> z = msgpack.decode(y)\n"
+"---\n"
+"...\n"
+"tarantool> z[1], z[2], z[3], z[4]\n"
+"---\n"
+"- a\n"
+"- 1\n"
+"- b\n"
+"- 2\n"
+"...\n"
+"tarantool> box.space.tester:insert{20, msgpack.NULL, 20}\n"
+"---\n"
+"- [20, null, 20]\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:199
+msgid "The MsgPack output structure can be specified with ``__serialize``:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:201
+msgid "``__serialize = \"seq\" or \"sequence\"`` for an array"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:202
+msgid "``__serialize = \"map\" or \"mapping\"`` for a map"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:204
+msgid "Serializing 'A' and 'B' with different ``__serialize`` values causes different results. To show this, here is a routine which encodes `{'A','B'}` both as an array and as a map, then displays each result in hexadecimal."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:208
+msgid "function hexdump(bytes)\n"
+"    local result = ''\n"
+"    for i = 1, #bytes do\n"
+"        result = result .. string.format(\"%x\", string.byte(bytes, i)) .. ' '\n"
+"    end\n"
+"    return result\n"
+"end\n"
+"\n"
+"msgpack = require('msgpack')\n"
+"m1 = msgpack.encode(setmetatable({'A', 'B'}, {\n"
+"                             __serialize = \"seq\"\n"
+"                          }))\n"
+"m2 = msgpack.encode(setmetatable({'A', 'B'}, {\n"
+"                             __serialize = \"map\"\n"
+"                          }))\n"
+"print('array encoding: ', hexdump(m1))\n"
+"print('map encoding: ', hexdump(m2))"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:228
+msgid "**Result:**"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:267
+msgid "**array** encoding: 92 a1 41 a1 42\n"
+"**map** encoding:   82 01 a1 41 02 a1 42"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:236
+msgid "The MsgPack Specification_ page explains that the first encoding means:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:275
+msgid "fixarray(2), fixstr(1), \"A\", fixstr(1), \"B\""
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:243
+msgid "and the second encoding means:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:282
+msgid "fixmap(2), key(1), fixstr(1), \"A\", key(2), fixstr(2), \"B\""
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:250
+msgid "Here are examples for all the common types, with the Lua-table representation on the left, with the MsgPack format name and encoding on the right."
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:258
+msgid "**Common Types and MsgPack Encodings**"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:266
+msgid "{}"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:266
+msgid "'fixmap' if metatable is 'map' = 80 otherwise 'fixarray' = 90"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:269
+msgid "'a'"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:269
+msgid "'fixstr' = a1 61"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:271
+msgid "false"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:271
+msgid "'false' = c2"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:273
+msgid "true"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:273
+msgid "'true' = c3"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:275
+msgid "127"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:275
+msgid "'positive fixint' = 7f"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:277
+msgid "65535"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:277
+msgid "'uint 16' = cd ff ff"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:279
+msgid "4294967295"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:279
+msgid "'uint 32' = ce ff ff ff ff"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:281
+msgid "nil"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:281
+msgid "'nil' = c0"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:283
+msgid "msgpack.NULL"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:283
+msgid "same as nil"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:285
+msgid "[0] = 5"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:285
+msgid "'fixmap(1)' + 'positive fixint' (for the key) + 'positive fixint' (for the value) = 81 00 05"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:288
+msgid "[0] = nil"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:288
+msgid "'fixmap(0)' = 80 -- nil is not stored when it is a missing map value"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:291
+msgid "1.5"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:291
+msgid "'float 64' = cb 3f f8 00 00 00 00 00 00"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:298
+msgid "Some MsgPack configuration settings can be changed, in the same way that they can be changed for json. See :ref:`Module JSON <json-module_cfg>` for a list of some configuration settings. (The same configuration settings exist for json, for MsgPack, and for  :ref:`YAML <yaml-module>`.)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:303
+msgid "For example, if ``msgpack.cfg.encode_invalid_numbers = true`` (the default), then nan and inf are legal values. If that is not desirable, then ensure that ``msgpack.encode()`` will not accept them, by saying ``msgpack.cfg{encode_invalid_numbers = false}``, thus:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/msgpack.rst:308
+msgid " tarantool> msgpack = require('msgpack'); msgpack.cfg{encode_invalid_numbers = true}\n"
+" ---\n"
+" ...\n"
+" tarantool> msgpack.decode(msgpack.encode{1, 0 / 0, 1 / 0, false})\n"
+" ---\n"
+" - [1, -nan, inf, false]\n"
+" - 22\n"
+" ...\n"
+" tarantool> msgpack.cfg{encode_invalid_numbers = false}\n"
+"---\n"
+"...\n"
+" tarantool> msgpack.decode(msgpack.encode{1, 0 / 0, 1 / 0, false})\n"
+" ---\n"
+" - error: ... number must not be NaN or Inf'\n"
+"..."
+msgstr ""
+

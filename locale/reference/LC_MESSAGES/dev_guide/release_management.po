@@ -1,0 +1,353 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../doc/dev_guide/release_management.rst:5
+msgid "Release management"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:11
+msgid "Release policy"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:13
+msgid ""
+"A Tarantool release is identified by three digits, for example, 1.7.7. We"
+" use these digits according to their definitions provided at "
+"http://semver.org:"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:16
+msgid ""
+"The first digit stands for MAJOR release. A **major** release may contain"
+" *incompatible changes*."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:18
+msgid ""
+"The second digit stands for MINOR release, it does not contain "
+"incompatible changes, and is used for introducing backward-compatible "
+"*features*."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:20
+msgid ""
+"The third digit is for PATCH releases that contain only backward-"
+"compatible *bug fixes*."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:23
+msgid "In MINOR digit, we reflect how stable a release is:"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:25
+msgid "0 meaning alpha,"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:26
+msgid "1 meaning beta,"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:27
+msgid "anything between 1 and 10 meaning stable, and"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:28
+msgid "10 meaning LTS."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:30
+msgid ""
+"So, each MAJOR release series goes through a development-maturity life "
+"cycle of MINOR releases, as follows:"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:33
+msgid ""
+"**Alpha**. Once in every few months we release a few alpha versions, e.g."
+" 2.0.1, 2.0.2."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:36
+msgid "Alpha versions may contain incompatible changes, crashes and other bugs."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:38
+msgid ""
+"**Beta**. Once major changes necessary to introduce new flagship features"
+" are ready, we release a few beta versions, e.g. 2.1.3, 2.1.4."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:41
+msgid ""
+"Beta versions may contain crashes, but do not have incompatible changes, "
+"so can be used to develop new applications."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:44
+msgid ""
+"**Stable**. Finally, after we see our beta versions run successfully in "
+"production, usually in a few more months, during which we fix all "
+"incoming bugs and add some minor features, we declare this MAJOR release "
+"series stable."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:49
+msgid "Like Ubuntu, we distinguish two kinds of stable releases:"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:51
+msgid ""
+"**LTS (Long Term Support)** releases that are supported for 3 years "
+"(community) and up to 5 years (paying customers). **LTS** release is "
+"identified by MINOR version 10."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:54
+msgid ""
+"**Standard stable releases** are only supported a few months after the "
+"next stable is out."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:57
+msgid "\"Support\" means that we continue fixing bugs in a release."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:59
+msgid "We add commits simultaneously to three MAJOR releases:"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:61
+msgid ""
+"**LTS** is a stable release which does not receive new features, and only"
+" gets backward compatible fixes. Hence, following the rules of semver, "
+"LTS release never has its MAJOR or MINOR version increased, and only gets"
+" PATCH level releases."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:66
+msgid ""
+"**STABLE** is our current stable release, which may receive new features."
+" When the next STABLE version is published, MINOR version is incremented."
+" Between MINOR releases, we may have intermediate PATCH level releases as"
+" well, which will contain only bug fixes. We maintain PATCH level "
+"releases for two STABLE releases, the current and the previous one, to "
+"preserve support continuity."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:73
+msgid ""
+"**NEXT** is our next MAJOR release, and it follows the maturity cycle "
+"described in the beginning. While NEXT release is in alpha state, its "
+"MINOR is frozen at 0 and is only increased when the release reaches BETA "
+"status. Once the NEXT release becomes STABLE, we switch the vehicle for "
+"delivery of minor features, designating the previous stable release as "
+"LTS, and releasing it with MINOR set to 10."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:80
+msgid "To sum up, once a quarter we release:"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:82
+msgid "the next LTS release, e.g. 2.10.6, 2.10.7 or 2.10.8"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:83
+msgid "the next STABLE release, e.g. 3.6, 3.7 or 3.8"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:84
+msgid ""
+"(optionally) an alpha or beta version of the NEXT release, e.g. 4.0.1, "
+"4.0.2 or 4.0.3"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:87
+msgid ""
+"In all supported releases, we also release a PATCH release as soon as we "
+"find and fix an outstanding CVE/vulnerability."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:90
+msgid ""
+"We also publish nightly builds, and use the fourth slot in the version "
+"identifier to designate the nightly build number."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:93
+msgid "Example version identifier:"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:95
+msgid "2.0.3 - third alpha of 2.x release"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:96
+msgid "2.1.3 - a beta of 2.x release"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:97
+msgid "2.2 - a stable version of 2.x series, but not an LTS yet"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:98
+msgid "2.10 - an LTS release"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:104
+msgid "How to make a minor release"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:106
+msgid ""
+"$ git tag -a 2.4 -m \"Next minor in 2.x series\"\n"
+"$ vim CMakeLists.txt # edit CPACK_PACKAGE_VERSION_PATCH\n"
+"$ git push --tags"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:112
+msgid ""
+"A tag which is made on a git branch can be taken along with a merge, or "
+"left on the branch. The technique to \"keep the tag on the branch it was "
+"originally set on\" is to use ``--no-fast-forward`` when merging this "
+"branch."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:116
+msgid ""
+"With ``--no-ff``, a merge changeset is created to represent the received "
+"changes, and only that merge changeset ends up in the destination branch."
+" This technique can be useful when there are two active lines of "
+"development, e.g. \"stable\" and \"next\", and it's necessary to be able "
+"to tag both lines independently."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:122
+msgid ""
+"To make sure that a tag doesn't end up in the destination branch, it is "
+"necessary to have the commit to which the tag is attached, \"stay on the "
+"original branch\". That's exactly what a merge with disabled \"fast-"
+"forward\" does -- creates a \"merge\" commit and adds it to both "
+"branches."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:127
+msgid "Here's what it may look like:"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:129
+msgid ""
+"kostja@shmita:~/work/tarantool$ git checkout master\n"
+"Already on 'master'\n"
+"kostja@shmita:~/work/tarantool$ git tag -a 2.4 -m \"Next development\"\n"
+"kostja@shmita:~/work/tarantool$ git describe\n"
+"2.4\n"
+"kostja@shmita:~/work/tarantool$ git checkout master-stable\n"
+"Switched to branch 'master-stable'\n"
+"kostja@shmita:~/work/tarantool$ git tag -a 2.3 -m \"Next stable\"\n"
+"kostja@shmita:~/work/tarantool$ git describe\n"
+"2.3\n"
+"kostja@shmita:~/work/tarantool$ git checkout master\n"
+"Switched to branch 'master'\n"
+"kostja@shmita:~/work/tarantool$ git describe\n"
+"2.4\n"
+"kostja@shmita:~/work/tarantool$ git merge --no-ff master-stable\n"
+"Auto-merging CMakeLists.txt\n"
+"Merge made by recursive.\n"
+" CMakeLists.txt |    1 +\n"
+" 1 files changed, 1 insertions(+), 0 deletions(-)\n"
+"kostja@shmita:~/work/tarantool$ git describe\n"
+"2.4.0-0-g0a98576"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:153
+msgid "Also, don't forget this:"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:155
+msgid "Update all issues. Upload the ChangeLog based on ``git log`` output."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:157
+msgid ""
+"The ChangeLog must only include items which are mentioned as issues on "
+"GitHub. If anything significant is there, which is not mentioned, "
+"something went wrong in release planning and the release should be held "
+"up until this is cleared."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:162
+msgid ""
+"Click 'Release milestone'. Create a milestone for the next minor release."
+" Alert the driver to target bugs and blueprints to the new milestone."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:167
+msgid "How to release a Docker container"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:169
+msgid "To bump a new version of a Docker container:"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:171
+msgid ""
+"On the ``master`` branch of `tarantool/docker "
+"<https://github.com/tarantool/docker>`_ repository, find the Dockerfile "
+"that corresponds to the commit's **major** version (e.g. "
+"https://github.com/tarantool/docker/blob/master/2.x/Dockerfile for "
+"Tarantool version 2.4) and specify the required commit in "
+"``TARANTOOL_VERSION``, for example "
+"``TARANTOOL_VERSION=2.4.0-11-gcd17b77f9``."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:179
+msgid "Commit the Dockerfile back to ``master`` branch."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:181
+msgid ""
+"In the same repository, create a branch named after the commit's "
+"``<major>.<minor>`` versions, e.g. branch ``2.4`` for commit "
+"2.4.0-11-gcd17b77f9."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:185
+msgid ""
+"In Tarantool container build settings at ``hub.docker.com`` "
+"(https://hub.docker.com/r/tarantool/tarantool/~/settings/automated-"
+"builds/), add a new line:"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:189
+msgid "Branch: x.y, /x, x.y"
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:193
+msgid "where ``x`` and ``y`` correspond to the commit's major and minor versions."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:195
+msgid "Click **Save changes**."
+msgstr ""
+
+#: ../doc/dev_guide/release_management.rst:197
+msgid "Shortly after, a new Docker container will be built."
+msgstr ""
+

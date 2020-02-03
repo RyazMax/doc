@@ -1,0 +1,631 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: 2019-12-06 16:16+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../doc/reference/reference_lua/utf8.rst:5
+msgid "Module `utf8`"
+msgstr "Модуль `utf8`"
+
+#: ../doc/reference/reference_lua/utf8.rst:9
+msgid "Overview"
+msgstr "Общие сведения"
+
+#: ../doc/reference/reference_lua/utf8.rst:11
+msgid ""
+"``utf8`` is Tarantool's module for handling UTF-8 strings. It includes some "
+"functions which are compatible with ones in `Lua 5.3 <https://www.lua.org/"
+"manual/5.3/manual.html#6.5>`_ but Tarantool has much more. For example, "
+"because internally Tarantool contains a complete copy of the \"International "
+"Components For Unicode\" library, there are comparison functions which "
+"understand the default ordering for Cyrillic (Capital Letter Zhe Ж = Small "
+"Letter Zhe ж) and Japanese (Hiragana A = Katakana A)."
+msgstr ""
+"``utf8`` -- это модуль Tarantool'а для обработки строк в формате UTF-8. Он "
+"содержит некоторые функции, которые совместимы с функциями `Lua 5.3 <https://"
+"www.lua.org/manual/5.3/manual.html#6.5>`_, но возможности Tarantool'а "
+"намного больше. Например, поскольку Tarantool включает в себя полную копию "
+"библиотеки Международных компонентов для Юникода (\"International Components "
+"For Unicode\"), доступны также функции сравнения, которые понимают "
+"упорядочение символов в кириллице (заглавная буква  Ж = строчная буква ж) и "
+"японском языке (A в хирагане = A в катакане)."
+
+#: ../doc/reference/reference_lua/utf8.rst:27
+msgid "Name"
+msgstr "Имя"
+
+#: ../doc/reference/reference_lua/utf8.rst:27
+msgid "Use"
+msgstr "Назначение"
+
+#: ../doc/reference/reference_lua/utf8.rst:29
+msgid ":ref:`casecmp <utf8-casecmp>` and |br| :ref:`cmp <utf8-cmp>`"
+msgstr ":ref:`casecmp <utf8-casecmp>` and |br| :ref:`cmp <utf8-cmp>`"
+
+#: ../doc/reference/reference_lua/utf8.rst:29
+msgid "Comparisons"
+msgstr "Сравнения"
+
+#: ../doc/reference/reference_lua/utf8.rst:32
+#, fuzzy
+msgid ":ref:`lower <utf8-lower>` and |br| :ref:`upper <utf8-upper>`"
+msgstr ":ref:`lower <utf8-islower>` and |br| :ref:`upper <utf8-isupper>`"
+
+#: ../doc/reference/reference_lua/utf8.rst:32
+msgid "Case conversions"
+msgstr "Замена регистра"
+
+#: ../doc/reference/reference_lua/utf8.rst:35
+msgid ""
+":ref:`isalpha <utf8-isalpha>`, |br| :ref:`isdigit <utf8-isdigit>`, |br| :ref:"
+"`islower <utf8-islower>` and |br| :ref:`isupper <utf8-isupper>`"
+msgstr ""
+":ref:`isalpha <utf8-isalpha>`, |br| :ref:`isdigit <utf8-isdigit>`, |br| :ref:"
+"`islower <utf8-islower>` and |br| :ref:`isupper <utf8-isupper>`"
+
+#: ../doc/reference/reference_lua/utf8.rst:35
+msgid "Determine character types"
+msgstr "Определение типа символа"
+
+#: ../doc/reference/reference_lua/utf8.rst:40
+msgid ":ref:`sub <utf8-sub>`"
+msgstr ":ref:`sub <utf8-sub>`"
+
+#: ../doc/reference/reference_lua/utf8.rst:40
+msgid "Substrings"
+msgstr "Подстроки"
+
+#: ../doc/reference/reference_lua/utf8.rst:42
+#, fuzzy
+msgid ":ref:`len <utf8-len>`"
+msgstr ":ref:`length <utf8-length>`"
+
+#: ../doc/reference/reference_lua/utf8.rst:42
+msgid "Length in characters"
+msgstr "Длина в символах"
+
+#: ../doc/reference/reference_lua/utf8.rst:44
+msgid ":ref:`next <utf8-next>`"
+msgstr ":ref:`next <utf8-next>`"
+
+#: ../doc/reference/reference_lua/utf8.rst:44
+msgid "Character-at-a-time iterations"
+msgstr "Посимвольная итерация"
+
+#: ../doc/reference/reference_lua/utf8.rst:0
+msgid "Parameters"
+msgstr "Параметры"
+
+#: ../doc/reference/reference_lua/utf8.rst:53
+#: ../doc/reference/reference_lua/utf8.rst:114
+#: ../doc/reference/reference_lua/utf8.rst:235
+#: ../doc/reference/reference_lua/utf8.rst:272
+#: ../doc/reference/reference_lua/utf8.rst:289
+#: ../doc/reference/reference_lua/utf8.rst:348
+msgid "a string encoded with UTF-8"
+msgstr "строка в формате UTF-8"
+
+#: ../doc/reference/reference_lua/utf8.rst:0
+msgid "return"
+msgstr "возвращает"
+
+#: ../doc/reference/reference_lua/utf8.rst:54
+#: ../doc/reference/reference_lua/utf8.rst:115
+msgid "-1 meaning \"less\", 0 meaning \"equal\", +1 meaning \"greater\""
+msgstr "-1 означает \"меньше\", 0 означает \"равно\", +1 означает \"больше\""
+
+#: ../doc/reference/reference_lua/utf8.rst:0
+msgid "rtype"
+msgstr "тип возвращаемого значения"
+
+#: ../doc/reference/reference_lua/utf8.rst:55
+#: ../doc/reference/reference_lua/utf8.rst:116
+#: ../doc/reference/reference_lua/utf8.rst:239
+msgid "number"
+msgstr "число"
+
+#: ../doc/reference/reference_lua/utf8.rst:57
+msgid ""
+"Compare two strings with the Default Unicode Collation Element Table (DUCET) "
+"for the `Unicode Collation Algorithm <http://www.unicode.org/Public/"
+"UCA/10.0.0/allkeys.txt>`_. Thus 'å' is less than 'B', even though the code-"
+"point value of å (229) is greater than the code-point value of B (66), "
+"because the algorithm depends on the values in the Collation Element Table, "
+"not the code-point values."
+msgstr ""
+"Сравнение двух строк с Таблицей сортировки символов Юникода по умолчанию "
+"(DUCET) для `Алгоритма сортировки по Юникоду (Unicode Collation Algorithm) "
+"<http://www.unicode.org/Public/UCA/10.0.0/allkeys.txt>`_. В результате 'å' "
+"меньше, чем 'B', хотя значение кодовой точки å (229) больше значения кодовой "
+"точки B (66), поскольку алгоритм основывается на значениях Таблица "
+"сортировки символов, а не на значениях кодовых точек."
+
+#: ../doc/reference/reference_lua/utf8.rst:64
+msgid ""
+"The comparison is done with primary weights. Therefore the elements which "
+"affect secondary or later weights (such as \"case\" in Latin or Cyrillic "
+"alphabets, or \"kana differentiation\" in Japanese) are ignored. If asked "
+"\"is this like a Microsoft case-insensitive accent-insensitive collation\" "
+"we tend to answer \"yes\", though the Unicode Collation Algorithm is far "
+"more sophisticated than those terms imply."
+msgstr ""
+"Сравнение осуществляется на основании основного веса. Таким образом, не "
+"учитываются элементы, которые влияют на вторичный или последующий вес (такие "
+"как \"регистр\" в латинице или кириллице, или \"отличия каны\" в японском "
+"языке). Если спросить: \"Это похоже на сортировку без учета регистра и "
+"ударения от компании Майкрософт?\" - ответом будет: \"Скорее да\", хотя "
+"Алгоритм сортировки по Юникоду гораздо сложнее, чем это описание."
+
+#: ../doc/reference/reference_lua/utf8.rst:72
+#: ../doc/reference/reference_lua/utf8.rst:101
+#: ../doc/reference/reference_lua/utf8.rst:130
+#: ../doc/reference/reference_lua/utf8.rst:154
+#: ../doc/reference/reference_lua/utf8.rst:176
+#: ../doc/reference/reference_lua/utf8.rst:198
+#: ../doc/reference/reference_lua/utf8.rst:220
+#: ../doc/reference/reference_lua/utf8.rst:252
+#: ../doc/reference/reference_lua/utf8.rst:276
+#: ../doc/reference/reference_lua/utf8.rst:297
+#: ../doc/reference/reference_lua/utf8.rst:335
+#: ../doc/reference/reference_lua/utf8.rst:357
+msgid "**Example:**"
+msgstr "**Пример:**"
+
+#: ../doc/reference/reference_lua/utf8.rst:74
+msgid ""
+"tarantool> utf8.casecmp('é','e'),utf8.casecmp('E','e')\n"
+"---\n"
+"- 0\n"
+"- 0\n"
+"..."
+msgstr ""
+"tarantool> utf8.casecmp('é','e'),utf8.casecmp('E','e')\n"
+"---\n"
+"- 0\n"
+"- 0\n"
+"..."
+
+#: ../doc/reference/reference_lua/utf8.rst:86
+msgid "a Unicode code point value, repeatable"
+msgstr "значение кодовой точки в Юникоде, повторяется"
+
+#: ../doc/reference/reference_lua/utf8.rst:87
+msgid "a UTF-8 string"
+msgstr "строка в UTF-8"
+
+#: ../doc/reference/reference_lua/utf8.rst:88
+#: ../doc/reference/reference_lua/utf8.rst:274
+#: ../doc/reference/reference_lua/utf8.rst:326
+#: ../doc/reference/reference_lua/utf8.rst:350
+msgid "string"
+msgstr "строка"
+
+#: ../doc/reference/reference_lua/utf8.rst:90
+msgid ""
+"The code-point number is the value that corresponds to a character in the "
+"`Unicode Character Database <http://www.unicode.org/Public/5.2.0/ucd/"
+"UnicodeData.txt>`_ This is not the same as the byte values of the encoded "
+"character, because the UTF-8 encoding scheme is more complex than a simple "
+"copy of the code-point number."
+msgstr ""
+"Число кодовой точки -- это значение, которое соответствует символу в `Базе "
+"данных символов Юникода <http://www.unicode.org/Public/5.2.0/ucd/UnicodeData."
+"txt>`_ This is not the same as the byte values of the encoded character, "
+"because the UTF-8 encoding scheme is more complex than a simple copy of the "
+"code-point number."
+
+#: ../doc/reference/reference_lua/utf8.rst:97
+msgid ""
+"Another way to construct a string with Unicode characters is with the \\"
+"\\u{hex-digits} escape mechanism, for example '\\\\u{41}\\\\u{42}' and "
+"``utf8.char(65,66)`` both produce the string 'AB'."
+msgstr ""
+"Другой способ создать строку с символами Юникода -- с помощью механизма "
+"экранирования символов \\\\u{шестнадцатеричные-числа}, например, в "
+"результате и '\\\\u{41}\\\\u{42}', и ``utf8.char(65,66)`` получим строку "
+"'AB'."
+
+#: ../doc/reference/reference_lua/utf8.rst:103
+msgid ""
+"tarantool> utf8.char(229)\n"
+"---\n"
+"- å\n"
+"..."
+msgstr ""
+"tarantool> utf8.char(229)\n"
+"---\n"
+"- å\n"
+"..."
+
+#: ../doc/reference/reference_lua/utf8.rst:118
+msgid ""
+"Compare two strings with the Default Unicode Collation Element Table (DUCET) "
+"for the `Unicode Collation Algorithm <http://www.unicode.org/Public/"
+"UCA/10.0.0/allkeys.txt>`_. Thus 'å' is less than 'B', even though the code-"
+"point value of å (229) is greater than the code-point value of B (66), "
+"because the algorithm depends on the values in the Collation Element Table, "
+"not the code values."
+msgstr ""
+"Сравнение двух строк с Таблицей сортировки символов Юникода по умолчанию "
+"(DUCET) для `Алгоритма сортировки по Юникоду (Unicode Collation Algorithm) "
+"<http://www.unicode.org/Public/UCA/10.0.0/allkeys.txt>`_. В результате 'å' "
+"меньше, чем 'B', хотя значение кодовой точки å (229) больше значения кодовой "
+"точки B (66), поскольку алгоритм основывается на значениях Таблица "
+"сортировки символов, а не на значениях кода."
+
+#: ../doc/reference/reference_lua/utf8.rst:125
+msgid ""
+"The comparison is done with at least three weights. Therefore the elements "
+"which affect secondary or later weights (such as \"case\" in Latin or "
+"Cyrillic alphabets, or \"kana differentiation\" in Japanese) are not "
+"ignored. and upper case comes after lower case."
+msgstr ""
+"Сравнение осуществляется на основании не менее трех значений веса. Таким "
+"образом, не учитываются элементы, которые влияют на вторичный или "
+"последующий вес (такие как \"регистр\" в латинице или кириллице, или "
+"\"отличия каны\" в японском языке), а верхний регистр следует за нижним."
+
+#: ../doc/reference/reference_lua/utf8.rst:132
+msgid ""
+"tarantool> utf8.cmp('é','e'),utf8.cmp('E','e')\n"
+"---\n"
+"- 1\n"
+"- 1\n"
+"..."
+msgstr ""
+"tarantool> utf8.cmp('é','e'),utf8.cmp('E','e')\n"
+"---\n"
+"- 1\n"
+"- 1\n"
+"..."
+
+#: ../doc/reference/reference_lua/utf8.rst:144
+#: ../doc/reference/reference_lua/utf8.rst:169
+#: ../doc/reference/reference_lua/utf8.rst:191
+#: ../doc/reference/reference_lua/utf8.rst:213
+msgid ""
+"a single UTF8 character, expressed as a one-byte string or a code point value"
+msgstr ""
+"отдельный символ UTF8, выраженный в виде однобайтной строки или значения "
+"кодовой точки"
+
+#: ../doc/reference/reference_lua/utf8.rst:146
+#: ../doc/reference/reference_lua/utf8.rst:171
+#: ../doc/reference/reference_lua/utf8.rst:193
+#: ../doc/reference/reference_lua/utf8.rst:215
+msgid "true or false"
+msgstr "true (правда) или false (ложь)"
+
+#: ../doc/reference/reference_lua/utf8.rst:147
+#: ../doc/reference/reference_lua/utf8.rst:172
+#: ../doc/reference/reference_lua/utf8.rst:194
+#: ../doc/reference/reference_lua/utf8.rst:216
+msgid "boolean"
+msgstr "boolean (логический)"
+
+#: ../doc/reference/reference_lua/utf8.rst:149
+msgid ""
+"Return true if the input character is an \"alphabetic-like\" character, "
+"otherwise return false. Generally speaking a character will be considered "
+"alphabetic-like provided it is typically used within a word, as opposed to a "
+"digit or punctuation. It does not have to be a character in an alphabet."
+msgstr ""
+"Возврат true (правда), если введенный символ является буквенным, в остальных "
+"случаях -- false (ложь). В целом, символ считается буквенным, если он "
+"используется в рамках слова, а не как число или знак пунктуации. Такой "
+"символ необязательно должен быть буквой алфавита."
+
+#: ../doc/reference/reference_lua/utf8.rst:156
+msgid ""
+"tarantool> utf8.isalpha('Ж'),utf8.isalpha('å'),utf8.isalpha('9')\n"
+"---\n"
+"- true\n"
+"- true\n"
+"- false\n"
+"..."
+msgstr ""
+"tarantool> utf8.isalpha('Ж'),utf8.isalpha('å'),utf8.isalpha('9')\n"
+"---\n"
+"- true\n"
+"- true\n"
+"- false\n"
+"..."
+
+#: ../doc/reference/reference_lua/utf8.rst:174
+msgid "Return true if the input character is a digit, otherwise return false."
+msgstr ""
+"Возврат true (правда), если введенный символ является цифрой, в остальных "
+"случаях -- false (ложь)."
+
+#: ../doc/reference/reference_lua/utf8.rst:178
+msgid ""
+"tarantool> utf8.isdigit('Ж'),utf8.isdigit('å'),utf8.isdigit('9')\n"
+"---\n"
+"- false\n"
+"- false\n"
+"- true\n"
+"..."
+msgstr ""
+"tarantool> utf8.isdigit('Ж'),utf8.isdigit('å'),utf8.isdigit('9')\n"
+"---\n"
+"- false\n"
+"- false\n"
+"- true\n"
+"..."
+
+#: ../doc/reference/reference_lua/utf8.rst:196
+msgid ""
+"Return true if the input character is lower case, otherwise return false."
+msgstr ""
+"Возврат true (правда), если введенный символ относится к нижнему регистру, в "
+"остальных случаях -- false (ложь)."
+
+#: ../doc/reference/reference_lua/utf8.rst:200
+msgid ""
+"tarantool> utf8.islower('Ж'),utf8.islower('å'),utf8.islower('9')\n"
+"---\n"
+"- false\n"
+"- true\n"
+"- false\n"
+"..."
+msgstr ""
+"tarantool> utf8.islower('Ж'),utf8.islower('å'),utf8.islower('9')\n"
+"---\n"
+"- false\n"
+"- true\n"
+"- false\n"
+"..."
+
+#: ../doc/reference/reference_lua/utf8.rst:218
+msgid ""
+"Return true if the input character is upper case, otherwise return false."
+msgstr ""
+"Возврат true (правда), если введенный символ относится к верхнему регистру, "
+"в остальных случаях -- false (ложь)."
+
+#: ../doc/reference/reference_lua/utf8.rst:222
+msgid ""
+"tarantool> utf8.isupper('Ж'),utf8.isupper('å'),utf8.isupper('9')\n"
+"---\n"
+"- true\n"
+"- false\n"
+"- false\n"
+"..."
+msgstr ""
+"tarantool> utf8.isupper('Ж'),utf8.isupper('å'),utf8.isupper('9')\n"
+"---\n"
+"- true\n"
+"- false\n"
+"- false\n"
+"..."
+
+#: ../doc/reference/reference_lua/utf8.rst:236
+msgid "byte position of the first character"
+msgstr "позиция байта первого символа"
+
+#: ../doc/reference/reference_lua/utf8.rst:237
+msgid "byte position where to stop"
+msgstr "позиция байта для остановки"
+
+#: ../doc/reference/reference_lua/utf8.rst:238
+msgid "the number of characters in the string, or between start and end"
+msgstr "количество символов в строке или же от начала до конца"
+
+#: ../doc/reference/reference_lua/utf8.rst:241
+msgid ""
+"Byte positions for start and end can be negative, which indicates "
+"\"calculate from end of string\" rather than \"calculate from start of string"
+"\"."
+msgstr ""
+"Позиции байта в начале и в конце могут быть отрицательными, что указывает на "
+"отсчет с конца строки, а не с начала."
+
+#: ../doc/reference/reference_lua/utf8.rst:244
+msgid ""
+"If the string contains a byte sequence which is not valid in UTF-8, each "
+"byte in the invalid byte sequence will be counted as one character."
+msgstr ""
+"Если строка содержит последовательность байтов, которая неприменима для "
+"UTF-8, каждый байт в неправильной последовательности будет считаться за один "
+"символ."
+
+#: ../doc/reference/reference_lua/utf8.rst:247
+msgid ""
+"UTF-8 is a variable-size encoding scheme. Typically a simple Latin letter "
+"takes one byte, a Cyrillic letter takes two bytes, a Chinese/Japanese "
+"character takes three bytes, and the maximum is four bytes."
+msgstr ""
+"UTF-8 представляет собой схему кодирования изменяемого размера. Как правило, "
+"одна буква латиницы занимает один байт, буква кириллицы занимает два байта, "
+"а символ из китайского или японского языка занимает три байта, максимальный "
+"размер -- четыре байта."
+
+#: ../doc/reference/reference_lua/utf8.rst:254
+msgid ""
+"tarantool> utf8.len('G'),utf8.len('ж')\n"
+"---\n"
+"- 1\n"
+"- 1\n"
+"...\n"
+"\n"
+"tarantool> string.len('G'),string.len('ж')\n"
+"---\n"
+"- 1\n"
+"- 2\n"
+"..."
+msgstr ""
+"tarantool> utf8.len('G'),utf8.len('ж')\n"
+"---\n"
+"- 1\n"
+"- 1\n"
+"...\n"
+"\n"
+"tarantool> string.len('G'),string.len('ж')\n"
+"---\n"
+"- 1\n"
+"- 2\n"
+"..."
+
+#: ../doc/reference/reference_lua/utf8.rst:273
+msgid "the same string, lower case"
+msgstr "та же строка в нижнем регистре"
+
+#: ../doc/reference/reference_lua/utf8.rst:278
+msgid ""
+"tarantool> utf8.lower('ÅΓÞЖABCDEFG')\n"
+"---\n"
+"- åγþжabcdefg\n"
+"..."
+msgstr ""
+"tarantool> utf8.lower('ÅΓÞЖABCDEFG')\n"
+"---\n"
+"- åγþжabcdefg\n"
+"..."
+
+#: ../doc/reference/reference_lua/utf8.rst:290
+msgid "byte position where to start within the string, default is 1"
+msgstr ""
+"позиция байта внутри строки, с которой начать выполнение, по умолчанию = 1"
+
+#: ../doc/reference/reference_lua/utf8.rst:291
+msgid ""
+"byte position of the next character and the code point value of the next "
+"character"
+msgstr ""
+"позиция байта следующего символа и значение кодовой точки следующего символа "
+
+#: ../doc/reference/reference_lua/utf8.rst:292
+msgid "table"
+msgstr "таблица"
+
+#: ../doc/reference/reference_lua/utf8.rst:294
+msgid ""
+"The ``next`` function is often used in a loop to get one character at a time "
+"from a UTF-8 string."
+msgstr ""
+"Функция ``next`` часто используется в цикле для получения символа за раз из "
+"строки в формате UTF-8."
+
+#: ../doc/reference/reference_lua/utf8.rst:299
+msgid ""
+"In the string 'åa' the first character is 'å', it starts at position 1, it "
+"takes two bytes to store so the character after it will be at position 3, "
+"its Unicode code point value is (decimal) 229."
+msgstr ""
+"В строке 'åa' первый символ -- 'å', он начинается в позиции 1, занимает два "
+"байта, поэтому символ после него будет на позиции 3, значение кодовой точки "
+"в Юникоде (десятичное) -- 229."
+
+#: ../doc/reference/reference_lua/utf8.rst:304
+msgid ""
+"tarantool> -- show next-character position + first-character codepoint\n"
+"tarantool> utf8.next('åa', 1)\n"
+"---\n"
+"- 3\n"
+"- 229\n"
+"...\n"
+"tarantool> -- (loop) show codepoint of every character\n"
+"tarantool> for position,codepoint in utf8.next,'åa' do print(codepoint) end\n"
+"229\n"
+"97\n"
+"..."
+msgstr ""
+"tarantool> -- показать позицию следующего символа + кодовую точку первого "
+"символа\n"
+"tarantool> utf8.next('åa', 1)\n"
+"---\n"
+"- 3\n"
+"- 229\n"
+"...\n"
+"tarantool> -- (цикл) показать кодовую точку каждого символа\n"
+"tarantool> for position,codepoint in utf8.next,'åa' do print(codepoint) end\n"
+"229\n"
+"97\n"
+"..."
+
+#: ../doc/reference/reference_lua/utf8.rst:322
+msgid "a string encoded as UTF-8"
+msgstr "строка в формате UTF-8"
+
+#: ../doc/reference/reference_lua/utf8.rst:323
+msgid "the position of the first character"
+msgstr "позиция первого символа"
+
+#: ../doc/reference/reference_lua/utf8.rst:324
+msgid "the position of the last character"
+msgstr "позиция последнего символа"
+
+#: ../doc/reference/reference_lua/utf8.rst:325
+msgid "a UTF-8 string, the \"substring\" of the input value"
+msgstr "строка в формате UTF-8, \"подстрока\" введенного значения"
+
+#: ../doc/reference/reference_lua/utf8.rst:328
+msgid ""
+"Character positions for start and end can be negative, which indicates "
+"\"calculate from end of string\" rather than \"calculate from start of string"
+"\"."
+msgstr ""
+"Позиции символа в начале и в конце могут быть отрицательными, что указывает "
+"на отсчет с конца строки, а не с начала."
+
+#: ../doc/reference/reference_lua/utf8.rst:331
+msgid ""
+"The default value for end-character is the length of the input string. "
+"Therefore, saying ``utf8.sub(1, 'abc')`` will return 'abc', the same as the "
+"input string."
+msgstr ""
+"Значение end-character по умолчанию -- длина введенной строки. Таким "
+"образом, выполнение ``utf8.sub(1, 'abc')`` вернет 'abc', т.е. введенную "
+"строку."
+
+#: ../doc/reference/reference_lua/utf8.rst:337
+msgid ""
+"tarantool> utf8.sub('åγþжabcdefg', 5, 8)\n"
+"---\n"
+"- abcd\n"
+"..."
+msgstr ""
+"tarantool> utf8.sub('åγþжabcdefg', 5, 8)\n"
+"---\n"
+"- abcd\n"
+"..."
+
+#: ../doc/reference/reference_lua/utf8.rst:349
+msgid "the same string, upper case"
+msgstr "та же строка в верхнем регистре"
+
+#: ../doc/reference/reference_lua/utf8.rst:354
+msgid ""
+"In rare cases the upper-case result may be longer than the lower-case input, "
+"for example ``utf8.upper('ß')`` is 'SS'."
+msgstr ""
+"В редких случаях результат в верхнем регистре может быть длиннее введенной "
+"строки в нижнем регистре, например, ``utf8.upper('ß')`` вернет 'SS'."
+
+#: ../doc/reference/reference_lua/utf8.rst:359
+msgid ""
+"tarantool> utf8.upper('åγþжabcdefg')\n"
+"---\n"
+"- ÅΓÞЖABCDEFG\n"
+"..."
+msgstr ""
+"tarantool> utf8.upper('åγþжabcdefg')\n"
+"---\n"
+"- ÅΓÞЖABCDEFG\n"
+"..."

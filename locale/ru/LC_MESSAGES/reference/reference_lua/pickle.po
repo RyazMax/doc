@@ -1,0 +1,379 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: 2019-12-06 16:16+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../doc/reference/reference_lua/pickle.rst:3
+msgid "Module `pickle`"
+msgstr "Модуль `pickle`"
+
+#: ../doc/reference/reference_lua/pickle.rst:7
+msgid "Index"
+msgstr "Указатель"
+
+#: ../doc/reference/reference_lua/pickle.rst:9
+msgid "Below is a list of all ``pickle`` functions."
+msgstr "Ниже приведен перечень всех функций модуля ``pickle``."
+
+#: ../doc/reference/reference_lua/pickle.rst:17
+msgid "Name"
+msgstr "Имя"
+
+#: ../doc/reference/reference_lua/pickle.rst:17
+msgid "Use"
+msgstr "Назначение"
+
+#: ../doc/reference/reference_lua/pickle.rst:19
+msgid ":ref:`pickle.pack() <pickle-pack>`"
+msgstr ":ref:`pickle.pack() <pickle-pack>`"
+
+#: ../doc/reference/reference_lua/pickle.rst:19
+msgid "Convert Lua variables to binary format"
+msgstr "Конвертация Lua-переменных в двоичный формат"
+
+#: ../doc/reference/reference_lua/pickle.rst:22
+msgid ":ref:`pickle.unpack() <pickle-unpack>`"
+msgstr ":ref:`pickle.unpack() <pickle-unpack>`"
+
+#: ../doc/reference/reference_lua/pickle.rst:22
+msgid "Convert Lua variables back from binary format"
+msgstr "Конвертация Lua-переменных в двоичный формат"
+
+#: ../doc/reference/reference_lua/pickle.rst:32
+msgid ""
+"To use Tarantool binary protocol primitives from Lua, it's necessary to "
+"convert Lua variables to binary format. The ``pickle.pack()`` helper "
+"function is prototyped after Perl 'pack_'."
+msgstr ""
+"Чтобы использовать примитивы бинарного протокола Tarantool'а из Lua, "
+"необходимо конвертировать Lua-переменные в двоичный формат. Прототипом "
+"вспомогательной функции ``pickle.pack()`` выступила функция 'pack_' из Perl."
+
+#: ../doc/reference/reference_lua/pickle.rst:38
+msgid "**Format specifiers**"
+msgstr "**Спецификаторы формата**"
+
+#: ../doc/reference/reference_lua/pickle.rst:43
+msgid "b, B"
+msgstr "b, B"
+
+#: ../doc/reference/reference_lua/pickle.rst:43
+msgid ""
+"converts Lua scalar value to a 1-byte integer, and stores the integer in the "
+"resulting string"
+msgstr ""
+"конвертирует скалярное Lua-значение в 1-байтное целое число и хранит целое "
+"число в полученной строке"
+
+#: ../doc/reference/reference_lua/pickle.rst:46
+msgid "s, S"
+msgstr "s, S"
+
+#: ../doc/reference/reference_lua/pickle.rst:46
+msgid ""
+"converts Lua scalar value to a 2-byte integer, and stores the integer in the "
+"resulting string, low byte first"
+msgstr ""
+"конвертирует скалярное Lua-значение в 2-байтное целое число и хранит целое "
+"число в полученной строке, сначала младший байт"
+
+#: ../doc/reference/reference_lua/pickle.rst:50
+msgid "i, I"
+msgstr "i, I"
+
+#: ../doc/reference/reference_lua/pickle.rst:50
+msgid ""
+"converts Lua scalar value to a 4-byte integer, and stores the integer in the "
+"resulting string, low byte first"
+msgstr ""
+"конвертирует скалярное Lua-значение в 4-байтное целое число и хранит целое "
+"число в полученной строке, сначала младший байт"
+
+#: ../doc/reference/reference_lua/pickle.rst:54
+msgid "l, L"
+msgstr "l, L"
+
+#: ../doc/reference/reference_lua/pickle.rst:54
+msgid ""
+"converts Lua scalar value to an 8-byte integer, and stores the integer in "
+"the resulting string, low byte first"
+msgstr ""
+"конвертирует скалярное Lua-значение в 8-байтное целое число и хранит целое "
+"число в полученной строке, сначала младший байт"
+
+#: ../doc/reference/reference_lua/pickle.rst:58
+msgid "n"
+msgstr "n"
+
+#: ../doc/reference/reference_lua/pickle.rst:58
+msgid ""
+"converts Lua scalar value to a 2-byte integer, and stores the integer in the "
+"resulting string, big endian,"
+msgstr ""
+"конвертирует скалярное Lua-значение в 2-байтное целое число и хранит целое "
+"число в полученной строке, порядок от старшего к младшему,"
+
+#: ../doc/reference/reference_lua/pickle.rst:62
+msgid "N"
+msgstr "N"
+
+#: ../doc/reference/reference_lua/pickle.rst:62
+msgid ""
+"converts Lua scalar value to a 4-byte integer, and stores the integer in the "
+"resulting string, big"
+msgstr ""
+"конвертирует скалярное Lua-значение в 4-байтное целое число и хранит целое "
+"число в полученной строке, порядок от старшего к младшему,"
+
+#: ../doc/reference/reference_lua/pickle.rst:65
+msgid "q, Q"
+msgstr "q, Q"
+
+#: ../doc/reference/reference_lua/pickle.rst:65
+msgid ""
+"converts Lua scalar value to an 8-byte integer, and stores the integer in "
+"the resulting string, big endian,"
+msgstr ""
+"конвертирует скалярное Lua-значение в 8-байтное целое число и хранит целое "
+"число в полученной строке, порядок от старшего к младшему,"
+
+#: ../doc/reference/reference_lua/pickle.rst:69
+msgid "f"
+msgstr "f"
+
+#: ../doc/reference/reference_lua/pickle.rst:69
+msgid ""
+"converts Lua scalar value to a 4-byte float, and stores the float in the "
+"resulting string"
+msgstr ""
+"конвертирует скалярное Lua-значение в 4-байтное число с плавающей запятой и "
+"хранит число с плавающей запятой в полученной строке"
+
+#: ../doc/reference/reference_lua/pickle.rst:72
+msgid "d"
+msgstr "d"
+
+#: ../doc/reference/reference_lua/pickle.rst:72
+msgid ""
+"converts Lua scalar value to a 8-byte double, and stores the double in the "
+"resulting string"
+msgstr ""
+"конвертирует скалярное Lua-значение в 8-байтное число двойной точности и "
+"хранит число двойной точности в полученной строке"
+
+#: ../doc/reference/reference_lua/pickle.rst:75
+msgid "a, A"
+msgstr "a, A"
+
+#: ../doc/reference/reference_lua/pickle.rst:75
+msgid ""
+"converts Lua scalar value to a sequence of bytes, and stores the sequence in "
+"the resulting string"
+msgstr ""
+"конвертирует скалярное Lua-значение в последовательность байтов и хранит "
+"последовательность в полученной строке"
+
+#: ../doc/reference/reference_lua/pickle.rst:0
+msgid "Parameters"
+msgstr "Параметры"
+
+#: ../doc/reference/reference_lua/pickle.rst:79
+msgid "string containing format specifiers"
+msgstr "строка со спецификаторами формата"
+
+#: ../doc/reference/reference_lua/pickle.rst:80
+msgid "scalar values to be formatted"
+msgstr "скалярные значения к форматированию"
+
+#: ../doc/reference/reference_lua/pickle.rst:0
+msgid "return"
+msgstr "возвращает"
+
+#: ../doc/reference/reference_lua/pickle.rst:81
+msgid ""
+"a binary string containing all arguments, packed according to the format "
+"specifiers."
+msgstr ""
+"бинарная строка, которая содержит все аргументы, упакованные в соответствии "
+"со спецификаторами формата."
+
+#: ../doc/reference/reference_lua/pickle.rst:0
+msgid "rtype"
+msgstr "тип возвращаемого значения"
+
+#: ../doc/reference/reference_lua/pickle.rst:83
+msgid "string"
+msgstr "строка"
+
+#: ../doc/reference/reference_lua/pickle.rst:85
+msgid ""
+"A scalar value can be either a variable or a literal. Remember that large "
+"integers should be entered with :ref:`tonumber64() or LL or ULL suffixes "
+"<index-box_number>`."
+msgstr ""
+"Скалярное значение может быть либо переменной, либо литеральным значением. "
+"Следует помнить, что большие целые числа нужно вводить с :ref:`tonumber64() "
+"или суффиксами LL или ULL <index-box_number>`."
+
+#: ../doc/reference/reference_lua/pickle.rst:89
+msgid "Possible errors: unknown format specifier."
+msgstr "Возможные ошибки: неизвестный спецификатор формата."
+
+#: ../doc/reference/reference_lua/pickle.rst:91
+#: ../doc/reference/reference_lua/pickle.rst:138
+msgid "**Example:**"
+msgstr "**Пример:**"
+
+#: ../doc/reference/reference_lua/pickle.rst:93
+msgid ""
+"tarantool> pickle = require('pickle')\n"
+"---\n"
+"...\n"
+"tarantool> box.space.tester:insert{0, 'hello world'}\n"
+"---\n"
+"- [0, 'hello world']\n"
+"...\n"
+"tarantool> box.space.tester:update({0}, {{'=', 2, 'bye world'}})\n"
+"---\n"
+"- [0, 'bye world']\n"
+"...\n"
+"tarantool> box.space.tester:update({0}, {\n"
+"         >   {'=', 2, pickle.pack('iiA', 0, 3, 'hello')}\n"
+"         > })\n"
+"---\n"
+"- [0, \"\\0\\0\\0\\0\\x03\\0\\0\\0hello\"]\n"
+"...\n"
+"tarantool> box.space.tester:update({0}, {{'=', 2, 4}})\n"
+"---\n"
+"- [0, 4]\n"
+"...\n"
+"tarantool> box.space.tester:update({0}, {{'+', 2, 4}})\n"
+"---\n"
+"- [0, 8]\n"
+"...\n"
+"tarantool> box.space.tester:update({0}, {{'^', 2, 4}})\n"
+"---\n"
+"- [0, 12]\n"
+"..."
+msgstr ""
+"tarantool> pickle = require('pickle')\n"
+"---\n"
+"...\n"
+"tarantool> box.space.tester:insert{0, 'hello world'}\n"
+"---\n"
+"- [0, 'hello world']\n"
+"...\n"
+"tarantool> box.space.tester:update({0}, {{'=', 2, 'bye world'}})\n"
+"---\n"
+"- [0, 'bye world']\n"
+"...\n"
+"tarantool> box.space.tester:update({0}, {\n"
+"         >   {'=', 2, pickle.pack('iiA', 0, 3, 'hello')}\n"
+"         > })\n"
+"---\n"
+"- [0, \"\\0\\0\\0\\0\\x03\\0\\0\\0hello\"]\n"
+"...\n"
+"tarantool> box.space.tester:update({0}, {{'=', 2, 4}})\n"
+"---\n"
+"- [0, 4]\n"
+"...\n"
+"tarantool> box.space.tester:update({0}, {{'+', 2, 4}})\n"
+"---\n"
+"- [0, 8]\n"
+"...\n"
+"tarantool> box.space.tester:update({0}, {{'^', 2, 4}})\n"
+"---\n"
+"- [0, 12]\n"
+"..."
+
+#: ../doc/reference/reference_lua/pickle.rst:129
+msgid ""
+"Counterpart to ``pickle.pack()``. Warning: if format specifier 'A' is used, "
+"it must be the last item."
+msgstr ""
+"Противоположность ``pickle.pack()``. Внимание: если используется "
+"спецификатор формата 'A', он должен идти последним."
+
+#: ../doc/reference/reference_lua/pickle.rst:135
+msgid "A list of strings or numbers."
+msgstr "Список строк или чисел."
+
+#: ../doc/reference/reference_lua/pickle.rst:136
+msgid "table"
+msgstr "таблица"
+
+#: ../doc/reference/reference_lua/pickle.rst:140
+msgid ""
+"tarantool> pickle = require('pickle')\n"
+"---\n"
+"...\n"
+"tarantool> tuple = box.space.tester:replace{0}\n"
+"---\n"
+"...\n"
+"tarantool> string.len(tuple[1])\n"
+"---\n"
+"- 1\n"
+"...\n"
+"tarantool> pickle.unpack('b', tuple[1])\n"
+"---\n"
+"- 48\n"
+"...\n"
+"tarantool> pickle.unpack('bsi', pickle.pack('bsi', 255, 65535, 4294967295))\n"
+"---\n"
+"- 255\n"
+"- 65535\n"
+"- 4294967295\n"
+"...\n"
+"tarantool> pickle.unpack('ls', pickle.pack('ls', "
+"tonumber64('18446744073709551615'), 65535))\n"
+"---\n"
+"...\n"
+"tarantool> num, num64, str = pickle.unpack('slA', pickle.pack('slA', 666,\n"
+"         > tonumber64('666666666666666'), 'string'))\n"
+"---\n"
+"..."
+msgstr ""
+"tarantool> pickle = require('pickle')\n"
+"---\n"
+"...\n"
+"tarantool> tuple = box.space.tester:replace{0}\n"
+"---\n"
+"...\n"
+"tarantool> string.len(tuple[1])\n"
+"---\n"
+"- 1\n"
+"...\n"
+"tarantool> pickle.unpack('b', tuple[1])\n"
+"---\n"
+"- 48\n"
+"...\n"
+"tarantool> pickle.unpack('bsi', pickle.pack('bsi', 255, 65535, 4294967295))\n"
+"---\n"
+"- 255\n"
+"- 65535\n"
+"- 4294967295\n"
+"...\n"
+"tarantool> pickle.unpack('ls', pickle.pack('ls', "
+"tonumber64('18446744073709551615'), 65535))\n"
+"---\n"
+"...\n"
+"tarantool> num, num64, str = pickle.unpack('slA', pickle.pack('slA', 666,\n"
+"         > tonumber64('666666666666666'), 'string'))\n"
+"---\n"
+"..."

@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../doc/reference/reference_lua/yaml.rst:5
+msgid "Module `yaml`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:9
+msgid "Overview"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:11
+msgid ""
+"The ``yaml`` module takes strings in YAML_ format and decodes them, or "
+"takes a series of non-YAML values and encodes them."
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:16
+msgid "Index"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:18
+msgid "Below is a list of all ``yaml`` functions and members."
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:26
+msgid "Name"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:26
+msgid "Use"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:28
+msgid ":ref:`yaml.encode() <yaml-encode>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:28
+msgid "Convert a Lua object to a YAML string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:31
+msgid ":ref:`yaml.decode() <yaml-decode>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:31
+msgid "Convert a YAML string to a Lua object"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:34
+msgid ":ref:`yaml.NULL <yaml-null>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:34
+msgid "Analog of Lua's \"nil\""
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:44
+msgid "Convert a Lua object to a YAML string."
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst
+msgid "Parameters"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:46
+msgid "either a scalar value or a Lua table value."
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst
+msgid "return"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:47
+msgid "the original value reformatted as a YAML string."
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst
+msgid "rtype"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:48
+msgid "string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:54
+msgid "Convert a YAML string to a Lua object."
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:56
+msgid "a string formatted as YAML."
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:57
+msgid "the original contents formatted as a Lua table."
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:58
+msgid "table"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:64
+msgid ""
+"A value comparable to Lua \"nil\" which may be useful as a placeholder in"
+" a tuple."
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:68
+msgid "Example"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:70
+msgid ""
+"tarantool> yaml = require('yaml')\n"
+"---\n"
+"...\n"
+"tarantool> y = yaml.encode({'a', 1, 'b', 2})\n"
+"---\n"
+"...\n"
+"tarantool> z = yaml.decode(y)\n"
+"---\n"
+"...\n"
+"tarantool> z[1], z[2], z[3], z[4]\n"
+"---\n"
+"- a\n"
+"- 1\n"
+"- b\n"
+"- 2\n"
+"...\n"
+"tarantool> if yaml.NULL == nil then print('hi') end\n"
+"hi\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:93
+msgid ""
+"The `YAML collection style <http://yaml.org/spec/1.1/#id930798>`_ can be "
+"specified with ``__serialize``:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:96
+msgid "``__serialize=\"sequence\"`` for a Block Sequence array,"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:97
+msgid "``__serialize=\"seq\"`` for a Flow Sequence array,"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:98
+msgid "``__serialize=\"mapping\"`` for a Block Mapping map,"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:99
+msgid "``__serialize=\"map\"`` for a Flow Mapping map."
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:101
+msgid ""
+"Serializing 'A' and 'B' with different ``__serialize`` values causes "
+"different results:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:104
+msgid ""
+"tarantool> yaml = require('yaml')\n"
+"---\n"
+"...\n"
+"tarantool> yaml.encode(setmetatable({'A', 'B'}, { "
+"__serialize=\"sequence\"}))\n"
+"---\n"
+"- |\n"
+"  ---\n"
+"  - A\n"
+"  - B\n"
+"  ...\n"
+"...\n"
+"tarantool> yaml.encode(setmetatable({'A', 'B'}, { __serialize=\"seq\"}))\n"
+"---\n"
+"- |\n"
+"  ---\n"
+"  ['A', 'B']\n"
+"  ...\n"
+"...\n"
+"tarantool> yaml.encode({setmetatable({f1 = 'A', f2 = 'B'}, { "
+"__serialize=\"map\"})})\n"
+"---\n"
+"- |\n"
+"  ---\n"
+"  - {'f2': 'B', 'f1': 'A'}\n"
+"  ...\n"
+"...\n"
+"tarantool> yaml.encode({setmetatable({f1 = 'A', f2 = 'B'}, { "
+"__serialize=\"mapping\"})})\n"
+"---\n"
+"- |\n"
+"  ---\n"
+"  - f2: B\n"
+"    f1: A\n"
+"  ...\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/yaml.rst:140
+msgid ""
+"Also, some YAML configuration settings for encoding can be changed, in "
+"the same way that they can be changed for :ref:`JSON <json-module_cfg>`."
+msgstr ""
+

@@ -1,0 +1,3271 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../doc/reference/reference_sql/sql.rst:3
+msgid "SQL statements and clauses"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:9
+msgid "ALTER TABLE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:11
+#: ../doc/reference/reference_sql/sql.rst:96
+#: ../doc/reference/reference_sql/sql.rst:178
+#: ../doc/reference/reference_sql/sql.rst:510
+#: ../doc/reference/reference_sql/sql.rst:559
+#: ../doc/reference/reference_sql/sql.rst:614
+#: ../doc/reference/reference_sql/sql.rst:656
+#: ../doc/reference/reference_sql/sql.rst:732
+#: ../doc/reference/reference_sql/sql.rst:771
+#: ../doc/reference/reference_sql/sql.rst:843
+#: ../doc/reference/reference_sql/sql.rst:921
+#: ../doc/reference/reference_sql/sql.rst:971
+#: ../doc/reference/reference_sql/sql.rst:1015
+#: ../doc/reference/reference_sql/sql.rst:1350
+#: ../doc/reference/reference_sql/sql.rst:1389
+#: ../doc/reference/reference_sql/sql.rst:1435
+#: ../doc/reference/reference_sql/sql.rst:1461
+#: ../doc/reference/reference_sql/sql.rst:1524
+#: ../doc/reference/reference_sql/sql.rst:1579
+#: ../doc/reference/reference_sql/sql.rst:1619
+#: ../doc/reference/reference_sql/sql.rst:1704
+#: ../doc/reference/reference_sql/sql.rst:1787
+#: ../doc/reference/reference_sql/sql.rst:1840
+#: ../doc/reference/reference_sql/sql.rst:1938
+#: ../doc/reference/reference_sql/sql.rst:1989
+#: ../doc/reference/reference_sql/sql.rst:2024
+#: ../doc/reference/reference_sql/sql.rst:2084
+#: ../doc/reference/reference_sql/sql.rst:2229
+#: ../doc/reference/reference_sql/sql.rst:2314
+#: ../doc/reference/reference_sql/sql.rst:2379
+#: ../doc/reference/reference_sql/sql.rst:2448
+#: ../doc/reference/reference_sql/sql.rst:2477
+#: ../doc/reference/reference_sql/sql.rst:2507
+#: ../doc/reference/reference_sql/sql.rst:2536
+#: ../doc/reference/reference_sql/sql.rst:2590
+#: ../doc/reference/reference_sql/sql.rst:2604
+#: ../doc/reference/reference_sql/sql.rst:2637
+#: ../doc/reference/reference_sql/sql.rst:2653
+#: ../doc/reference/reference_sql/sql.rst:2677
+#: ../doc/reference/reference_sql/sql.rst:2695
+#: ../doc/reference/reference_sql/sql.rst:2721
+#: ../doc/reference/reference_sql/sql.rst:2736
+#: ../doc/reference/reference_sql/sql.rst:2754
+#: ../doc/reference/reference_sql/sql.rst:2776
+#: ../doc/reference/reference_sql/sql.rst:2795
+#: ../doc/reference/reference_sql/sql.rst:2815
+#: ../doc/reference/reference_sql/sql.rst:2831
+#: ../doc/reference/reference_sql/sql.rst:2846
+msgid "Syntax:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:13
+msgid ":samp:`ALTER TABLE {table-name} RENAME TO {new-table-name};`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:14
+msgid ":samp:`ALTER TABLE {table-name} ADD CONSTRAINT {constraint-name} {constraint-definition};`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:15
+msgid ":samp:`ALTER TABLE {table-name} DROP CONSTRAINT {constraint-name};`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:17
+#: ../doc/reference/reference_sql/sql.rst:22
+#: ../doc/reference/reference_sql/sql.rst:100
+#: ../doc/reference/reference_sql/sql.rst:105
+#: ../doc/reference/reference_sql/sql.rst:198
+#: ../doc/reference/reference_sql/sql.rst:514
+#: ../doc/reference/reference_sql/sql.rst:519
+#: ../doc/reference/reference_sql/sql.rst:563
+#: ../doc/reference/reference_sql/sql.rst:568
+#: ../doc/reference/reference_sql/sql.rst:618
+#: ../doc/reference/reference_sql/sql.rst:623
+#: ../doc/reference/reference_sql/sql.rst:660
+#: ../doc/reference/reference_sql/sql.rst:665
+#: ../doc/reference/reference_sql/sql.rst:736
+#: ../doc/reference/reference_sql/sql.rst:741
+#: ../doc/reference/reference_sql/sql.rst:777
+#: ../doc/reference/reference_sql/sql.rst:782
+#: ../doc/reference/reference_sql/sql.rst:849
+#: ../doc/reference/reference_sql/sql.rst:854
+#: ../doc/reference/reference_sql/sql.rst:925
+#: ../doc/reference/reference_sql/sql.rst:930
+#: ../doc/reference/reference_sql/sql.rst:977
+#: ../doc/reference/reference_sql/sql.rst:982
+#: ../doc/reference/reference_sql/sql.rst:1027
+#: ../doc/reference/reference_sql/sql.rst:1032
+#: ../doc/reference/reference_sql/sql.rst:1354
+#: ../doc/reference/reference_sql/sql.rst:1359
+#: ../doc/reference/reference_sql/sql.rst:1393
+#: ../doc/reference/reference_sql/sql.rst:1398
+#: ../doc/reference/reference_sql/sql.rst:1444
+#: ../doc/reference/reference_sql/sql.rst:1449
+#: ../doc/reference/reference_sql/sql.rst:1466
+#: ../doc/reference/reference_sql/sql.rst:1471
+#: ../doc/reference/reference_sql/sql.rst:1528
+#: ../doc/reference/reference_sql/sql.rst:1533
+#: ../doc/reference/reference_sql/sql.rst:1583
+#: ../doc/reference/reference_sql/sql.rst:1588
+#: ../doc/reference/reference_sql/sql.rst:1623
+#: ../doc/reference/reference_sql/sql.rst:1628
+#: ../doc/reference/reference_sql/sql.rst:1791
+#: ../doc/reference/reference_sql/sql.rst:1796
+#: ../doc/reference/reference_sql/sql.rst:1844
+#: ../doc/reference/reference_sql/sql.rst:1849
+#: ../doc/reference/reference_sql/sql.rst:1948
+#: ../doc/reference/reference_sql/sql.rst:1953
+#: ../doc/reference/reference_sql/sql.rst:1993
+#: ../doc/reference/reference_sql/sql.rst:1998
+#: ../doc/reference/reference_sql/sql.rst:2090
+#: ../doc/reference/reference_sql/sql.rst:2095
+#: ../doc/reference/reference_sql/sql.rst:2160
+#: ../doc/reference/reference_sql/sql.rst:2165
+#: ../doc/reference/reference_sql/sql.rst:2235
+#: ../doc/reference/reference_sql/sql.rst:2240
+#: ../doc/reference/reference_sql/sql.rst:2245
+#: ../doc/reference/reference_sql/sql.rst:2250
+#: ../doc/reference/reference_sql/sql.rst:2318
+#: ../doc/reference/reference_sql/sql.rst:2323
+#: ../doc/reference/reference_sql/sql.rst:2383
+#: ../doc/reference/reference_sql/sql.rst:2388
+#: ../doc/reference/reference_sql/sql.rst:2452
+#: ../doc/reference/reference_sql/sql.rst:2457
+#: ../doc/reference/reference_sql/sql.rst:2481
+#: ../doc/reference/reference_sql/sql.rst:2486
+#: ../doc/reference/reference_sql/sql.rst:2511
+#: ../doc/reference/reference_sql/sql.rst:2516
+#: ../doc/reference/reference_sql/sql.rst:2540
+#: ../doc/reference/reference_sql/sql.rst:2545
+msgid "|br|"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:24
+msgid "ALTER is used to change a table's name or to add new constraints or to drop old constraints."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:27
+#: ../doc/reference/reference_sql/sql.rst:144
+#: ../doc/reference/reference_sql/sql.rst:542
+#: ../doc/reference/reference_sql/sql.rst:594
+#: ../doc/reference/reference_sql/sql.rst:639
+#: ../doc/reference/reference_sql/sql.rst:712
+#: ../doc/reference/reference_sql/sql.rst:821
+#: ../doc/reference/reference_sql/sql.rst:885
+#: ../doc/reference/reference_sql/sql.rst:956
+#: ../doc/reference/reference_sql/sql.rst:992
+#: ../doc/reference/reference_sql/sql.rst:1065
+#: ../doc/reference/reference_sql/sql.rst:1374
+#: ../doc/reference/reference_sql/sql.rst:1503
+#: ../doc/reference/reference_sql/sql.rst:1560
+#: ../doc/reference/reference_sql/sql.rst:1604
+#: ../doc/reference/reference_sql/sql.rst:1681
+#: ../doc/reference/reference_sql/sql.rst:1817
+#: ../doc/reference/reference_sql/sql.rst:1901
+#: ../doc/reference/reference_sql/sql.rst:1965
+#: ../doc/reference/reference_sql/sql.rst:2007
+#: ../doc/reference/reference_sql/sql.rst:2126
+#: ../doc/reference/reference_sql/sql.rst:2559
+#: ../doc/reference/reference_sql/sql.rst:2666
+#: ../doc/reference/reference_sql/sql.rst:2708
+#: ../doc/reference/reference_sql/sql.rst:2743
+msgid "Examples:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:29
+msgid "-- renaming a table:\n"
+"ALTER TABLE t1 RENAME TO t2;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:34
+msgid "For ``ALTER ... RENAME``, the *old-table* must exist, the *new-table* must not exist."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:37
+msgid "-- adding a foreign-key constraint definition:\n"
+"ALTER TABLE t1 ADD CONSTRAINT c FOREIGN KEY (s1) REFERENCES t1;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:42
+msgid "For ``ALTER ... ADD CONSTRAINT``, the table must exist, table must be empty, the constraint name must not already exist for the table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:45
+msgid "It is not possible to say ``CREATE TABLE table_a ... REFERENCES table_b ...`` if table ``b`` does not exist yet. This is a situation where ``ALTER TABLE`` is handy -- users can ``CREATE TABLE table_a`` without the foreign key, then ``CREATE TABLE table_b``, then ``ALTER TABLE table_a ... REFERENCES table_b ...``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:50
+msgid "-- adding a primary-key constraint definition:\n"
+"-- This is unusual because primary keys are created automatically\n"
+"-- and it is illegal to have two primary keys for the same table.\n"
+"-- However, it is possible to drop a primary-key index, and this\n"
+"-- is a way to restore the primary key if that happens.\n"
+"ALTER TABLE t1 ADD CONSTRAINT primary_key PRIMARY KEY (s1);\n"
+"\n"
+"-- adding a unique-constraint definition:\n"
+"-- Alternatively, you can say CREATE UNIQUE INDEX unique_key ON t1 (s1);\n"
+"ALTER TABLE t1 ADD CONSTRAINT unique_key UNIQUE (s1);\n"
+"\n"
+"-- Adding a check-constraint definition:\n"
+"ALTER TABLE t1 ADD CONSTRAINT check_ CHECK (s1 > 0);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:68
+msgid "For ``ALTER ... DROP CONSTRAINT``, it is only legal to drop a named constraint, and Tarantool only looks for names of foreign-key constraints. (Tarantool generates the constraint names automatically if the user does not provide them.)"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:72
+msgid "To remove a unique constraint, use DROP INDEX, which will drop the constraint as well."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:75
+msgid "-- dropping a constraint:\n"
+"ALTER TABLE t1 DROP CONSTRAINT c;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:81
+#: ../doc/reference/reference_sql/sql.rst:164
+#: ../doc/reference/reference_sql/sql.rst:603
+#: ../doc/reference/reference_sql/sql.rst:1330
+#: ../doc/reference/reference_sql/sql.rst:1690
+#: ../doc/reference/reference_sql/sql.rst:1830
+#: ../doc/reference/reference_sql/sql.rst:1926
+#: ../doc/reference/reference_sql/sql.rst:1976
+#: ../doc/reference/reference_sql/sql.rst:2289
+msgid "Limitations:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:83
+msgid "It is not possible to add or drop a column."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:84
+msgid "It is not possible to modify NOT NULL constraints or column properties DEFAULT and data type. However, it is possible to modify them with Tarantool/NOSQL, for example by calling :ref:`space_object:format() <box_space-format>` with a different ``is_nullable`` value."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:94
+msgid "CREATE TABLE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:98
+msgid ":samp:`CREATE TABLE [IF NOT EXISTS] {table-name} ((column-definition or table-constraint list);`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:107
+msgid "Create a new base table, usually called a \"table\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:111
+msgid "A table is a *base table* if it is created with CREATE TABLE and contains data in persistent storage."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:114
+msgid "A table is a *viewed table*, or just \"view\", if it is created with CREATE VIEW and gets its data from other views or from base tables."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:117
+msgid "The *table-name* must be an identifier which is valid according to the rules for identifiers, and must not be the name of an already existing base table or view."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:120
+msgid "The *column-definition* or *table-constraint* list is a comma-separated list of column definitions or table constraints."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:123
+msgid "A *table-element-list* must be a comma-separated list of table elements; each table element may be either a column definition or a table constraint definition."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:127
+#: ../doc/reference/reference_sql/sql.rst:526
+#: ../doc/reference/reference_sql/sql.rst:580
+#: ../doc/reference/reference_sql/sql.rst:676
+#: ../doc/reference/reference_sql/sql.rst:794
+#: ../doc/reference/reference_sql/sql.rst:866
+#: ../doc/reference/reference_sql/sql.rst:940
+#: ../doc/reference/reference_sql/sql.rst:1042
+#: ../doc/reference/reference_sql/sql.rst:1405
+msgid "Rules:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:129
+msgid "A primary key is necessary; it can be specified with a table constraint ``PRIMARY KEY``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:131
+msgid "There must be at least one column."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:132
+msgid "When ``IF NOT EXISTS`` is specified, and there is already a table with the same name, the statement is ignored."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:135
+#: ../doc/reference/reference_sql/sql.rst:534
+#: ../doc/reference/reference_sql/sql.rst:587
+#: ../doc/reference/reference_sql/sql.rst:632
+#: ../doc/reference/reference_sql/sql.rst:683
+#: ../doc/reference/reference_sql/sql.rst:751
+#: ../doc/reference/reference_sql/sql.rst:809
+#: ../doc/reference/reference_sql/sql.rst:875
+#: ../doc/reference/reference_sql/sql.rst:946
+#: ../doc/reference/reference_sql/sql.rst:1059
+#: ../doc/reference/reference_sql/sql.rst:1368
+#: ../doc/reference/reference_sql/sql.rst:1412
+msgid "Actions:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:137
+msgid "Tarantool evaluates each column definition and *table-constraint*, and returns an error if any of the rules is violated."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:139
+msgid "Tarantool makes a new definition in the schema."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:140
+msgid "Tarantool makes new indexes for ``PRIMARY KEY`` or ``UNIQUE`` constraints. A unique index name is created automatically."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:142
+msgid "Tarantool effectively executes a ``COMMIT`` statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:146
+msgid "-- the simplest form, with one column and one constraint:\n"
+"CREATE TABLE t1 (s1 INTEGER, PRIMARY KEY (s1));\n"
+"\n"
+"-- you can see the effect of the statement by querying\n"
+"-- Tarantool system spaces:\n"
+"SELECT * FROM \"_space\" WHERE \"name\" = 'T1';\n"
+"SELECT * FROM \"_index\" JOIN \"_space\" ON \"_index\".\"id\" = \"_space\".\"id\"\n"
+"         WHERE \"_space\".\"name\" = 'T1';\n"
+"\n"
+"-- variation of the simplest form, with delimited identifiers\n"
+"-- and an inline comment:\n"
+"CREATE TABLE \"T1\" (\"S1\" INT /* synonym of INTEGER */, PRIMARY KEY (\"S1\"));\n"
+"\n"
+"-- two columns, one named constraint\n"
+"CREATE TABLE t1 (s1 INTEGER, s2 STRING, CONSTRAINT c1 PRIMARY KEY (s1, s2));"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:166
+msgid "The maximum number of columns is 2000."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:167
+msgid "The maximum length of a row depends on the :ref:`memtx_max_tuple_size <cfg_storage-memtx_max_tuple_size>` or :ref:`vinyl_max_tuple_size  <cfg_storage-memtx_max_tuple_size>` configuration option."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:176
+msgid "Column definition"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:180
+msgid ":samp:`column-name data-type [, column-constraint]`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:182
+msgid "Define a column, which is a table-element used in a CREATE TABLE statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:184
+msgid "The ``column-name`` must be an identifier which is valid according to the rules for identifiers."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:187
+msgid "Each ``column-name`` must be unique within a table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:193
+msgid "Column definition -- data type"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:200
+msgid "Every operand has a data type."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:202
+msgid "For literals, the data type is usually determined by the format."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:204
+msgid "For identifiers, the data type is usually determined by the definition."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:206
+msgid "The usual determination may change because of context or because of explicit casting."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:208
+msgid "For some SQL data type names there are *aliases*. An alias may be used for data definition. For example VARCHAR(5) and TEXT are aliases of STRING and may appear in `CREATE TABLE table_name (column_name VARCHAR(5) PRIMARY KEY);` but Tarantool, if asked, will report that the data type of `column_name` is STRING."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:214
+msgid "For every SQL data type there is a corresponding NoSQL type, for example an SQL STRING is stored in a NoSQL space as type = 'string'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:217
+msgid "To avoid confusion in this manual, all references to SQL data type names are in upper case and all similar words which refer to NoSQL types or to other kinds of object are in lower case, for example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:221
+msgid "STRING is a data type name, but string is a general term;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:222
+msgid "NUMBER is a data type name, but number is a general term."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:224
+msgid "Although it is common to say that a VARBINARY value is a \"binary string\", this manual will not use that term and will instead say \"byte sequence\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:227
+msgid "Here are all the SQL data types, their corresponding NoSQL types, their aliases, and minimum / maximum literal examples."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:232
+#: ../doc/reference/reference_sql/sql.rst:420
+msgid "**Data types**"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:240
+msgid "SQL type"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:240
+msgid "NoSQL type"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:240
+msgid "Aliases"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:240
+msgid "Minimum"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:240
+msgid "Maximum"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:242
+msgid "BOOLEAN"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:242
+msgid "boolean"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:242
+msgid "BOOL"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:242
+#: ../doc/reference/reference_sql/sql.rst:255
+msgid "FALSE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:242
+msgid "TRUE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:244
+msgid "INTEGER"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:244
+msgid "integer"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:244
+msgid "INT"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:244
+msgid "-9223372036854775808"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:244
+#: ../doc/reference/reference_sql/sql.rst:246
+msgid "18446744073709551615"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:246
+msgid "UNSIGNED"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:246
+msgid "unsigned"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:246
+#: ../doc/reference/reference_sql/sql.rst:248
+#: ../doc/reference/reference_sql/sql.rst:253
+#: ../doc/reference/reference_sql/sql.rst:255
+msgid "(none)"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:246
+msgid "0"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:248
+msgid "NUMBER"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:248
+msgid "number"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:248
+msgid "-1.79769e308"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:248
+msgid "1.79769e308"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:250
+msgid "STRING"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:250
+msgid "string"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:250
+msgid "TEXT, VARCHAR(n)"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:250
+msgid "''"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:250
+msgid "'many-characters'"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:253
+msgid "VARBINARY"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:253
+msgid "varbinary"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:253
+msgid "X''"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:253
+msgid "'X'many-hex-digits'"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:255
+msgid "SCALAR"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:255
+msgid "scalar"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:255
+msgid "X'many-hex-digits'"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:258
+msgid "BOOLEAN values are FALSE, TRUE, and UNKNOWN (which is the same as NULL). FALSE is less than TRUE."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:261
+msgid "INTEGER values are numbers that do not contain decimal points and are not expressed with exponential notation. The range of possible values is between -2^63 and +2^64, or NULL."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:265
+msgid "UNSIGNED values are numbers that do not contain decimal points and are not expressed with exponential notation. The range of possible values is between 0 and +2^64, or NULL."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:269
+msgid "NUMBER values are numbers that do contain decimal points (for example 0.5) or are expressed with exponential notation (for example 5E-1). The range of possible values is the same as for the IEEE 754 floating-point standard, or NULL. Numbers outside the range of NUMBER literals may be displayed as -inf or inf."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:275
+msgid "STRING values are any sequence of zero or more characters encoded with UTF-8, or NULL. The possible character values are the same as for the Unicode standard. Byte sequences which are not valid UTF-8 characters are allowed but not recommended. STRING literal values are enclosed within single quotes, for example 'literal'. If the VARCHAR alias is used for column definition, it must include a maximum length, for example column_1 VARCHAR(40). However, the maximum length is ignored. The data-type may be followed by ``[COLLATE collation-name]``. .. // see section COLLATE clause."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:284
+msgid "VARBINARY values are any sequence of zero or more octets (bytes), or NULL. VARBINARY literal values are expressed as X followed by pairs of hexadecimal digits enclosed within single quotes, for example X'0044'. VARBINARYs NoSQL equivalent is 'varbinary' but not character string -- the MessagePack storage is MP_BIN (MsgPack binary)."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:290
+msgid "SCALAR can be used for column definitions but the individual column values have one of the preceding types -- BOOLEAN, INTEGER, UNSIGNED, NUMBER, STRING, or VARBINARY. See more about SCALAR in the next section. The data-type may be followed by ``[COLLATE collation-name]``. .. // see section COLLATE clause."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:296
+msgid "Any value of any data type may be NULL. Ordinarily NULL will be cast to the data type of any operand it is being compared to or to the data type of the column it is in. If the data type of NULL cannot be determined from context, it is BOOLEAN."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:303
+msgid "Column definition -- the rules for the SCALAR data type"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:305
+msgid "SCALAR is a \"complex\" data type, unlike all the other data types which are \"primitive\". Two column values in a SCALAR column can have two different primitive data types."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:308
+msgid "Any item defined as SCALAR has an underlying primitive type. For example, here:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:310
+msgid "CREATE TABLE t (s1 SCALAR PRIMARY KEY);\n"
+"INSERT INTO t VALUES (55),('41');"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:315
+msgid "the underlying primitive type of the item in the first row is INTEGER because literal 55 has data type INTEGER, and the underlying primitive type in the second row is STRING (the data type of a literal is always clear from its format)."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:320
+msgid "An item's primitive type is far more important than its defined type. Incidentally Tarantool might find the primitive type by looking at the way MsgPack stores it, but that is an implementation detail."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:324
+msgid "A SCALAR definition may not include a maximum length, as there is no suggested restriction."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:326
+msgid "A SCALAR definition may include a COLLATE clause, which affects any items whose primitive data type is STRING. The default collation is \"binary\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:328
+msgid "Some assignments are illegal when data types differ, but legal when the target is a SCALAR item. For example ``UPDATE ... SET column1 = 'a'`` is illegal if ``column1`` is defined as INTEGER, but is legal if ``column1`` is defined as SCALAR -- values which happen to be INTEGER will be changed so their data type is STRING."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:333
+msgid "There is no literal syntax which implies data type SCALAR."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:334
+msgid "TYPEOF(x) is never SCALAR, it is always the underlying data type. This is true even if ``x`` is null (in that case the data type is BOOLEAN). In fact there is no function that is guaranteed to return the defined data type. For example, ``TYPEOF(CAST(1 AS SCALAR));`` returns INTEGER, not SCALAR."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:338
+msgid "For any operation that requires implicit casting from an item defined as SCALAR, the syntax is legal but the operation may fail at runtime. At runtime, Tarantool detects the underlying primitive data type and applies the rules for that. For example, if a definition is:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:343
+msgid "CREATE TABLE t (s1 SCALAR PRIMARY KEY, s2 INTEGER);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:347
+msgid "and within any row ``s1 = 'a'``, that is, its underlying primitive type is STRING to indicate character strings, then ``UPDATE t SET s2 = s1;`` is illegal. Tarantool usually does not know that in advance."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:350
+msgid "For any dyadic operation that requires implicit casting for comparison, the syntax is legal and the operation will not fail at runtime. Take this situation: comparison with a primitive type VARBINARY and a primitive type STRING."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:355
+msgid "CREATE TABLE t (s1 SCALAR PRIMARY KEY);\n"
+"INSERT INTO t VALUES (X'41');\n"
+"SELECT * FROM t WHERE s1 > 'a';"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:361
+msgid "The comparison is valid, because Tarantool knows the ordering of X'41' and 'a' in Tarantool/NoSQL 'scalar'. This would be true even if ``s1`` was not defined as SCALAR."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:364
+msgid "The result data type of min/max operation on a column defined as SCALAR is the data type of the minimum/maximum operand, unless the result value is NULL. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:368
+msgid "CREATE TABLE t (s1 INT, s2 SCALAR PRIMARY KEY);\n"
+"INSERT INTO t VALUES (1,X'44'),(2,11),(3,1E4),(4,'a');\n"
+"SELECT MIN(s2), HEX(MAX(s2)) FROM t;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:374
+msgid "The result is: ``- - [11, '44',]``"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:376
+msgid "That is only possible with Tarantool/NoSQL scalar rules, but ``SELECT SUM(s2)`` would not be legal because addition would in this case require implicit casting from VARBINARY to integer, which is not sensible."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:379
+msgid "The result data type of a primitive combination is never SCALAR because we in effect use TYPEOF(item) not the defined data type. (Here we use the word \"combination\" in the way that the standard document uses it for section \"Result of data type combinations\".) Therefore for ``MAX(1E308, 'a', 0, X'00')`` the result is X'00'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:387
+msgid "Column definition -- relation to NoSQL"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:389
+msgid "All the SQL data types correspond to :ref:`Tarantool/NoSQL types with the same name <box_space-index_field_types>`. For example an SQL STRING is stored in a NoSQL space as type = 'string'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:393
+msgid "Therefore specifying an SQL data type X determines that the storage will be in a space with a format column saying that the NoSQL type is 'x'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:396
+msgid "The rules for that NoSQL type are applicable to the SQL data type."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:398
+msgid "If two items have SQL data types that have the same underlying type, then they are compatible for all assignment or comparison purposes."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:401
+msgid "If two items have SQL data types that have different underlying types, then the rules for explicit casts, or implicit (assignment) casts, or implicit (comparison) casts, apply."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:405
+msgid "There is one floating-point value which is not handled by SQL: -nan is seen as NULL."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:407
+msgid "There are also some Tarantool/NoSQL data types which have no corresponding SQL data types. For example, ``SELECT \"flags\" FROM \"_space\";`` will return a column whose data type is 'map'. Such columns can only be manipulated in SQL by invoking Lua functions."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:414
+msgid "Column definition -- column-constraint or default clause"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:416
+msgid "The column-constraint or default clause may be as follows:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:426
+msgid "Type"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:426
+msgid "Comment"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:428
+msgid "NOT NULL"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:428
+msgid "means \"it is illegal to assign a NULL to this column\""
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:431
+msgid "PRIMARY KEY"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:431
+#: ../doc/reference/reference_sql/sql.rst:434
+#: ../doc/reference/reference_sql/sql.rst:437
+msgid "explained in the later section \"Constraint definition\""
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:434
+msgid "UNIQUE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:437
+msgid "CHECK (expression)"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:440
+msgid "DEFAULT expression"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:440
+msgid "means \"if INSERT does not assign to this column then assign expression result to this column\" -- if there is no DEFAULT clause then DEFAULT NULL is assumed."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:447
+msgid "If column-constraint is PRIMARY KEY, this is a shorthand for a separate table-constraint definition: \"PRIMARY KEY (column-name)\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:450
+msgid "If column-constraint is UNIQUE, this is a shorthand for a separate table-constraint definition: \"UNIQUE (column-name)\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:453
+msgid "Columns defined with PRIMARY KEY are automatically NOT NULL."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:455
+msgid "To enforce some restrictions that Tarantool does not enforce automatically, add CHECK clauses, like these:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:458
+msgid "CREATE TABLE t (\"smallint\" INTEGER PRIMARY KEY, CHECK (\"smallint\" <= 32767 AND \"smallint\" >= -32768));\n"
+"CREATE TABLE t (\"shorttext\" CHAR(10) PRIMARY KEY, CHECK (length(\"shorttext\") <= 10));"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:463
+msgid "but this may cause inserts or updates to be slow."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:467
+msgid "Column definition -- examples"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:469
+msgid "These are shown within CREATE TABLE statements. Data types may also appear in CAST functions."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:472
+msgid "-- the simple form with column-name and data-type\n"
+"CREATE TABLE t (column1 INTEGER ...);\n"
+"-- with column-name and data-type and column-constraint\n"
+"CREATE TABLE t (column1 STRING PRIMARY KEY ...);\n"
+"-- with column-name and data-type and collate-clause and two column-constraints\n"
+"CREATE TABLE t (column1 SCALAR COLLATE \"unicode\" ...);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:481
+msgid "-- with all possible data types and aliases\n"
+"CREATE TABLE t\n"
+"(column1 BOOLEAN, column2 BOOL,\n"
+" column3 INT PRIMARY KEY, column4 INTEGER,\n"
+" column4 NUMBER,\n"
+" column7 STRING, column8 STRING COLLATE \"unicode\",\n"
+" column9 TEXT, columna TEXT COLLATE \"unicode_sv_s1\",\n"
+" columnb VARCHAR(0), columnc VARCHAR(100000) COLLATE \"binary\",\n"
+" columnd VARBINARY,\n"
+" columne SCALAR, columnf SCALAR COLLATE \"unicode_uk_s2\");"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:494
+msgid "-- with all possible column constraints and a default clause\n"
+"CREATE TABLE t\n"
+"(column1 INT PRIMARY KEY,\n"
+" column2 INT UNIQUE,\n"
+" column3 INT CHECK (column3 > column2),\n"
+" column4 INT REFERENCES t,\n"
+" column6 INT DEFAULT NULL);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:508
+msgid "DROP TABLE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:512
+msgid ":samp:`DROP TABLE [IF EXISTS] {table-name};`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:521
+msgid "Drop a table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:523
+msgid "The *table-name* must identify a table that was created earlier with the :ref:`CREATE TABLE statement <sql_create_table>`."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:528
+msgid "If there is a view that references the table, the drop will fail. Please drop the referencing view with DROP VIEW first."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:530
+msgid "If there is a foreign key that references the table, the drop will fail. Please drop the referencing constraint with :ref:`ALTER TABLE ... DROP <sql_alter_table_drop_constraint>` first."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:536
+msgid "Tarantool returns an error if the table does not exist."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:537
+msgid "The table and all its data are dropped."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:538
+msgid "All indexes for the table are dropped."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:539
+msgid "All triggers for the table are dropped."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:540
+#: ../doc/reference/reference_sql/sql.rst:592
+#: ../doc/reference/reference_sql/sql.rst:637
+#: ../doc/reference/reference_sql/sql.rst:689
+#: ../doc/reference/reference_sql/sql.rst:756
+#: ../doc/reference/reference_sql/sql.rst:1063
+#: ../doc/reference/reference_sql/sql.rst:1372
+msgid "Tarantool effectively executes a COMMIT statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:544
+msgid "-- the simple case:\n"
+"DROP TABLE t31;\n"
+"-- with an IF EXISTS clause:\n"
+"DROP TABLE IF EXISTS t31;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:551
+msgid "See also: :ref:`DROP VIEW <sql_drop_view>`."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:557
+msgid "CREATE VIEW"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:561
+msgid ":samp:`CREATE VIEW [IF NOT EXISTS] {view-name} [(column-list)] AS subquery;`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:570
+msgid "Create a new viewed table, usually called a \"view\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:572
+msgid "The *view-name* must be valid according to the rules for identifiers."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:574
+msgid "The optional *column-list* must be a comma-separated list of names of columns in the view."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:577
+msgid "The syntax of the subquery must be the same as the syntax of a SELECT statement, or of a VALUES clause."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:582
+msgid "There must not already be a base table or view with the same name as *view-name*."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:584
+msgid "If *column-list* is specified, the number of columns in *column-list* must be the same as the number of columns in the *select-list* of the subquery."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:589
+#: ../doc/reference/reference_sql/sql.rst:685
+#: ../doc/reference/reference_sql/sql.rst:1061
+msgid "Tarantool will throw an error if a rule is violated."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:590
+msgid "Tarantool will create a new persistent object with *column-names* equal to the names in the *column-list* or the names in the subquery's *select-list*."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:596
+msgid "-- the simple case:\n"
+"CREATE VIEW v AS SELECT column1, column2 FROM t;\n"
+"-- with a column-list:\n"
+"CREATE VIEW v (a,b) AS SELECT column1, column2 FROM t;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:605
+msgid "It is not possible to insert or update or delete from a view, although sometimes a possible substitution is to create an INSTEAD OF trigger."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:612
+msgid "DROP VIEW"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:616
+msgid ":samp:`DROP VIEW [IF EXISTS] {view-name};`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:625
+msgid "Drop a view."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:627
+msgid "The *view-name* must identify a view that was created earlier with the :ref:`CREATE VIEW statement <sql_create_view>`."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:630
+#: ../doc/reference/reference_sql/sql.rst:749
+#: ../doc/reference/reference_sql/sql.rst:1366
+msgid "Rules: none"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:634
+msgid "Tarantool returns an error if the view does not exist."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:635
+msgid "The view is dropped."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:636
+msgid "All triggers for the view are dropped."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:641
+msgid "-- the simple case:\n"
+"DROP VIEW v31;\n"
+"-- with an IF EXISTS clause:\n"
+"DROP VIEW IF EXISTS v31;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:648
+msgid "See also: :ref:`DROP TABLE <sql_drop_table>`."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:654
+msgid "CREATE INDEX"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:658
+msgid ":samp:`CREATE [UNIQUE] INDEX [IF NOT EXISTS] {index-name} ON {table-name} (column-list);`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:667
+msgid "Create an index."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:669
+msgid "The *index-name* must be valid according to the rules for identifiers."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:671
+msgid "The *table-name* must refer to an existing table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:673
+msgid "The *column-list* must be a comma-separated list of names of columns in the table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:678
+msgid "There must not already be, for the same table, an index with the same name as *index-name*."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:680
+msgid "An index name is local to the table the index is defined on."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:681
+msgid "The maximum number of indexes per table is 128."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:686
+msgid "If the new index is UNIQUE, Tarantool will throw an error if any row exists with columns that have duplicate values."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:688
+msgid "Tarantool will create a new index."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:691
+msgid "Automatic indexes:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:693
+msgid "Indexes may be created automatically for columns mentioned in the PRIMARY KEY or UNIQUE clauses of a CREATE TABLE statement. If an index was created automatically, then the *index-name* is based on four items:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:698
+msgid "``pk`` if this is for a PRIMARY KEY clause, ``unique`` if this is for a UNIQUE clause;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:700
+msgid "``_unnamed_``;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:701
+msgid "the name of the table;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:702
+msgid "``_`` and an ordinal number; the first index is 1, the second index is 2, and so on."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:705
+msgid "For example, after ``CREATE TABLE t (s1 INT PRIMARY KEY, s2 INT, UNIQUE (s2));`` there are two indexes named ``pk_unnamed_T_1`` and ``unique_unnamed_T_2``. You can confirm this by saying ``SELECT * FROM \"_index\";`` which will list all indexes on all tables. There is no need to say ``CREATE INDEX`` for columns that already have automatic indexes."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:714
+msgid "-- the simple case\n"
+"CREATE INDEX i ON t (column1);\n"
+"-- with IF NOT EXISTS clause\n"
+"CREATE INDEX IF NOT EXISTS i ON t (column1);\n"
+"-- with UNIQUE specifier and more than one column\n"
+"CREATE UNIQUE INDEX i ON t (column1, column2);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:723
+msgid "Dropping an automatic index created for a unique constraint will drop the unique constraint as well."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:730
+msgid "DROP INDEX"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:734
+msgid ":samp:`DROP INDEX [IF EXISTS] index-name ON {table-name};`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:743
+msgid "The *index-name* must be the name of an existing index, which was created with CREATE INDEX. Or, the *index-name* must be the name of an index that was created automatically due to a PRIMARY KEY or UNIQUE clause in the CREATE TABLE statement. To see what a table's indexes are, use ``PRAGMA index_list (table-name)``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:753
+msgid "Tarantool throws an error if the index does not exist, or is an automatically created index."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:755
+msgid "Tarantool will drop the index."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:758
+#: ../doc/reference/reference_sql/sql.rst:1335
+#: ../doc/reference/reference_sql/sql.rst:1423
+#: ../doc/reference/reference_sql/sql.rst:2269
+#: ../doc/reference/reference_sql/sql.rst:2294
+#: ../doc/reference/reference_sql/sql.rst:2346
+#: ../doc/reference/reference_sql/sql.rst:2424
+#: ../doc/reference/reference_sql/sql.rst:2465
+#: ../doc/reference/reference_sql/sql.rst:2495
+#: ../doc/reference/reference_sql/sql.rst:2524
+#: ../doc/reference/reference_sql/sql.rst:2645
+#: ../doc/reference/reference_sql/sql.rst:2687
+msgid "Example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:760
+msgid "-- the simplest form:\n"
+"DROP INDEX i ON t;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:769
+msgid "INSERT"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:773
+msgid ":samp:`INSERT INTO {table-name} [(column-list)] VALUES (expression-list) [, (expression-list)];`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:774
+msgid ":samp:`INSERT INTO {table-name} [(column-list)]  select-statement;`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:775
+msgid ":samp:`INSERT INTO {table-name} DEFAULT VALUES;`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:784
+msgid "Insert one or more new rows into a table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:786
+msgid "The *table-name* must be a name of a table defined earlier with CREATE TABLE."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:788
+msgid "The optional *column-list* must be a comma-separated list of names of columns in the table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:791
+msgid "The *expression-list* must be a comma-separated list of expressions; each expression may contain literals and operators and subqueries and function invocations."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:796
+msgid "The values in the *expression-list* are evaluated from left to right."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:797
+msgid "The order of the values in the *expression-list* must correspond to the order of the columns in the table, or (if a *column-list* is specified) to the order of the columns in the *column-list*."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:800
+#: ../doc/reference/reference_sql/sql.rst:869
+msgid "The data type of the value should correspond to the data type of the column, that is, the data type that was specified with CREATE TABLE."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:802
+msgid "If a *column-list* is not specified, then the number of expressions must be the same as the number of columns in the table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:804
+msgid "If a *column-list* is specified, then some columns may be omitted; omitted columns will get default values."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:806
+msgid "The parenthesized *expression-list* may be repeated -- ``(expression-list),(expression-list),...`` -- for multiple rows."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:811
+msgid "Tarantool evaluates each expression in *expression-list*, and returns an error if any of the rules is violated."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:813
+msgid "Tarantool creates zero or more new rows containing values based on the values in the VALUES list or based on the results of the *select-expression* or based on the default values."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:816
+msgid "Tarantool executes constraint checks and trigger actions and the actual insertion."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:817
+msgid "Tarantool inserts values into the table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:823
+msgid "-- the simplest form:\n"
+"INSERT INTO table1 VALUES (1, 'A');\n"
+"-- with a column list:\n"
+"INSERT INTO table1 (column1, column2) VALUES (2, 'B');\n"
+"-- with an arithmetic operator in the first expression:\n"
+"INSERT INTO table1 VALUES (2 + 1, 'C');\n"
+"-- put two rows in the table:\n"
+"INSERT INTO table1 VALUES (4, 'D'), (5, 'E');"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:835
+msgid "See also: :ref:`REPLACE statement <sql_replace>`."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:841
+msgid "UPDATE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:845
+msgid ":samp:`UPDATE {table-name} SET column-name = expression [, column-name = expression ...] [WHERE search-condition];`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:856
+msgid "Update zero or more existing rows in a table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:858
+#: ../doc/reference/reference_sql/sql.rst:934
+msgid "The *table-name* must be a name of a table defined earlier with CREATE TABLE or CREATE VIEW."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:861
+msgid "The *column-name* must be an updatable column in the table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:863
+msgid "The *expression* may contain literals and operators and subqueries and function invocations and column names."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:868
+msgid "The values in the SET clause are evaluated from left to right."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:871
+msgid "If a *search-condition* is not specified, then all rows in the table will be updated; otherwise only those rows which match the *search-condition* will be updated."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:877
+msgid "Tarantool evaluates each expression in the SET clause, and returns an error if any of the rules is violated. For each row that is found by the WHERE clause, a temporary new row is formed based on the original contents and the modifications caused by the SET clause."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:881
+msgid "Tarantool executes constraint checks and trigger actions and the actual update."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:887
+msgid "-- the simplest form:\n"
+"UPDATE t SET column1 = 1;\n"
+"-- with more than one assignment in the SET clause:\n"
+"UPDATE t SET column1 = 1, column2 = 2;\n"
+"-- with a WHERE clause:\n"
+"UPDATE t SET column1 = 5 WHERE column2 = 6;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:896
+msgid "Special cases:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:898
+msgid "It is legal to say SET (list of columns) = (list of values). For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:900
+msgid "UPDATE t SET (column1, column2, column3) = (1,2,3);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:904
+msgid "It is not legal to assign to a column more than once. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:906
+msgid "INSERT INTO t (column1) VALUES (0);\n"
+"UPDATE t SET column1 = column1 + 1, column1 = column1 + 1;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:911
+msgid "The result is an error: \"duplicate column name\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:913
+msgid "It is not legal to assign to a primary-key column."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:919
+msgid "DELETE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:923
+msgid ":samp:`DELETE FROM {table-name} [WHERE search-condition];`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:932
+msgid "Delete zero or more existing rows in a table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:937
+msgid "The *search-condition* may contain literals and operators and subqueries and function invocations and column names."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:942
+msgid "If a search-condition is not specified, then all rows in the table will be deleted; otherwise only those rows which match the *search-condition* will be deleted."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:948
+msgid "Tarantool evaluates each expression in the *search-condition*, and returns an error if any of the rules is violated."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:950
+msgid "Tarantool finds the set of rows that are to be deleted."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:951
+msgid "Tarantool executes constraint checks and trigger actions and the actual deletion."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:952
+msgid "Tarantool deletes the set of matching rows from the table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:958
+msgid "-- the simplest form:\n"
+"DELETE FROM t;\n"
+"-- with a WHERE clause:\n"
+"DELETE FROM t WHERE column2 = 6;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:969
+msgid "REPLACE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:973
+msgid ":samp:`REPLACE INTO {table-name} [(column-list)] VALUES (expression-list) [, (expression-list)];`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:974
+msgid ":samp:`REPLACE INTO {table-name} [(column-list)] select-statement;`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:975
+msgid ":samp:`REPLACE INTO {table-name} DEFAULT VALUES;`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:984
+msgid "Insert one or more new rows into a table, or update existing rows."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:986
+msgid "If a row already exists (as determined by the primary key or any unique key), then the action is delete + insert, and the rules are the same as for a DELETE statement followed by an INSERT statement. Otherwise the action is insert, and the rules are the same as for the INSERT statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:994
+msgid "-- the simplest form:\n"
+"REPLACE INTO table1 VALUES (1, 'A');\n"
+"-- with a column list:\n"
+"REPLACE INTO table1 (column1, column2) VALUES (2, 'B');\n"
+"-- with an arithmetic operator in the first expression:\n"
+"REPLACE INTO table1 VALUES (2 + 1, 'C');\n"
+"-- put two rows in the table:\n"
+"REPLACE INTO table1 VALUES (4, 'D'), (5, 'E');"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1005
+msgid "See also: :ref:`INSERT Statement <sql_insert>`, :ref:`UPDATE Statement <sql_update>`."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1013
+msgid "CREATE TRIGGER"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1017
+msgid ":samp:`CREATE TRIGGER [IF NOT EXISTS] {trigger-name}` |br| :samp:`BEFORE|AFTER|INSTEAD OF` |br| :samp:`INSERT|UPDATE|DELETE ON {table-name}` |br| :samp:`FOR EACH ROW` |br| :samp:`[WHEN (search-condition)]` |br| :samp:`BEGIN` |br| :samp:`update-statement | insert-statement | delete-statement | select-statement;` |br| :samp:`[update-statement | insert-statement | delete-statement | select-statement; ...]` |br| :samp:`END;`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1034
+msgid "The *trigger-name* must be valid according to the rules for identifiers."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1036
+msgid "If the trigger action time is BEFORE or AFTER, then the *table-name* must refer to an existing base table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1039
+msgid "If the trigger action time is INSTEAD OF, then the *table-name* must refer to an existing view."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1044
+msgid "There must not already be a trigger with the same name as *trigger-name*."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1045
+msgid "Triggers on different tables or views share the same namespace."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1046
+msgid "The statements between BEGIN and END should not refer to the *table-name* mentioned in the ON clause."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1048
+msgid "The statements between BEGIN and END should not contain an INDEXED BY clause."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1050
+msgid "SQL triggers are not fired upon Tarantool/NoSQL requests. This will change in version 2.2."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1053
+msgid "On a replica, effects of trigger execution are applied, and the SQL triggers themselves are not fired upon replication events."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1056
+msgid "NoSQL triggers are fired both on replica and master, thus if you have a NoSQL trigger on replica, it is fired when applying effects of an SQL trigger."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1062
+msgid "Tarantool will create a new trigger."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1067
+msgid "-- the simple case:\n"
+"CREATE TRIGGER delete_if_insert BEFORE INSERT ON stores FOR EACH ROW\n"
+"  BEGIN DELETE FROM warehouses; END;\n"
+"-- with IF NOT EXISTS clause:\n"
+"CREATE TRIGGER IF NOT EXISTS delete_if_insert BEFORE INSERT ON stores FOR EACH ROW\n"
+"  BEGIN DELETE FROM warehouses; END;\n"
+"-- with FOR EACH ROW and WHEN clauses:\n"
+"CREATE TRIGGER delete_if_insert BEFORE INSERT ON stores FOR EACH ROW WHEN a=5\n"
+"  BEGIN DELETE FROM warehouses; END;\n"
+"-- with multiple statements between BEGIN and END:\n"
+"CREATE TRIGGER delete_if_insert BEFORE INSERT ON stores FOR EACH ROW\n"
+"  BEGIN DELETE FROM warehouses; INSERT INTO inventories VALUES (1); END;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1086
+msgid "Trigger extra clauses"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1088
+msgid ":samp:`UPDATE OF column-list`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1090
+msgid "After BEFORE|AFTER UPDATE it is optional to add ``OF column-list``. If any of the columns in *column-list* is affected at the time the row is processed, then the trigger will be activated for that row. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1094
+msgid "CREATE TRIGGER trigger_on_table1\n"
+" BEFORE UPDATE  OF column1, column2 ON table1\n"
+" FOR EACH ROW\n"
+" BEGIN UPDATE table2 SET column1 = column1 + 1; END;\n"
+"UPDATE table1 SET column3 = column3 + 1; -- Trigger will not be activated\n"
+"UPDATE table1 SET column2 = column2 + 0; -- Trigger will be activated"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1103
+msgid ":samp:`WHEN`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1105
+msgid "After *table-name* FOR EACH ROW it is optional to add [``WHEN expression``]. If the expression is true at the time the row is processed, only then the trigger will be activated for that row. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1109
+msgid "CREATE TRIGGER trigger_on_table1 BEFORE UPDATE ON table1 FOR EACH ROW\n"
+" WHEN (SELECT COUNT(*) FROM table1) > 1\n"
+" BEGIN UPDATE table2 SET column1 = column1 + 1; END;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1115
+msgid "This trigger will not be activated unless there is more than one row in ``table1``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1118
+msgid ":samp:`OLD and NEW`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1120
+msgid "The keywords OLD and NEW have special meaning in the context of trigger action:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1122
+msgid "OLD.column-name refers to the value of *column-name* before the change."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1123
+msgid "NEW.column-name refers to the value of *column-name* after the change."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1125
+#: ../doc/reference/reference_sql/sql.rst:2172
+msgid "For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1127
+msgid "CREATE TABLE table1 (column1 VARCHAR(15), column2 INT PRIMARY KEY);\n"
+"CREATE TABLE table2 (column1 VARCHAR(15), column2 VARCHAR(15), column3 INT PRIMARY KEY);\n"
+"INSERT INTO table1 VALUES ('old value', 1);\n"
+"INSERT INTO table2 VALUES ('', '', 1);\n"
+"CREATE TRIGGER trigger_on_table1 BEFORE UPDATE ON table1 FOR EACH ROW\n"
+" BEGIN UPDATE table2 SET column1 = old.column1, column2 = new.column1; END;\n"
+"UPDATE table1 SET column1 = 'new value';\n"
+"SELECT * FROM table2;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1138
+msgid "At the beginning of the UPDATE for the single row of ``table1``, the value in ``column1`` is 'old value' -- so that is what is seen as ``old.column1``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1141
+msgid "At the end of the UPDATE for the single row of ``table1``, the value in ``column1`` is 'new value' -- so that is what is seen as ``new.column1``. (OLD and NEW are qualifiers for ``table1``, not ``table2.``)"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1145
+msgid "Therefore, ``SELECT * FROM table2;`` returns ``['old value', 'new value']``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1147
+msgid "``OLD.column-name`` does not exist for an INSERT trigger."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1149
+msgid "``NEW.column-name`` does not exist for a DELETE trigger."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1151
+msgid "OLD and NEW are read-only; you cannot change their values."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1153
+msgid "Deprecated or illegal statements:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1155
+msgid "It is legal for the trigger action to include a SELECT statement or a REPLACE statement, but not recommended."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1158
+msgid "It is illegal for the trigger action to include a qualified column reference other than ``OLD.column-name`` or ``NEW.column-name``. For example, ``CREATE TRIGGER ... BEGIN UPDATE table1 SET table1.column1=5; END;`` is illegal."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1163
+msgid "It is illegal for the trigger action to include statements that include a WITH clause, a DEFAULT VALUES clause, or an INDEXED BY clause."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1166
+msgid "It is usually not a good idea to have a trigger on ``table1`` which causes a change on ``table2``, and at the same time have a trigger on ``table2`` which causes a change on ``table1``. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1170
+msgid "CREATE TRIGGER trigger_on_table1\n"
+" BEFORE UPDATE ON table1\n"
+" FOR EACH ROW\n"
+" BEGIN UPDATE table2 SET column1 = column1 + 1; END;\n"
+"CREATE TRIGGER trigger_on_table2\n"
+" BEFORE UPDATE ON table2\n"
+" FOR EACH ROW\n"
+" BEGIN UPDATE table1 SET column1 = column1 + 1; END;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1181
+msgid "Luckily ``UPDATE table1 ...`` will not cause an infinite loop, because Tarantool recognizes when it has already updated so it will stop. However, not every DBMS acts this way."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1189
+msgid "Trigger activation"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1191
+msgid "These are remarks concerning trigger activation."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1193
+msgid "Standard terminology:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1195
+msgid "\"trigger action time\" = BEFORE or AFTER or INSTEAD OF"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1196
+msgid "\"trigger event\" = INSERT or DELETE or UPDATE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1197
+msgid "\"triggered statement\" = BEGIN ... INSERT|DELETE|UPDATE ... END"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1198
+msgid "\"triggered when clause\" = WHEN (search condition)"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1199
+msgid "\"activate\" = execute a triggered statement"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1200
+msgid "some vendors use the word \"fire\" instead of \"activate\""
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1202
+msgid "If there is more than one trigger for the same trigger event, Tarantool may execute the triggers in any order."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1205
+msgid "It is possible for a triggered statement to cause activation of another triggered statement. For example, this is legal:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1208
+msgid "CREATE TRIGGER on_t1 BEFORE DELETE ON t1 BEGIN DELETE FROM t2; END;\n"
+"CREATE TRIGGER on_t2 BEFORE DELETE ON t2 BEGIN DELETE FROM t3; END;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1213
+msgid "Activation occurs FOR EACH ROW, not FOR EACH STATEMENT. Therefore, if no rows are candidates for insert or update or delete, then no triggers are activated."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1216
+msgid "The BEFORE trigger is activated even if the trigger event fails."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1218
+msgid "If an UPDATE trigger event does not make a change, the trigger is activated anyway. For example, if row 1 ``column1`` contains 'a', and the trigger event is ``UPDATE ... SET column1 = 'a';``, the trigger is activated."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1222
+msgid "The triggered statement may refer to a function: ``RAISE(FAIL, error-message)``. If a triggered statement invokes a ``RAISE(FAIL, error-message)`` function, or if a triggered statement causes an error, then statement execution stops immediately."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1228
+msgid "The triggered statement may refer to column values within the rows being changed. in this case:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1231
+msgid "The row \"as of before\" the change is called the \"old\" row (which makes sense only for UPDATE and DELETE statements)."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1233
+msgid "The row \"as of after\" the change is called the \"new\" row (which makes sense only for UPDATE and INSERT statements)."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1236
+msgid "This example shows how an INSERT can be done to a view by referring to the \"new\" row:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1239
+msgid "CREATE TABLE t (s1 INT PRIMARY KEY, s2 INT);\n"
+"CREATE VIEW v AS SELECT s1, s2 FROM t;\n"
+"CREATE TRIGGER tv INSTEAD OF INSERT ON v\n"
+"  FOR EACH ROW\n"
+"  BEGIN INSERT INTO t VALUES (new.s1, new.s2); END;\n"
+"INSERT INTO v VALUES (1,2);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1248
+msgid "Ordinarily saying ``INSERT INTO view_name ...`` is illegal in Tarantool, so this is a workaround."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1251
+msgid "It is possible to generalize this so that all data-change statements on views will change the base tables, provided that the view contains all the columns of the base table, and provided that the triggers refer to those columns when necessary, as in this example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1256
+msgid "CREATE TABLE base_table (primary_key_column INT PRIMARY KEY, value_column INT);\n"
+"CREATE VIEW viewed_table AS SELECT primary_key_column, value_column FROM base_table;\n"
+"CREATE TRIGGER viewed_insert INSTEAD OF INSERT ON viewed_table FOR EACH ROW\n"
+"  BEGIN\n"
+"    INSERT INTO base_table VALUES (new.primary_key_column, new.value_column);\n"
+"  END;\n"
+"CREATE TRIGGER viewed_update INSTEAD OF UPDATE ON viewed_table FOR EACH ROW\n"
+"  BEGIN\n"
+"    UPDATE base_table\n"
+"    SET primary_key_column = new.primary_key_column, value_column = new.value_column\n"
+"    WHERE primary_key_column = old.primary_key_column;\n"
+"  END;\n"
+"CREATE TRIGGER viewed_delete INSTEAD OF DELETE ON viewed_table FOR EACH ROW\n"
+"  BEGIN\n"
+"    DELETE FROM base_table WHERE primary_key_column = old.primary_key_column;\n"
+"  END;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1275
+msgid "When INSERT or UPDATE or DELETE occurs for table ``X``, Tarantool usually operates in this order (a basic scheme):"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1278
+msgid "For each row\n"
+"  Perform constraint checks\n"
+"  For each BEFORE trigger that refers to table X\n"
+"    Check that the trigger's WHEN condition is true.\n"
+"    Execute what is in the trigger's BEGIN|END block.\n"
+"  Insert or update or delete the row in table X.\n"
+"  Perform more constraint checks\n"
+"  For each AFTER trigger that refers to table X\n"
+"    Check that the trigger's WHEN condition is true.\n"
+"    Execute what is in the trigger's BEGIN|END block."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1293
+msgid "However, Tarantool does not guarantee execution order when there are multiple constraints, or multiple triggers for the same event (including NoSQL ``on_replace`` triggers or SQL INSTEAD OF triggers that affect a view of table ``X``)."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1298
+msgid "The maximum number of trigger activations per statement is 32."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1304
+msgid "INSTEAD OF triggers"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1306
+msgid "A trigger which is created with the clause |br| :samp:`INSTEAD OF {INSERT|UPDATE|DELETE} ON {view-name}` |br| is an INSTEAD OF trigger. For each affected row, the trigger action is performed \"instead of\" the INSERT or UPDATE or DELETE statement that causes trigger activation."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1312
+msgid "For example, ordinarily it is illegal to INSERT rows in a view, but it is legal to create a trigger which intercepts attempts to INSERT, and puts rows in the underlying base table:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1316
+msgid "CREATE TABLE t1 (column1 INT PRIMARY KEY, column2 INT);\n"
+"CREATE VIEW v1 AS SELECT column1, column2 FROM t1;\n"
+"CREATE TRIGGER t1 INSTEAD OF INSERT ON v1 FOR EACH ROW BEGIN\n"
+" INSERT INTO t1 VALUES (NEW.column1, NEW.column2); END;\n"
+"INSERT INTO v1 VALUES (1, 1);\n"
+"-- ... The result will be: table t1 will contain a new row."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1325
+msgid "INSTEAD OF triggers are only legal for views, while BEFORE or AFTER triggers are not legal for views."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1328
+msgid "It is legal to create INSTEAD OF triggers with triggered WHEN clauses."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1332
+msgid "It is legal to create INSTEAD OF triggers with UPDATE OF *column-list* clauses, but they are not standard SQL."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1337
+msgid "CREATE TRIGGER et1\n"
+"  INSTEAD OF UPDATE OF column2,column1 ON ev1\n"
+"  FOR EACH ROW BEGIN\n"
+"  INSERT INTO et2 VALUES (NEW.column1, NEW.column2); END;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1348
+msgid "DROP TRIGGER"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1352
+msgid ":samp:`DROP TRIGGER [IF EXISTS] {trigger-name};`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1361
+msgid "Drop a trigger."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1363
+msgid "The *trigger-name* must identify a trigger that was created earlier with the CREATE TRIGGER statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1370
+msgid "Tarantool returns an error if the trigger does not exist."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1371
+msgid "The trigger is dropped."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1376
+msgid "-- the simple case:\n"
+"DROP TRIGGER tr;\n"
+"-- with an IF EXISTS clause:\n"
+"DROP TRIGGER IF EXISTS tr;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1387
+msgid "TRUNCATE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1391
+msgid ":samp:`TRUNCATE TABLE {table-name};`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1400
+msgid "Remove all rows in the table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1402
+msgid "TRUNCATE is considered to be a schema-change rather than a data-change statement, so it does not work within transactions (it cannot be rolled back)."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1407
+msgid "It is illegal to truncate a table which is referenced by a foreign key."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1408
+msgid "It is illegal to truncate a table which is also a system space, such as ``_space``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1410
+msgid "The table must be a base table rather than a view."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1414
+msgid "All rows in the table are removed. Usually this is faster than ``DELETE FROM table-name;``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1416
+msgid "If the table has an autoincrement primary key, its sequence is reset to zero."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1417
+msgid "There is no effect for any triggers associated with the table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1418
+msgid "There is no effect on the counts for the ``row_count()`` function."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1419
+msgid "Only one action is written to the write-ahead log (with ``DELETE FROM table-name;`` there would be one action for each deleted row)."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1425
+msgid "TRUNCATE TABLE t;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1433
+msgid "SELECT"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1437
+msgid ":samp:`SELECT [ALL|DISTINCT] select-list [from clause] [where clause] [group-by clause] [having clause] [order-by clause];`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1451
+msgid "Select zero or more rows."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1453
+msgid "The clauses of the SELECT statement are discussed in the following five sections."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1459
+msgid "Select-list"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1463
+msgid ":samp:`select-list-column [, select-list-column ...] select-list-column:`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1473
+msgid "Define what will be in a result set; this is a clause in a SELECT statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1475
+msgid "The *select-list* is a comma-delimited list of expressions, or ``*`` (asterisk). An expression can have an alias provided with ``[AS [column-name]]`` clause."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1478
+msgid "The ``*`` \"asterisk\" shorthand is valid if and only if the SELECT statement also contains a FROM clause which specifies the table or tables (details about the FROM clause are in the next section). The simple form is ``*`` which means \"all columns\" -- for example, if the select is done for a table which contains three columns ``s1`` ``s2`` ``s3``, then ``SELECT * ...`` is equivalent to ``SELECT s1, s2, s3 ...``. The qualified form is ``table-name.*`` which means \"all columns in the specified table\", which again must be a result of the FROM clause -- for example, if the table is named ``table1``, then ``table1.*`` is equivalent to a list of the columns of ``table1``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1490
+msgid "The ``[AS [column-name]]`` clause determines the column name. The column name is useful for two reasons:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1493
+msgid "in a tabular display, the column names are the headings"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1494
+msgid "if the results of the SELECT are used in ``CREATE TABLE new-table-name ... AS SELECT select-list ...``, then the column names in the new table will be the column names in the *select-list*."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1498
+msgid "If ``[AS [column-name]]`` is missing, Tarantool makes a name equal to the expression, for example ``SELECT 5*88`` will cause the column name to be ``5*88``, but such names may be ambiguous or illegal in other contexts, so it is better to say, for example, ``SELECT 5 * 88 AS column1``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1505
+msgid "-- the simple form:\n"
+"SELECT 5;\n"
+"-- with multiple expressions including operators:\n"
+"SELECT 1, 2 * 2, 'Three' || 'Four';\n"
+"-- with [[AS] column-name] clause:\n"
+"SELECT 5 AS column1;\n"
+"-- * which must be eventually followed by a FROM clause:\n"
+"SELECT * FROM table1;\n"
+"-- as a list:\n"
+"SELECT 1 AS a, 2 AS b, table1.* FROM table1;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1522
+msgid "FROM clause"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1526
+msgid ":samp:`FROM table-reference [, table-reference ...]`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1535
+msgid "Specify the table or tables for the source of a SELECT statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1537
+msgid "The *table-reference* must be a name of an existing table, or a subquery, or a joined table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1540
+msgid "A joined table looks like this:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1542
+msgid ":samp:`table-reference-or-joined-table join-operator table-reference-or-joined-table [join-specification]`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1544
+msgid "A *join-operator* must be any of `the standard types <https://en.wikipedia.org/wiki/Join_(SQL)>`_:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1547
+msgid "[NATURAL] LEFT [OUTER] JOIN,"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1548
+msgid "[NATURAL] INNER JOIN, or"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1549
+msgid "CROSS JOIN"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1551
+msgid "A *join-specification* must be any of:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1553
+msgid "ON expression, or"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1554
+msgid "USING (column-name [, column-name ...])"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1556
+msgid "Parentheses are allowed, and ``[[AS] correlation-name]`` is allowed."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1558
+msgid "The maximum number of joins in a FROM clause is 64."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1562
+msgid "-- the simplest form:\n"
+"SELECT * FROM t;\n"
+"-- with two tables, making a Cartesian join:\n"
+"SELECT * FROM t1, t2;\n"
+"-- with one table joined to itself, requiring correlation names:\n"
+"SELECT a.*, b.* FROM t1 AS a, t1 AS b;\n"
+"-- with a left outer join:\n"
+"SELECT * FROM t1 LEFT JOIN t2;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1577
+msgid "WHERE clause"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1581
+msgid ":samp:`WHERE condition;`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1590
+msgid "Specify the condition for filtering rows from a table; this is a clause in a SELECT or UPDATE or DELETE statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1593
+msgid "The condition may contain any expression that returns a BOOLEAN (TRUE or FALSE or UNKNOWN) value."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1596
+#: ../doc/reference/reference_sql/sql.rst:1809
+msgid "For each row in the table:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1598
+#: ../doc/reference/reference_sql/sql.rst:1811
+msgid "if the condition is true, then the row is kept;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1599
+#: ../doc/reference/reference_sql/sql.rst:1812
+msgid "if the condition is false or unknown, then the row is ignored."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1601
+msgid "In effect, WHERE condition takes a table with n rows and returns a table with n or fewer rows."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1606
+msgid "-- with a simple condition:\n"
+"SELECT 1 FROM t WHERE column1 = 5;\n"
+"-- with a condition that contains AND and OR and parentheses:\n"
+"SELECT 1 FROM t WHERE column1 = 5 AND (x > 1 OR y < 1);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1617
+msgid "GROUP BY clause"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1621
+msgid ":samp:`GROUP BY expression [, expression ...]`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1630
+msgid "Make a grouped table; this is a clause in a SELECT statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1632
+msgid "The expressions should be column names in the table, and each column should be specified only once."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1635
+msgid "In effect, GROUP BY clause takes a table with rows that may have matching values, combines rows that have matching values into single rows, and returns a table which, because it is the result of GROUP BY, is called a grouped table."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1640
+msgid "Thus, if the input is a table:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1642
+msgid "a    b      c\n"
+"-    -      -\n"
+"1    'a'   'b\n"
+"1    'b'   'b'\n"
+"2    'a'   'b'\n"
+"3    'a'   'b'\n"
+"1    'b'   'b'"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1652
+msgid "then ``GROUP BY a, b`` will produce a grouped table:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1654
+msgid "a    b      c\n"
+"-    -      -\n"
+"1    'a'   'b'\n"
+"1    'b'   'b'\n"
+"2    'a'   'b'\n"
+"3    'a'   'b'"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1663
+msgid "The rows where column ``a`` and column ``b`` have the same value have been merged; column ``c`` has been preserved but its value should not be depended on -- if the rows were not all 'b', Tarantool could pick any value."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1667
+msgid "It is useful to envisage a grouped table as having hidden extra columns for the aggregation of the values, for example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1670
+msgid "a    b      c    COUNT(a) SUM(a) MIN(c)\n"
+"-    -      -    -------- ------ ------\n"
+"1    'a'  'b'         2      2    'b'\n"
+"1    'b'  'b'         1      1    'b'\n"
+"2    'a'  'b'         1      2    'b'\n"
+"     'a'  'b'         1      3    'b'"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1679
+msgid "These extra columns are what :ref:`aggregate functions <sql_aggregate>` are for."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1683
+msgid "-- with a single column:\n"
+"SELECT 1 FROM t GROUP BY column1;\n"
+"-- with two columns:\n"
+"SELECT 1 FROM t GROUP BY column1, column2;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1692
+msgid "``SELECT s1,s2 FROM t GROUP BY s1;`` is legal."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1693
+msgid "``SELECT s1 AS q FROM t GROUP BY q;`` is legal."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1694
+msgid "``SELECT s1 FROM t GROUP by 1;`` is legal."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1702
+msgid "Aggregate functions"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1706
+#: ../doc/reference/reference_sql/sql.rst:2592
+msgid ":samp:`function-name (one or more expressions)`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1708
+msgid "Apply a built-in aggregate function to one or more expressions and return a scalar value."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1711
+msgid "Aggregate functions are only legal in certain clauses of SELECT for grouped tables. (A table is a grouped table if a GROUP BY clause is present.) Also, if an aggregate function is used in a select-list and GROUP BY clause is omitted, then Tarantool assumes ``SELECT ... GROUP BY [all columns];``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1718
+msgid "NULLs are ignored for all aggregate functions except COUNT(*)."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1725
+msgid "``AVG([DISTINCT] expression)``"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1723
+msgid "Return the average value of expression."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1725
+msgid "Example: :samp:`AVG({column1})`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1732
+msgid "``COUNT([DISTINCT] expression)``"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1730
+msgid "Return the number of occurrences of expression."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1732
+msgid "Example: :samp:`COUNT({column1})`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1739
+msgid "``COUNT(*)``"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1737
+msgid "Return the number of occurrences of a row."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1739
+msgid "Example: :samp:`COUNT(*)`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1749
+msgid "``GROUP_CONCAT(expression-1 [, expression-2])``"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1744
+msgid "Return a list of *expression-1* values, separated by commas if *expression-2* is omitted, or separated by the *expression-2* value if *expression-2* is not omitted."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1749
+msgid "Example: :samp:`GROUP_CONCAT({column1})`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1756
+msgid "``MAX([DISTINCT] expression)``"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1754
+msgid "Return the maximum value of expression."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1756
+msgid "Example: :samp:`MAX({column1})`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1763
+msgid "``MIN([DISTINCT] expression)``"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1761
+msgid "Return the minimum value of expression."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1763
+msgid "Example: :samp:`MIN({column1})`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1770
+msgid "``SUM([DISTINCT] expression)``"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1768
+#: ../doc/reference/reference_sql/sql.rst:1775
+msgid "Return the sum of values of expression."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1770
+msgid "Example: :samp:`SUM({column1})`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1777
+msgid "``TOTAL([DISTINCT] expression)``"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1777
+msgid "Example: :samp:`TOTAL({column1})`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1785
+msgid "HAVING clause"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1789
+msgid ":samp:`HAVING condition;`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1798
+msgid "Specify the condition for filtering rows from a grouped table; this is a clause in a SELECT statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1801
+msgid "The clause preceding the HAVING clause may be a GROUP BY clause. HAVING operates on the table that the GROUP BY produces, which may contain grouped columns and aggregates."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1805
+msgid "If the preceding clause is not a GROUP BY clause, then there is only one group and the HAVING clause may only contain aggregate functions or literals."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1814
+msgid "In effect, HAVING condition takes a table with n rows and returns a table with n or fewer rows."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1819
+msgid "-- with a simple condition:\n"
+"SELECT 1 FROM t GROUP BY column1 HAVING column2 > 5;\n"
+"-- with a more complicated condition:\n"
+"SELECT 1 FROM t GROUP BY column1 HAVING column2 > 5 OR column2 < 5;\n"
+"-- with an aggregate:\n"
+"SELECT x, SUM(y) FROM t GROUP BY x HAVING SUM(y) > 0;\n"
+"-- with no GROUP BY and an aggregate:\n"
+"SELECT SUM(y) FROM t GROUP BY x HAVING MIN(y) < MAX(y);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1832
+msgid "HAVING without GROUP BY is not supported for multiple tables."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1838
+msgid "ORDER BY clause"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1842
+msgid ":samp:`ORDER BY expression [ASC|DESC] [, expression [ASC|DESC] ...]`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1851
+msgid "Put rows in order; this is a clause in a SELECT statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1853
+msgid "An ORDER BY expression has one of three types which are checked in order:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1855
+msgid "Expression is a positive integer, representing the ordinal position of the column in the select list. For example, in the statement |br| ``SELECT x, y, z FROM t ORDER BY 2;`` |br| ``ORDER BY 2`` means \"order by the second column in the select list\", which is ``y``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1860
+msgid "Expression is a name of a column in the select list, which is determined by an AS clause. For example, in the statement |br| ``SELECT x, y AS x, z FROM t ORDER BY x;`` |br| ``ORDER BY x`` means \"order by the column explicitly named ``x`` in the select list\", which is the second column."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1865
+msgid "Expression contains a name of a column in a table of the FROM clause. For example, in the statement |br| ``SELECT x, y FROM t1 JOIN t2 ORDER BY z;`` |br| ``ORDER BY z`` means \"order by a column named ``z`` which is expected to be in table ``t1`` or table ``t2``\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1871
+msgid "If both tables contain a column named ``z``, then Tarantool will choose the first column that it finds."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1874
+msgid "The expression may also contain operators and function names and literals. For example, in the statement |br| ``SELECT x, y FROM t ORDER BY UPPER(z);`` |br| ``ORDER BY UPPER(z)`` means \"order by the uppercase form of column ``t.z``\", which may be similar to doing ordering in a case-insensitive manner."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1880
+msgid "Type 3 is illegal if the SELECT statement contains UNION or EXCEPT or INTERSECT."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1882
+msgid "If an ORDER BY clause contains multiple expressions, then expressions on the left are processed first and expressions on the right are processed only if necessary for tie-breaking. For example, in the statement |br| ``SELECT x, y FROM t ORDER BY x, y;`` if there are two rows which both have the same values for column ``x``, then an additional check is made to see which row has a greater value for column ``y``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1891
+msgid "In effect, ORDER BY clause takes a table with rows that may be out of order, and returns a table with rows in order."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1894
+msgid "Sorting order:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1896
+msgid "The default order is ASC (ascending), the optional order is DESC (descending)."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1897
+msgid "NULLs come first, then numbers (INTEGER or NUMBER), then STRINGs, then VARBINARYs."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1898
+msgid "Within STRINGs, ordering is according to collation."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1899
+msgid "Collation may be specified within the ORDER BY column-list, or may be default."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1903
+msgid "-- with a single column:\n"
+"SELECT 1 FROM t ORDER BY column1;\n"
+"-- with two columns:\n"
+"SELECT 1 FROM t ORDER BY column1, column2;\n"
+"-- with a variety of data:\n"
+"CREATE TABLE h (s1 INT PRIMARY KEY, s2 INT);\n"
+"INSERT INTO h VALUES (7,'A'),(4,'A '),(-4,'AZ'),(17,17),(23,NULL);\n"
+"INSERT INTO h VALUES (17.5,'Д'),(1e+300,'a'),(0,''),(-1,'');\n"
+"SELECT * FROM h ORDER BY s2, s1;\n"
+"-- The result of the above SELECT will be:\n"
+"- - [23, null]\n"
+"  - [17, 17]\n"
+"  - [-1, '']\n"
+"  - [0, '']\n"
+"  - [7, 'A']\n"
+"  - [4, 'A ']\n"
+"  - [-4, 'AZ']\n"
+"  - [1e+300, 'a']\n"
+"  - [17.5, 'Д']\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1928
+msgid "ORDER BY 1 is legal. This is common but is not standard SQL nowadays."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1936
+msgid "LIMIT clause"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1940
+msgid ":samp:`LIMIT limit-expression [OFFSET offset-expression]`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1941
+msgid ":samp:`LIMIT offset-expression, limit-expression`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1945
+msgid "The above is not a typo: *offset-expression* and *limit-expression* are in reverse order if a comma is used."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1955
+msgid "Specify a maximum number of rows and a start row; this is a clause in a SELECT statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1958
+msgid "Expressions may contain integers and arithmetic operators or functions, for example ``ABS(-3/1)``. However, the result must be an integer value greater than or equal to zero."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1962
+msgid "Usually the LIMIT clause follows an ORDER BY clause, because otherwise Tarantool does not guarantee that rows are in order."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1967
+msgid "-- simple case:\n"
+"SELECT * FROM t LIMIT 3;\n"
+"-- both limit and order:\n"
+"SELECT * FROM t LIMIT 3 OFFSET 1;\n"
+"-- applied to a UNIONed result (LIMIT clause must be the final clause):\n"
+"SELECT column1 FROM table1 UNION SELECT column1 FROM table2 ORDER BY 1 LIMIT 1;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1978
+msgid "If ORDER BY ... LIMIT is used, then all order-by columns must be ASC or all must be DESC."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1987
+msgid "VALUES"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:1991
+msgid ":samp:`VALUES (expression [, expression ...]) [, (expression [, expression ...])`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2000
+msgid "Select one or more rows."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2002
+msgid "VALUES has the same effect as SELECT, that is, it returns a result set, but VALUES statements may not have FROM or GROUP or ORDER BY or LIMIT clauses."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2005
+msgid "VALUES may be used wherever SELECT may be used, for example in subqueries."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2009
+msgid "-- simple case:\n"
+"VALUES (1);\n"
+"-- equivalent to SELECT 1, 2, 3:\n"
+"VALUES (1, 2, 3);\n"
+"-- two rows:\n"
+"VALUES (1, 2, 3), (4, 5, 6);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2022
+msgid "Subquery"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2026
+msgid ":ref:`SELECT-statement <sql_select>` syntax"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2027
+msgid ":ref:`VALUES-statement <sql_values>` syntax"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2029
+msgid "A subquery has the same syntax as a SELECT statement or VALUES statement embedded inside a main statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2034
+msgid "The SELECT and VALUES statements are called \"queries\" because they return answers, in the form of result sets."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2037
+msgid "Subqueries may be the second part of INSERT statements. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2039
+msgid "INSERT INTO t2 SELECT a,b,c FROM t1;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2043
+msgid "Subqueries may be in the FROM clause of SELECT statements."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2045
+msgid "Subqueries may be expressions, or be inside expressions. In this case they must be parenthesized, and usually the number of rows must be 1. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2049
+msgid "SELECT 1, (SELECT 5), 3 FROM t WHERE c1 * (SELECT COUNT(*) FROM t2) > 5;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2053
+msgid "Subqueries may be expressions on the right side of certain comparison operators, and in this unusual case the number of rows may be greater than 1. The comparison operators are: [NOT] EXISTS and [NOT] IN. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2057
+msgid "DELETE FROM t WHERE s1 NOT IN (SELECT s2 FROM t);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2061
+msgid "Subqueries may refer to values in the outer query. In this case, the subquery is called a \"correlated subquery\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2064
+msgid "Subqueries may refer to rows which are being updated or deleted by the main query. In that case, the subquery finds the matching rows first, before starting to update or delete. For example, after:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2068
+msgid "CREATE TABLE t (s1 INT PRIMARY KEY, s2 INT);\n"
+"INSERT INTO t VALUES (1,3),(2,1);\n"
+"DELETE FROM t WHERE s2 NOT IN (SELECT s1 FROM t);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2074
+msgid "only one of the rows is deleted, not both rows."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2080
+msgid "WITH clause"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2082
+msgid "**WITH clause (common table expression)**"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2086
+msgid ":samp:`WITH {temporary-table-name} AS (subquery)` |br| :samp:`[, {temporary-table-name} AS (subquery)]` |br| :samp:`SELECT statement | INSERT statement | DELETE statement | UPDATE statement | REPLACE statement;`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2097
+msgid "WITH v AS (SELECT * FROM t) SELECT * FROM v;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2101
+msgid "is equivalent to creating a view and selecting from it:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2103
+msgid "CREATE VIEW v AS SELECT * FROM t;\n"
+"SELECT * FROM v;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2108
+msgid "The difference is that a WITH-clause \"view\" is temporary and only useful within the same statement. No CREATE privilege is required."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2111
+msgid "The WITH-clause can also be thought of as a subquery that has a name. This is useful when the same subquery is being repeated. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2114
+msgid "SELECT * FROM t WHERE a < (SELECT s1 FROM x) AND b < (SELECT s1 FROM x);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2118
+msgid "can be replaced with:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2120
+msgid "WITH S AS (SELECT s1 FROM x) SELECT * FROM t,S WHERE a < S.s1 AND b < S.s1;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2124
+msgid "This \"factoring out\" of a repeated expression is regarded as good practice."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2128
+msgid "WITH cte AS (VALUES (7,'') INSERT INTO j SELECT * FROM cte;\n"
+"WITH cte AS (SELECT s1 AS x FROM k) SELECT * FROM cte;\n"
+"WITH cte AS (SELECT COUNT(*) FROM k WHERE s2 < 'x' GROUP BY s3)\n"
+"  UPDATE j SET s2 = 5\n"
+"  WHERE s1 = (SELECT s1 FROM cte) OR s3 = (SELECT s1 FROM cte);"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2136
+msgid "WITH can only be used at the beginning of a statement, therefore it cannot be used at the beginning of a subquery or after a set operator or inside a CREATE statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2140
+msgid "A WITH-clause \"view\" is read-only because Tarantool does not support updatable views."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2147
+msgid "WITH RECURSIVE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2149
+msgid "**WITH RECURSIVE clause (iterative common table expression)**"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2151
+msgid "The real power of WITH lies in the WITH RECURSIVE clause, which is useful when it is combined with UNION or UNION ALL:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2154
+msgid ":samp:`WITH RECURSIVE recursive-table-name AS` |br| :samp:`(SELECT ... FROM non-recursive-table-name ...` |br| :samp:`UNION [ALL]` |br| :samp:`SELECT ... FROM recursive-table-name ...)` |br| :samp:`statement-that-uses-recursive-table-name;` |br|"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2167
+msgid "In non-SQL this can be read as: starting with a seed value from a non-recursive table, produce a recursive viewed table, UNION that with itself, UNION that with itself, UNION that with itself ... forever, or until a condition in the WHERE clause says \"stop\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2174
+msgid "CREATE TABLE ts (s1 INT PRIMARY KEY);\n"
+"INSERT INTO ts VALUES (1);\n"
+"WITH RECURSIVE w AS (\n"
+"  SELECT s1 FROM ts\n"
+"  UNION ALL\n"
+"  SELECT s1+1 FROM w WHERE s1 < 4)\n"
+"SELECT * FROM w;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2184
+msgid "First, table ``w`` is seeded from ``t1``, so it has one row: [1]."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2186
+msgid "Then, ``UNION ALL (SELECT s1+1 FROM w)`` takes the row from ``w`` -- which contains [1] -- adds 1 because the select list says \"s1+1\", and so it has one row: [2]."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2190
+msgid "Then, ``UNION ALL (SELECT s1+1 FROM w)`` takes the row from ``w`` -- which contains [2] -- adds 1 because the select list says \"s1+1\", and so it has one row: [3]."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2194
+msgid "Then, ``UNION ALL (SELECT s1+1 FROM w)`` takes the row from ``w`` -- which contains [3] -- adds 1 because the select list says \"s1+1\", and so it has one row: [4]."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2198
+msgid "Then, ``UNION ALL (SELECT s1+1 FROM w)`` takes the row from ``w`` -- which contains [4] -- and now the importance of the WHERE clause becomes evident, because \"s1 < 4\" is false for this row, and therefore we have reached the \"stop\" condition."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2203
+msgid "So, before the \"stop\", table ``w`` got 4 rows -- [1], [2], [3], [4] -- and the result of the statement looks like:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2206
+msgid "tarantool> WITH RECURSIVE w AS (\n"
+"         >   SELECT s1 FROM ts\n"
+"         >   UNION ALL\n"
+"         >   SELECT s1+1 FROM w WHERE s1 < 4)\n"
+"         > SELECT * FROM w;\n"
+"---\n"
+"- - [1]\n"
+"  - [2]\n"
+"  - [3]\n"
+"  - [4]\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2220
+msgid "In other words, this ``WITH RECURSIVE ... SELECT`` produces a table of auto-incrementing values."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2227
+msgid "UNION, EXCEPT, and INTERSECT clauses"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2231
+msgid ":samp:`select-statement UNION [ALL] select-statement [ORDER BY clause] [LIMIT clause];`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2232
+msgid ":samp:`select-statement EXCEPT select-statement [ORDER BY clause] [LIMIT clause];`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2233
+msgid ":samp:`select-statement INTERSECT select-statement [ORDER BY clause] [LIMIT clause];`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2252
+msgid "UNION, EXCEPT, and INTERSECT are collectively called \"set operators\" or \"table operators\". In particular:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2255
+msgid "``a UNION b`` means \"take rows which occur in a OR b\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2256
+msgid "``a EXCEPT b`` means \"take rows which occur in a AND NOT b\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2257
+msgid "``a INTERSECT b`` means \"take rows which occur in a AND b\"."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2259
+msgid "Duplicate rows are eliminated unless ALL is specified."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2261
+msgid "The *select-statements* may be chained: ``SELECT ... SELECT ... SELECT ...;``"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2263
+msgid "Each *select-statement* must result in the same number of columns."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2265
+msgid "The *select-statements* may be replaced with VALUES statements."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2267
+msgid "The maximum number of set operations is 50."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2271
+msgid "CREATE TABLE t1 (s1 INT PRIMARY KEY, s2 VARCHAR(1));\n"
+"CREATE TABLE t2 (s1 INT PRIMARY KEY, s2 VARCHAR(1));\n"
+"INSERT INTO t1 VALUES (1,'A'),(2,'B'),(3,NULL);\n"
+"INSERT INTO t2 VALUES (1,'A'),(2,'C'),(3,NULL);\n"
+"SELECT s2 FROM t1 UNION SELECT s2 FROM t2;\n"
+"SELECT s2 FROM t1 UNION ALL SELECT s2 FROM t2 ORDER BY s2;\n"
+"SELECT s2 FROM t1 EXCEPT SELECT s2 FROM t2;\n"
+"SELECT s2 FROM t1 INTERSECT SELECT s2 FROM t2;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2282
+msgid "In this example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2284
+msgid "The UNION query returns 4 rows: NULL, 'A', 'B', 'C'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2285
+msgid "The UNION ALL query returns 6 rows: NULL, NULL, 'A', 'A', 'B', 'C'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2286
+msgid "The EXCEPT query returns 1 row: 'B'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2287
+msgid "The INTERSECT query returns 2 rows: NULL, 'A'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2291
+msgid "Parentheses are not allowed."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2292
+msgid "Evaluation is left to right, INTERSECT does not have precedence."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2296
+msgid "CREATE TABLE t01 (s1 INT PRIMARY KEY, s2 VARCHAR(1));\n"
+"CREATE TABLE t02 (s1 INT PRIMARY KEY, s2 VARCHAR(1));\n"
+"CREATE TABLE t03 (s1 INT PRIMARY KEY, s2 VARCHAR(1));\n"
+"INSERT INTO t01 VALUES (1,'A');\n"
+"INSERT INTO t02 VALUES (1,'B');\n"
+"INSERT INTO t03 VALUES (1,'A');\n"
+"SELECT s2 FROM t01 INTERSECT SELECT s2 FROM t03 UNION SELECT s2 FROM t02;\n"
+"SELECT s2 FROM t03 UNION SELECT s2 FROM t02 INTERSECT SELECT s2 FROM t03;\n"
+"-- ... results are different."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2312
+msgid "INDEXED BY clause"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2316
+msgid ":samp:`INDEXED BY {index-name}`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2325
+msgid "The INDEXED BY clause may be used in a SELECT, DELETE, or UPDATE statement, immediately after the *table-name*. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2328
+msgid "DELETE FROM table7 INDEXED BY index7 WHERE column1 = 'a';"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2332
+msgid "In this case the search for 'a' will take place within ``index7``. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2334
+msgid "SELECT * FROM table7 NOT INDEXED WHERE column1 = 'a';"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2338
+msgid "In this case the search for 'a' will be done via a search of the whole table, what is sometimes called a \"full table scan\", even if there is an index for ``column1``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2342
+msgid "Ordinarily Tarantool chooses the appropriate index or lookup method depending on a complex set of \"optimizer\" rules; the INDEXED BY clause overrides the optimizer choice."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2348
+msgid "Suppose a table has two columns:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2350
+msgid "The first column is the primary key and therefore it has an automatic index named ``pk_unnamed_T_1``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2352
+msgid "The second column has an index created by the user."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2354
+msgid "The user selects with ``INDEXED BY the-index-on-column1``, then selects with ``INDEXED BY the-index-on-column-2``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2357
+msgid "CREATE TABLE t (column1 INT PRIMARY KEY, column2 INT);\n"
+"CREATE INDEX i ON t (column2);\n"
+"INSERT INTO t VALUES (1,2),(2,1);\n"
+"SELECT * FROM t INDEXED BY \"pk_unnamed_T_1\";\n"
+"SELECT * FROM t INDEXED BY i;\n"
+"-- Result for the first select: (1,2),(2,1)\n"
+"-- Result for the second select: (2,1),(1,2)."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2371
+msgid "Transactions"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2377
+msgid "START TRANSACTION"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2381
+msgid ":samp:`START TRANSACTION;`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2390
+msgid "Start a transaction. After ``START TRANSACTION;``, a transaction is \"active\". If a transaction is already active, then ``START TRANSACTION;`` is illegal."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2393
+msgid "Transactions should be active for fairly short periods of time, to avoid concurrency issues. To end a transaction, say ``COMMIT;`` or ``ROLLBACK;``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2396
+msgid "Just like in NoSQL, transaction control statements are subject to limitations set by the storage engine involved:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2399
+msgid "For memtx storage engine, if a yield happens within an active transaction, the transaction is rolled back."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2401
+msgid "For vinyl engine, yields are allowed."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2403
+msgid "However,transaction control statements still may not work as you expect when run over a network connection: a transaction is associated with a fiber, not a network connection, and different transaction control statements sent via the same network connection may be executed by different fibers from the fiber pool."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2409
+msgid "In order to ensure that all statements are part of the intended transaction, put all of them between ``START TRANSACTION;`` and ``COMMIT;`` or ``ROLLBACK;`` then send as a single batch. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2413
+msgid "Enclose each separate SQL statement in a :ref:`box.execute() <box-sql_box_execute>` function."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2415
+msgid "Pass all the ``box.execute()`` functions to the server in a single message."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2417
+msgid "If you are using a console, you can do this by writing everything on a single line."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2420
+msgid "If you are using :ref:`net.box <net_box-module>`, you can do this by putting all the function calls in a single string and calling :ref:`eval(string) <net_box-eval>`."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2426
+msgid "START TRANSACTION;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2430
+msgid "Example of a whole transaction sent to a server on ``localhost:3301`` with ``eval(string)``:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2433
+msgid "net_box = require('net.box')\n"
+"conn = net_box.new('localhost', 3301)\n"
+"s = 'box.execute([[START TRANSACTION; ]]) '\n"
+"s = s .. 'box.execute([[INSERT INTO t VALUES (1); ]]) '\n"
+"s = s .. 'box.execute([[ROLLBACK; ]]) '\n"
+"conn:eval(s)"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2446
+msgid "COMMIT"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2450
+msgid ":samp:`COMMIT;`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2459
+msgid "Commit an active transaction, so all changes are made permanent and the transaction ends."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2462
+msgid "COMMIT is illegal unless a transaction is active. If a transaction is not active then SQL statements are committed automatically."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2467
+msgid "COMMIT;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2475
+msgid "SAVEPOINT"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2479
+msgid ":samp:`SAVEPOINT {savepoint-name};`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2488
+msgid "Set a savepoint, so that ROLLBACK TO *savepoint-name* is possible."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2490
+msgid "SAVEPOINT is illegal unless a transaction is active."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2492
+msgid "If a savepoint with the same name already exists, it is released before the new savepoint is set."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2497
+msgid "SAVEPOINT x;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2505
+msgid "RELEASE SAVEPOINT"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2509
+msgid ":samp:`RELEASE SAVEPOINT {savepoint-name};`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2518
+msgid "Release (destroy) a savepoint created by SAVEPOINT statement."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2520
+msgid "RELEASE is illegal unless a transaction is active."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2522
+msgid "Savepoints are released automatically when a transaction ends."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2526
+msgid "RELEASE SAVEPOINT x;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2534
+msgid "ROLLBACK"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2538
+msgid ":samp:`ROLLBACK [TO [SAVEPOINT] {savepoint-name}];`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2547
+msgid "If ROLLBACK does not specify a *savepoint-name*, rollback an active transaction, so all changes since START TRANSACTION are cancelled, and the transaction ends."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2552
+msgid "If ROLLBACK does specify a *savepoint-name*, rollback an active transaction, so all changes since *savepoint-name* are cancelled, and the transaction does not end."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2557
+msgid "ROLLBACK is illegal unless a transaction is active."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2561
+msgid "-- the simple form:\n"
+"ROLLBACK;\n"
+"-- the form so changes before a savepoint are not cancelled:\n"
+"ROLLBACK TO SAVEPOINT x;"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2568
+msgid "-- An example of a Lua function that will do a transaction\n"
+"-- containing savepoint and rollback to savepoint.\n"
+"function f()\n"
+"box.execute([[DROP TABLE IF EXISTS t;]]) -- commits automatically\n"
+"box.execute([[CREATE TABLE t (s1 VARCHAR(20) PRIMARY KEY);]]) -- commits automatically\n"
+"box.execute([[START TRANSACTION;]]) -- after this succeeds, a transaction is active\n"
+"box.execute([[INSERT INTO t VALUES ('Data change #1');]])\n"
+"box.execute([[SAVEPOINT \"1\";]])\n"
+"box.execute([[INSERT INTO t VALUES ('Data change #2');]])\n"
+"box.execute([[ROLLBACK TO SAVEPOINT \"1\";]]) -- rollback Data change #2\n"
+"box.execute([[ROLLBACK TO SAVEPOINt \"1\";]]) -- this is legal but does nothing\n"
+"box.execute([[COMMIT;]]) -- make Data change #1 permanent, end the transaction\n"
+"end"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2588
+msgid "Functions"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2594
+msgid "Apply a built-in function to one or more expressions and return a scalar value."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2596
+msgid "Tarantool supports 32 built-in functions."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2602
+msgid "CHAR"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2606
+msgid ":samp:`CHAR([numeric-expression [,numeric-expression...])`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2608
+msgid "Return the characters whose Unicode code point values are equal to the numeric expressions."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2611
+msgid "Short example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2613
+msgid "The first 128 Unicode characters are the \"ASCII\" characters, so CHAR(65,66,67) is 'ABC'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2616
+msgid "Long example:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2618
+msgid "For the current list of Unicode characters, in order by code point, see `www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt <http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt>`_. In that list, there is a line for a Linear B ideogram"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2624
+msgid "``100CC;LINEAR B IDEOGRAM B240 WHEELED CHARIOT ...``"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2626
+msgid "Therefore, for a string with a chariot in the middle, use the concatenation operator ``||`` and the CHAR function"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2629
+msgid "``'start of string ' || CHAR(0X100CC) || ' end of string'``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2635
+msgid "COALESCE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2639
+msgid ":samp:`COALESCE(expression, expression [, expression ...])`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2641
+msgid "Return the value of the first non-NULL expression, or, if all expression values are NULL, return NULL."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2645
+msgid "``COALESCE(NULL, 17, 32)`` is 17."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2651
+msgid "HEX"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2655
+msgid ":samp:`HEX(expression)`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2657
+msgid "Return the hexadecimal code for each byte in **expression**, which may be either a string or a byte sequence. For ASCII characters, this is straightforward because the encoding is the same as the code point value. For non-ASCII characters, since character strings are usually encoded in UTF-8, each character will require two or more bytes."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2668
+msgid "``HEX('A')`` will return ``41``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2669
+msgid "``HEX('Д')`` will return ``D094``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2675
+msgid "IFNULL"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2679
+msgid ":samp:`IFNULL(expression, expression)`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2681
+msgid "Return the value of the first non-NULL expression, or, if both expression values are NULL, return NULL. Thus ``IFNULL(expression, expression)`` is the same as :ref:`COALESCE(expression, expression) <sql_function_coalesce>`."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2687
+msgid "``IFNULL(NULL, 17)`` is 17"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2693
+msgid "LENGTH"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2697
+msgid ":samp:`LENGTH(expression)`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2699
+msgid "Return the number of characters in the **expression**, or the number of bytes in the **expression**. It depends on the data type: strings with data type STRING are counted in characters, byte sequences with data type VARBINARY are counted in bytes and are not ended by the nul character. There are two aliases for ``LENGTH(expression)`` -- ``CHAR_LENGTH(expression)`` and ``CHARACTER_LENGTH(expression)`` do the same thing."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2710
+msgid "``LENGTH('ДД')`` is 2, the string has 2 characters."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2711
+msgid "``LENGTH(CAST('ДД' AS VARBINARY))`` is 4, the string has 4 bytes."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2712
+msgid "``LENGTH(CHAR(0,65))`` is 2, '\\0' does not mean 'end of string'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2713
+msgid "``LENGTH(X'410041')`` is 3, X'...' byte sequences have type VARBINARY."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2719
+msgid "LOWER"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2723
+msgid ":samp:`LOWER(string-expression)`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2725
+msgid "Return the expression, with upper-case characters converted to lower case. This is the reverse of :ref:`UPPER(string-expression) <sql_function_upper>`."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2728
+msgid "Example: ``LOWER('-4ЩL')`` is '-4щl'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2734
+msgid "NULLIF"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2738
+msgid ":samp:`NULLIF(expression-1, expression-2)`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2740
+msgid "Return *expression-1* if *expression-1* <> *expression-2*, otherwise return NULL."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2745
+msgid "``NULLIF('a','A')`` is 'a'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2746
+msgid "``NULLIF(1.00, 1)`` is NULL."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2752
+msgid "PRINTF"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2756
+msgid ":samp:`PRINTF(string-expression [, expression ...])`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2758
+msgid "Return a string formatted according to the rules of the C ``sprintf()`` function, where ``%d%s`` means the next two arguments are a number and a string, etc."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2762
+msgid "If an argument is missing or is NULL, it becomes:"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2764
+msgid "'0' if the format requires an integer,"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2765
+msgid "'0.0' if the format requires a decimal number,"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2766
+msgid "'' if the format requires a string."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2768
+msgid "Example: ``PRINTF('%da', 5)`` is '5a'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2774
+msgid "QUOTE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2778
+msgid ":samp:`QUOTE(string-literal)`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2780
+msgid "Return a string with enclosing quotes if necessary, and with quotes inside the enclosing quotes if necessary. This function is useful for creating strings which are part of SQL statements, because of SQL's rules that string literals are enclosed by single quotes, and single quotes inside such strings are shown as two single quotes in a row."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2787
+msgid "Example: ``QUOTE('a')`` is ``'a'``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2793
+msgid "SOUNDEX"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2797
+msgid ":samp:`SOUNDEX(string-expression)`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2799
+msgid "Return a four-character string which represents the sound of ``string-expression``. Often words and names which have different spellings will have the same Soundex representation if they are pronounced similarly, so it is possible to search by what they sound like. The algorithm works with characters in the Latin alphabet and works best with English words."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2807
+msgid "Example: ``SOUNDEX('Crater')`` and ``SOUNDEX('Creature')`` both return ``C636``."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2813
+msgid "UNICODE"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2817
+msgid ":samp:`UNICODE(string-expression)`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2819
+msgid "Return the Unicode code point value of the first character of **string-expression**. If *string-expression* is empty, the return is NULL. This is the reverse of :ref:`CHAR(integer) <sql_function_char>`."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2823
+msgid "Example: ``UNICODE('Щ')`` is 1065 (hexadecimal 0429)."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2829
+msgid "UPPER"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2833
+msgid ":samp:`UPPER(string-expression)`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2835
+msgid "Return the expression, with lower-case characters converted to upper case. This is the reverse of :ref:`LOWER(string-expression)<sql_function_lower>`."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2838
+msgid "Example: ``UPPER('-4щl')`` is '-4ЩL'."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2844
+msgid "VERSION"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2848
+msgid ":samp:`VERSION()`"
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2850
+msgid "Return the Tarantool version."
+msgstr ""
+
+#: ../doc/reference/reference_sql/sql.rst:2852
+msgid "Example: for a March 2019 build VERSION() is ``2.1.1-374-g27283debc``."
+msgstr ""
+

@@ -1,0 +1,1245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../doc/book/box/box_schema.rst:5
+msgid "Submodule `box.schema`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:11
+msgid "Overview"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:13
+msgid "The ``box.schema`` submodule has data-definition functions for spaces, users, roles, function tuples, and sequences."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:18
+msgid "Index"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:20
+msgid "Below is a list of all ``box.schema`` functions."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:28
+#: ../doc/book/box/box_schema.rst:138
+msgid "Name"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:28
+msgid "Use"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:30
+msgid ":ref:`box.schema.space.create() <box_schema-space_create>` or :ref:`box.schema.create_space() <box_schema-space_create>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:30
+msgid "Create a space"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:35
+msgid ":ref:`box.schema.user.create() <box_schema-user_create>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:35
+msgid "Create a user"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:38
+msgid ":ref:`box.schema.user.drop() <box_schema-user_drop>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:38
+msgid "Drop a user"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:41
+msgid ":ref:`box.schema.user.exists() <box_schema-user_exists>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:41
+msgid "Check if a user exists"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:44
+msgid ":ref:`box.schema.user.grant() <box_schema-user_grant>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:44
+msgid "Grant privileges to a user or a role"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:47
+msgid ":ref:`box.schema.user.revoke() <box_schema-user_revoke>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:47
+msgid "Revoke privileges from a user or a role"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:50
+msgid ":ref:`box.schema.user.password() <box_schema-user_password>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:50
+msgid "Get a hash of a user's password"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:53
+msgid ":ref:`box.schema.user.passwd() <box_schema-user_passwd>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:53
+msgid "Associate a password with a user"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:56
+msgid ":ref:`box.schema.user.info() <box_schema-user_info>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:56
+msgid "Get a description of a user's privileges"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:59
+msgid ":ref:`box.schema.role.create() <box_schema-role_create>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:59
+msgid "Create a role"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:62
+msgid ":ref:`box.schema.role.drop() <box_schema-role_drop>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:62
+msgid "Drop a role"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:65
+msgid ":ref:`box.schema.role.exists() <box_schema-role_exists>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:65
+msgid "Check if a role exists"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:68
+msgid ":ref:`box.schema.role.grant() <box_schema-role_grant>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:68
+msgid "Grant privileges to a role"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:71
+msgid ":ref:`box.schema.role.revoke() <box_schema-role_revoke>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:71
+msgid "Revoke privileges from a role"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:74
+msgid ":ref:`box.schema.role.info() <box_schema-role_info>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:74
+msgid "Get a description of a role's privileges"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:77
+msgid ":ref:`box.schema.func.create() <box_schema-func_create>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:77
+msgid "Create a function tuple"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:80
+msgid ":ref:`box.schema.func.drop() <box_schema-func_drop>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:80
+msgid "Drop a function tuple"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:83
+msgid ":ref:`box.schema.func.exists() <box_schema-func_exists>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:83
+msgid "Check if a function tuple exists"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:86
+msgid ":ref:`box.schema.sequence.create() <box_schema-sequence_create>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:86
+msgid "Create a new sequence generator"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:89
+msgid ":ref:`sequence_object:next() <box_schema-sequence_next>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:89
+msgid "Generate and return the next value"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:92
+msgid ":ref:`sequence_object:alter() <box_schema-sequence_alter>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:92
+msgid "Change sequence options"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:95
+msgid ":ref:`sequence_object:reset() <box_schema-sequence_reset>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:95
+msgid "Reset sequence state"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:98
+msgid ":ref:`sequence_object:set() <box_schema-sequence_set>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:98
+msgid "Set the new value"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:101
+msgid ":ref:`sequence_object:drop() <box_schema-sequence_drop>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:101
+msgid "Drop the sequence"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:104
+msgid ":ref:`space_object:create_index() <box_schema-sequence_create_index>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:104
+msgid "Create an index"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:113
+msgid "Create a :ref:`space <index-box_space>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:115
+msgid "name of space, which should conform to the :ref:`rules for object names <app_server-names>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:117
+msgid "see \"Options for box.schema.space.create\" chart, below"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+msgid "return"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:119
+msgid "space object"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+#: ../doc/book/box/box_schema.rst:0
+msgid "rtype"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:120
+msgid "userdata"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:122
+msgid "You can use either syntax. For example, ``s = box.schema.space.create('tester')`` has the same effect as ``s = box.schema.create_space('tester')``."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:128
+msgid "**Options for box.schema.space.create**"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:138
+msgid "Effect"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:138
+msgid "Type"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:138
+msgid "Default"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:140
+msgid "engine"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:140
+msgid "'memtx' or 'vinyl'"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:140
+#: ../doc/book/box/box_schema.rst:180
+#: ../doc/book/box/box_schema.rst:396
+msgid "string"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:140
+msgid "'memtx'"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:142
+msgid "field_count"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:142
+msgid "fixed count of :ref:`fields <index-box_tuple>`: for example if field_count=5, it is illegal to insert a tuple with fewer than or more than 5 fields"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:142
+#: ../doc/book/box/box_schema.rst:155
+msgid "number"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:142
+msgid "0 i.e. not fixed"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:148
+msgid "format"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:148
+msgid "field names and types: See the illustrations of format clauses in the :ref:`space_object:format() <box_space-format>` description and in the :ref:`box.space._space <box_space-space>` example. Optional and usually not specified."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:148
+msgid "table"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:148
+msgid "(blank)"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:155
+msgid "id"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:155
+msgid "unique identifier: users can refer to spaces with the id instead of the name"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:155
+msgid "last space's id, +1"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:159
+msgid "if_not_exists"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:159
+msgid "create space only if a space with the same name does not exist already, otherwise do nothing but do not cause an error"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:159
+#: ../doc/book/box/box_schema.rst:165
+#: ../doc/book/box/box_schema.rst:172
+msgid "boolean"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:159
+#: ../doc/book/box/box_schema.rst:165
+#: ../doc/book/box/box_schema.rst:172
+msgid "false"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:165
+msgid "is_local"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:165
+msgid "space contents are :ref:`replication-local <replication-local>`: changes are stored in the :ref:`write-ahead log <internals-wal>` of the local node but there is no :ref:`replication <replication>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:172
+msgid "temporary"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:172
+msgid "space contents are temporary: changes are not stored in the :ref:`write-ahead log <internals-wal>` and there is no :ref:`replication <replication>`. Note re storage engine: vinyl does not support temporary spaces."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:180
+msgid "user"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:180
+msgid "name of the user who is considered to be the space's :ref:`owner <authentication-owners_privileges>` for authorization purposes"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:180
+msgid "current user's name"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:186
+msgid "There are three :ref:`syntax variations <app_server-object_reference>` for object references targeting space objects, for example :samp:`box.schema.space.drop({space-id})` will drop a space. However, the common approach is to use functions attached to the space objects, for example :ref:`space_object:drop() <box_space-drop>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:193
+msgid "**Example**"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:195
+msgid "tarantool> s = box.schema.space.create('space55')\n"
+"---\n"
+"...\n"
+"tarantool> s = box.schema.space.create('space55', {\n"
+"         >   id = 555,\n"
+"         >   temporary = false\n"
+"         > })\n"
+"---\n"
+"- error: Space 'space55' already exists\n"
+"...\n"
+"tarantool> s = box.schema.space.create('space55', {\n"
+"         >   if_not_exists = true\n"
+"         > })\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:213
+msgid "After a space is created, usually the next step is to :ref:`create an index <box_space-create_index>` for it, and then it is available for insert, select, and all the other :ref:`box.space <box_space>` functions."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:222
+msgid "Create a user. For explanation of how Tarantool maintains user data, see section :ref:`Users<authentication-users>` and reference on :ref:`_user <box_space-user>` space."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:227
+#: ../doc/book/box/box_schema.rst:319
+#: ../doc/book/box/box_schema.rst:600
+#: ../doc/book/box/box_schema.rst:643
+msgid "The possible options are:"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:229
+msgid "``if_not_exists`` = ``true|false`` (default = ``false``) - boolean; ``true`` means there should be no error if the user already exists,"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:232
+msgid "``password`` (default = '') - string; the ``password`` = *password* specification is good because in a :ref:`URI <index-uri>` (Uniform Resource Identifier) it is usually illegal to include a user-name without a password."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:239
+msgid "The maximum number of users is 32."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:241
+msgid "name of user, which should conform to the :ref:`rules for object names <app_server-names>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:243
+msgid "``if_not_exists``, ``password``"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:245
+#: ../doc/book/box/box_schema.rst:463
+#: ../doc/book/box/box_schema.rst:618
+#: ../doc/book/box/box_schema.rst:669
+msgid "nil"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:247
+#: ../doc/book/box/box_schema.rst:268
+msgid "**Examples:**"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:249
+msgid "box.schema.user.create('Lena')\n"
+"box.schema.user.create('Lena', {password = 'X'})\n"
+"box.schema.user.create('Lena', {if_not_exists = false})"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:259
+msgid "Drop a user. For explanation of how Tarantool maintains user data, see section :ref:`Users <authentication-users>` and reference on :ref:`_user <box_space-user>` space."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:264
+#: ../doc/book/box/box_schema.rst:284
+msgid "the name of the user"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:265
+msgid "``if_exists`` = ``true|false`` (default = ``false``) - boolean; ``true`` means there should be no error if the user does not exist."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:270
+msgid "box.schema.user.drop('Lena')\n"
+"box.schema.user.drop('Lena',{if_exists=false})"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:279
+msgid "Return ``true`` if a user exists; return ``false`` if a user does not exist. For explanation of how Tarantool maintains user data, see section :ref:`Users <authentication-users>` and reference on :ref:`_user <box_space-user>` space."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:285
+#: ../doc/book/box/box_schema.rst:497
+#: ../doc/book/box/box_schema.rst:774
+msgid "bool"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:287
+#: ../doc/book/box/box_schema.rst:325
+#: ../doc/book/box/box_schema.rst:359
+#: ../doc/book/box/box_schema.rst:398
+#: ../doc/book/box/box_schema.rst:420
+#: ../doc/book/box/box_schema.rst:465
+#: ../doc/book/box/box_schema.rst:484
+#: ../doc/book/box/box_schema.rst:499
+#: ../doc/book/box/box_schema.rst:530
+#: ../doc/book/box/box_schema.rst:561
+#: ../doc/book/box/box_schema.rst:578
+#: ../doc/book/box/box_schema.rst:620
+#: ../doc/book/box/box_schema.rst:725
+#: ../doc/book/box/box_schema.rst:760
+#: ../doc/book/box/box_schema.rst:776
+#: ../doc/book/box/box_schema.rst:801
+#: ../doc/book/box/box_schema.rst:949
+msgid "**Example:**"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:289
+msgid "box.schema.user.exists('Lena')"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:299
+msgid "Grant :ref:`privileges <authentication-owners_privileges>` to a user or to another role."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:302
+#: ../doc/book/box/box_schema.rst:344
+msgid "the name of the user."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:303
+#: ../doc/book/box/box_schema.rst:345
+#: ../doc/book/box/box_schema.rst:514
+#: ../doc/book/box/box_schema.rst:547
+msgid "'read' or 'write' or 'execute' or 'create' or 'alter' or 'drop' or a combination."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:305
+#: ../doc/book/box/box_schema.rst:516
+#: ../doc/book/box/box_schema.rst:549
+msgid "'space' or 'function' or 'sequence' or 'role'."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:306
+msgid "name of object to grant permissions for."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:307
+msgid "name of role to grant to user."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:308
+msgid "``grantor``, ``if_not_exists``."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:310
+msgid "If :samp:`'function','{object-name}'` is specified, then a _func tuple with that object-name must exist."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:313
+#: ../doc/book/box/box_schema.rst:524
+msgid "**Variation:** instead of ``object-type, object-name`` say 'universe' which means 'all object-types and all objects'. In this case, object name is omitted."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:316
+#: ../doc/book/box/box_schema.rst:356
+msgid "**Variation:** instead of ``privilege, object-type, object-name`` say ``role-name`` (see section :ref:`Roles <authentication-roles>`)."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:321
+msgid "``grantor`` = *grantor_name_or_id* -- string or number, for custom grantor,"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:322
+msgid "``if_not_exists`` = ``true|false`` (default = ``false``) - boolean; ``true`` means there should be no error if the user already has the privilege."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:327
+msgid "box.schema.user.grant('Lena', 'read', 'space', 'tester')\n"
+"box.schema.user.grant('Lena', 'execute', 'function', 'f')\n"
+"box.schema.user.grant('Lena', 'read,write', 'universe')\n"
+"box.schema.user.grant('Lena', 'Accountant')\n"
+"box.schema.user.grant('Lena', 'read,write,execute', 'universe')\n"
+"box.schema.user.grant('X', 'read', 'universe', nil, {if_not_exists=true}))"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:341
+msgid "Revoke :ref:`privileges <authentication-owners_privileges>` from a user or from another role."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:347
+msgid "'space' or 'function' or 'sequence'."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:348
+msgid "the name of a function or space or sequence."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:350
+msgid "The user must exist, and the object must exist, but it is not an error if the user does not have the privilege."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:353
+#: ../doc/book/box/box_schema.rst:555
+msgid "**Variation:** instead of ``object-type, object-name`` say 'universe' which means 'all object-types and all objects'."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:361
+msgid "box.schema.user.revoke('Lena', 'read', 'space', 'tester')\n"
+"box.schema.user.revoke('Lena', 'execute', 'function', 'f')\n"
+"box.schema.user.revoke('Lena', 'read,write', 'universe')\n"
+"box.schema.user.revoke('Lena', 'Accountant')"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:372
+msgid "Return a hash of a user's password. For explanation of how Tarantool maintains passwords, see section :ref:`Passwords <authentication-passwords>` and reference on :ref:`_user <box_space-user>` space."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:378
+msgid "If a non-'guest' user has no password, it’s **impossible** to connect to Tarantool using this user. The user is regarded as “internal” only, not usable from a remote connection. Such users can be useful if they have defined some procedures with the :ref:`SETUID <box_schema-func_create>` option, on which privileges are granted to externally-connectable users. This way, external users cannot create/drop objects, they can only invoke procedures."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:385
+msgid "For the 'guest' user, it’s impossible to set a password: that would be misleading, since 'guest' is the default user on a newly-established connection over a :ref:`binary port <admin-security>`, and Tarantool does not require a password to establish a :ref:`binary connection <box_protocol-iproto_protocol>`. It is, however, possible to change the current user to ‘guest’ by providing the :ref:`AUTH packet <box_protocol-authentication>` with no password at all or an empty password. This feature is useful for connection pools, which want to reuse a connection for a different user without re-establishing it."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:395
+msgid "password to be hashed"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:400
+msgid "box.schema.user.password('ЛЕНА')"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:408
+msgid "Associate a password with the user who is currently logged in, or with the user specified by user-name. The user must exist and must not be 'guest'."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:411
+msgid "Users who wish to change their own passwords should use ``box.schema.user.passwd(password)`` syntax."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:414
+msgid "Administrators who wish to change passwords of other users should use ``box.schema.user.passwd(user-name, password)`` syntax."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:417
+msgid "user-name"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:418
+msgid "password"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:422
+msgid "box.schema.user.passwd('ЛЕНА')\n"
+"box.schema.user.passwd('Lena', 'ЛЕНА')"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:431
+msgid "Return a description of a user's :ref:`privileges <authentication-owners_privileges>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:453
+msgid "Create a role. For explanation of how Tarantool maintains role data, see section :ref:`Roles <authentication-roles>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:457
+msgid "name of role, which should conform to the :ref:`rules for object names <app_server-names>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:459
+msgid "``if_not_exists`` = ``true|false`` (default = ``false``) - boolean; ``true`` means there should be no error if the role already exists"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:467
+msgid "box.schema.role.create('Accountant')\n"
+"box.schema.role.create('Accountant', {if_not_exists = false})"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:476
+msgid "Drop a role. For explanation of how Tarantool maintains role data, see section :ref:`Roles <authentication-roles>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:480
+#: ../doc/book/box/box_schema.rst:496
+msgid "the name of the role"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:481
+msgid "``if_exists`` = ``true|false`` (default = ``false``) - boolean; ``true`` means there should be no error if the role does not exist."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:486
+msgid "box.schema.role.drop('Accountant')"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:494
+msgid "Return ``true`` if a role exists; return ``false`` if a role does not exist."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:501
+msgid "box.schema.role.exists('Accountant')"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:511
+msgid "Grant :ref:`privileges <authentication-owners_privileges>` to a role."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:513
+#: ../doc/book/box/box_schema.rst:546
+#: ../doc/book/box/box_schema.rst:576
+msgid "the name of the role."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:517
+#: ../doc/book/box/box_schema.rst:550
+msgid "the name of a function or space or sequence or role."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:518
+msgid "``if_not_exists`` = ``true|false`` (default = ``false``) - boolean; ``true`` means there should be no error if the role already has the privilege."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:522
+msgid "The role must exist, and the object must exist."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:527
+msgid "**Variation:** instead of ``privilege, object-type, object-name`` say ``role-name`` -- to grant a role to a role."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:532
+msgid "box.schema.role.grant('Accountant', 'read', 'space', 'tester')\n"
+"box.schema.role.grant('Accountant', 'execute', 'function', 'f')\n"
+"box.schema.role.grant('Accountant', 'read,write', 'universe')\n"
+"box.schema.role.grant('public', 'Accountant')\n"
+"box.schema.role.grant('role1', 'role2', nil, nil, {if_not_exists=false})"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:544
+msgid "Revoke :ref:`privileges <authentication-owners_privileges>` from a role."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:552
+msgid "The role must exist, and the object must exist, but it is not an error if the role does not have the privilege."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:558
+msgid "**Variation:** instead of ``privilege, object-type, object-name`` say ``role-name``."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:563
+msgid "box.schema.role.revoke('Accountant', 'read', 'space', 'tester')\n"
+"box.schema.role.revoke('Accountant', 'execute', 'function', 'f')\n"
+"box.schema.role.revoke('Accountant', 'read,write', 'universe')\n"
+"box.schema.role.revoke('public', 'Accountant')"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:574
+msgid "Return a description of a role's privileges."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:580
+msgid "box.schema.role.info('Accountant')"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:588
+msgid "Create a function :ref:`tuple <index-box_tuple>`. without including the ``body`` option. (For functions created with the ``body`` option, see :ref:`box.schema.func.create(func-name [, {options-with-body}]) <box_schema-func_create_with-body>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:593
+msgid "This is called a \"not persistent\" function because functions without bodies are not persistent. This does not create the function itself -- that is done with Lua -- but if it is necessary to grant privileges for a function, box.schema.func.create must be done first. For explanation of how Tarantool maintains function data, see the reference for the :ref:`box.space._func <box_space-func>` space."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:602
+msgid "``if_not_exists`` = ``true|false`` (default = ``false``) - boolean; ``true`` means there should be no error if the ``_func`` tuple already exists."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:605
+msgid "``setuid`` = ``true|false`` (default = ``false``) - boolean; ``true`` means that Tarantool should treat the function’s caller as the function’s owner, with owner privileges. ``setuid`` works only over :ref:`binary ports <admin-security>`, ``setuid`` does not work if the function is invoked via an :ref:`admin console <admin-security>` or inside a Lua script."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:612
+msgid "``language`` = 'LUA'|'C' (default = ‘LUA’) - string."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:614
+#: ../doc/book/box/box_schema.rst:664
+msgid "name of function, which should conform to the :ref:`rules for object names <app_server-names>`"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:616
+msgid "``if_not_exists``, ``setuid``, ``language``."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:622
+msgid "box.schema.func.create('calculate')\n"
+"box.schema.func.create('calculate', {if_not_exists = false})\n"
+"box.schema.func.create('calculate', {setuid = false})\n"
+"box.schema.func.create('calculate', {language = 'LUA'})"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:633
+msgid "Create a function :ref:`tuple <index-box_tuple>`. including the ``body`` option. (For functions created without the ``body`` option, see :ref:`box.schema.func.create(func-name [, {options-without-body}]) <box_schema-func_create>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:638
+msgid "This is called a \"persistent\" function because only functions with bodies are persistent. This does create the function itself, the body is a function definition. For explanation of how Tarantool maintains function data, see the reference for the :ref:`box.space._func <box_space-func>` space."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:645
+msgid "``if_not_exists`` = ``true|false`` (default = ``false``) - boolean; same as for :ref:`box.schema.func.create(func-name [, {options-without-body}]) <box_schema-func_create>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:648
+msgid "``setuid`` = ``true|false`` (default = ``false``) - boolean; same as for :ref:`box.schema.func.create(func-name [, {options-without-body}]) <box_schema-func_create>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:651
+msgid "``language`` = 'LUA'|'C' (default = ‘LUA’) - string. same as for :ref:`box.schema.func.create(func-name [, {options-without-body}]) <box_schema-func_create>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:654
+msgid "``is_sandboxed`` = ``true|false`` (default = ``false``) - boolean; whether the function should be executed in a sandbox."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:657
+msgid "``is_deterministic`` = ``true|false`` (default = ``false``) - boolean; ``true`` means that the function should be deterministic, ``false`` means that the function may or may not be deterministic."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:661
+msgid "``body`` = function definition (default = nil) - string; the function definition."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:666
+msgid "``if_not_exists``, ``setuid``, ``language``, ``is_sandboxed``, ``is_deterministic``, ``body``."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:671
+msgid "C functions are imported from .so files, Lua functions can be defined within ``body``. We will only describe Lua functions in this section."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:674
+msgid "A function tuple with a body is \"persistent\" because the tuple is stored in a snapshot and is recoverable if the server restarts. All of the option values described in this section are visible in the :ref:`box.space._func <box_space-func>` system space."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:679
+msgid "If ``is_sandboxed`` is true, then the function will be executed in an isolated environment: any operation that accesses the world outside the sandbox will be forbidden or will have no effect. Therefore a sandboxed function can only use modules and functions which cannot affect isolation: `assert <https://www.lua.org/manual/5.1/manual.html#pdf-assert>`_, `error <://www.lua.org/manual/5.1/manual.html#pdf-error>`_, `ipairs <https://www.lua.org/manual/5.1/manual.html#pdf-ipairs>`_, `math.* <https://www.lua.org/manual/5.1/manual.html#5.6>`_, `next <https://www.lua.org/manual/5.1/manual.html#pdf-next>`_, `pairs <https://www.lua.org/manual/5.1/manual.html#pdf-pairs>`_, `pcall <https://www.lua.org/manual/5.1/manual.html#pdf-pcall>`_, `print <https://www.lua.org/manual/5.1/manual.html#pdf-print>`_, `select <https://www.lua.org/manual/5.1/manual.html#pdf-select>`_, `string.* <https://www.lua.org/manual/5.1/manual.html#5.4>`_, `table.* <https://www.lua.org/manual/5.1/manual.html#5.5>`_, `tonumber <https://www.lua.org/manual/5.1/manual.html#pdf-tonumber>`_, `tostring <https://www.lua.org/manual/5.1/manual.html#pdf-tostring>`_, `type <https://www.lua.org/manual/5.1/manual.html#pdf-type>`_, `unpack <https://www.lua.org/manual/5.1/manual.html#pdf-unpack>`_, :ref:`utf8.* <utf8-module>`, `xpcall <https://www.lua.org/manual/5.1/manual.html#pdf-xpcall>`_. Also a sandboxed function cannot refer to global variables -- they will be treated as local variables because the sandbox is established with `setfenv <https://www.lua.org/manual/5.1/manual.html#pdf-setfenv>`_. So a sandboxed function will happen to be stateless and deterministic."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:706
+msgid "If ``is_deterministic`` is true, there is no immediate effect. Tarantool plans to use the is_deterministic value in a future version. A function is deterministic if it always returns the same outputs given the same inputs. It is the function creator's responsibility to ensure that a function is truly deterministic."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:712
+msgid "**Using a persistent Lua function**"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:714
+msgid "After a persistent Lua function is created, it can be found in the :ref:`box.space._func <box_space-func>` system space, and it can be shown with |br| :samp:`box.func.{func-name}` |br| and it can be invoked by any user with :ref:`authorization <authentication-owners_privileges>` to 'execute' it. The syntax for invoking is: |br| :samp:`box.func.{func-name}:call([parameters])` |br| or, if the connection is remote, the syntax is as in :ref:`net_box:call() <net_box-call>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:727
+msgid "tarantool> lua_code = [[function(a, b) return a + b end]]\n"
+"tarantool> box.schema.func.create('sum', {body = lua_code})\n"
+"\n"
+"tarantool> box.func.sum\n"
+"---\n"
+"- is_sandboxed: false\n"
+"  is_deterministic: false\n"
+"  id: 2\n"
+"  setuid: false\n"
+"  body: function(a, b) return a + b end\n"
+"  name: sum\n"
+"  language: LUA\n"
+"...\n"
+"\n"
+"tarantool> box.func.sum:call({1, 2})\n"
+"---\n"
+"- 3\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:752
+msgid "Drop a function tuple. For explanation of how Tarantool maintains function data, see reference on :ref:`_func space <box_space-func>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:756
+#: ../doc/book/box/box_schema.rst:773
+msgid "the name of the function"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:757
+msgid "``if_exists`` = ``true|false`` (default = ``false``) - boolean; ``true`` means there should be no error if the _func tuple does not exist."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:762
+msgid "box.schema.func.drop('calculate')"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:770
+msgid "Return true if a function tuple exists; return false if a function tuple does not exist."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:778
+msgid "box.schema.func.exists('calculate')"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:786
+msgid "Reload a C module with all its functions without restarting the server."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:788
+msgid "Under the hood, Tarantool loads a new copy of the module (``*.so`` shared library) and starts routing all new request to the new version. The previous version remains active until all started calls are finished. All shared libraries are loaded with ``RTLD_LOCAL`` (see \"man 3 dlopen\"), therefore multiple copies can co-exist without any problems."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:796
+msgid "Reload will fail if a module was loaded from Lua script with `ffi.load() <http://luajit.org/ext_ffi_api.html#ffi_load>`_."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:799
+msgid "the name of the module to reload"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:803
+msgid "-- reload the entire module contents\n"
+"box.schema.func.reload('module')"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:812
+msgid "Sequences"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:814
+msgid "An introduction to sequences is in the :ref:`Sequences <index-box_sequence>` section of the \"Data model\" chapter. Here are the details for each function and option."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:818
+msgid "All functions related to sequences require appropriate :ref:`privileges <authentication-owners_privileges>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:825
+msgid "Create a new sequence generator."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:827
+msgid "the name of the sequence"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:829
+msgid "see a quick overview in the \"Options for ``box.schema.sequence.create()``\" :ref:`chart <index-box_sequence-options>` (in the :ref:`Sequences <index-box_sequence>` section of the \"Data model\" chapter), and see more details below."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:836
+msgid "a reference to a new sequence object."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:838
+msgid "Options:"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:840
+msgid "``start`` -- the STARTS WITH value. Type = integer, Default = 1."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:842
+msgid "``min`` -- the MINIMUM value. Type = integer, Default = 1."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:844
+msgid "``max`` - the MAXIMUM value. Type = integer, Default = 9223372036854775807."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:846
+msgid "There is a rule: ``min`` <= ``start`` <= ``max``. For example it is illegal to say ``{start=0}`` because then the specified start value (0) would be less than the default min value (1)."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:850
+msgid "There is a rule: ``min`` <= next-value <= ``max``. For example, if the next generated value would be 1000, but the maximum value is 999, then that would be considered \"overflow\"."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:855
+msgid "There is a rule: ``start`` and ``min`` and ``max`` must all be <= 9223372036854775807 which is 2^63 - 1 (not 2^64)."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:858
+msgid "``cycle`` -- the CYCLE value. Type = bool. Default = false."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:860
+msgid "If the sequence generator's next value is an overflow number, it causes an error return -- unless ``cycle == true``."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:863
+msgid "But if ``cycle == true``, the count is started again, at the MINIMUM value or at the MAXIMUM value (not the STARTS WITH value)."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:866
+msgid "``cache`` -- the CACHE value. Type = unsigned integer. Default = 0."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:868
+msgid "Currently Tarantool ignores this value, it is reserved for future use."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:870
+msgid "``step`` -- the INCREMENT BY value. Type = integer. Default = 1."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:872
+msgid "Ordinarily this is what is added to the previous value."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:878
+msgid "Generate the next value and return it."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:880
+msgid "The generation algorithm is simple:"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:882
+msgid "If this is the first time, then return the STARTS WITH value."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:883
+msgid "If the previous value plus the INCREMENT value is less than the MINIMUM value or greater than the MAXIMUM value, that is \"overflow\", so either raise an error (if ``cycle`` = ``false``) or return the MAXIMUM value (if ``cycle`` = ``true`` and ``step`` < 0) or return the MINIMUM value (if ``cycle`` = ``true`` and ``step`` > 0)."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:889
+msgid "If there was no error, then save the returned result, it is now the \"previous value\"."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:892
+msgid "For example, suppose sequence 'S' has:"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:894
+msgid "``min`` == -6,"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:895
+msgid "``max`` == -1,"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:896
+msgid "``step`` == -3,"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:897
+msgid "``start`` = -2,"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:898
+msgid "``cycle`` = true,"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:899
+msgid "previous value = -2."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:901
+msgid "Then ``box.sequence.S:next()`` returns -5 because -2 + (-3) == -5."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:903
+msgid "Then ``box.sequence.S:next()`` again returns -1 because -5 + (-3) < -6, which is overflow, causing cycle, and ``max`` == -1."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:906
+msgid "This function requires a :ref:`'write' privilege <box_schema-user_grant>` on the sequence."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:911
+msgid "This function should not be used in \"cross-engine\" transactions (transactions which use both the memtx and the vinyl storage engines)."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:914
+msgid "To see what the previous value was, without changing it, you can select from the :ref:`_sequence_data <box_space-sequence_data>` system space."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:922
+msgid "The ``alter()`` function can be used to change any of the sequence's options. Requirements and restrictions are the same as for :ref:`box.schema.sequence.create() <box_schema-sequence_create>`."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:930
+msgid "Set the sequence back to its original state. The effect is that a subsequent ``next()`` will return the ``start`` value. This function requires a :ref:`'write' privilege <box_schema-user_grant>` on the sequence."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:939
+msgid "Set the \"previous value\" to ``new-previous-value``. This function requires a :ref:`'write' privilege <box_schema-user_grant>` on the sequence."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:947
+msgid "Drop an existing sequence."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:951
+msgid "Here is an example showing all sequence options and operations:"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:953
+msgid "s = box.schema.sequence.create(\n"
+"               'S2',\n"
+"               {start=100,\n"
+"               min=100,\n"
+"               max=tonumber64('9223372036854775807'),\n"
+"               cache=100000,\n"
+"               cycle=false,\n"
+"               step=100\n"
+"               })\n"
+"s:alter({step=6})\n"
+"s:next()\n"
+"s:reset()\n"
+"s:set(150)\n"
+"s:drop()"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:974
+msgid "You can use the ``sequence`` option when :ref:`creating <box_space-create_index>` or :ref:`altering <box_index-alter>` a primary-key index. The sequence becomes associated with the index, so that the next ``insert()`` will put the next generated number into the primary-key field, if the field value would otherwise be nil."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:981
+msgid "The syntax may be any of: |br| :samp:`sequence = {sequence identifier}` |br| or :code:`sequence = {id =` :samp:`{sequence identifier}` :code:`}` |br| or :code:`sequence = {field =` :samp:`{field number}` :code:`}` |br| or :code:`sequence = {id =` :samp:`{sequence identifier}` :code:`, field =` :samp:`{field number}` :code:`}` |br| or :code:`sequence = true` |br| or :code:`sequence = {}`. |br| The sequence identifier may be either a number (the sequence id) or a string (the sequence name). The field number may be the ordinal number of any field in the index; default = 1. Examples of all possibilities: ``sequence = 1`` or ``sequence = 'sequence_name'`` or ``sequence = {id = 1}`` or ``sequence = {id = 'sequence_name'}`` or ``sequence = {id = 1, field = 1}`` or ``sequence = {id = 'sequence_name', field = 1}`` or ``sequence = {field = 1}`` or ``sequence = true`` or ``sequence = {}``. Notice that the sequence identifier can be omitted, if it is omitted then a new sequence is created automatically with default name = :samp:`{space-name}_seq`. Notice that the field number does not have to be 1, that is, the sequence can be associated with any field in the primary-key index."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:1014
+msgid "For example, if 'Q' is a sequence and 'T' is a new space, then this will work:"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:1017
+msgid "tarantool> box.space.T:create_index('Q',{sequence='Q'})\n"
+"---\n"
+"- unique: true\n"
+"  parts:\n"
+"  - type: unsigned\n"
+"    is_nullable: false\n"
+"    fieldno: 1\n"
+"  sequence_id: 8\n"
+"  id: 0\n"
+"  space_id: 514\n"
+"  name: Q\n"
+"  type: TREE\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:1033
+msgid "(Notice that the index now has a ``sequence_id`` field.)"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:1035
+msgid "And this will work:"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:1037
+msgid "tarantool> box.space.T:insert{nil,0}\n"
+"---\n"
+"- [1, 0]\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:1046
+msgid "The index key type may be either 'integer' or 'unsigned'. If any of the sequence options is a negative number, then the index key type should be 'integer'."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:1050
+msgid "Users should not insert a value greater than 9223372036854775807, which is 2^63 - 1, in the indexed field. The sequence generator will ignore it."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:1054
+msgid "A sequence cannot be dropped if it is associated with an index. However, :ref:`index_object:alter() <box_index-alter>` can be used to say that a sequence is not associated with an index, for example ``box.space.T.index.I:alter({sequence=false})``."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:1060
+msgid "If a sequence was created automatically because the sequence identifier was omitted, then it will be dropped automatically if the index is altered so that ``sequence=false``, or if the index is dropped."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:1065
+msgid "``index_object:alter()`` can also be used to associate a sequence with an existing index, with the same syntax for options."
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:1068
+msgid "When a sequence is used with an index based on a JSON path, inserted tuples must have all components of the path preceding the autoincrement field, and the autoincrement field. To achieve that use ``box.NULL`` rather than ``nil``. Example:"
+msgstr ""
+
+#: ../doc/book/box/box_schema.rst:1073
+msgid "s = box.schema.space.create('test')\n"
+"s:create_index('pk', {parts = {{'[1].a.b[1]', 'unsigned'}}, sequence = true})\n"
+"s:replace{} -- error\n"
+"s:replace{{c = {}}} -- error\n"
+"s:replace{{a = {c = {}}}} -- error\n"
+"s:replace{{a = {b = {}}}} -- error\n"
+"s:replace{{a = {b = {nil}}}} -- error\n"
+"s:replace{{a = {b = {box.NULL}}}} -- ok"
+msgstr ""
+

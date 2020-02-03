@@ -1,0 +1,1537 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../doc/book/box/box_index.rst:5
+msgid "Submodule `box.index`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:9
+msgid "Overview"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:11
+msgid "The ``box.index`` submodule provides read-only access for index definitions and index keys. Indexes are contained in :samp:`box.space.{space-name}.index` array within each space object. They provide an API for ordered iteration over tuples. This API is a direct binding to corresponding methods of index objects of type ``box.index`` in the storage engine."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:19
+msgid "Index"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:21
+msgid "Below is a list of all ``box.index`` functions and members."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:29
+msgid "Name"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:29
+msgid "Use"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:31
+msgid ":ref:`index_object.unique <box_index-unique>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:31
+msgid "Flag, true if an index is unique"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:34
+msgid ":ref:`index_object.type <box_index-type>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:34
+msgid "Index type"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:37
+msgid ":ref:`index_object.parts <box_index-parts>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:37
+msgid "Array of index key fields"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:40
+msgid ":ref:`index_object:pairs() <box_index-index_pairs>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:40
+msgid "Prepare for iterating"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:43
+msgid ":ref:`index_object:select() <box_index-select>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:43
+msgid "Select one or more tuples via index"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:46
+msgid ":ref:`index_object:get() <box_index-get>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:46
+msgid "Select a tuple via index"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:49
+msgid ":ref:`index_object:min() <box_index-min>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:49
+msgid "Find the minimum value in index"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:52
+msgid ":ref:`index_object:max() <box_index-max>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:52
+msgid "Find the maximum value in index"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:55
+msgid ":ref:`index_object:random() <box_index-random>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:55
+msgid "Find a random value in index"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:58
+msgid ":ref:`index_object:count() <box_index-count>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:58
+msgid "Count tuples matching key value"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:61
+msgid ":ref:`index_object:update() <box_index-update>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:61
+msgid "Update a tuple"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:64
+msgid ":ref:`index_object:delete() <box_index-delete>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:64
+msgid "Delete a tuple by key"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:67
+msgid ":ref:`index_object:alter() <box_index-alter>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:67
+msgid "Alter an index"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:70
+msgid ":ref:`index_object:drop() <box_index-drop>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:70
+msgid "Drop an index"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:73
+msgid ":ref:`index_object:rename() <box_index-rename>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:73
+msgid "Rename an index"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:76
+msgid ":ref:`index_object:bsize() <box_index-bsize>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:76
+msgid "Get count of bytes for an index"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:79
+msgid ":ref:`index_object:stat() <box_index-stat>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:79
+msgid "Get statistics for an index"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:82
+msgid ":ref:`index_object:compact() <box_index-compact>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:82
+msgid "Remove unused index space"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:85
+msgid ":ref:`index_object:user_defined() <box_index-user_defined>`"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:85
+msgid "Any function / method that any user wants to add"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:98
+msgid "True if the index is unique, false if the index is not unique."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+msgid "rtype"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:100
+msgid "boolean"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:106
+msgid "Index type, 'TREE' or 'HASH' or 'BITSET' or 'RTREE'."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:112
+msgid "An array describing the index fields. To learn more about the index field types, refer to :ref:`this table <box_space-index_field_types>`."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:115
+#: ../doc/book/box/box_index.rst:945
+msgid "table"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:117
+#: ../doc/book/box/box_index.rst:503
+#: ../doc/book/box/box_index.rst:643
+#: ../doc/book/box/box_index.rst:674
+#: ../doc/book/box/box_index.rst:705
+#: ../doc/book/box/box_index.rst:734
+#: ../doc/book/box/box_index.rst:758
+#: ../doc/book/box/box_index.rst:841
+#: ../doc/book/box/box_index.rst:871
+#: ../doc/book/box/box_index.rst:893
+#: ../doc/book/box/box_index.rst:991
+#: ../doc/book/box/box_index.rst:1004
+msgid "**Example:**"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:119
+msgid "tarantool> box.space.tester.index.primary\n"
+"---\n"
+"- unique: true\n"
+"  parts:\n"
+"  - type: unsigned\n"
+"    is_nullable: false\n"
+"    fieldno: 1\n"
+"  id: 0\n"
+"  space_id: 513\n"
+"  name: primary\n"
+"  type: TREE\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:138
+msgid "Search for a tuple or a set of tuples via the given index, and allow iterating over one tuple at a time."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:141
+msgid "The :samp:`{key}` parameter specifies what must match within the index."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:145
+msgid ":samp:`{key}` is only used to find the first match. Do not assume all matched tuples will contain the key."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:148
+msgid "The :samp:`{iterator}` parameter specifies the rule for matching and ordering. Different index types support different iterators. For example, a TREE index maintains a strict order of keys and can return all tuples in ascending or descending order, starting from the specified key. Other index types, however, do not support ordering."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:154
+msgid "To understand consistency of tuples returned by an iterator, it's essential to know the principles of the Tarantool transaction processing subsystem. An iterator in Tarantool does not own a consistent read view. Instead, each procedure is granted exclusive access to all tuples and spaces until there is a \"context switch\": which may happen due to :ref:`the implicit yield rules <atomic-implicit-yields>`, or by an explicit call to :ref:`fiber.yield <fiber-yield>`. When the execution flow returns to the yielded procedure, the data set could have changed significantly. Iteration, resumed after a yield point, does not preserve the read view, but continues with the new content of the database. The tutorial :ref:`Indexed pattern search <c_lua_tutorial-indexed_pattern_search>` shows one way that iterators and yields can be used together."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:168
+msgid "For information about iterators' internal structures see the `\"Lua Functional library\" <https://luafun.github.io/index.html>`_ documentation."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:172
+#: ../doc/book/box/box_index.rst:492
+#: ../doc/book/box/box_index.rst:627
+#: ../doc/book/box/box_index.rst:658
+#: ../doc/book/box/box_index.rst:689
+#: ../doc/book/box/box_index.rst:723
+#: ../doc/book/box/box_index.rst:750
+#: ../doc/book/box/box_index.rst:781
+#: ../doc/book/box/box_index.rst:804
+#: ../doc/book/box/box_index.rst:825
+#: ../doc/book/box/box_index.rst:860
+#: ../doc/book/box/box_index.rst:885
+#: ../doc/book/box/box_index.rst:909
+#: ../doc/book/box/box_index.rst:941
+#: ../doc/book/box/box_index.rst:987
+msgid "an :ref:`object reference <app_server-object_reference>`."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:174
+msgid "value to be matched against the index key, which may be multi-part"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:176
+msgid "as defined in tables below. The default iterator type is 'EQ'"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+#: ../doc/book/box/box_index.rst:0
+msgid "return"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:180
+msgid "`iterator <https://www.lua.org/pil/7.1.html>`_ which can be used in a for/end loop or with `totable() <https://rtsisyk.github.io/luafun/reducing.html#fun.totable>`_"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:184
+#: ../doc/book/box/box_index.rst:634
+#: ../doc/book/box/box_index.rst:833
+#: ../doc/book/box/box_index.rst:865
+msgid "**Possible errors:**"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:186
+msgid "no such space; wrong type;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:187
+msgid "selected iteration type is not supported for the index type;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:188
+msgid "key is not supported for the iteration type."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:190
+msgid "**Complexity factors:** Index size, Index type; Number of tuples accessed."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:193
+msgid "A search-key-value can be a number (for example ``1234``), a string (for example ``'abcd'``), or a table of numbers and strings (for example ``{1234, 'abcd'}``). Each part of a key will be compared to each part of an index key."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:198
+msgid "The returned tuples will be in order by index key value, or by the hash of the index key value if index type = 'hash'. If the index is non-unique, then duplicates will be secondarily in order by primary key value. The order will be reversed if the iterator type is 'LT' or 'LE' or 'REQ'."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:205
+msgid "**Iterator types for TREE indexes**"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:216
+#: ../doc/book/box/box_index.rst:315
+#: ../doc/book/box/box_index.rst:351
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "Type"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:216
+#: ../doc/book/box/box_index.rst:315
+#: ../doc/book/box/box_index.rst:351
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "Arguments"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:216
+#: ../doc/book/box/box_index.rst:315
+#: ../doc/book/box/box_index.rst:351
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "Description"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:218
+#: ../doc/book/box/box_index.rst:322
+#: ../doc/book/box/box_index.rst:357
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "box.index.EQ or 'EQ'"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:218
+#: ../doc/book/box/box_index.rst:224
+#: ../doc/book/box/box_index.rst:229
+#: ../doc/book/box/box_index.rst:236
+#: ../doc/book/box/box_index.rst:243
+#: ../doc/book/box/box_index.rst:247
+#: ../doc/book/box/box_index.rst:253
+#: ../doc/book/box/box_index.rst:322
+#: ../doc/book/box/box_index.rst:328
+#: ../doc/book/box/box_index_rtree.csv:1
+#: ../doc/book/box/box_index_rtree.csv:1
+#: ../doc/book/box/box_index_rtree.csv:1
+#: ../doc/book/box/box_index_rtree.csv:1
+#: ../doc/book/box/box_index_rtree.csv:1
+#: ../doc/book/box/box_index_rtree.csv:1
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "search value"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:218
+msgid "The comparison operator is '==' (equal to). If an index key is equal to a search value, it matches. Tuples are returned in ascending order by index key. This is the default."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:224
+msgid "box.index.REQ or 'REQ'"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:224
+msgid "Matching is the same as for ``box.index.EQ``. Tuples are returned in descending order by index key."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:229
+#: ../doc/book/box/box_index.rst:328
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "box.index.GT or 'GT'"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:229
+msgid "The comparison operator is '>' (greater than). If an index key is greater than a search value, it matches. Tuples are returned in ascending order by index key."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:236
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "box.index.GE or 'GE'"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:236
+msgid "The comparison operator is '>=' (greater than or equal to). If an index key is greater than or equal to a search value, it matches. Tuples are returned in ascending order by index key."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:243
+#: ../doc/book/box/box_index.rst:353
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "box.index.ALL or 'ALL'"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:243
+msgid "Same as box.index.GE."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:247
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "box.index.LT or 'LT'"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:247
+msgid "The comparison operator is '<' (less than). If an index key is less than a search value, it matches. Tuples are returned in descending order by index key."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:253
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "box.index.LE or 'LE'"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:253
+msgid "The comparison operator is '<=' (less than or equal to). If an index key is less than or equal to a search value, it matches. Tuples are returned in descending order by index key."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:261
+msgid "Informally, we can state that searches with TREE indexes are generally what users will find is intuitive, provided that there are no nils and no missing parts. Formally, the logic is as follows. A search key has zero or more parts, for example {}, {1,2,3},{1,nil,3}. An index key has one or more parts, for example {1}, {1,2,3},{1,2,3}. A search key may contain nil (but not msgpack.NULL, which is the wrong type). An index key may not contain nil or msgpack.NULL, although a later version of Tarantool will have different rules --  the behavior of searches with nil is subject to change. Possible iterators are LT, LE, EQ, REQ, GE, GT. A search key is said to \"match\" an index key if the following statements, which are pseudocode for the comparison operation, return TRUE."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:311
+msgid "If (number-of-search-key-parts > number-of-index-key-parts) return ERROR\n"
+"If (number-of-search-key-parts == 0) return TRUE\n"
+"for (i = 1; ; ++i)\n"
+"{\n"
+"  if (i > number-of-search-key-parts) OR (search-key-part[i] is nil)\n"
+"  {\n"
+"    if (iterator is LT or GT) return FALSE\n"
+"    return TRUE\n"
+"  }\n"
+"  if (type of search-key-part[i] is not compatible with type of index-key-part[i])\n"
+"  {\n"
+"    return ERROR\n"
+"  }\n"
+"  if (search-key-part[i] == index-key-part[i])\n"
+"  {\n"
+"    continue\n"
+"  }\n"
+"  if (search-key-part[i] > index-key-part[i])\n"
+"  {\n"
+"    if (iterator is EQ or REQ or LE or LT) return FALSE\n"
+"    return TRUE\n"
+"  }\n"
+"  if (search-key-part[i] < index-key-part[i])\n"
+"  {\n"
+"    if (iterator is EQ or REQ or GE or GT) return FALSE\n"
+"    return TRUE\n"
+"  }\n"
+"}"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:306
+msgid "**Iterator types for HASH indexes**"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:317
+msgid "box.index.ALL"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:317
+#: ../doc/book/box/box_index.rst:353
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "none"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:317
+msgid "All index keys match. Tuples are returned in ascending order by hash of index key, which will appear to be random."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:322
+msgid "The comparison operator is '==' (equal to). If an index key is equal to a search value, it matches. The number of returned tuples will be 0 or 1. This is the default."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:328
+msgid "The comparison operator is '>' (greater than). If a hash of an index key is greater than a hash of a search value, it matches. Tuples are returned in ascending order by hash of index key, which will appear to be random. Provided that the space is not being updated, one can retrieve all the tuples in a space, N tuples at a time, by using {iterator='GT', limit=N} in each search, and using the last returned value from the previous result as the start search value for the next search."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:342
+msgid "**Iterator types for BITSET indexes**"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:353
+msgid "All index keys match. Tuples are returned in their order within the space."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:357
+#: ../doc/book/box/box_index.rst:362
+#: ../doc/book/box/box_index.rst:367
+#: ../doc/book/box/box_index.rst:372
+msgid "bitset value"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:357
+msgid "If an index key is equal to a bitset value, it matches. Tuples are returned in their order within the space. This is the default."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:362
+msgid "box.index.BITS_ALL_SET"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:362
+msgid "If all of the bits which are 1 in the bitset value are 1 in the index key, it matches. Tuples are returned in their order within the space."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:367
+msgid "box.index.BITS_ANY_SET"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:367
+msgid "If any of the bits which are 1 in the bitset value are 1 in the index key, it matches. Tuples are returned in their order within the space."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:372
+msgid "box.index.BITS_ALL_NOT_SET"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:372
+msgid "If all of the bits which are 1 in the bitset value are 0 in the index key, it matches. Tuples are returned in their order within the space."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:380
+msgid "**Iterator types for RTREE indexes**"
+msgstr ""
+
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "All keys match. Tuples are returned in their order within the space."
+msgstr ""
+
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "If all points of the rectangle-or-box defined by the search value are the same as the rectangle-or-box defined by the index key, it matches. Tuples are returned in their order within the space. \"Rectangle-or-box\" means \"rectangle-or-box as explained in section about :ref:`RTREE <box_index-rtree>`\". This is the default."
+msgstr ""
+
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "If all points of the rectangle-or-box defined by the search value are within the rectangle-or-box defined by the index key, it matches. Tuples are returned in their order within the space."
+msgstr ""
+
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "If all points of the rectangle-or-box defined by the search value are within, or at the side of, the rectangle-or-box defined by the index key, it matches. Tuples are returned in their order within the space."
+msgstr ""
+
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "If all points of the rectangle-or-box defined by the index key are within the rectangle-or-box defined by the search key, it matches. Tuples are returned in their order within the space."
+msgstr ""
+
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "If all points of the rectangle-or-box defined by the index key are within, or at the side of, the rectangle-or-box defined by the search key, it matches. Tuples are returned in their order within the space."
+msgstr ""
+
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "box.index.OVERLAPS or 'OVERLAPS'"
+msgstr ""
+
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "If some points of the rectangle-or-box defined by the search value are within the rectangle-or-box defined by the index key, it matches. Tuples are returned in their order within the space."
+msgstr ""
+
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "box.index.NEIGHBOR or 'NEIGHBOR'"
+msgstr ""
+
+#: ../doc/book/box/box_index_rtree.csv:1
+msgid "If some points of the rectangle-or-box defined by the defined by the key are within, or at the side of, defined by the index key, it matches. Tuples are returned in order: nearest neighbor first."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:394
+msgid "**First example of index pairs():**"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:396
+msgid "Default 'TREE' Index and ``pairs()`` function:"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:398
+msgid "tarantool> s = box.schema.space.create('space17')\n"
+"---\n"
+"...\n"
+"tarantool> s:create_index('primary', {\n"
+"         >   parts = {1, 'string', 2, 'string'}\n"
+"         > })\n"
+"---\n"
+"...\n"
+"tarantool> s:insert{'C', 'C'}\n"
+"---\n"
+"- ['C', 'C']\n"
+"...\n"
+"tarantool> s:insert{'B', 'A'}\n"
+"---\n"
+"- ['B', 'A']\n"
+"...\n"
+"tarantool> s:insert{'C', '!'}\n"
+"---\n"
+"- ['C', '!']\n"
+"...\n"
+"tarantool> s:insert{'A', 'C'}\n"
+"---\n"
+"- ['A', 'C']\n"
+"...\n"
+"tarantool> function example()\n"
+"         >   for _, tuple in\n"
+"         >     s.index.primary:pairs(nil, {\n"
+"         >         iterator = box.index.ALL}) do\n"
+"         >       print(tuple)\n"
+"         >   end\n"
+"         > end\n"
+"---\n"
+"...\n"
+"tarantool> example()\n"
+"['A', 'C']\n"
+"['B', 'A']\n"
+"['C', '!']\n"
+"['C', 'C']\n"
+"---\n"
+"...\n"
+"tarantool> s:drop()\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:444
+msgid "**Second example of index pairs():**"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:446
+msgid "This Lua code finds all the tuples whose primary key values begin with 'XY'. The assumptions include that there is a one-part primary-key TREE index on the first field, which must be a string. The iterator loop ensures that the search will return tuples where the first value is greater than or equal to 'XY'. The conditional statement within the loop ensures that the looping will stop when the first two letters are not 'XY'."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:454
+msgid "for _, tuple in\n"
+"box.space.t.index.primary:pairs(\"XY\",{iterator = \"GE\"}) do\n"
+"  if (string.sub(tuple[1], 1, 2) ~= \"XY\") then break end\n"
+"  print(tuple)\n"
+"end"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:462
+msgid "**Third example of index pairs():**"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:464
+msgid "This Lua code finds all the tuples whose primary key values are greater than or equal to 1000, and less than or equal to 1999 (this type of request is sometimes called a \"range search\" or a \"between search\"). The assumptions include that there is a one-part primary-key TREE index on the first field, which must be a :ref:`number <index-box_number>`. The iterator loop ensures that the search will return tuples where the first value is greater than or equal to 1000. The conditional statement within the loop ensures that the looping will stop when the first value is greater than 1999."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:474
+msgid "for _, tuple in\n"
+"box.space.t2.index.primary:pairs(1000,{iterator = \"GE\"}) do\n"
+"  if (tuple[1] > 1999) then break end\n"
+"  print(tuple)\n"
+"end"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:486
+msgid "This is an alternative to :ref:`box.space...select() <box_space-select>` which goes via a particular index and can make use of additional parameters that specify the iterator type, and the limit (that is, the maximum number of tuples to return) and the offset (that is, which tuple to start with in the list)."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:494
+#: ../doc/book/box/box_index.rst:629
+#: ../doc/book/box/box_index.rst:660
+#: ../doc/book/box/box_index.rst:691
+#: ../doc/book/box/box_index.rst:752
+#: ../doc/book/box/box_index.rst:783
+#: ../doc/book/box/box_index.rst:806
+msgid "values to be matched against the index key"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:495
+msgid "none, any or all of next parameters"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:496
+msgid "type of iterator"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:497
+msgid "maximum number of tuples"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:498
+msgid "start tuple number"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:500
+msgid "the tuple or tuples that match the field values."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:501
+msgid "array of tuples"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:505
+msgid "-- Create a space named tester.\n"
+"tarantool> sp = box.schema.space.create('tester')\n"
+"-- Create a unique index 'primary'\n"
+"-- which won't be needed for this example.\n"
+"tarantool> sp:create_index('primary', {parts = {1, 'unsigned' }})\n"
+"-- Create a non-unique index 'secondary'\n"
+"-- with an index on the second field.\n"
+"tarantool> sp:create_index('secondary', {\n"
+"         >   type = 'tree',\n"
+"         >   unique = false,\n"
+"         >   parts = {2, 'string'}\n"
+"         > })\n"
+"-- Insert three tuples, values in field[2]\n"
+"-- equal to 'X', 'Y', and 'Z'.\n"
+"tarantool> sp:insert{1, 'X', 'Row with field[2]=X'}\n"
+"tarantool> sp:insert{2, 'Y', 'Row with field[2]=Y'}\n"
+"tarantool> sp:insert{3, 'Z', 'Row with field[2]=Z'}\n"
+"-- Select all tuples where the secondary index\n"
+"-- keys are greater than 'X'.`\n"
+"tarantool> sp.index.secondary:select({'X'}, {\n"
+"         >   iterator = 'GT',\n"
+"         >   limit = 1000\n"
+"         > })"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:531
+msgid "The result will be a table of tuple and will look like this:"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:533
+msgid "---\n"
+"- - [2, 'Y', 'Row with field[2]=Y']\n"
+"  - [3, 'Z', 'Row with field[2]=Z']\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:542
+msgid ":samp:`index.{index-name}` is optional. If it is omitted, then the assumed index is the first (primary-key) index. Therefore, for the example above, ``box.space.tester:select({1}, {iterator = 'GT'})`` would have returned the same two rows, via the 'primary' index."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:549
+msgid ":samp:`iterator = {iterator-type}` is optional. If it is omitted, then ``iterator = 'EQ'`` is assumed."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:554
+msgid ":samp:`{field-value} [, {field-value ...}]` is optional. If it is omitted, then every key in the index is considered to be a match, regardless of iterator type. Therefore, for the example above, ``box.space.tester:select{}`` will select every tuple in the tester space via the first (primary-key) index."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:564
+msgid ":samp:`box.space.{space-name}.index.{index-name}:select(...)[1]``. can be replaced by :samp:`box.space.{space-name}.index.{index-name}:get(...)`. That is, ``get`` can be used as a convenient shorthand to get the first tuple in the tuple set that would be returned by ``select``. However, if there is more than one tuple in the tuple set, then ``get`` throws an error."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:572
+msgid "**Example with BITSET index:**"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:574
+msgid "The following script shows creation and search with a BITSET index. Notice: BITSET cannot be unique, so first a primary-key index is created. Notice: bit values are entered as hexadecimal literals for easier reading."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:578
+msgid "tarantool> s = box.schema.space.create('space_with_bitset')\n"
+"tarantool> s:create_index('primary_index', {\n"
+"         >   parts = {1, 'string'},\n"
+"         >   unique = true,\n"
+"         >   type = 'TREE'\n"
+"         > })\n"
+"tarantool> s:create_index('bitset_index', {\n"
+"         >   parts = {2, 'unsigned'},\n"
+"         >   unique = false,\n"
+"         >   type = 'BITSET'\n"
+"         > })\n"
+"tarantool> s:insert{'Tuple with bit value = 01', 0x01}\n"
+"tarantool> s:insert{'Tuple with bit value = 10', 0x02}\n"
+"tarantool> s:insert{'Tuple with bit value = 11', 0x03}\n"
+"tarantool> s.index.bitset_index:select(0x02, {\n"
+"         >   iterator = box.index.EQ\n"
+"         > })\n"
+"---\n"
+"- - ['Tuple with bit value = 10', 2]\n"
+"...\n"
+"tarantool> s.index.bitset_index:select(0x02, {\n"
+"         >   iterator = box.index.BITS_ANY_SET\n"
+"         > })\n"
+"---\n"
+"- - ['Tuple with bit value = 10', 2]\n"
+"  - ['Tuple with bit value = 11', 3]\n"
+"...\n"
+"tarantool> s.index.bitset_index:select(0x02, {\n"
+"         >   iterator = box.index.BITS_ALL_SET\n"
+"         > })\n"
+"---\n"
+"- - ['Tuple with bit value = 10', 2]\n"
+"  - ['Tuple with bit value = 11', 3]\n"
+"...\n"
+"tarantool> s.index.bitset_index:select(0x02, {\n"
+"         >   iterator = box.index.BITS_ALL_NOT_SET\n"
+"         > })\n"
+"---\n"
+"- - ['Tuple with bit value = 01', 1]\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:625
+msgid "Search for a tuple via the given index, as described :ref:`earlier <box_index-note>`."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:631
+msgid "the tuple whose index-key fields are equal to the passed key values."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:632
+#: ../doc/book/box/box_index.rst:668
+#: ../doc/book/box/box_index.rst:699
+#: ../doc/book/box/box_index.rst:728
+#: ../doc/book/box/box_index.rst:792
+#: ../doc/book/box/box_index.rst:809
+msgid "tuple"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:636
+msgid "no such index;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:637
+msgid "wrong type;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:638
+msgid "more than one tuple matches."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:640
+msgid "**Complexity factors:** Index size, Index type. See also :ref:`space_object:get() <box_space-get>`."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:645
+msgid "tarantool> box.space.tester.index.primary:get(2)\n"
+"---\n"
+"- [2, 'Music']\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:656
+msgid "Find the minimum value in the specified index."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:662
+msgid "the tuple for the first key in the index. If optional ``key`` value is supplied, returns the first key which is greater than or equal to ``key`` value. Starting with Tarantool version 2.0, index_object:min(``key`` value) will return nothing if ``key`` value is not equal to a value in the index."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:670
+#: ../doc/book/box/box_index.rst:701
+msgid "**Possible errors:** index is not of type 'TREE'."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:672
+#: ../doc/book/box/box_index.rst:703
+#: ../doc/book/box/box_index.rst:730
+msgid "**Complexity factors:** Index size, Index type."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:676
+msgid "tarantool> box.space.tester.index.primary:min()\n"
+"---\n"
+"- ['Alpha!', 55, 'This is the first tuple!']\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:687
+msgid "Find the maximum value in the specified index."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:693
+msgid "the tuple for the last key in the index. If optional ``key`` value is supplied, returns the last key which is less than or equal to ``key`` value. Starting with Tarantool version 2.0, index_object:max(``key`` value) will return nothing if ``key`` value is not equal to a value in the index."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:707
+msgid "tarantool> box.space.tester.index.primary:max()\n"
+"---\n"
+"- ['Gamma!', 55, 'This is the third tuple!']\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:718
+msgid "Find a random value in the specified index. This method is useful when it's important to get insight into data distribution in an index without having to iterate over the entire data set."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:725
+msgid "an arbitrary non-negative integer"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:727
+msgid "the tuple for the random key in the index."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:732
+msgid "**Note re storage engine:** vinyl does not support ``random()``."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:736
+msgid "tarantool> box.space.tester.index.secondary:random(1)\n"
+"---\n"
+"- ['Beta!', 66, 'This is the second tuple!']\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:747
+msgid "Iterate over an index, counting the number of tuples which match the key-value."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:753
+msgid "comparison method"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:755
+msgid "the number of matching tuples."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:756
+#: ../doc/book/box/box_index.rst:913
+msgid "number"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:760
+msgid "tarantool> box.space.tester.index.primary:count(999)\n"
+"---\n"
+"- 0\n"
+"...\n"
+"tarantool> box.space.tester.index.primary:count('Alpha!', { iterator = 'LE' })\n"
+"---\n"
+"- 1\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:775
+msgid "Update a tuple."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:777
+msgid "Same as :ref:`box.space...update() <box_space-update>`, but key is searched in this index instead of primary key. This index ought to be unique."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:784
+msgid "operation type represented in string"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:785
+msgid "what field the operation will apply to. The field number can be negative, meaning the position from the end of tuple. (#tuple + negative field number + 1)"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:789
+msgid "what value will be applied"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:791
+msgid "the updated tuple."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:798
+msgid "Delete a tuple identified by a key."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:800
+msgid "Same as :ref:`box.space...delete() <box_space-delete>`, but key is searched in this index instead of in the primary-key index. This index ought to be unique."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:808
+msgid "the deleted tuple."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:811
+msgid "**Note re storage engine:** vinyl will return `nil`, rather than the deleted tuple."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:818
+msgid "Alter an index. It is legal in some circumstances to change one or more of the index characteristics, for example its type, its sequence options, its parts, and whether it is unique, Usually this causes rebuilding of the space,  except for the simple case where a part's ``is_nullable`` flag is changed from ``false`` to ``true``."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:827
+msgid "options list, same as the options list for ``create_index``, see the chart named :ref:`Options for space_object:create_index() <box_space-create_index>`."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:831
+#: ../doc/book/box/box_index.rst:889
+msgid "nil"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:835
+#: ../doc/book/box/box_index.rst:867
+msgid "index does not exist,"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:836
+msgid "the primary-key index cannot be changed to ``{unique = false}``."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:838
+msgid "**Note re storage engine:** vinyl does not support ``alter()`` of a primary-key index unless the space is empty."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:843
+msgid "tarantool> box.space.space55.index.primary:alter({type = 'HASH'})\n"
+"---\n"
+"...\n"
+"\n"
+"tarantool> box.space.vinyl_space.index.i:alter({page_size=4096})\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:857
+msgid "Drop an index. Dropping a primary-key index has a side effect: all tuples are deleted."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:863
+msgid "nil."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:868
+msgid "a primary-key index cannot be dropped while a secondary-key index exists."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:873
+msgid "tarantool> box.space.space55.index.primary:drop()\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:883
+msgid "Rename an index."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:887
+msgid "new name for index"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:891
+msgid "**Possible errors:** index_object does not exist."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:895
+msgid "tarantool> box.space.space55.index.primary:rename('secondary')\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:901
+msgid "**Complexity factors:** Index size, Index type, Number of tuples accessed."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:907
+msgid "Return the total number of bytes taken by the index."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:912
+msgid "number of bytes"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:919
+msgid "Return statistics about actions taken that affect the index."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:921
+msgid "This is for use with the vinyl engine."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:923
+msgid "Some detail items in the output from ``index_object:stat()`` are:"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:925
+msgid "``index_object:stat().latency`` -- timings subdivided by percentages;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:926
+msgid "``index_object:stat().bytes`` -- the number of bytes total;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:927
+msgid "``index_object:stat().disk.rows`` -- the approximate number of tuples in each range;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:928
+msgid "``index_object:stat().disk.statement`` -- counts of inserts|updates|upserts|deletes;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:929
+msgid "``index_object:stat().disk.compaction`` -- counts of compactions and their amounts;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:930
+msgid "``index_object:stat().disk.dump`` -- counts of dumps and their amounts;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:931
+msgid "``index_object:stat().disk.iterator.bloom`` -- counts of bloom filter hits|misses;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:932
+msgid "``index_object:stat().disk.pages`` -- the size in pages;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:933
+msgid "``index_object:stat().disk.last_level`` -- size of data in the last LSM tree level;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:934
+msgid "``index_object:stat().cache.evict`` -- number of evictions from the cache;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:935
+msgid "``index_object:stat().range_size`` -- maximum number of bytes in a range;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:936
+msgid "``index_object:stat().dumps_per_compaction`` -- average number of dumps required to trigger major compaction in any range of the LSM tree."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:938
+msgid "Summary index statistics are also available via :ref:`box.stat.vinyl() <box_introspection-box_stat_vinyl_details>`."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:944
+msgid "statistics"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:951
+msgid "Remove unused index space. For the memtx storage engine this method does nothing; ``index_object:compact()`` is only for the vinyl storage engine. For example, with vinyl, if a tuple is deleted, the space is not immediately reclaimed. There is a scheduler for reclaiming space automatically based on factors such as lsm shape and amplification as discussed in the section :ref:`Storing data with vinyl <engines-vinyl>`, so calling ``index_object:compact()`` manually is not always necessary."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:960
+msgid "nil (Tarantool returns without waiting for compaction to complete)"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:967
+msgid "Users can define any functions they want, and associate them with indexes: in effect they can make their own index methods. They do this by:"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:971
+msgid "creating a Lua function,"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:972
+msgid "adding the function name to a predefined global variable which has type = table, and"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:974
+msgid "invoking the function any time thereafter, as long as the server is up, by saying ``index_object:function-name([parameters])``."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:977
+msgid "There are three predefined global variables:"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:979
+msgid "Adding to ``box_schema.index_mt`` makes the method available for all indexes."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:980
+msgid "Adding to ``box_schema.memtx_index_mt`` makes the method available for all memtx indexes."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:981
+msgid "Adding to ``box_schema.vinyl_index_mt`` makes the method available for all vinyl indexes."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:983
+msgid "Alternatively, user-defined methods can be made available for only one index, by calling ``getmetatable(index_object)`` and then adding the function name to the meta table."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:989
+msgid "whatever the user defines"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:993
+msgid "-- Visible to any index of a memtx space, no parameters.\n"
+"-- After these requests, the value of global_variable will be 6.\n"
+"box.schema.space.create('t', {engine='memtx'})\n"
+"box.space.t:create_index('i')\n"
+"global_variable = 5\n"
+"function f() global_variable = global_variable + 1 end\n"
+"box.schema.memtx_index_mt.counter = f\n"
+"box.space.t.index.i:counter()"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1006
+msgid "-- Visible to index box.space.t.index.i only, 1 parameter.\n"
+"-- After these requests, the value of X will be 1005.\n"
+"box.schema.space.create('t', {engine='memtx', id = 1000})\n"
+"box.space.t:create_index('i')\n"
+"X = 0\n"
+"i = box.space.t.index.i\n"
+"function f(i_arg, param) X = X + param + i_arg.space_id end\n"
+"box.schema.memtx_index_mt.counter = f\n"
+"meta = getmetatable(i)\n"
+"meta.counter = f\n"
+"i:counter(5)"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1022
+msgid "Example showing use of the box functions"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1024
+msgid "This example will work with the sandbox configuration described in the preface. That is, there is a space named tester with a numeric primary key. The example function will:"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1028
+msgid "select a tuple whose key value is 1000;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1029
+msgid "raise an error if the tuple already exists and already has 3 fields;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1032
+msgid "Insert or replace the tuple with:"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1031
+msgid "field[1] = 1000"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1032
+msgid "field[2] = a uuid"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1033
+msgid "field[3] = number of seconds since 1970-01-01;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1034
+msgid "Get field[3] from what was replaced;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1035
+msgid "Format the value from field[3] as yyyy-mm-dd hh:mm:ss.ffff;"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1036
+msgid "Return the formatted value."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1038
+msgid "The function uses Tarantool box functions :ref:`box.space...select <box_space-select>`, :ref:`box.space...replace <box_space-replace>`, :ref:`fiber.time <fiber-time>`, :ref:`uuid.str <uuid-str>`. The function uses Lua functions `os.date()`_ and `string.sub()`_."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1047
+msgid "function example()\n"
+"  local a, b, c, table_of_selected_tuples, d\n"
+"  local replaced_tuple, time_field\n"
+"  local formatted_time_field\n"
+"  local fiber = require('fiber')\n"
+"  table_of_selected_tuples = box.space.tester:select{1000}\n"
+"  if table_of_selected_tuples ~= nil then\n"
+"    if table_of_selected_tuples[1] ~= nil then\n"
+"      if #table_of_selected_tuples[1] == 3 then\n"
+"        box.error({code=1, reason='This tuple already has 3 fields'})\n"
+"      end\n"
+"    end\n"
+"  end\n"
+"  replaced_tuple = box.space.tester:replace\n"
+"    {1000,  require('uuid').str(), tostring(fiber.time())}\n"
+"  time_field = tonumber(replaced_tuple[3])\n"
+"  formatted_time_field = os.date(\"%Y-%m-%d %H:%M:%S\", time_field)\n"
+"  c = time_field % 1\n"
+"  d = string.sub(c, 3, 6)\n"
+"  formatted_time_field = formatted_time_field .. '.' .. d\n"
+"  return formatted_time_field\n"
+"end"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1072
+msgid "... And here is what happens when one invokes the function:"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1074
+msgid "tarantool> box.space.tester:delete(1000)\n"
+"---\n"
+"- [1000, '264ee2da03634f24972be76c43808254', '1391037015.6809']\n"
+"...\n"
+"tarantool> example(1000)\n"
+"---\n"
+"- 2014-01-29 16:11:51.1582\n"
+"...\n"
+"tarantool> example(1000)\n"
+"---\n"
+"- error: 'This tuple already has 3 fields'\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1091
+msgid "Example showing a user-defined iterator"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1093
+msgid "Here is an example that shows how to build one's own iterator. The ``paged_iter`` function is an \"iterator function\", which will only be understood by programmers who have read the Lua manual section `Iterators and Closures <https://www.lua.org/pil/7.1.html>`_. It does paginated retrievals, that is, it returns 10 tuples at a time from a table named \"t\", whose primary key was defined with ``create_index('primary',{parts={1,'string'}})``."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1100
+msgid "function paged_iter(search_key, tuples_per_page)\n"
+"  local iterator_string = \"GE\"\n"
+"  return function ()\n"
+"  local page = box.space.t.index[0]:select(search_key,\n"
+"    {iterator = iterator_string, limit=tuples_per_page})\n"
+"  if #page == 0 then return nil end\n"
+"  search_key = page[#page][1]\n"
+"  iterator_string = \"GT\"\n"
+"  return page\n"
+"  end\n"
+"end"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1114
+msgid "Programmers who use ``paged_iter`` do not need to know why it works, they only need to know that, if they call it within a loop, they will get 10 tuples at a time until there are no more tuples."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1118
+msgid "In this example the tuples are merely printed, a page at a time. But it should be simple to change the functionality, for example by yielding after each retrieval, or by breaking when the tuples fail to match some additional criteria."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1123
+msgid "for page in paged_iter(\"X\", 10) do\n"
+"  print(\"New Page. Number Of Tuples = \" .. #page)\n"
+"  for i = 1, #page, 1 do\n"
+"    print(page[i])\n"
+"  end\n"
+"end"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1136
+msgid "Submodule `box.index` with index type = RTREE for spatial searches"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1138
+msgid "The :ref:`box.index <box_index>` submodule may be used for spatial searches if the index type is RTREE. There are operations for searching *rectangles* (geometric objects with 4 corners and 4 sides) and *boxes* (geometric objects with more than 4 corners and more than 4 sides, sometimes called hyperrectangles). This manual uses the term *rectangle-or-box* for the whole class of objects that includes both rectangles and boxes. Only rectangles will be illustrated."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1146
+msgid "Rectangles are described according to their X-axis (horizontal axis) and Y-axis (vertical axis) coordinates in a grid of arbitrary size. Here is a picture of four rectangles on a grid with 11 horizontal points and 11 vertical points:"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1150
+msgid "           X AXIS\n"
+"           1   2   3   4   5   6   7   8   9   10  11\n"
+"        1\n"
+"        2  #-------+                                           <-Rectangle#1\n"
+"Y AXIS  3  |       |\n"
+"        4  +-------#\n"
+"        5          #-----------------------+                   <-Rectangle#2\n"
+"        6          |                       |\n"
+"        7          |   #---+               |                   <-Rectangle#3\n"
+"        8          |   |   |               |\n"
+"        9          |   +---#               |\n"
+"        10         +-----------------------#\n"
+"        11                                     #               <-Rectangle#4"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1166
+msgid "The rectangles are defined according to this scheme: {X-axis coordinate of top left, Y-axis coordinate of top left, X-axis coordinate of bottom right, Y-axis coordinate of bottom right} -- or more succinctly: {x1,y1,x2,y2}. So in the picture ... Rectangle#1 starts at position 1 on the X axis and position 2 on the Y axis, and ends at position 3 on the X axis and position 4 on the Y axis, so its coordinates are {1,2,3,4}. Rectangle#2's coordinates are {3,5,9,10}. Rectangle#3's coordinates are {4,7,5,9}. And finally Rectangle#4's coordinates are {10,11,10,11}. Rectangle#4 is actually a \"point\" since it has zero width and zero height, so it could have been described with only two digits: {10,11}."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1176
+msgid "Some relationships between the rectangles are: \"Rectangle#1's nearest neighbor is Rectangle#2\", and \"Rectangle#3 is entirely inside Rectangle#2\"."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1179
+msgid "Now let us create a space and add an RTREE index."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1181
+msgid "tarantool> s = box.schema.space.create('rectangles')\n"
+"tarantool> i = s:create_index('primary', {\n"
+"         >   type = 'HASH',\n"
+"         >   parts = {1, 'unsigned'}\n"
+"         > })\n"
+"tarantool> r = s:create_index('rtree', {\n"
+"         >   type = 'RTREE',\n"
+"         >   unique = false,\n"
+"         >   parts = {2, 'ARRAY'}\n"
+"         > })"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1194
+msgid "Field#1 doesn't matter, we just make it because we need a primary-key index. (RTREE indexes cannot be unique and therefore cannot be primary-key indexes.) The second field must be an \"array\", which means its values must represent {x,y} points or {x1,y1,x2,y2} rectangles. Now let us populate the table by inserting two tuples, containing the coordinates of Rectangle#2 and Rectangle#4."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1200
+msgid "tarantool> s:insert{1, {3, 5, 9, 10}}\n"
+"tarantool> s:insert{2, {10, 11}}"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1205
+msgid "And now, following the description of `RTREE iterator types`_, we can search the rectangles with these requests:"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1210
+msgid "tarantool> r:select({10, 11, 10, 11}, {iterator = 'EQ'})\n"
+"---\n"
+"- - [2, [10, 11]]\n"
+"...\n"
+"tarantool> r:select({4, 7, 5, 9}, {iterator = 'GT'})\n"
+"---\n"
+"- - [1, [3, 5, 9, 10]]\n"
+"...\n"
+"tarantool> r:select({1, 2, 3, 4}, {iterator = 'NEIGHBOR'})\n"
+"---\n"
+"- - [1, [3, 5, 9, 10]]\n"
+"  - [2, [10, 11]]\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1226
+msgid "Request#1 returns 1 tuple because the point {10,11} is the same as the rectangle {10,11,10,11} (\"Rectangle#4\" in the picture). Request#2 returns 1 tuple because the rectangle {4,7,5,9}, which was \"Rectangle#3\" in the picture, is entirely within{3,5,9,10} which was Rectangle#2. Request#3 returns 2 tuples, because the NEIGHBOR iterator always returns all tuples, and the first returned tuple will be {3,5,9,10} (\"Rectangle#2\" in the picture) because it is the closest neighbor of {1,2,3,4} (\"Rectangle#1\" in the picture)."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1234
+msgid "Now let us create a space and index for cuboids, which are rectangle-or-boxes that have 6 corners and 6 sides."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1237
+msgid "tarantool> s = box.schema.space.create('R')\n"
+"tarantool> i = s:create_index('primary', {parts = {1, 'unsigned'}})\n"
+"tarantool> r = s:create_index('S', {\n"
+"         >   type = 'RTREE',\n"
+"         >   unique = false,\n"
+"         >   dimension = 3,\n"
+"         >   parts = {2, 'ARRAY'}\n"
+"         > })"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1248
+msgid "The additional option here is ``dimension=3``. The default dimension is 2, which is why it didn't need to be specified for the examples of rectangle. The maximum dimension is 20. Now for insertions and selections there will usually be 6 coordinates. For example:"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1253
+msgid "tarantool> s:insert{1, {0, 3, 0, 3, 0, 3}}\n"
+"tarantool> r:select({1, 2, 1, 2, 1, 2}, {iterator = box.index.GT})"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1258
+msgid "Now let us create a space and index for Manhattan-style spatial objects, which are rectangle-or-boxes that have a different way to calculate neighbors."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1261
+msgid "tarantool> s = box.schema.space.create('R')\n"
+"tarantool> i = s:create_index('primary', {parts = {1, 'unsigned'}})\n"
+"tarantool> r = s:create_index('S', {\n"
+"         >   type = 'RTREE',\n"
+"         >   unique = false,\n"
+"         >   distance = 'manhattan',\n"
+"         >   parts = {2, 'ARRAY'}\n"
+"         > })"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1272
+msgid "The additional option here is ``distance='manhattan'``. The default distance calculator is 'euclid', which is the straightforward as-the-crow-flies method. The optional distance calculator is 'manhattan', which can be a more appropriate method if one is following the lines of a grid rather than traveling in a straight line."
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1278
+msgid "tarantool> s:insert{1, {0, 3, 0, 3}}\n"
+"tarantool> r:select({1, 2, 1, 2}, {iterator = box.index.NEIGHBOR})"
+msgstr ""
+
+#: ../doc/book/box/box_index.rst:1284
+msgid "More examples of spatial searching are online in the file `R tree index quick start and usage`_."
+msgstr ""
+

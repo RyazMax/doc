@@ -1,0 +1,406 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../doc/dev_guide/documentation_guidelines.rst:5
+msgid "Documentation guidelines"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:7
+msgid ""
+"These guidelines are updated on the on-demand basis, covering only those "
+"issues that cause pains to the existing writers. At this point, we do not"
+" aim to come up with an exhaustive Documentation Style Guide for the "
+"Tarantool project."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:13
+msgid "Markup issues"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:17
+msgid "Wrapping text"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:19
+msgid ""
+"The limit is 80 characters per line for plain text, and no limit for any "
+"other constructions when wrapping affects ReST readability and/or HTML "
+"output. Also, it makes no sense to wrap text into lines shorter than 80 "
+"characters unless you have a good reason to do so."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:24
+msgid ""
+"The 80-character limit comes from the ISO/ANSI 80x24 screen resolution, "
+"and it's unlikely that readers/writers will use 80-character consoles. "
+"Yet it's still a standard for many coding guidelines (including "
+"Tarantool). As for writers, the benefit is that an 80-character page "
+"guide allows keeping the text window rather narrow most of the time, "
+"leaving more space for other applications in a wide-screen environment."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:33
+msgid "Formatting code snippets"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:35
+msgid ""
+"For code snippets, we mainly use the ``code-block`` directive with an "
+"appropriate highlighting language. The most commonly used highlighting "
+"languages are:"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:39
+msgid "``.. code-block:: tarantoolsession``"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:40
+msgid "``.. code-block:: console``"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:41
+msgid "``.. code-block:: lua``"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:43
+msgid "For example (a code snippet in Lua):"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:45
+msgid ""
+"for page in paged_iter(\"X\", 10) do\n"
+"  print(\"New Page. Number Of Tuples = \" .. #page)\n"
+"  for i=1,#page,1 do print(page[i]) end\n"
+"end"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:52
+msgid ""
+"In rare cases, when we need custom highlight for specific parts of a code"
+" snippet and the ``code-block`` directive is not enough, we use the per-"
+"line ``codenormal`` directive together and explicit output formatting "
+"(defined in :file:`doc/sphinx/_static/sphinx_design.css`)."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:57
+msgid "Examples:"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:59
+msgid "Function syntax (the placeholder `space-name` is displayed in italics):"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:61
+msgid ""
+":codenormal:`box.space.`:codeitalic:`space-"
+"name`:codenormal:`:create_index('index-name')`"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:63
+msgid ""
+"A tdb session (user input is in bold, command prompt is in blue, computer"
+" output is in green):"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:103
+msgid ""
+"$ :codebold:`tarantool example.lua`\n"
+":codeblue:`(TDB)`  :codegreen:`Tarantool debugger v.0.0.3. Type h for "
+"help`\n"
+"example.lua\n"
+":codeblue:`(TDB)`  :codegreen:`[example.lua]`\n"
+":codeblue:`(TDB)`  :codenormal:`3: i = 1`"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:75
+msgid ""
+"Warning: Every entry of explicit output formatting (``codenormal``, "
+"``codebold``, etc) tends to cause troubles when this documentation is "
+"translated to other languages. Please avoid using explicit output "
+"formatting unless it is REALLY needed."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:82
+msgid "Using separated links"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:84
+msgid "Avoid separating the link and the target definition (ref), like this:"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:86
+msgid ""
+"This is a paragraph that contains `a link`_.\n"
+"\n"
+".. _a link: http://example.com/"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:92
+msgid "Use non-separated links instead:"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:94
+msgid "This is a paragraph that contains `a link <http://example.com/>`_."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:98
+msgid ""
+"Warning: Every separated link tends to cause troubles when this "
+"documentation is translated to other languages. Please avoid using "
+"separated links unless it is REALLY needed (e.g. in tables)."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:104
+msgid "Creating labels for local links"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:106
+msgid ""
+"We avoid using links that sphinx generates automatically for most "
+"objects. Instead, we add our own labels for linking to any place in this "
+"documentation."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:109
+msgid "Our naming convention is as follows:"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:111
+msgid "Character set: a through z, 0 through 9, dash, underscore."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:113
+msgid "Format: ``path dash filename dash tag``"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:115
+msgid ""
+"Example: ``_c_api-box_index-iterator_type`` |br| where: |br| ``c_api`` is"
+" the directory name, |br| ``box_index`` is the file name (without "
+"\".rst\"), and |br| ``iterator_type`` is the tag."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:121
+msgid ""
+"The file name is useful for knowing, when you see \"ref\", where it is "
+"pointing to. And if the file name is meaningful, you see that better."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:124
+msgid ""
+"The file name alone, without a path, is enough when the file name is "
+"unique within ``doc/sphinx``. So, for ``fiber.rst`` it should be just "
+"\"fiber\", not \"reference-fiber\". While for \"index.rst\" (we have a "
+"handful of \"index.rst\" in different directories) please specify the "
+"path before the file name, e.g. \"reference-index\"."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:131
+msgid ""
+"Use a dash \"-\" to delimit the path and the file name. In the "
+"documentation source, we use only underscores \"_\" in paths and file "
+"names, reserving dash \"-\" as the delimiter for local links."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:135
+msgid ""
+"The tag can be anything meaningful. The only guideline is for Tarantool "
+"syntax items (such as members), where the preferred tag syntax is "
+"``module_or_object_name dash member_name``. For example, ``box_space-"
+"drop``."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:141
+msgid "Making comments"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:143
+msgid ""
+"Sometimes we may need to leave comments in a ReST file. To make sphinx "
+"ignore some text during processing, use the following per-line notation "
+"with \".. //\" as the comment marker:"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:147
+msgid ".. // your comment here"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:151
+msgid ""
+"The starting symbols \".. //\" do not interfere with the other ReST "
+"markup, and they are easy to find both visually and using grep. There are"
+" no symbols to escape in grep search, just go ahead with something like "
+"this:"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:155
+msgid "$ grep \".. //\" doc/sphinx/dev_guide/*.rst"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:159
+msgid ""
+"These comments don't work properly in nested documentation, though (e.g. "
+"if you leave a comment in module -> object -> method, sphinx ignores the "
+"comment and all nested content that follows in the method description)."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:165
+msgid "Language and style issues"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:169
+msgid "US vs British spelling"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:171
+msgid "We use English US spelling."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:175
+msgid "Instance vs server"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:177
+msgid ""
+"We say \"instance\" rather than \"server\" to refer to an instance of "
+"Tarantool server. This keeps the manual terminology consistent with names"
+" like ``/etc/tarantool/instances.enabled`` in the Tarantool environment."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:181
+msgid ""
+"Wrong usage: \"Replication allows multiple Tarantool *servers* to work on"
+" copies of the same databases.\""
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:184
+msgid ""
+"Correct usage: \"Replication allows multiple Tarantool *instances* to "
+"work on copies of the same databases.\""
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:189
+msgid "Examples and templates"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:193
+msgid "Module and function"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:195
+msgid ""
+"Here is an example of documenting a module (``my_fiber``) and a function "
+"(``my_fiber.create``)."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:202
+msgid ""
+"Create and start a ``my_fiber`` object. The object is created and begins "
+"to run immediately."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst
+msgid "Parameters"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:205
+msgid "the function to be associated with the ``my_fiber`` object"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:206
+msgid "what will be passed to function"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst
+msgid "return"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:208
+msgid "created ``my_fiber`` object"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst
+msgid "rtype"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:209
+msgid "userdata"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:211
+#: ../doc/dev_guide/documentation_guidelines.rst:249
+msgid "**Example:**"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:213
+msgid ""
+"tarantool> my_fiber = require('my_fiber')\n"
+"---\n"
+"...\n"
+"tarantool> function function_name()\n"
+"         >   my_fiber.sleep(1000)\n"
+"         > end\n"
+"---\n"
+"...\n"
+"tarantool> my_fiber_object = my_fiber.create(function_name)\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:229
+msgid "Module, class and method"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:231
+msgid ""
+"Here is an example of documenting a module (``my_box.index``), a class "
+"(``my_index_object``) and a function (``my_index_object.rename``)."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:240
+msgid "Rename an index."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:242
+msgid "an object reference"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:243
+msgid "a new name for the index (type = string)"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:245
+msgid "nil"
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:247
+msgid "Possible errors: index_object does not exist."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:251
+msgid ""
+"tarantool> box.space.space55.index.primary:rename('secondary')\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/dev_guide/documentation_guidelines.rst:257
+msgid "Complexity Factors: Index size, Index type, Number of tuples accessed."
+msgstr ""
+

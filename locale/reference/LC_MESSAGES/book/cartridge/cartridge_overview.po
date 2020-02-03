@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../doc/book/cartridge/cartridge_overview.rst:5
+msgid "About Tarantool Cartridge"
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:7
+msgid ""
+"Tarantool Cartridge is the recommended alternative to the :ref:`old-"
+"school practices <app_server-creating_app>` of application development "
+"for Tarantool."
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:13
+msgid ""
+"As a software development kit (SDK), Tarantool Cartridge provides you "
+"with utilities and :ref:`templates <cartridge-templates>` to help:"
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:16
+msgid "easily set up a development environment for your applications;"
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:17
+msgid "plug the necessary Lua modules."
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:19
+msgid ""
+"The resulting package can be installed and started on one or multiple "
+"servers as one or multiple instantiated services -- independent or "
+"organized into a **cluster**."
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:25
+msgid ""
+"A Tarantool cluster is a collection of Tarantool instances acting in "
+"concert. While a single Tarantool instance can leverage the performance "
+"of a single server and is vulnerable to failure, the cluster spans "
+"multiple servers, utilizes their cumulative CPU power, and is fault-"
+"tolerant."
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:30
+msgid ""
+"To fully utilize the capabilities of a Tarantool cluster, you need to "
+"develop applications keeping in mind they are to run in a cluster "
+"environment."
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:33
+msgid ""
+"Further on, Tarantool Cartridge provides your cluster-aware applications "
+"with the following benefits:"
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:36
+msgid "horizontal scalability and load balancing via built-in automatic sharding;"
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:37
+msgid "asynchronous replication;"
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:38
+msgid "automatic failover;"
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:39
+msgid "centralized cluster control via GUI or API;"
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:40
+msgid "automatic configuration synchronization;"
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:41
+msgid "instance functionality segregation."
+msgstr ""
+
+#: ../doc/book/cartridge/cartridge_overview.rst:43
+msgid ""
+"A Tarantool Cartridge cluster can segregate functionality between "
+"instances via built-in and custom (user-defined) :ref:`cluster roles "
+"<cartridge-roles>`. You can toggle instances on and off on the fly during"
+" cluster operation. This allows you to put different types of workloads "
+"(e.g., compute- and transaction-intensive ones) on different physical "
+"servers with dedicated hardware."
+msgstr ""
+
