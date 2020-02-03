@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:10+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../doc/reference/reference_lua/uri.rst:3
+msgid "Module `uri`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:7
+msgid "Overview"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:9
+msgid "A \"URI\" is a \"Uniform Resource Identifier\". The `IETF standard <https://www.ietf.org/rfc/rfc2396.txt>`_ says a URI string looks like this:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:13
+msgid "[scheme:]scheme-specific-part[#fragment]"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:17
+msgid "A common type, a hierarchical URI, looks like this:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:19
+msgid "[scheme:][//authority][path][?query][#fragment]"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:23
+msgid "For example the string ``'https://tarantool.org/x.html#y'`` has three components:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:26
+msgid "``https`` is the scheme,"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:27
+msgid "``tarantool.org/x.html`` is the path,"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:28
+msgid "``y`` is the fragment."
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:30
+msgid "Tarantool's URI module provides routines which convert URI strings into their components, or turn components into URI strings."
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:35
+msgid "Index"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:37
+msgid "Below is a list of all ``uri`` functions."
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:45
+msgid "Name"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:45
+msgid "Use"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:47
+msgid ":ref:`uri.parse() <uri-parse>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:47
+msgid "Get a table of URI components"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:50
+msgid ":ref:`uri.format() <uri-format>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:50
+msgid "Construct a URI from components"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:0
+#: ../doc/reference/reference_lua/uri.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:60
+msgid "a Uniform Resource Identifier"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:0
+#: ../doc/reference/reference_lua/uri.rst:0
+msgid "return"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:61
+msgid "URI-components-table. Possible components are fragment, host, login, password, path, query, scheme, service."
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:0
+#: ../doc/reference/reference_lua/uri.rst:0
+msgid "rtype"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:63
+msgid "Table"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:65
+#: ../doc/reference/reference_lua/uri.rst:92
+msgid "**Example:**"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:67
+msgid "tarantool> uri = require('uri')\n"
+"---\n"
+"...\n"
+"\n"
+"tarantool> uri.parse('http://x.html#y')\n"
+"---\n"
+"- host: x.html\n"
+"  scheme: http\n"
+"  fragment: y\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:84
+msgid "a series of name:value pairs, one for each component"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:86
+msgid "boolean. If this is supplied and is ``true``, then the password component is rendered in clear text, otherwise it is omitted."
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:89
+msgid "URI-string. Thus uri.format() is the reverse of uri.parse()."
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:90
+msgid "string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/uri.rst:94
+msgid "tarantool> uri.format({host = 'x.html', scheme = 'http', fragment = 'y'})\n"
+"---\n"
+"- http://x.html#y\n"
+"..."
+msgstr ""
+

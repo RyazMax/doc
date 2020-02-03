@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:10+0000\n"
+"PO-Revision-Date: 2019-12-06 16:16+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 2.2.4\n"
+
+#: ../doc/reference/reference_lua/xlog.rst:5
+msgid "Module `xlog`"
+msgstr "Модуль `xlog`"
+
+#: ../doc/reference/reference_lua/xlog.rst:7
+msgid ""
+"The xlog module contains one function: ``pairs()``. It can be used to read "
+"Tarantool's :ref:`snapshot files<index-box_persistence>` or :ref:`write-"
+"ahead-log (WAL) <internals-wal>` files. A description of the file format is "
+"in section :ref:`Data persistence and the WAL file format <internals-"
+"data_persistence>`."
+msgstr ""
+"Модуль xlog включает в себя одну функцию: ``pairs()``. Ее можно использовать "
+"для чтения :ref:`файлов снимка <index-box_persistence>` или :ref:`файлов "
+"журнала упреждающей записи (WAL) <internals-wal>` в Tarantool'е. Описание "
+"формата файла дается в разделе :ref:`Персистентность данных и формат WAL-"
+"файла <internals-data_persistence>`."
+
+#: ../doc/reference/reference_lua/xlog.rst:19
+msgid "Open a file, and allow iterating over one file entry at a time."
+msgstr "Открытие файла и итерация по одной записи файла за раз."
+
+#: ../doc/reference/reference_lua/xlog.rst:0
+msgid "returns"
+msgstr "возвращает"
+
+#: ../doc/reference/reference_lua/xlog.rst:21
+msgid "iterator  which can be used in a for/end loop."
+msgstr "итератор, который можно использовать в цикле for / end."
+
+#: ../doc/reference/reference_lua/xlog.rst:0
+msgid "rtype"
+msgstr "тип возвращаемого значения"
+
+#: ../doc/reference/reference_lua/xlog.rst:22
+msgid "`iterator <https://www.lua.org/pil/7.1.html>`_"
+msgstr "`итератор <https://www.lua.org/pil/7.1.html>`_"
+
+#: ../doc/reference/reference_lua/xlog.rst:24
+msgid ""
+"Possible errors: File does not contain properly formatted snapshot or write-"
+"ahead-log information."
+msgstr ""
+"Возможные ошибки: Файл не содержит снимок в правильном формате или "
+"информацию журнала упреждающей записи."
+
+#: ../doc/reference/reference_lua/xlog.rst:27
+msgid "**Example:**"
+msgstr "**Пример:**"
+
+#: ../doc/reference/reference_lua/xlog.rst:29
+msgid ""
+"This will read the first write-ahead-log (WAL) file that was created in the :"
+"ref:`wal_dir <cfg_basic-wal_dir>` directory in our :ref:`\"Getting started\" "
+"exercises <getting_started>`."
+msgstr ""
+"В данном примере производится чтение первого WAL-файла, который был создан в "
+"директории :ref:`wal_dir <cfg_basic-wal_dir>` в рамках наших :ref:"
+"`упражнений в \"Руководстве для начинающих\" <getting_started>`."
+
+#: ../doc/reference/reference_lua/xlog.rst:33
+msgid ""
+"Each result from ``pairs()`` is formatted with MsgPack so its structure can "
+"be specified with :ref:`__serialize <msgpack-serialize>`."
+msgstr ""
+"Каждый результат из ``pairs()`` выводится в формате MsgPack, поэтому его "
+"структуру можно указать с помощью :ref:`__serialize <msgpack-serialize>`."
+
+#: ../doc/reference/reference_lua/xlog.rst:36
+msgid ""
+"xlog = require('xlog')\n"
+"t = {}\n"
+"for k, v in xlog.pairs('00000000000000000000.xlog') do\n"
+"  table.insert(t, setmetatable(v, { __serialize = \"map\"}))\n"
+"end\n"
+"return t"
+msgstr ""
+"xlog = require('xlog')\n"
+"t = {}\n"
+"for k, v in xlog.pairs('00000000000000000000.xlog') do\n"
+"  table.insert(t, setmetatable(v, { __serialize = \"map\"}))\n"
+"end\n"
+"return t"
+
+#: ../doc/reference/reference_lua/xlog.rst:45
+msgid "The first lines of the result will look like:"
+msgstr "Первые строки результата будут выглядеть следующим образом:"
+
+#: ../doc/reference/reference_lua/xlog.rst:47
+msgid ""
+"(...)\n"
+"---\n"
+"- - {'BODY':   {'space_id': 272, 'index_base': 1, 'key': ['max_id'],\n"
+"                'tuple': [['+', 2, 1]]},\n"
+"     'HEADER': {'type': 'UPDATE', 'timestamp': 1477846870.8541,\n"
+"                'lsn': 1, 'server_id': 1}}\n"
+"  - {'BODY':   {'space_id': 280,\n"
+"                 'tuple': [512, 1, 'tester', 'memtx', 0, {}, []]},\n"
+"     'HEADER': {'type': 'INSERT', 'timestamp': 1477846870.8597,\n"
+"                'lsn': 2, 'server_id': 1}}"
+msgstr ""
+"(...)\n"
+"---\n"
+"- - {'BODY':   {'space_id': 272, 'index_base': 1, 'key': ['max_id'],\n"
+"                'tuple': [['+', 2, 1]]},\n"
+"     'HEADER': {'type': 'UPDATE', 'timestamp': 1477846870.8541,\n"
+"                'lsn': 1, 'server_id': 1}}\n"
+"  - {'BODY':   {'space_id': 280,\n"
+"                 'tuple': [512, 1, 'tester', 'memtx', 0, {}, []]},\n"
+"     'HEADER': {'type': 'INSERT', 'timestamp': 1477846870.8597,\n"
+"                'lsn': 2, 'server_id': 1}}"

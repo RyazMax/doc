@@ -1,0 +1,407 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:10+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../doc/reference/reference_lua/string.rst:5
+msgid "Module `string`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:9
+msgid "Overview"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:13
+msgid "The :code:`string` module has everything in the `standard Lua string library <https://www.lua.org/pil/20.html>`_, and some Tarantool extensions."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:17
+msgid "In this section we only discuss the additional functions that the Tarantool developers have added."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:20
+msgid "Below is a list of all additional ``string`` functions."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:28
+msgid "Name"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:28
+msgid "Use"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:30
+msgid ":ref:`string.ljust() <string-ljust>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:30
+msgid "Left-justify a string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:33
+msgid ":ref:`string.rjust() <string-rjust>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:33
+msgid "Right-justify a string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:36
+msgid ":ref:`string.hex() <string-hex>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:36
+msgid "Get the hexadecimal value of a string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:39
+msgid ":ref:`string.startswith() <string-startswith>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:39
+msgid "Check if a string starts with a given substring"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:42
+msgid ":ref:`string.endswith() <string-endswith>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:42
+msgid "Check if a string ends with a given substring"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:45
+msgid ":ref:`string.lstrip() <string-lstrip>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:45
+msgid "Remove spaces on the left of a string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:48
+msgid ":ref:`string.rstrip() <string-rstrip>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:48
+msgid "Remove spaces on the right of a string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:51
+msgid ":ref:`string.split() <string-split>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:51
+msgid "Split a string into a table of strings"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:54
+msgid ":ref:`string.strip() <string-strip>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:54
+msgid "Remove spaces on the left and right of a string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:63
+msgid "Return the string left-justified in a string of length ``width``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:65
+msgid "the string to left-justify"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:66
+msgid "the width of the string after left-justifying"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:67
+#: ../doc/reference/reference_lua/string.rst:92
+msgid "a single character, default = 1 space"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+msgid "Return"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:69
+msgid "left-justified string (unchanged if width <= string length)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+#: ../doc/reference/reference_lua/string.rst:0
+msgid "Rtype"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:70
+#: ../doc/reference/reference_lua/string.rst:95
+#: ../doc/reference/reference_lua/string.rst:118
+#: ../doc/reference/reference_lua/string.rst:202
+#: ../doc/reference/reference_lua/string.rst:225
+#: ../doc/reference/reference_lua/string.rst:280
+msgid "string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:72
+#: ../doc/reference/reference_lua/string.rst:97
+#: ../doc/reference/reference_lua/string.rst:120
+#: ../doc/reference/reference_lua/string.rst:150
+#: ../doc/reference/reference_lua/string.rst:180
+#: ../doc/reference/reference_lua/string.rst:204
+#: ../doc/reference/reference_lua/string.rst:227
+#: ../doc/reference/reference_lua/string.rst:257
+#: ../doc/reference/reference_lua/string.rst:282
+msgid "**Example:**"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:74
+msgid "tarantool> string = require('string')\n"
+"---\n"
+"...\n"
+"tarantool> string.ljust(' A', 5)\n"
+"---\n"
+"- ' A   '\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:88
+msgid "Return the string right-justified in a string of length ``width``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:90
+msgid "the string to right-justify"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:91
+msgid "the width of the string after right-justifying"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:94
+msgid "right-justified string (unchanged if width <= string length)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:99
+msgid "tarantool> string = require('string')\n"
+"---\n"
+"...\n"
+"tarantool> string.rjust('', 5, 'X')\n"
+"---\n"
+"- 'XXXXX'\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:113
+msgid "Return the hexadecimal value of the input string."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:115
+#: ../doc/reference/reference_lua/string.rst:199
+#: ../doc/reference/reference_lua/string.rst:222
+#: ../doc/reference/reference_lua/string.rst:277
+msgid "the string to process"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:117
+msgid "hexadecimal, 2 hex-digit characters for each input character"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:122
+msgid "tarantool> string = require('string')\n"
+"---\n"
+"...\n"
+"tarantool> string.hex('ABC ')\n"
+"---\n"
+"- '41424320'\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:136
+msgid "Return True if ``input-string`` starts with ``start-string``, otherwise return False."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:139
+msgid "the string where ``start-string`` should be looked for"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:140
+#: ../doc/reference/reference_lua/string.rst:170
+msgid "the string to look for"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:141
+#: ../doc/reference/reference_lua/string.rst:171
+msgid "position: where to start looking within ``input-string``"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:142
+#: ../doc/reference/reference_lua/string.rst:172
+msgid "position: where to end looking within ``input-string``"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:144
+#: ../doc/reference/reference_lua/string.rst:174
+msgid "true or false"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:145
+#: ../doc/reference/reference_lua/string.rst:175
+msgid "boolean"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:147
+#: ../doc/reference/reference_lua/string.rst:177
+msgid "``start-pos`` and ``end-pos`` may be negative, meaning the position should be calculated from the end of the string."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:152
+msgid "tarantool> string = require('string')\n"
+"---\n"
+"...\n"
+"tarantool> string.startswith(' A', 'A', 2, 5)\n"
+"---\n"
+"- true\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:166
+msgid "Return True if ``input-string`` ends with ``end-string``, otherwise return False."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:169
+msgid "the string where ``end-string`` should be looked for"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:182
+msgid "tarantool> string = require('string')\n"
+"---\n"
+"...\n"
+"tarantool> string.endswith('Baa', 'aa')\n"
+"---\n"
+"- true\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:197
+msgid "Return the value of the input string, but without spaces on the left."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:201
+#: ../doc/reference/reference_lua/string.rst:224
+#: ../doc/reference/reference_lua/string.rst:279
+msgid "result after stripping spaces from input string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:206
+msgid "tarantool> string = require('string')\n"
+"---\n"
+"...\n"
+"tarantool> string.lstrip(' ABC ')\n"
+"---\n"
+"- 'ABC '\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:220
+msgid "Return the value of the input string, but without spaces on the right."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:229
+msgid "tarantool> string = require('string')\n"
+"---\n"
+"...\n"
+"tarantool> string.rstrip(' ABC ')\n"
+"---\n"
+"- ' ABC'\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:243
+msgid "Split ``input-string`` into one or more output strings in a table. The places to split are the places where ``split-string`` occurs."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:247
+msgid "the string to split"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:248
+msgid "the string to find within ``input-string``. Default = space."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:250
+msgid "maximum number of delimiters to process counting from the beginning of the input string. Result will contain max + 1 parts maximum."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:254
+msgid "table of strings that were split from ``input-string``"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:255
+msgid "table"
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:259
+msgid "tarantool> string = require('string')\n"
+"---\n"
+"...\n"
+"tarantool> string.split(\"A:B C:D\", \":\", 2)\n"
+"---\n"
+"- - A\n"
+"  - B\n"
+"  - ' C:D'\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:275
+msgid "Return the value of the input string, but without spaces on the left or the right."
+msgstr ""
+
+#: ../doc/reference/reference_lua/string.rst:284
+msgid "tarantool> string = require('string')\n"
+"---\n"
+"...\n"
+"tarantool> string.strip(' ABC ')\n"
+"---\n"
+"- ABC\n"
+"..."
+msgstr ""
+

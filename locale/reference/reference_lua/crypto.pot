@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:10+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../doc/reference/reference_lua/crypto.rst:5
+msgid "Module `crypto`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:11
+msgid "Overview"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:13
+msgid "\"Crypto\" is short for \"Cryptography\", which generally refers to the production of a digest value from a function (usually a `Cryptographic hash function`_), applied against a string. Tarantool's ``crypto`` module supports ten types of cryptographic hash functions (AES_, DES_, DSS_, MD4_, MD5_, MDC2_, RIPEMD_, SHA-1_, SHA-2_). Some of the crypto functionality is also present in the :ref:`digest` module."
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:22
+msgid "Index"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:24
+msgid "Below is a list of all ``crypto`` functions."
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:32
+msgid "Name"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:32
+msgid "Use"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:34
+msgid ":ref:`crypto.cipher.{algorithm}.{cipher_mode}.encrypt() <crypto-cipher>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:34
+msgid "Encrypt a string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:37
+msgid ":ref:`crypto.cipher.{algorithm}.{cipher_mode}.decrypt() <crypto-cipher>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:37
+msgid "Decrypt a string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:40
+msgid ":ref:`crypto.digest.{algorithm}() <crypto-digest>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:40
+msgid "Get a digest"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:43
+msgid ":ref:`crypto.hmac.{algorithm}() <crypto-hmac>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:43
+msgid "Get a hash key"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:53
+msgid "Pass or return a cipher derived from the string, key, and (optionally, sometimes) initialization vector. The four choices of algorithms:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:56
+msgid "aes128 - aes-128 (with 192-bit binary strings using AES)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:57
+msgid "aes192 - aes-192 (with 192-bit binary strings using AES)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:58
+msgid "aes256 - aes-256 (with 256-bit binary strings using AES)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:59
+msgid "des    - des (with 56-bit binary strings using DES, though DES is not recommended)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:62
+msgid "Four choices of block cipher modes are also available:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:64
+msgid "cbc - Cipher Block Chaining"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:65
+msgid "cfb - Cipher Feedback"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:66
+msgid "ecb - Electronic Codebook"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:67
+msgid "ofb - Output Feedback"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:69
+msgid "For more information, read the article about `Encryption Modes`_"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:71
+#: ../doc/reference/reference_lua/crypto.rst:103
+#: ../doc/reference/reference_lua/crypto.rst:132
+msgid "**Example:**"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:73
+msgid "_16byte_iv='1234567890123456'\n"
+"_16byte_pass='1234567890123456'\n"
+"e=crypto.cipher.aes128.cbc.encrypt('string', _16byte_pass, _16byte_iv)\n"
+"crypto.cipher.aes128.cbc.decrypt(e,  _16byte_pass, _16byte_iv)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:88
+msgid "Pass or return a digest derived from the string. The eleven algorithm choices:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:91
+msgid "dss - dss (using DSS)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:92
+msgid "dss1 - dss (using DSS-1)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:93
+msgid "md4 - md4 (with 128-bit binary strings using MD4)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:94
+msgid "md5 - md5 (with 128-bit binary strings using MD5)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:95
+msgid "mdc2 - mdc2 (using MDC2)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:96
+msgid "ripemd160 - ripemd (with 160-bit binary strings using RIPEMD-160)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:97
+msgid "sha1 - sha-1 (with 160-bit binary strings using SHA-1)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:98
+msgid "sha224 - sha-224 (with 224-bit binary strings using SHA-2)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:99
+msgid "sha256 - sha-256 (with 256-bit binary strings using SHA-2)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:100
+msgid "sha384 - sha-384 (with 384-bit binary strings using SHA-2)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:101
+msgid "sha512 - sha-512(with 512-bit binary strings using SHA-2)."
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:105
+msgid "crypto.digest.md4('string')\n"
+"crypto.digest.sha512('string')"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:118
+msgid "Pass a key and a string. The result is an `HMAC <https://en.wikipedia.org/wiki/HMAC>`_ message authentication code. The eight algorithm choices:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:123
+msgid "md4 or md4_hex - md4 (with 128-bit binary strings using MD4)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:124
+msgid "md5 or md5_hex - md5 (with 128-bit binary strings using MD5)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:125
+msgid "ripemd160 or ripemd160_hex - ripemd (with 160-bit binary strings using RIPEMD-160)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:126
+msgid "sha1 or sha1_hex - sha-1 (with 160-bit binary strings using SHA-1)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:127
+msgid "sha224 or sha224_hex - sha-224 (with 224-bit binary strings using SHA-2)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:128
+msgid "sha256 or sha256_hex - sha-256 (with 256-bit binary strings using SHA-2)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:129
+msgid "sha384 or sha384_hex - sha-384 (with 384-bit binary strings using SHA-2)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:130
+msgid "sha512 or sha512_hex - sha-512(with 512-bit binary strings using SHA-2)."
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:134
+msgid "crypto.hmac.md4('key', 'string')\n"
+"crypto.hmac.md4_hex('key', 'string')"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:141
+msgid "Incremental methods in the crypto module"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:143
+msgid "Suppose that a digest is done for a string 'A', then a new part 'B' is appended to the string, then a new digest is required. The new digest could be recomputed for the whole string 'AB', but it is faster to take what was computed before for 'A' and apply changes based on the new part 'B'. This is called multi-step or \"incremental\" digesting, which Tarantool supports for all crypto functions."
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:149
+msgid "crypto = require('crypto')\n"
+"\n"
+"-- print aes-192 digest of 'AB', with one step, then incrementally\n"
+"key = 'key/key/key/key/key/key/'\n"
+"iv =  'iviviviviviviviv'\n"
+"print(crypto.cipher.aes192.cbc.encrypt('AB', key, iv))\n"
+"c = crypto.cipher.aes192.cbc.encrypt.new(key)\n"
+"c:init(nil, iv)\n"
+"c:update('A')\n"
+"c:update('B')\n"
+"print(c:result())\n"
+"c:free()\n"
+"\n"
+"-- print sha-256 digest of 'AB', with one step, then incrementally\n"
+"print(crypto.digest.sha256('AB'))\n"
+"c = crypto.digest.sha256.new()\n"
+"c:init()\n"
+"c:update('A')\n"
+"c:update('B')\n"
+"print(c:result())\n"
+"c:free()"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:175
+msgid "Getting the same results from digest and crypto modules"
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:177
+msgid "The following functions are equivalent. For example, the ``digest`` function and the ``crypto`` function will both produce the same result."
+msgstr ""
+
+#: ../doc/reference/reference_lua/crypto.rst:180
+msgid "crypto.cipher.aes256.cbc.encrypt('x',b32,b16)==digest.aes256cbc.encrypt('x',b32,b16)\n"
+"crypto.digest.md4('string') == digest.md4('string')\n"
+"crypto.digest.md5('string') == digest.md5('string')\n"
+"crypto.digest.sha1('string') == digest.sha1('string')\n"
+"crypto.digest.sha224('string') == digest.sha224('string')\n"
+"crypto.digest.sha256('string') == digest.sha256('string')\n"
+"crypto.digest.sha384('string') == digest.sha384('string')\n"
+"crypto.digest.sha512('string') == digest.sha512('string')"
+msgstr ""
+

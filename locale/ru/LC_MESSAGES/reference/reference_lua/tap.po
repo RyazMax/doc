@@ -1,0 +1,562 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:10+0000\n"
+"PO-Revision-Date: 2019-12-06 16:16+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 2.2.4\n"
+
+#: ../doc/reference/reference_lua/tap.rst:3
+msgid "Module `tap`"
+msgstr "Модуль `tap`"
+
+#: ../doc/reference/reference_lua/tap.rst:7
+msgid "Overview"
+msgstr "Общие сведения"
+
+#: ../doc/reference/reference_lua/tap.rst:9
+msgid ""
+"The ``tap`` module streamlines the testing of other modules. It allows "
+"writing of tests in the `TAP protocol`_. The results from the tests can be "
+"parsed by standard TAP-analyzers so they can be passed to utilities such as "
+"`prove`_. Thus one can run tests and then use the results for statistics, "
+"decision-making, and so on."
+msgstr ""
+"Модуль ``tap`` оптимизирует тестирование других модулей. Он позволяет "
+"записывать тесты в TAP-протокол (`TAP protocol`_). Результаты тестов могут "
+"подвергаться анализу стандартными TAP-анализаторами, поэтому их можно "
+"передавать утилитам, например `prove`_. Таким образом, можно выполнять "
+"тестирование, а затем использовать результаты для выведения статистики, "
+"принятия решений и т.д."
+
+#: ../doc/reference/reference_lua/tap.rst:17
+msgid "Index"
+msgstr "Указатель"
+
+#: ../doc/reference/reference_lua/tap.rst:19
+msgid "Below is a list of all ``tap`` functions."
+msgstr "Ниже приведен перечень всех функций модуля ``tap``."
+
+#: ../doc/reference/reference_lua/tap.rst:27
+msgid "Name"
+msgstr "Имя"
+
+#: ../doc/reference/reference_lua/tap.rst:27
+msgid "Use"
+msgstr "Назначение"
+
+#: ../doc/reference/reference_lua/tap.rst:29
+msgid ":ref:`tap.test() <tap-test>`"
+msgstr ":ref:`tap.test() <tap-test>`"
+
+#: ../doc/reference/reference_lua/tap.rst:29
+msgid "Initialize"
+msgstr "Инициализация"
+
+#: ../doc/reference/reference_lua/tap.rst:32
+msgid ":ref:`taptest:test() <taptest-test>`"
+msgstr ":ref:`taptest:test() <taptest-test>`"
+
+#: ../doc/reference/reference_lua/tap.rst:32
+msgid "Create a subtest and print the results"
+msgstr "Создание подтеста и вывод результатов"
+
+#: ../doc/reference/reference_lua/tap.rst:35
+msgid ":ref:`taptest:plan() <taptest-plan>`"
+msgstr ":ref:`taptest:plan() <taptest-plan>`"
+
+#: ../doc/reference/reference_lua/tap.rst:35
+msgid "Indicate how many tests to perform"
+msgstr "Указание количества проводимых тестов"
+
+#: ../doc/reference/reference_lua/tap.rst:38
+msgid ":ref:`taptest:check() <taptest-check>`"
+msgstr ":ref:`taptest:check() <taptest-check>`"
+
+#: ../doc/reference/reference_lua/tap.rst:38
+msgid "Check the number of tests performed"
+msgstr "Проверка количества выполненных тестов"
+
+#: ../doc/reference/reference_lua/tap.rst:41
+msgid ":ref:`taptest:diag() <taptest-diag>`"
+msgstr ":ref:`taptest:diag() <taptest-diag>`"
+
+#: ../doc/reference/reference_lua/tap.rst:41
+msgid "Display a diagnostic message"
+msgstr "Отображение сообщения диагностики"
+
+#: ../doc/reference/reference_lua/tap.rst:44
+msgid ":ref:`taptest:ok() <taptest-ok>`"
+msgstr ":ref:`taptest:ok() <taptest-ok>`"
+
+#: ../doc/reference/reference_lua/tap.rst:44
+#: ../doc/reference/reference_lua/tap.rst:47
+#: ../doc/reference/reference_lua/tap.rst:50
+msgid "Evaluate the condition and display the message"
+msgstr "Оценка состояния и отображение сообщения"
+
+#: ../doc/reference/reference_lua/tap.rst:47
+msgid ":ref:`taptest:fail() <taptest-fail>`"
+msgstr ":ref:`taptest:fail() <taptest-fail>`"
+
+#: ../doc/reference/reference_lua/tap.rst:50
+msgid ":ref:`taptest:skip() <taptest-skip>`"
+msgstr ":ref:`taptest:skip() <taptest-skip>`"
+
+#: ../doc/reference/reference_lua/tap.rst:53
+msgid ":ref:`taptest:is() <taptest-is>`"
+msgstr ":ref:`taptest:is() <taptest-is>`"
+
+#: ../doc/reference/reference_lua/tap.rst:53
+msgid "Check if the two arguments are equal"
+msgstr "Проверка равенства двух аргументов"
+
+#: ../doc/reference/reference_lua/tap.rst:56
+msgid ":ref:`taptest:isnt() <taptest-isnt>`"
+msgstr ":ref:`taptest:isnt() <taptest-isnt>`"
+
+#: ../doc/reference/reference_lua/tap.rst:56
+msgid "Check if the two arguments are different"
+msgstr "Проверка отличий двух аргументов"
+
+#: ../doc/reference/reference_lua/tap.rst:59
+msgid ":ref:`taptest:is_deeply() <taptest-is_deeply>`"
+msgstr ":ref:`taptest:is_deeply() <taptest-is_deeply>`"
+
+#: ../doc/reference/reference_lua/tap.rst:59
+msgid "Recursively check if the two arguments are equal"
+msgstr "Рекурсивная проверка равенства двух аргументов"
+
+#: ../doc/reference/reference_lua/tap.rst:62
+msgid ":ref:`taptest:like() <taptest-like>`"
+msgstr ":ref:`taptest:like() <taptest-like>`"
+
+#: ../doc/reference/reference_lua/tap.rst:62
+msgid "Check if the argument matches a pattern"
+msgstr "Проверка соответствия аргумента шаблону"
+
+#: ../doc/reference/reference_lua/tap.rst:65
+msgid ":ref:`taptest:unlike() <taptest-unlike>`"
+msgstr ":ref:`taptest:unlike() <taptest-unlike>`"
+
+#: ../doc/reference/reference_lua/tap.rst:65
+msgid "Check if the argument does not match a pattern"
+msgstr "Проверка отличия аргумента от шаблона"
+
+#: ../doc/reference/reference_lua/tap.rst:68
+msgid ""
+":ref:`taptest:isnil() <taptest-istype>` |br| :ref:`taptest:isstring() "
+"<taptest-istype>` |br| :ref:`taptest:isnumber() <taptest-istype>` |br| :ref:"
+"`taptest:istable() <taptest-istype>` |br| :ref:`taptest:isboolean() <taptest-"
+"istype>` |br| :ref:`taptest:isudata() <taptest-istype>` |br| :ref:`taptest:"
+"iscdata() <taptest-istype>`"
+msgstr ""
+":ref:`taptest:isnil() <taptest-istype>` |br| :ref:`taptest:isstring() "
+"<taptest-istype>` |br| :ref:`taptest:isnumber() <taptest-istype>` |br| :ref:"
+"`taptest:istable() <taptest-istype>` |br| :ref:`taptest:isboolean() <taptest-"
+"istype>` |br| :ref:`taptest:isudata() <taptest-istype>` |br| :ref:`taptest:"
+"iscdata() <taptest-istype>`"
+
+#: ../doc/reference/reference_lua/tap.rst:74
+msgid "Check if a value has a particular type"
+msgstr "Проверка соответствия значения определенному типу"
+
+#: ../doc/reference/reference_lua/tap.rst:90
+msgid "Initialize."
+msgstr "Инициализация."
+
+#: ../doc/reference/reference_lua/tap.rst:92
+msgid ""
+"The result of ``tap.test`` is an object, which will be called taptest in the "
+"rest of this discussion, which is necessary for ``taptest:plan()`` and all "
+"the other methods."
+msgstr ""
+"Результатом ``tap.test`` является объект, который будет называться taptest в "
+"ходе данного разбора, что необходимо для ``taptest:plan()`` и всех остальных "
+"методов."
+
+#: ../doc/reference/reference_lua/tap.rst:0
+msgid "Parameters"
+msgstr "Параметры"
+
+#: ../doc/reference/reference_lua/tap.rst:96
+#: ../doc/reference/reference_lua/tap.rst:117
+msgid "an arbitrary name to give for the test outputs."
+msgstr "произвольное имя для результата теста."
+
+#: ../doc/reference/reference_lua/tap.rst:0
+msgid "return"
+msgstr "возвращает"
+
+#: ../doc/reference/reference_lua/tap.rst:97
+#: ../doc/reference/reference_lua/tap.rst:119
+msgid "taptest"
+msgstr "taptest"
+
+#: ../doc/reference/reference_lua/tap.rst:0
+msgid "rtype"
+msgstr "тип возвращаемого значения"
+
+#: ../doc/reference/reference_lua/tap.rst:98
+msgid "userdata"
+msgstr "пользовательские данные"
+
+#: ../doc/reference/reference_lua/tap.rst:100
+msgid ""
+"tap = require('tap')\n"
+"taptest = tap.test('test-name')"
+msgstr ""
+"tap = require('tap')\n"
+"taptest = tap.test('test-name')"
+
+#: ../doc/reference/reference_lua/tap.rst:111
+msgid ""
+"Create a subtest (if no ``func`` argument specified), or (if all arguments "
+"are specified) create a subtest, run the test function and print the result."
+msgstr ""
+"Создание подтеста (если не указан аргумент ``func``) или (если указаны все "
+"аргументы) создание подтеста, выполнение тестовой функции и вывод результата."
+
+#: ../doc/reference/reference_lua/tap.rst:115
+msgid "See the :ref:`example <tap-example>`."
+msgstr "См. :ref:`пример <tap-example>`."
+
+#: ../doc/reference/reference_lua/tap.rst:118
+msgid "the test logic to run."
+msgstr "выполняемая тестовая логика."
+
+#: ../doc/reference/reference_lua/tap.rst:120
+msgid "userdata or string"
+msgstr "userdata или строка"
+
+#: ../doc/reference/reference_lua/tap.rst:126
+msgid "Indicate how many tests will be performed."
+msgstr "Указание количества проводимых тестов."
+
+#: ../doc/reference/reference_lua/tap.rst:129
+#: ../doc/reference/reference_lua/tap.rst:163
+#: ../doc/reference/reference_lua/tap.rst:223
+msgid "nil"
+msgstr "nil"
+
+#: ../doc/reference/reference_lua/tap.rst:135
+msgid "Checks the number of tests performed."
+msgstr "Проверка количества выполненных тестов."
+
+#: ../doc/reference/reference_lua/tap.rst:137
+msgid ""
+"The result will be a display saying ``# bad plan: ...`` if the number of "
+"completed tests is not equal to the number of tests specified by ``taptest:"
+"plan(...)``. (This is a purely Tarantool feature: \"bad plan\" messages are "
+"out of the TAP13 standard.)"
+msgstr ""
+"Выведенный результат будет включать в себя сообщение: ``# bad plan: ...``, "
+"если количество выполненных тестов не равно количеству тестов, указанному в "
+"``taptest:plan(...)``. (Это собственная функция Tarantool'а: сообщения типа "
+"\"bad plan\" не входят в стандарт TAP13.)"
+
+#: ../doc/reference/reference_lua/tap.rst:142
+msgid ""
+"This check should only be done after all planned tests are complete, so "
+"ordinarily ``taptest:check()`` will only appear at the end of a script. "
+"However, as a Tarantool extension, ``taptest:check()`` may appear at the end "
+"of any subtest. Therefore there are three ways to cause the check:"
+msgstr ""
+"Такую проверку следует проводить только по завершении всех запланированных "
+"тестов, поэтому как правило, ``taptest:check()`` появится лишь в конце "
+"скрипта. Тем не менее, в качестве расширения Tarantool'а, ``taptest:"
+"check()`` может появиться в начале любого подтеста. Таким образом, проверка "
+"появится в трех случаях:"
+
+#: ../doc/reference/reference_lua/tap.rst:147
+msgid "by calling ``taptest:check()`` at the end of a script,"
+msgstr "при вызове ``taptest:check()`` в конце скрипта,"
+
+#: ../doc/reference/reference_lua/tap.rst:148
+msgid "by calling a function which ends with a call to ``taptest:check()``,"
+msgstr "при вызове функции, которая заканчивается вызовом ``taptest:check()``,"
+
+#: ../doc/reference/reference_lua/tap.rst:149
+msgid ""
+"or by calling taptest:test('...', subtest-function-name) where subtest-"
+"function-name does not need to end with ``taptest:check()`` because it can "
+"be called after the subtest is complete."
+msgstr ""
+"или при вызове taptest:test('...', имя-функции-подтеста), где функция "
+"подтеста не обязана заканчиваться на ``taptest:check()``, поскольку ее можно "
+"вызвать по окончании подтеста."
+
+#: ../doc/reference/reference_lua/tap.rst:153
+#: ../doc/reference/reference_lua/tap.rst:176
+#: ../doc/reference/reference_lua/tap.rst:210
+#: ../doc/reference/reference_lua/tap.rst:245
+#: ../doc/reference/reference_lua/tap.rst:258
+#: ../doc/reference/reference_lua/tap.rst:268
+#: ../doc/reference/reference_lua/tap.rst:283
+#: ../doc/reference/reference_lua/tap.rst:304
+#: ../doc/reference/reference_lua/tap.rst:323
+msgid "true or false."
+msgstr "true (правда) или false (ложь)."
+
+#: ../doc/reference/reference_lua/tap.rst:154
+#: ../doc/reference/reference_lua/tap.rst:177
+#: ../doc/reference/reference_lua/tap.rst:211
+#: ../doc/reference/reference_lua/tap.rst:246
+#: ../doc/reference/reference_lua/tap.rst:259
+#: ../doc/reference/reference_lua/tap.rst:269
+#: ../doc/reference/reference_lua/tap.rst:284
+#: ../doc/reference/reference_lua/tap.rst:305
+#: ../doc/reference/reference_lua/tap.rst:324
+msgid "boolean"
+msgstr "boolean (логический)"
+
+#: ../doc/reference/reference_lua/tap.rst:160
+msgid "Display a diagnostic message."
+msgstr "Отображение сообщения диагностики."
+
+#: ../doc/reference/reference_lua/tap.rst:162
+msgid "the message to be displayed."
+msgstr "отображаемое сообщение."
+
+#: ../doc/reference/reference_lua/tap.rst:169
+msgid ""
+"This is a basic function which is used by other functions. Depending on the "
+"value of ``condition``, print 'ok' or 'not ok' along with debugging "
+"information. Displays the message."
+msgstr ""
+"Это базовая функция, которая используется другими функциями. В зависимости "
+"от условия ``condition``, выводится 'ok' или 'not ok' вместе с отладочной "
+"информацией. Отображается сообщение."
+
+#: ../doc/reference/reference_lua/tap.rst:173
+msgid "an expression which is true or false"
+msgstr "выражение, которое либо true (правда), либо false (ложь)"
+
+#: ../doc/reference/reference_lua/tap.rst:174
+#: ../doc/reference/reference_lua/tap.rst:208
+#: ../doc/reference/reference_lua/tap.rst:221
+#: ../doc/reference/reference_lua/tap.rst:244
+#: ../doc/reference/reference_lua/tap.rst:256
+#: ../doc/reference/reference_lua/tap.rst:273
+#: ../doc/reference/reference_lua/tap.rst:288
+#: ../doc/reference/reference_lua/tap.rst:302
+#: ../doc/reference/reference_lua/tap.rst:321
+msgid "name of the test"
+msgstr "имя теста"
+
+#: ../doc/reference/reference_lua/tap.rst:179
+#: ../doc/reference/reference_lua/tap.rst:225
+msgid "**Example:**"
+msgstr "**Пример:**"
+
+#: ../doc/reference/reference_lua/tap.rst:181
+msgid ""
+"tarantool> taptest:ok(true, 'x')\n"
+"ok - x\n"
+"---\n"
+"- true\n"
+"...\n"
+"tarantool> tap = require('tap')\n"
+"---\n"
+"...\n"
+"tarantool> taptest = tap.test('test-name')\n"
+"TAP version 13\n"
+"---\n"
+"...\n"
+"tarantool> taptest:ok(1 + 1 == 2, 'X')\n"
+"ok - X\n"
+"---\n"
+"- true\n"
+"..."
+msgstr ""
+"tarantool> taptest:ok(true, 'x')\n"
+"ok - x\n"
+"---\n"
+"- true\n"
+"...\n"
+"tarantool> tap = require('tap')\n"
+"---\n"
+"...\n"
+"tarantool> taptest = tap.test('test-name')\n"
+"TAP version 13\n"
+"---\n"
+"...\n"
+"tarantool> taptest:ok(1 + 1 == 2, 'X')\n"
+"ok - X\n"
+"---\n"
+"- true\n"
+"..."
+
+#: ../doc/reference/reference_lua/tap.rst:205
+msgid ""
+"``taptest:fail('x')`` is equivalent to ``taptest:ok(false, 'x')``. Displays "
+"the message."
+msgstr ""
+"``taptest:fail('x')`` -- аналог ``taptest:ok(false, 'x')``. Отображается "
+"сообщение."
+
+#: ../doc/reference/reference_lua/tap.rst:217
+msgid ""
+"``taptest:skip('x')`` is equivalent to ``taptest:ok(true, 'x' .. '# "
+"skip')``. Displays the message."
+msgstr ""
+"``taptest:skip('x')`` -- аналог ``taptest:ok(true, 'x' .. '# skip')``. "
+"Отображается сообщение."
+
+#: ../doc/reference/reference_lua/tap.rst:227
+msgid ""
+"tarantool> taptest:skip('message')\n"
+"ok - message # skip\n"
+"---\n"
+"- true\n"
+"..."
+msgstr ""
+"tarantool> taptest:skip('message')\n"
+"ok - message # skip\n"
+"---\n"
+"- true\n"
+"..."
+
+#: ../doc/reference/reference_lua/tap.rst:239
+msgid ""
+"Check whether the first argument equals the second argument. Displays "
+"extensive message if the result is false."
+msgstr ""
+"Проверка равенства первого аргумента второму аргументу. Отображается "
+"подробное сообщение, если результатом будет false (ложь)."
+
+#: ../doc/reference/reference_lua/tap.rst:242
+#: ../doc/reference/reference_lua/tap.rst:254
+#: ../doc/reference/reference_lua/tap.rst:271
+#: ../doc/reference/reference_lua/tap.rst:286
+#: ../doc/reference/reference_lua/tap.rst:300
+msgid "actual result"
+msgstr "фактический результат"
+
+#: ../doc/reference/reference_lua/tap.rst:243
+#: ../doc/reference/reference_lua/tap.rst:255
+#: ../doc/reference/reference_lua/tap.rst:272
+msgid "expected result"
+msgstr "ожидаемый результат"
+
+#: ../doc/reference/reference_lua/tap.rst:252
+msgid "This is the negation of :ref:`taptest:is() <taptest-is>`."
+msgstr "Отрицание :ref:`taptest:is() <taptest-is>`."
+
+#: ../doc/reference/reference_lua/tap.rst:265
+msgid ""
+"Recursive version of ``taptest:is(...)``, which can be be used to compare "
+"tables as well as scalar values."
+msgstr ""
+"Рекурсивная версия ``taptest:is(...)``, которую можно использовать для "
+"сопоставления таблиц, а также скалярных значений."
+
+#: ../doc/reference/reference_lua/tap.rst:279
+msgid ""
+"Verify a string against a `pattern <http://lua-users.org/wiki/"
+"PatternsTutorial>`_. Ok if match is found."
+msgstr ""
+"Проверка совпадения строки с `шаблоном <http://lua-users.org/wiki/"
+"PatternsTutorial>`_. Ok, если найдено совпадение."
+
+#: ../doc/reference/reference_lua/tap.rst:287
+#: ../doc/reference/reference_lua/tap.rst:301
+msgid "pattern"
+msgstr "шаблон"
+
+#: ../doc/reference/reference_lua/tap.rst:290
+msgid "test:like(tarantool.version, '^[1-9]', \"version\")"
+msgstr "test:like(tarantool.version, '^[1-9]', \"version\")"
+
+#: ../doc/reference/reference_lua/tap.rst:298
+msgid "This is the negation of :ref:`taptest:like() <taptest-like>`."
+msgstr "Отрицание :ref:`taptest:like() <taptest-like>`."
+
+#: ../doc/reference/reference_lua/tap.rst:317
+msgid ""
+"Test whether a value has a particular type. Displays a long message if the "
+"value is not of the specified type."
+msgstr ""
+"Проверка соответствия значения определенному типу. Отображается длинное "
+"сообщение, если значение не принадлежит указанному типу."
+
+#: ../doc/reference/reference_lua/tap.rst:333
+msgid "Example"
+msgstr "Пример"
+
+#: ../doc/reference/reference_lua/tap.rst:335
+msgid ""
+"To run this example: put the script in a file named ./tap.lua, then make tap."
+"lua executable by saying ``chmod a+x ./tap.lua``, then execute using "
+"Tarantool as a script processor by saying ./tap.lua."
+msgstr ""
+"Для выполнения данного примера поместите скрипт в файл под названием ./tap."
+"lua, затем сделайте tap.lua выполняемым файлом с помощью команды ``chmod a"
+"+x ./tap.lua``, а затем выполните его, используя Tarantool в качестве "
+"обработчика скриптов после выполнения команды ./tap.lua."
+
+#: ../doc/reference/reference_lua/tap.rst:339
+msgid ""
+"#!/usr/bin/tarantool\n"
+"local tap = require('tap')\n"
+"test = tap.test(\"my test name\")\n"
+"test:plan(2)\n"
+"test:ok(2 * 2 == 4, \"2 * 2 is 4\")\n"
+"test:test(\"some subtests for test2\", function(test)\n"
+"    test:plan(2)\n"
+"    test:is(2 + 2, 4, \"2 + 2 is 4\")\n"
+"    test:isnt(2 + 3, 4, \"2 + 3 is not 4\")\n"
+"end)\n"
+"test:check()"
+msgstr ""
+"#!/usr/bin/tarantool\n"
+"local tap = require('tap')\n"
+"test = tap.test(\"my test name\")\n"
+"test:plan(2)\n"
+"test:ok(2 * 2 == 4, \"2 * 2 is 4\")\n"
+"test:test(\"some subtests for test2\", function(test)\n"
+"    test:plan(2)\n"
+"    test:is(2 + 2, 4, \"2 + 2 is 4\")\n"
+"    test:isnt(2 + 3, 4, \"2 + 3 is not 4\")\n"
+"end)\n"
+"test:check()"
+
+#: ../doc/reference/reference_lua/tap.rst:353
+msgid "The output from the above script will look approximately like this:"
+msgstr "Результатом вышеприведенного скрипта будет примерно следующее:"
+
+#: ../doc/reference/reference_lua/tap.rst:355
+msgid ""
+"TAP version 13\n"
+"1..2\n"
+"ok - 2 * 2 is 4\n"
+"    # Some subtests for test2\n"
+"    1..2\n"
+"    ok - 2 + 2 is 4,\n"
+"    ok - 2 + 3 is not 4\n"
+"    # Some subtests for test2: end\n"
+"ok - some subtests for test2"
+msgstr ""
+"TAP version 13\n"
+"1..2\n"
+"ok - 2 * 2 is 4\n"
+"    # Some subtests for test2\n"
+"    1..2\n"
+"    ok - 2 + 2 is 4,\n"
+"    ok - 2 + 3 is not 4\n"
+"    # Some subtests for test2: end\n"
+"ok - some subtests for test2"

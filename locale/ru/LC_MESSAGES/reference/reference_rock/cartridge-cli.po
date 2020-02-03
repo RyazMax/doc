@@ -1,0 +1,234 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:10+0000\n"
+"PO-Revision-Date: 2019-12-06 16:16+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 2.2.4\n"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:2
+msgid "Cartridge Command Line Interface"
+msgstr "Интерфейс командной строки Cartridge"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:5
+msgid "Installation"
+msgstr "Установка"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:10
+msgid "tarantoolctl rocks install cartridge-cli"
+msgstr "tarantoolctl rocks install cartridge-cli"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:11
+msgid "Optionally you may add ``.rocks/bin`` to executable path:"
+msgstr "При желании можно добавить ``.rocks/bin`` к путь к исполняемому файлу:"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:16
+msgid "export PATH=$PWD/.rocks/bin/:$PATH"
+msgstr "export PATH=$PWD/.rocks/bin/:$PATH"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:18
+msgid "Usage"
+msgstr "Использование"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:20
+msgid "For more details, run"
+msgstr "Чтобы получить более подробную информацию, выполните:"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:25
+msgid "cartridge --help"
+msgstr "cartridge --help"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:27
+msgid "Applications lifecycle"
+msgstr "Жизненный цикл приложений"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:29
+msgid "Create an application from template:"
+msgstr "Создайте приложение из шаблона:"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:34
+msgid "cartridge create --name myapp"
+msgstr "cartridge create --name myapp"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:35
+msgid "Pack an application into distributable:"
+msgstr "Упакуйте приложение:"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:40
+msgid "cartridge pack rpm myapp"
+msgstr "cartridge pack rpm myapp"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:42
+msgid "Managing instances"
+msgstr "Управление экземплярами"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:80
+msgid ""
+"cartridge start [APP_NAME[.INSTANCE_NAME]] [options]\n"
+"\n"
+"Options\n"
+"    --script FILE       Application's entry point.\n"
+"                        Default to TARANTOOL_SCRIPT,\n"
+"                        or ./init.lua when running from app's directory,\n"
+"                        or :apps_path/:app_name/init.lua in multi-app env.\n"
+"\n"
+"    --apps_path PATH    Path to apps direcrory when running in multi-app "
+"env.\n"
+"                        Default to /usr/share/tarantool\n"
+"\n"
+"    --run_dir DIR       Directory with pid and sock files\n"
+"                        Default to TARANTOOL_RUN_DIR or /var/run/tarantool\n"
+"\n"
+"    --cfg FILE          Cartridge instances config file.\n"
+"                        Default to TARANTOOL_CFG or ./instances.yml\n"
+"\n"
+"    --foreground        Do not daemonize"
+msgstr ""
+"cartridge start [ИМЯ_ПРИЛОЖЕНИЯ[.ИМЯ_ЭКЗЕМПЛЯРА]] [параметры]\n"
+"\n"
+"Параметры\n"
+"    --script FILE       Точка входа в приложение.\n"
+"                        По умолчанию TARANTOOL_SCRIPT,\n"
+"                        или ./init.lua, если запуск идет из директории "
+"приложения,\n"
+"                        или :путь_к_приложениям/:имя_приложения/init.lua в "
+"среде с несколькими приложениями.\n"
+"\n"
+"    --apps_path PATH    Путь к директории с приложениями при запуске из "
+"среды с несколькими приложениями.\n"
+"                        По умолчанию /usr/share/tarantool\n"
+"\n"
+"    --run_dir DIR       Директория с файлами pid и sock \n"
+"                        По умолчанию TARANTOOL_RUN_DIR or /var/run/"
+"tarantool\n"
+"\n"
+"    --cfg FILE          Конфигурационный файл для экземпляров Cartridge.\n"
+"                        По умолчанию TARANTOOL_CFG или ./instances.yml\n"
+"\n"
+"    --foreground        Не в фоне"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:65
+msgid ""
+"It starts tarantool instance in background with enforced env-vars and waits "
+"until app’s main script is finished."
+msgstr ""
+"Это запустит экземпляр Tarantool'а в фоновом режиме с принудительным "
+"использованием переменных окружения и будет ожидать выполнения основного "
+"скрипта приложения."
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:104
+msgid ""
+"TARANTOOL_INSTANCE_NAME\n"
+"TARANTOOL_CFG\n"
+"TARANTOOL_PID_FILE - %run_dir%/%instance_name%.pid\n"
+"TARANTOOL_CONSOLE_SOCK - %run_dir%/%instance_name%.pid"
+msgstr ""
+"TARANTOOL_INSTANCE_NAME\n"
+"TARANTOOL_CFG\n"
+"TARANTOOL_PID_FILE - %run_dir%/%instance_name%.pid\n"
+"TARANTOOL_CONSOLE_SOCK - %run_dir%/%instance_name%.pid"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:75
+msgid ""
+"``cartridge.cfg()`` uses ``TARANTOOL_INSTANCE_NAME`` to read instance’s "
+"config from file provided in ``TARANTOOL_CFG``."
+msgstr ""
+"``cartridge.cfg()`` использует ``ИМЯ_ЭКЗЕМПЛЯРА_TARANTOOL'А``, чтобы считать "
+"настройки экземпляра из файла, который находится в ``TARANTOOL_CFG``."
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:78
+msgid ""
+"Default options for ``cartridge`` command can be overriden in ``./.cartridge."
+"yml`` or ``~/.cartridge.yml``:"
+msgstr ""
+"Параметры по умолчанию для ``cartridge`` можно изменить в файле ``./."
+"cartridge.yml`` или ``~/.cartridge.yml``:"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:86
+msgid ""
+"run_dir: tmp/run\n"
+"cfg: cartrifge.yml\n"
+"apps_path: /usr/local/share/tarantool"
+msgstr ""
+"run_dir: tmp/run\n"
+"cfg: cartrifge.yml\n"
+"apps_path: /usr/local/share/tarantool"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:87
+msgid ""
+"When APP_NAME is not provided it is parsed from ``./*.rockspec`` filename. "
+"When ``INSTANCE_NAME`` is not provided cartridge reads ``cfg`` file and "
+"starts all defined instances:"
+msgstr ""
+"Если ``ИМЯ_ПРИЛОЖЕНИЯ`` не указано, оно выделяется из имени файла ``./*."
+"rockspec``. Если ``ИМЯ_ЭКЗЕМПЛЯРА`` не указывается, cartridge прочитает файл "
+"``cfg`` и запустит все указанные экземпляры:"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:127
+msgid ""
+"# in application directory\n"
+"cartridge start # starts all instances\n"
+"cartridge start .router_1 # start single instance\n"
+"\n"
+"# in multi-application environment\n"
+"cartridge start app_1 # starts all instances of app_1\n"
+"cartridge start app_1.router_1 # start single instance"
+msgstr ""
+"# в директории приложения\n"
+"cartridge start # запускает все экземпляры\n"
+"cartridge start .router_1 # запускает отдельный экземпляр\n"
+"\n"
+"# в среде с несколькими приложениями\n"
+"cartridge start app_1 # запускает все экземпляры app_1\n"
+"cartridge start app_1.router_1 # запускает отдельный экземпляр"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:101
+msgid "To stop one or more running instances use:"
+msgstr ""
+"Чтобы остановить один или несколько работающих экземпляров, используйте:"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:139
+msgid ""
+"cartridge stop [APP_NAME[.INSTANCE_NAME]] [options]\n"
+"\n"
+"These options from `start` command are supported\n"
+"    --run_dir DIR\n"
+"    --cfg FILE"
+msgstr ""
+"cartridge stop [ИМЯ_ПРИЛОЖЕНИЯ[.ИМЯ_ЭКЗЕМПЛЯРА]] [параметры]\n"
+"\n"
+"Поддерживаются следующие параметры из команды `start`\n"
+"    --run_dir DIR\n"
+"    --cfg FILE"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:112
+msgid "Misc"
+msgstr "Разное"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:115
+msgid "Running end-to-end tests"
+msgstr "Выполнение сквозного тестирования"
+
+#: ../doc/reference/reference_rock/cartridge-cli.rst:121
+msgid ""
+"vagrant up\n"
+"vagrant ssh 1_10 < test/end-to-end.sh\n"
+"vagrant halt"
+msgstr ""
+"vagrant up\n"
+"vagrant ssh 1_10 < test/end-to-end.sh\n"
+"vagrant halt"

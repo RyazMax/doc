@@ -1,0 +1,1418 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:10+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:5
+msgid "Configuration reference"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:11
+msgid "Basic parameters"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:13
+msgid ":ref:`sharding <cfg_basic-sharding>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:14
+msgid ":ref:`weights <cfg_basic-weights>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:15
+msgid ":ref:`shard_index <cfg_basic-shard_index>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:16
+msgid ":ref:`bucket_count <cfg_basic-bucket_count>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:17
+msgid ""
+":ref:`collect_bucket_garbage_interval <cfg_basic-"
+"collect_bucket_garbage_interval>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:18
+msgid ":ref:`collect_lua_garbage <cfg_basic-collect_lua_garbage>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:19
+msgid ":ref:`sync_timeout <cfg_basic-sync_timeout>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:20
+msgid ""
+":ref:`rebalancer_disbalance_threshold <cfg_basic-"
+"rebalancer_disbalance_threshold>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:21
+msgid ":ref:`rebalancer_max_receiving <cfg_basic-rebalancer_max_receiving>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:22
+msgid ":ref:`rebalancer_max_sending <cfg_basic-rebalancer_max_sending>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:28
+msgid "A field defining the logical topology of the sharded Tarantool cluster."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:30
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:41
+msgid "Type: table"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:31
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:42
+msgid "Default: false"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:32
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:43
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:89
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:99
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:111
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:126
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:147
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:162
+msgid "Dynamic: yes"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:38
+msgid ""
+"A field defining the configuration of relative weights for each zone pair"
+" in a replica set. See the :ref:`Replica weights <vshard-replica-"
+"weights>` section."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:49
+msgid ""
+"Name of a TREE index over the :ref:`bucket id <vshard-vbuckets>`. Spaces "
+"without this index do not participate in a sharded Tarantool cluster and "
+"can be used as regular spaces if needed."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:53
+msgid "Type: non-empty string or non-negative integer"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:54
+msgid "Default: \"bucket_id\""
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:55
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:79
+msgid "Dynamic: no"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:61
+msgid "The total number of buckets in a cluster."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:63
+msgid ""
+"This number should be several orders of magnitude larger than the "
+"potential number of cluster nodes, considering potential scaling out in "
+"the foreseeable future."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:66
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:137
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:458
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:473
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:490
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:551
+msgid "**Example:**"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:68
+msgid ""
+"If the estimated number of nodes is M, then the data set should be "
+"divided into 100M or even 1000M buckets, depending on the planned scaling"
+" out. This number is certainly greater than the potential number of "
+"cluster nodes in the system being designed."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:73
+msgid ""
+"Keep in mind that too many buckets can cause a need to allocate more "
+"memory to store routing information. On the other hand, an insufficient "
+"number of buckets can lead to decreased granularity when rebalancing."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:77
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:87
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:109
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:124
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:145
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:160
+msgid "Type: number"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:78
+msgid "Default: 3000"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:85
+msgid "The interval between garbage collector actions, in seconds."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:88
+msgid "Default: 0.5"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:95
+msgid ""
+"If set to true, the Lua ``collectgarbage()`` function is called "
+"periodically."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:97
+msgid "Type: boolean"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:98
+msgid "Default: no"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:105
+msgid ""
+"Timeout to wait for synchronization of the old master with replicas "
+"before demotion. Used when switching a master or when manually calling "
+"the ``sync()`` function."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:110
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:125
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:161
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:191
+msgid "Default: 1"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:117
+msgid ""
+"A maximum bucket disbalance threshold, in percent. The threshold is "
+"calculated for each replica set using the following formula:"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:120
+msgid "|etalon_bucket_count - real_bucket_count| / etalon_bucket_count * 100"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:132
+msgid ""
+"The maximum number of buckets that can be received in parallel by a "
+"single replica set. This number must be limited, because when a new "
+"replica set is added to a cluster, the rebalancer sends a very large "
+"amount of buckets from the existing replica sets to the new replica set. "
+"This produces a heavy load on the new replica set."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:139
+msgid ""
+"Suppose ``rebalancer_max_receiving`` is equal to 100, ``bucket_count`` is"
+" equal to 1000. There are 3 replica sets with 333, 333 and 334 buckets on"
+" each respectively. When a new replica set is added, each replica set’s "
+"``etalon_bucket_count`` becomes equal to 250. Rather than receiving all "
+"250 buckets at once, the new replica set receives 100, 100 and 50 buckets"
+" sequentially."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:146
+msgid "Default: 100"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:153
+msgid ""
+"The degree of parallelism for :ref:`parallel rebalancing <vshard-"
+"parallel-rebalancing>`."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:156
+msgid "Works for storages only, ignored for routers."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:158
+msgid "The maximum value is ``15``."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:168
+msgid "Replica set functions"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:170
+msgid ":ref:`uuid <cfg_replica_set-uuid>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:171
+msgid ":ref:`weight <cfg_replica_set-weight>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:177
+msgid "A unique identifier of a replica set."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:179
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:190
+msgid "Type:"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:180
+msgid "Default:"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:181
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:192
+msgid "Dynamic:"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:187
+msgid ""
+"A weight of a replica set. See the :ref:`Replica set weights <vshard-"
+"replica-set-weights>` section for details."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:198
+msgid "API reference"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:204
+msgid "Router public API"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:206
+msgid ":ref:`vshard.router.bootstrap() <router_api-bootstrap>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:207
+msgid ":ref:`vshard.router.cfg(cfg) <router_api-cfg>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:208
+msgid ":ref:`vshard.router.new(name, cfg) <router_api-new>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:209
+msgid ""
+":ref:`vshard.router.call(bucket_id, mode, function_name, {argument_list},"
+" {options}) <router_api-call>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:210
+msgid ""
+":ref:`vshard.router.callro(bucket_id, function_name, {argument_list}, "
+"{options}) <router_api-callro>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:211
+msgid ""
+":ref:`vshard.router.callrw(bucket_id, function_name, {argument_list}, "
+"{options}) <router_api-callrw>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:212
+msgid ""
+":ref:`vshard.router.callre(bucket_id, function_name, {argument_list}, "
+"{options}) <router_api-callre>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:213
+msgid ""
+":ref:`vshard.router.callbro(bucket_id, function_name, {argument_list}, "
+"{options}) <router_api-callbro>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:214
+msgid ""
+":ref:`vshard.router.callbre(bucket_id, function_name, {argument_list}, "
+"{options}) <router_api-callbre>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:215
+msgid ":ref:`vshard.router.route(bucket_id) <router_api-route>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:216
+msgid ":ref:`vshard.router.routeall() <router_api-routeall>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:217
+msgid ":ref:`vshard.router.bucket_id(key) <router_api-bucket_id>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:218
+msgid ":ref:`vshard.router.bucket_count() <router_api-bucket_count>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:219
+msgid ":ref:`vshard.router.sync(timeout) <router_api-sync>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:220
+msgid ":ref:`vshard.router.discovery_wakeup() <router_api-discovery_wakeup>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:221
+msgid ":ref:`vshard.router.info() <router_api-info>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:222
+msgid ":ref:`vshard.router.buckets_info() <router_api-buckets_info>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:223
+msgid ":ref:`replicaset.call() <router_api-replicaset_call>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:224
+msgid ":ref:`replicaset.callro() <router_api-replicaset_callro>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:225
+msgid ":ref:`replicaset.callrw() <router_api-replicaset_callrw>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:226
+msgid ":ref:`replicaset.callre() <router_api-replicaset_callre>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:232
+msgid ""
+"Perform the initial cluster bootstrap and distribute all buckets across "
+"the replica sets."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst
+msgid "Parameters"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:235
+msgid ""
+"a number of seconds before ending a bootstrap attempt as unsuccessful. "
+"Recreate the cluster in case of bootstrap timeout."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:243
+msgid ""
+"Configure the database and start sharding for the specified ``router`` "
+"instance. See the :ref:`sample configuration <vshard-config-cluster-"
+"example>` above."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:247
+msgid "a configuration table"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:253
+msgid ""
+"Create a new router instance. ``vshard`` supports multiple routers in a "
+"single Tarantool instance. Each router can be connected to any ``vshard``"
+" cluster, and multiple routers can be connected to the same cluster."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:257
+msgid ""
+"A router created via ``vshard.router.new()`` works in the same way as a "
+"static router, but the method name is preceded by a colon "
+"(``vshard.router:method_name(...)``), while for a static router the "
+"method name is preceded by a period (``vshard.router.method_name(...)``)."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:262
+msgid ""
+"A static router can be obtained via the ``vshard.router.static()`` method"
+" and then used like a router created via the ``vshard.router.new()`` "
+"method."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:268
+msgid "``box.cfg`` is shared among all the routers of a single instance."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:270
+msgid ""
+"a router instance name. This name is used as a prefix in logs of the "
+"router and must be unique within the instance"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:272
+msgid ""
+"a configuration table. The :ref:`sample configuration <vshard-config-"
+"cluster-example>` is described above."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst
+msgid "Return"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:276
+msgid ""
+"a router instance, if created successfully; otherwise, nil and an error "
+"object"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:283
+msgid ""
+"Call the function identified by function-name on the shard storing the "
+"bucket identified by bucket_id. See the :ref:`Processing requests "
+"<vshard-process-requests>` section for details on function operation."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:288
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:346
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:377
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:410
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:454
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:487
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:694
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:774
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:802
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:813
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:824
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:850
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:969
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:989
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:998
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1023
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1041
+msgid "a bucket identifier"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:289
+msgid ""
+"either a string = 'read'|'write', or a map with mode='read'|'write' "
+"and/or prefer_replica=true|false and/or balance=true|false."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:290
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:347
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:378
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:411
+msgid "a function to execute"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:291
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:348
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:379
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:412
+msgid "an array of the function's arguments"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:292
+msgid ""
+"* ``timeout`` – a request timeout, in seconds. If the router cannot "
+"identify a   shard with the specified ``bucket_id``, the operation will "
+"be repeated until the   timeout is reached."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:294
+msgid ""
+"``timeout`` – a request timeout, in seconds. If the router cannot "
+"identify a shard with the specified ``bucket_id``, the operation will be "
+"repeated until the timeout is reached."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:298
+msgid ""
+"The mode parameter has two possible forms: a string or a map. Examples of"
+" the string form are: ``'read'``, ``'write'``. Examples of the map form "
+"are: ``{mode='read'}``, ``{mode='write'}``, ``{mode='read', "
+"prefer_replica=true}``, ``{mode='read', balance=true}``, ``{mode='read', "
+"prefer_replica=true, balance=true}``."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:303
+msgid "If ``'write'`` is specified then the target is the master."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:305
+msgid ""
+"If ``prefer_replica=true`` is specified then the preferred target is one "
+"of the replicas, but the target is the master if there is no conveniently"
+" available replica."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:308
+msgid ""
+"It may be good to specify prefer_replica=true for functions which are "
+"expensive in terms of resource use, to avoid slowing down the master."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:311
+msgid ""
+"If ``balance=true`` then there is load balancing -- reads are distributed"
+" over all the nodes in the replica set in round-robin fashion, with a "
+"preference for replicas if prefer_replica=true is also set."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:315
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:357
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:388
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:421
+msgid ""
+"The original return value of the executed function, or ``nil`` and error "
+"object. The error object has a type attribute equal to ``ShardingError`` "
+"or one of the regular Tarantool errors (``ClientError``, ``OutOfMemory``,"
+" ``SocketError``, etc.)."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:320
+msgid ""
+"``ShardingError`` is returned on errors specific for sharding: the master"
+" is missing, wrong bucket id, etc. It has an attribute code containing "
+"one of the values from the ``vshard.error.code.*`` LUA table, an optional"
+" attribute containing a message with the human-readable error "
+"description, and other attributes specific for the error code."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:326
+msgid "**Examples:**"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:328
+msgid "To call ``customer_add`` function from ``vshard/example``, say:"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:330
+msgid ""
+"vshard.router.call(100, 'write', 'customer_add', {{customer_id = 2, "
+"bucket_id = 100, name = 'name2', accounts = {}}}, {timeout = 100})\n"
+"-- or, the same thing but with a map for the second argument\n"
+"vshard.router.call(100, {mode='write'}, 'customer_add', {{customer_id = "
+"2, bucket_id = 100, name = 'name2', accounts = {}}}, {timeout = 100})"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:340
+msgid ""
+"Call the function identified by function-name on the shard storing the "
+"bucket identified by bucket_id, in read-only mode (similar to calling "
+"vshard.router.call with mode='read'). See the :ref:`Processing requests "
+"<vshard-process-requests>` section for details on function operation."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:349
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:380
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:413
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:610
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:631
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:650
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:672
+msgid ""
+"* ``timeout`` – a request timeout, in seconds. In case the ``router`` "
+"cannot identify a   shard with the bucket id, the operation will be "
+"repeated until the   timeout is reached."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:351
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:382
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:415
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:612
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:633
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:652
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:674
+msgid ""
+"``timeout`` – a request timeout, in seconds. In case the ``router`` "
+"cannot identify a shard with the bucket id, the operation will be "
+"repeated until the timeout is reached."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:362
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:393
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:426
+msgid ""
+"``ShardingError`` is returned on errors specific for sharding: the "
+"replica set is not available, the master is missing, wrong bucket id, "
+"etc. It has an attribute code containing one of the values from the "
+"``vshard.error.code.*`` LUA table, an optional attribute containing a "
+"message with the human-readable error description, and other attributes "
+"specific for this error code."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:372
+msgid ""
+"Call the function identified by function-name on the shard storing the "
+"bucket identified by bucket_id, in read-write mode (similar to calling "
+"vshard.router.call with mode='write'). See the :ref:`Processing requests "
+"<vshard-process-requests>` section for details on function operation."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:403
+msgid ""
+"Call the function identified by function-name on the shard storing the "
+"bucket identified by bucket_id, in read-only mode (similar to calling "
+"``vshard.router.call`` with ``mode='read'``), with preference for a "
+"replica rather than a master (similar to calling ``vshard.router.call`` "
+"with ``prefer_replica = true``). See the :ref:`Processing requests "
+"<vshard-process-requests>` section for details on function operation."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:436
+msgid ""
+"This has the same effect as :ref:`vshard.router.call() <router_api-call>`"
+" with mode parameter = {mode='read', balance=true}."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:444
+msgid ""
+"This has the same effect as :ref:`vshard.router.call() <router_api-call>`"
+" with mode ``parameter = {mode='read', balance=true, "
+"prefer_replica=true}``."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:452
+msgid ""
+"Return the replica set object for the bucket with the specified bucket id"
+" value."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:456
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:471
+msgid "a replica set object"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:460
+msgid "replicaset = vshard.router.route(123)"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:468
+msgid "Return all available replica set objects."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:470
+msgid "a map of the following type: ``{UUID = replicaset}``"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst
+msgid "Rtype"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:475
+msgid "replicaset = vshard.router.routeall()"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:483
+msgid "Calculate the bucket id using a simple built-in hash function."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:485
+msgid "a hash key. This can be any Lua object (number, table, string)."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:488
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:503
+msgid "number"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:492
+msgid "bucket_id = vshard.router.bucket_id(18374927634039)"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:500
+msgid "Return the total number of buckets specified in ``vshard.router.cfg()``."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:502
+msgid "the total number of buckets"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:509
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:788
+msgid "Wait until the dataset is synchronized on replicas."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:511
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:790
+msgid "a timeout, in seconds"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst
+msgid "return"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:513
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:792
+msgid ""
+"``true`` if the dataset was synchronized successfully; or ``nil`` and "
+"``err`` explaining why the dataset cannot be synchronized."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:520
+msgid "Force wakeup of the bucket discovery fiber."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:526
+msgid "Return information about each instance."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:530
+msgid "Replica set parameters:"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:532
+msgid "replica set uuid"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:533
+msgid "master instance parameters"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:534
+msgid "replica instance parameters"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:536
+msgid "Instance parameters:"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:538
+msgid "``uri`` — URI of the instance"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:539
+msgid "``uuid`` — UUID of the instance"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:540
+msgid ""
+"``status`` – status of the instance (``available``, ``unreachable``, "
+"``missing``)"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:541
+msgid ""
+"``network_timeout`` – a timeout for the request. The value is updated "
+"automatically on each 10th successful request and each 2nd failed "
+"request."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:544
+msgid "Bucket parameters:"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:546
+msgid ""
+"``available_ro`` – the number of buckets known to the ``router`` and "
+"available for read requests"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:547
+msgid ""
+"``available_rw`` – the number of buckets known to the router and "
+"available for read and write requests"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:548
+msgid ""
+"``unavailable`` – the number of buckets known to the ``router`` but "
+"unavailable for any requests"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:549
+msgid ""
+"``unreachable`` – the number of buckets whose replica sets are not known "
+"to the ``router``"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:553
+msgid ""
+"tarantool> vshard.router.info()\n"
+"---\n"
+"- replicasets:\n"
+"    ac522f65-aa94-4134-9f64-51ee384f1a54:\n"
+"      replica: &0\n"
+"        network_timeout: 0.5\n"
+"        status: available\n"
+"        uri: storage@127.0.0.1:3303\n"
+"        uuid: 1e02ae8a-afc0-4e91-ba34-843a356b8ed7\n"
+"      uuid: ac522f65-aa94-4134-9f64-51ee384f1a54\n"
+"      master: *0\n"
+"    cbf06940-0790-498b-948d-042b62cf3d29:\n"
+"      replica: &1\n"
+"        network_timeout: 0.5\n"
+"        status: available\n"
+"        uri: storage@127.0.0.1:3301\n"
+"        uuid: 8a274925-a26d-47fc-9e1b-af88ce939412\n"
+"      uuid: cbf06940-0790-498b-948d-042b62cf3d29\n"
+"      master: *1\n"
+"  bucket:\n"
+"    unreachable: 0\n"
+"    available_ro: 0\n"
+"    unknown: 0\n"
+"    available_rw: 3000\n"
+"  status: 0\n"
+"  alerts: []\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:587
+msgid ""
+"Return information about each bucket. Since a bucket map can be huge, "
+"only the required range of buckets can be specified."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:590
+msgid "the offset in a bucket map of the first bucket to show"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:591
+msgid "the maximum number of buckets to show"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:593
+msgid "a map of the following type: ``{bucket_id = 'unknown'/replicaset_uuid}``"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:599
+msgid ""
+"Call a function on a nearest available master (distances are defined "
+"using ``replica.zone`` and ``cfg.weights`` matrix) with specified "
+"arguments."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:605
+msgid "The ``replicaset.call`` method is similar to ``replicaset.callrw``."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:607
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:628
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:647
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:669
+msgid "UUID of a replica set"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:608
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:629
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:648
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:670
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:776
+msgid "function to execute"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:609
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:630
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:649
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:671
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:777
+msgid "array of the function's arguments"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:620
+msgid ""
+"Call a function on a nearest available master (distances are defined "
+"using ``replica.zone`` and ``cfg.weights`` matrix) with a specified "
+"arguments."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:626
+msgid "The ``replicaset.callrw`` method is similar to ``replicaset.call``."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:641
+msgid ""
+"Call a function on the nearest available replica (distances are defined "
+"using ``replica.zone`` and ``cfg.weights`` matrix) with specified "
+"arguments. It is recommended to call only read-only functions using "
+"``replicaset.callro()``, as the function can be executed not only on a "
+"master, but also on replicas."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:660
+msgid ""
+"Call a function on the nearest available replica (distances are defined "
+"using ``replica.zone`` and ``cfg.weights`` matrix) with specified "
+"arguments, with preference for a replica rather than a master (similar to"
+" calling vshard.router.call with prefer_replica = true). It is "
+"recommended to call only read-only functions using "
+"``replicaset.callre()``, as the function can be executed not only on a "
+"master, but also on replicas."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:682
+msgid "Router internal API"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:684
+msgid ""
+":ref:`vshard.router.bucket_discovery(bucket_id) <router_api-"
+"bucket_discovery>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:690
+msgid ""
+"Search for the bucket in the whole cluster. If the bucket is not found, "
+"it is likely that it does not exist. The bucket might also be moved "
+"during rebalancing and currently is in the RECEIVING state."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:700
+msgid "Storage public API"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:702
+msgid ":ref:`vshard.storage.cfg(cfg, name) <storage_api-cfg>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:703
+msgid ":ref:`vshard.storage.info() <storage_api-info>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:704
+msgid ""
+":ref:`vshard.storage.call(bucket_id, mode, function_name, "
+"{argument_list}) <storage_api-call>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:705
+msgid ":ref:`vshard.storage.sync(timeout) <storage_api-sync>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:706
+msgid ":ref:`vshard.storage.bucket_pin(bucket_id) <storage_api-bucket_pin>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:707
+msgid ":ref:`vshard.storage.bucket_unpin(bucket_id) <storage_api-bucket_unpin>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:708
+msgid ":ref:`vshard.storage.bucket_ref(bucket_id, mode) <storage_api-bucket_ref>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:709
+msgid ":ref:`vshard.storage.bucket_refro() <storage_api-bucket_refro>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:710
+msgid ":ref:`vshard.storage.bucket_refrw() <storage_api-bucket_refrw>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:711
+msgid ""
+":ref:`vshard.storage.bucket_unref(bucket_id, mode) <storage_api-"
+"bucket_unref>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:712
+msgid ":ref:`vshard.storage.bucket_unrefro() <storage_api-bucket_unrefro>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:713
+msgid ":ref:`vshard.storage.bucket_unrefrw() <storage_api-bucket_unrefrw>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:714
+msgid ""
+":ref:`vshard.storage.find_garbage_bucket(bucket_index, control) "
+"<storage_api-find_garbage_bucket>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:715
+msgid ""
+":ref:`vshard.storage.rebalancer_disable() <storage_api-"
+"rebalancer_disable>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:716
+msgid ":ref:`vshard.storage.rebalancer_enable() <storage_api-rebalancer_enable>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:717
+msgid ":ref:`vshard.storage.is_locked() <storage_api-is_locked>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:718
+msgid ""
+":ref:`vshard.storage.rebalancing_is_in_progress() <storage_api-"
+"rebalancing_is_in_progress>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:719
+msgid ":ref:`vshard.storage.buckets_info() <storage_api-buckets_info>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:720
+msgid ":ref:`vshard.storage.buckets_count() <storage_api-buckets_count>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:721
+msgid ":ref:`vshard.storage.sharded_spaces() <storage_api-sharded_spaces>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:727
+msgid ""
+"Configure the database and start sharding for the specified ``storage`` "
+"instance."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:730
+msgid "a ``storage`` configuration"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:731
+msgid "UUID of the instance"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:737
+msgid "Return information about the storage instance in the following format:"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:739
+msgid ""
+"tarantool> vshard.storage.info()\n"
+"---\n"
+"- buckets:\n"
+"    2995:\n"
+"      status: active\n"
+"      id: 2995\n"
+"    2997:\n"
+"      status: active\n"
+"      id: 2997\n"
+"    2999:\n"
+"      status: active\n"
+"      id: 2999\n"
+"  replicasets:\n"
+"    2dd0a343-624e-4d3a-861d-f45efc571cd3:\n"
+"      uuid: 2dd0a343-624e-4d3a-861d-f45efc571cd3\n"
+"      master:\n"
+"        state: active\n"
+"        uri: storage:storage@127.0.0.1:3301\n"
+"        uuid: 2ec29309-17b6-43df-ab07-b528e1243a79\n"
+"    c7ad642f-2cd8-4a8c-bb4e-4999ac70bba1:\n"
+"      uuid: c7ad642f-2cd8-4a8c-bb4e-4999ac70bba1\n"
+"      master:\n"
+"        state: active\n"
+"        uri: storage:storage@127.0.0.1:3303\n"
+"        uuid: 810d85ef-4ce4-4066-9896-3c352fec9e64\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:772
+msgid "Call the specified function on the current ``storage`` instance."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:775
+msgid "a type of the function: 'read' or 'write'"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:781
+msgid ""
+"The original return value of the executed function, or ``nil`` and error "
+"object."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:799
+msgid ""
+"Pin a bucket to a replica set. A pinned bucket cannot be moved even if it"
+" breaks the cluster balance."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:804
+msgid ""
+"``true`` if the bucket is pinned successfully; or ``nil`` and ``err`` "
+"explaining why the bucket cannot be pinned"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:811
+msgid "Return a pinned bucket back into the active state."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:815
+msgid ""
+"``true`` if the bucket is unpinned successfully; or ``nil`` and ``err`` "
+"explaining why the bucket cannot be unpinned"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:822
+msgid "Create an RO or RW :ref:`ref <vshard-ref>`."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:825
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:851
+msgid "'read' or 'write'"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:827
+msgid ""
+"``true`` if the bucket ref is created successfully; or ``nil`` and "
+"``err`` explaining why the ref cannot be created"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:834
+msgid ""
+"An alias for :ref:`vshard.storage.bucket_ref <storage_api-bucket_ref>` in"
+" the RO mode."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:841
+msgid ""
+"An alias for :ref:`vshard.storage.bucket_ref <storage_api-bucket_ref>` in"
+" the RW mode."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:848
+msgid "Remove a RO/RW :ref:`ref <vshard-ref>`."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:853
+msgid ""
+"``true`` if the bucket ref is removed successfully; or ``nil`` and "
+"``err`` explaining why the ref cannot be removed"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:860
+msgid ""
+"An alias for :ref:`vshard.storage.bucket_unref <storage_api-"
+"bucket_unref>` in the RO mode."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:867
+msgid ""
+"An alias for :ref:`vshard.storage.bucket_unref <storage_api-"
+"bucket_unref>` in the RW mode."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:874
+msgid ""
+"Find a bucket which has data in a space but is not stored in a "
+"``_bucket`` space; or is in a GARBAGE state."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:877
+msgid "index of a space with the part of a bucket id"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:878
+msgid ""
+"a garbage collector controller. If there is an increased buckets "
+"generation, then the search should be interrupted."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:881
+msgid "an identifier of the bucket in the garbage state, if found; otherwise, nil"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:888
+msgid "Return information about each bucket located in storage. For example:"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:890
+msgid ""
+"vshard.storage.buckets_info(1)\n"
+"---\n"
+"- 1:\n"
+"    status: active\n"
+"    ref_rw: 1\n"
+"    ref_ro: 1\n"
+"    ro_lock: true\n"
+"    rw_lock: true\n"
+"    id: 1"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:906
+msgid "Return the number of buckets located in storage."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:912
+msgid "Immediately wake up a recovery fiber, if it exists."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:918
+msgid ""
+"Return a flag indicating whether rebalancing is in progress. The result "
+"is true if the node is currently applying routes received from a "
+"rebalancer node in the special fiber."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:926
+msgid "Return a flag indicating whether storage is invisible to the rebalancer."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:932
+msgid ""
+"Disable rebalancing. A disabled rebalancer sleeps until it is enabled "
+"again with vshard.storage.rebalancer_enable()."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:939
+msgid "Enable rebalancing."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:945
+msgid ""
+"Show the spaces that are visible to rebalancer and garbage collector "
+"fibers."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:951
+msgid "Storage internal API"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:953
+msgid ":ref:`vshard.storage.bucket_stat(bucket_id) <storage_api-bucket_stat>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:954
+msgid ""
+":ref:`vshard.storage.bucket_recv(bucket_id, from, data) <storage_api-"
+"bucket_recv>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:955
+msgid ""
+":ref:`vshard.storage.bucket_delete_garbage(bucket_id) <storage_api-"
+"bucket_delete_garbage>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:956
+msgid ""
+":ref:`vshard.storage.bucket_collect(bucket_id) <storage_api-"
+"bucket_collect>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:957
+msgid ""
+":ref:`vshard.storage.bucket_force_create(first_bucket_id, count) "
+"<storage_api-bucket_force_create>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:958
+msgid ""
+":ref:`vshard.storage.bucket_force_drop(bucket_id, to) <storage_api-"
+"bucket_force_drop>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:959
+msgid ":ref:`vshard.storage.bucket_send(bucket_id, to) <storage_api-bucket_send>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:960
+msgid ":ref:`vshard.storage.buckets_discovery() <storage_api-buckets_discovery>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:961
+msgid ""
+":ref:`vshard.storage.rebalancer_request_state() <storage_api-"
+"rebalancer_request_state>`"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:967
+msgid "Receive a bucket identified by bucket id from a remote replica set."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:970
+msgid "UUID of source replica set"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:971
+msgid ""
+"data logically stored in a bucket identified by bucket_id, in the same "
+"format as the return value from ``bucket_collect() <storage_api-"
+"bucket_collect>``"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:978
+msgid "Return information about the bucket id:"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:980
+msgid ""
+"tarantool> vshard.storage.bucket_stat(1)\n"
+"---\n"
+"- 0\n"
+"- status: active\n"
+"  id: 1\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:995
+msgid ""
+"Force garbage collection for the bucket identified by bucket_id in case "
+"the bucket was transferred to a different replica set."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1004
+msgid ""
+"Collect all the data that is logically stored in the bucket identified by"
+" bucket_id:"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1006
+msgid ""
+"tarantool> vshard.storage.bucket_collect(1)\n"
+"---\n"
+"- 0\n"
+"- - - 514\n"
+"    - - [10, 1, 1, 100, 'Account 10']\n"
+"      - [11, 1, 1, 100, 'Account 11']\n"
+"      - [12, 1, 1, 100, 'Account 12']\n"
+"      - [50, 5, 1, 100, 'Account 50']\n"
+"      - [51, 5, 1, 100, 'Account 51']\n"
+"      - [52, 5, 1, 100, 'Account 52']\n"
+"  - - 513\n"
+"    - - [1, 1, 'Customer 1']\n"
+"      - [5, 1, 'Customer 5']\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1029
+msgid ""
+"Force creation of the buckets (single or multiple) on the current replica"
+" set. Use only for manual emergency recovery or for initial bootstrap."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1032
+msgid "an identifier of the first bucket in a range"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1033
+msgid "the number of buckets to insert (default = 1)"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1039
+msgid "Drop a bucket manually for tests or emergency cases."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1047
+msgid ""
+"Send a specified bucket from the current replica set to a remote replica "
+"set."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1049
+msgid "bucket identifier"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1050
+msgid "UUID of a remote replica set"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1056
+msgid ""
+"Check all buckets of the host storage that have the SENT or ACTIVE state,"
+" return the number of active buckets."
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1059
+msgid "the number of buckets in the active state, if found; otherwise, nil"
+msgstr ""
+
+#: ../doc/reference/reference_rock/vshard/vshard_ref.rst:1065
+msgid "Collect an array of active bucket identifiers for discovery."
+msgstr ""
+

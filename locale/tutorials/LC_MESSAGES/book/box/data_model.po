@@ -1,0 +1,1493 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 19:10+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../doc/book/box/data_model.rst:5
+msgid "Data model"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:7
+msgid ""
+"This section describes how Tarantool stores values and what operations "
+"with data it supports."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:10
+msgid ""
+"If you tried to create a database as suggested in our :ref:`\"Getting "
+"started\" exercises <getting_started>`, then your test database now looks"
+" like this:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:20
+msgid "Space"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:22
+msgid "A **space** -- 'tester' in our example -- is a container."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:24
+msgid ""
+"When Tarantool is being used to store data, there is always at least one "
+"space. Each space has a unique **name** specified by the user. Besides, "
+"each space has a unique **numeric identifier** which can be specified by "
+"the user, but usually is assigned automatically by Tarantool. Finally, a "
+"space always has an **engine**: *memtx* (default) -- in-memory engine, "
+"fast but limited in size, or *vinyl* -- on-disk engine for huge data "
+"sets."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:31
+msgid ""
+"A space is a container for :ref:`tuples <index-box_tuple>`. To be "
+"functional, it needs to have a :ref:`primary index <index-box_index>`. It"
+" can also have secondary indexes."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:39
+msgid "Tuple"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:41
+msgid ""
+"A **tuple** plays the same role as a “row” or a “record”, and the "
+"components of a tuple (which we call “fields”) play the same role as a "
+"“row column” or “record field”, except that:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:45
+msgid "fields can be composite structures, such as arrays or maps, and"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:46
+msgid "fields don't need to have names."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:48
+msgid ""
+"Any given tuple may have any number of fields, and the fields may be of "
+"different :ref:`types <index-box_data-types>`. The identifier of a field "
+"is the field's number, base 1 (in Lua and other 1-based languages) or "
+"base 0 (in PHP or C/C++). For example, ``1`` or ``0`` can be used in some"
+" contexts to refer to the first field of a tuple."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:55
+msgid "The number of tuples in a space is unlimited."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:57
+msgid ""
+"Tuples in Tarantool are stored as `MsgPack "
+"<https://en.wikipedia.org/wiki/MessagePack>`_ arrays."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:60
+msgid ""
+"When Tarantool returns a tuple value in console, it uses the `YAML "
+"<https://en.wikipedia.org/wiki/YAML>`_ format, for example: ``[3, 'Ace of"
+" Base', 1993]``."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:69
+msgid "Index"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:71
+msgid "An **index** is a group of key values and pointers."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:73
+msgid ""
+"As with spaces, you should specify the index **name**, and let Tarantool "
+"come up with a unique **numeric identifier** (\"index id\")."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:76
+msgid ""
+"An index always has a **type**. The default index type is 'TREE'. TREE "
+"indexes are provided by all Tarantool engines, can index unique and non-"
+"unique values, support partial key searches, comparisons and ordered "
+"results. Additionally, memtx engine supports HASH, RTREE and BITSET "
+"indexes."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:81
+msgid ""
+"An index may be **multi-part**, that is, you can declare that an index "
+"key value is composed of two or more fields in the tuple, in any order. "
+"For example, for an ordinary TREE index, the maximum number of parts is "
+"255."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:85
+msgid ""
+"An index may be **unique**, that is, you can declare that it would be "
+"illegal to have the same key value twice."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:88
+msgid ""
+"The first index defined on a space is called the **primary key index**, "
+"and it must be unique. All other indexes are called **secondary "
+"indexes**, and they may be non-unique."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:92
+msgid ""
+"An index definition may include identifiers of tuple fields and their "
+"expected **types** (see allowed :ref:`indexed field types <index-"
+"box_indexed-field-types>` below)."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:96
+msgid ""
+"In our example, we first defined the primary index (named 'primary') "
+"based on field #1 of each tuple:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:99
+msgid ""
+"tarantool> i = s:create_index('primary', {type = 'hash', parts = {{field "
+"= 1, type = 'unsigned'}}}"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:103
+msgid ""
+"The effect is that, for all tuples in space 'tester', field #1 must exist"
+" and must contain an unsigned integer. The index type is 'hash', so "
+"values in field #1 must be unique, because keys in HASH indexes are "
+"unique."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:108
+msgid ""
+"After that, we defined a secondary index (named 'secondary') based on "
+"field #2 of each tuple:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:111
+msgid ""
+"tarantool> i = s:create_index('secondary', {type = 'tree', parts = {2, "
+"'string'}})"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:115
+msgid ""
+"The effect is that, for all tuples in space 'tester', field #2 must exist"
+" and must contain a string. The index type is 'tree', so values in field "
+"#2 must not be unique, because keys in TREE indexes may be non-unique."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:122
+msgid ""
+"Space definitions and index definitions are stored permanently in "
+"Tarantool's system spaces :ref:`_space <box_space-space>` and "
+":ref:`_index <box_space-index>` (for details, see reference on "
+":ref:`box.space <box_space>` submodule)."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:126
+msgid ""
+"You can add, drop, or alter the definitions at runtime, with some "
+"restrictions. See syntax details in reference on :ref:`box <box-module>` "
+"module."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:133
+msgid "Data types"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:135
+msgid ""
+"Tarantool is both a database and an application server. Hence a developer"
+" often deals with two type sets: the programming language types (e.g. "
+"Lua) and the types of the Tarantool storage format (MsgPack)."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:144
+msgid "Lua vs MsgPack"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:154
+msgid "Scalar / compound"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:154
+msgid "MsgPack |nbsp| type"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:154
+msgid "Lua type"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:154
+msgid "Example value"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:156 ../doc/book/box/data_model.rst:158
+#: ../doc/book/box/data_model.rst:160 ../doc/book/box/data_model.rst:162
+#: ../doc/book/box/data_model.rst:164
+msgid "scalar"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:156
+msgid "nil"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:156
+msgid "\"`nil`_\""
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:156
+msgid "msgpack.NULL"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:158
+msgid "boolean"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:158
+msgid "\"`boolean`_\""
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:158 ../doc/book/box/data_model.rst:301
+#: ../doc/book/box/data_model.rst:309
+msgid "true"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:160
+msgid "string"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:160
+msgid "\"`string`_\""
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:160
+msgid "'A B C'"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:162
+msgid "integer"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:162 ../doc/book/box/data_model.rst:164
+msgid "\"`number`_\""
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:162
+msgid "12345"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:164
+msgid "double"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:164
+msgid "1.2345"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:166 ../doc/book/box/data_model.rst:168
+#: ../doc/book/box/data_model.rst:170
+msgid "compound"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:166
+msgid "map"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:166
+msgid "\"`table`_\" (with string keys)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:166
+msgid "{'a': 5, 'b': 6}"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:168 ../doc/book/box/data_model.rst:170
+msgid "array"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:168
+msgid "\"`table`_\" (with integer keys)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:168
+msgid "[1, 2, 3, 4, 5]"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:170
+msgid "tuple (\"`cdata`_\")"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:170
+msgid "[12345, 'A B C']"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:180
+msgid ""
+"In Lua, a **nil** type has only one possible value, also called *nil* "
+"(displayed as **null** on Tarantool's command line, since the output is "
+"in the YAML format). Nils may be compared to values of any types with == "
+"(is-equal) or ~= (is-not-equal), but other operations will not work. Nils"
+" may not be used in Lua tables; the workaround is to use "
+":ref:`msgpack.NULL <msgpack-null>`"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:188
+msgid "A **boolean** is either ``true`` or ``false``."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:192
+msgid ""
+"A **string** is a variable-length sequence of bytes, usually represented "
+"with alphanumeric characters inside single quotes. In both Lua and "
+"MsgPack, strings are treated as binary data, with no attempts to "
+"determine a string's character set or to perform any string conversion --"
+" unless there is an optional :ref:`collation <index-collation>`. So, "
+"usually, string sorting and comparison are done byte-by-byte, without any"
+" special collation rules applied. (Example: numbers are ordered by their "
+"point on the number line, so 2345 is greater than 500; meanwhile, strings"
+" are ordered by the encoding of the first byte, then the encoding of the "
+"second byte, and so on, so '2345' is less than '500'.)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:205
+msgid ""
+"In Lua, a **number** is double-precision floating-point, but Tarantool "
+"allows both integer and floating-point values. Tarantool will try to "
+"store a Lua number as floating-point if the value contains a decimal "
+"point or is very large (greater than 100 trillion = 1e14), otherwise "
+"Tarantool will store it as an integer. To ensure that even very large "
+"numbers are stored as integers, use the :ref:`tonumber64 <other-"
+"tonumber64>` function, or the LL (Long Long) suffix, or the ULL (Unsigned"
+" Long Long) suffix. Here are examples of numbers using regular notation, "
+"exponential notation, the ULL suffix and the ``tonumber64`` function: "
+"``-55``, ``-2.7e+20``, ``100000000000000ULL``, "
+"``tonumber64('18446744073709551615')``."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:216
+msgid ""
+"Lua **tables** with string keys are stored as MsgPack maps; Lua tables "
+"with integer keys starting with 1 -- as MsgPack arrays. Nils may not be "
+"used in Lua tables; the workaround is to use :ref:`msgpack.NULL <msgpack-"
+"null>`"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:221
+msgid ""
+"A **tuple** is a light reference to a MsgPack array stored in the "
+"database. It is a special type (cdata) to avoid conversion to a Lua table"
+" on retrieval. A few functions may return tables with multiple tuples. "
+"For more tuple examples, see :ref:`box.tuple <box_tuple>`."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:228
+msgid ""
+"Tarantool uses the MsgPack format for database storage, which is "
+"variable-length. So, for example, the smallest number requires only one "
+"byte, but the largest number requires nine bytes."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:232
+msgid "Examples of insert requests with different data types:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:234
+msgid ""
+"tarantool> box.space.K:insert{1,nil,true,'A B C',12345,1.2345}\n"
+"---\n"
+"- [1, null, true, 'A B C', 12345, 1.2345]\n"
+"...\n"
+"tarantool> box.space.K:insert{2,{['a']=5,['b']=6}}\n"
+"---\n"
+"- [2, {'a': 5, 'b': 6}]\n"
+"...\n"
+"tarantool> box.space.K:insert{3,{1,2,3,4,5}}\n"
+"---\n"
+"- [3, [1, 2, 3, 4, 5]]\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:253
+msgid "Indexed field types"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:255
+msgid ""
+"Indexes restrict values which Tarantool's MsgPack may contain. This is "
+"why, for example, 'unsigned' is a separate **indexed field type**, "
+"compared to ‘integer’ data type in MsgPack: they both store ‘integer’ "
+"values, but an 'unsigned' index contains only *non-negative* integer "
+"values and an ‘integer’ index contains *all* integer values."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:261
+msgid "Here's how Tarantool indexed field types correspond to MsgPack data types."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:274
+msgid "Indexed field type"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:274
+msgid "MsgPack data type |br| (and possible values)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:274 ../doc/book/box/data_model.rst:877
+msgid "Index type"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:274 ../doc/book/box/data_model.rst:457
+msgid "Examples"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:277
+msgid "**unsigned** (may also be called ‘uint’ or ‘num’, but ‘num’ is deprecated)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:277
+msgid ""
+"**integer** (integer between 0 and 18446744073709551615, i.e. about 18 "
+"quintillion)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:277 ../doc/book/box/data_model.rst:297
+msgid "TREE, BITSET or HASH"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:277
+msgid "123456"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:282
+msgid "**integer** (may also be called ‘int’)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:282 ../doc/book/box/data_model.rst:287
+#: ../doc/book/box/data_model.rst:312
+msgid ""
+"**integer** (integer between -9223372036854775808 and "
+"18446744073709551615)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:282 ../doc/book/box/data_model.rst:287
+#: ../doc/book/box/data_model.rst:301 ../doc/book/box/data_model.rst:309
+msgid "TREE or HASH"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:282
+msgid "-2^63"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:287
+msgid "**number**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:292 ../doc/book/box/data_model.rst:317
+msgid ""
+"**double** (single-precision floating point number or double-precision "
+"floating point number)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:287 ../doc/book/box/data_model.rst:313
+msgid "1.234"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:289
+msgid "-44"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:291
+msgid "1.447e+44"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:297
+msgid "**string** (may also be called ‘str’)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:297
+msgid "**string** (any set of octets, up to the maximum length)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:297
+msgid "‘A B C’"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:299
+msgid "‘\\65 \\66 \\67’"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:301
+msgid "**boolean**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:301 ../doc/book/box/data_model.rst:309
+msgid "**bool** (true or false)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:304
+msgid "**array**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:304
+msgid "**array** (list of numbers representing points in a geometric figure)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:304
+msgid "RTREE"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:304
+msgid "{10, 11}"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:306
+msgid "{3, 5, 9, 10}"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:309
+msgid "**scalar**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:322
+msgid "**string** (any set of octets)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:324
+msgid ""
+"Note: When there is a mix of types, the key order is: booleans, then "
+"numbers, then strings."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:311
+msgid "-1"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:315
+msgid "‘’"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:317
+msgid "‘ру’"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:334
+msgid "Collations"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:336
+msgid ""
+"By default, when Tarantool compares strings, it uses what we call a "
+"**\"binary\" collation**. The only consideration here is the numeric "
+"value of each byte in the string. Therefore, if the string is encoded "
+"with ASCII or UTF-8, then ``'A' < 'B' < 'a'``, because the encoding of "
+"'A' (what used to be called the \"ASCII value\") is 65, the encoding of "
+"'B' is 66, and the encoding of 'a' is 98. Binary collation is best if you"
+" prefer fast deterministic simple maintenance and searching with "
+"Tarantool indexes."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:345
+msgid ""
+"But if you want the ordering that you see in phone books and "
+"dictionaries, then you need Tarantool's **optional collations** -- "
+"``unicode`` and ``unicode_ci`` -- that allow for ``'a' < 'A' < 'B'`` and "
+"``'a' = 'A' < 'B'`` respectively."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:350
+msgid ""
+"Optional collations use the ordering according to the `Default Unicode "
+"Collation Element Table (DUCET) "
+"<http://unicode.org/reports/tr10/#Default_Unicode_Collation_Element_Table>`_"
+" and the rules described in `Unicode® Technical Standard #10 Unicode "
+"Collation Algorithm (UTS #10 UCA) <http://unicode.org/reports/tr10>`_. "
+"The only difference between the two collations is about `weights "
+"<https://unicode.org/reports/tr10/#Weight_Level_Defn>`_:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:357
+msgid ""
+"``unicode`` collation observes L1 and L2 and L3 weights (strength = "
+"'tertiary'),"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:358
+msgid ""
+"``unicode_ci`` collation observes only L1 weights (strength = 'primary'),"
+" so for example 'a' = 'A' = 'á' = 'Á'."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:360
+msgid "As an example, let's take some Russian words:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:362
+msgid ""
+"'ЕЛЕ'\n"
+"'елейный'\n"
+"'ёлка'\n"
+"'еловый'\n"
+"'елозить'\n"
+"'Ёлочка'\n"
+"'ёлочный'\n"
+"'ЕЛь'\n"
+"'ель'"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:374
+msgid "...and show the difference in ordering and selecting by index:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:376
+msgid "with ``unicode`` collation:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:378
+msgid ""
+"tarantool> box.space.T:create_index('I', {parts = {{1,'str', "
+"collation='unicode'}}})\n"
+"...\n"
+"tarantool> box.space.T.index.I:select()\n"
+"---\n"
+"- - ['ЕЛЕ']\n"
+"  - ['елейный']\n"
+"  - ['ёлка']\n"
+"  - ['еловый']\n"
+"  - ['елозить']\n"
+"  - ['Ёлочка']\n"
+"  - ['ёлочный']\n"
+"  - ['ель']\n"
+"  - ['ЕЛь']\n"
+"...\n"
+"tarantool> box.space.T.index.I:select{'ЁлКа'}\n"
+"---\n"
+"- []\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:399
+msgid "with ``unicode_ci`` collation:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:401
+msgid ""
+"tarantool> box.space.T:create_index('I', {parts = {{1,'str', "
+"collation='unicode_ci'}}})\n"
+"...\n"
+"tarantool> box.space.S.index.I:select()\n"
+"---\n"
+"- - ['ЕЛЕ']\n"
+"  - ['елейный']\n"
+"  - ['ёлка']\n"
+"  - ['еловый']\n"
+"  - ['елозить']\n"
+"  - ['Ёлочка']\n"
+"  - ['ёлочный']\n"
+"  - ['ЕЛь']\n"
+"...\n"
+"tarantool> box.space.S.index.I:select{'ЁлКа'}\n"
+"---\n"
+"- - ['ёлка']\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:421
+msgid ""
+"In fact, though, good collation involves much more than these simple "
+"examples of upper case / lower case and accented / unaccented equivalence"
+" in alphabets. We also consider variations of the same character, non-"
+"alphabetic writing systems, and special rules that apply for combinations"
+" of characters."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:430
+msgid "Sequences"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:432
+msgid "A **sequence** is a generator of ordered integer values."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:434
+msgid ""
+"As with spaces and indexes, you should specify the sequence **name**, and"
+" let Tarantool come up with a unique **numeric identifier** (\"sequence "
+"id\")."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:437
+msgid ""
+"As well, you can specify several options when creating a new sequence. "
+"The options determine what value will be generated whenever the sequence "
+"is used."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:444
+msgid "Options for ``box.schema.sequence.create()``"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:457
+msgid "Option name"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:457
+msgid "Type and meaning"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:457
+msgid "Default"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:459
+msgid "**start**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:459
+msgid "Integer. The value to generate the first time a sequence is used"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:459 ../doc/book/box/data_model.rst:463
+#: ../doc/book/box/data_model.rst:475
+msgid "1"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:459
+msgid "start=0"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:463
+msgid "**min**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:463
+msgid "Integer. Values smaller than this cannot be generated"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:463
+msgid "min=-1000"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:466
+msgid "**max**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:466
+msgid "Integer. Values larger than this cannot be generated"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:466
+msgid "9223372036854775807"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:466
+msgid "max=0"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:469
+msgid "**cycle**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:469
+msgid "Boolean. Whether to start again when values cannot be generated"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:469 ../doc/book/box/data_model.rst:479
+msgid "false"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:469
+msgid "cycle=true"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:472
+msgid "**cache**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:472
+msgid "Integer. The number of values to store in a cache"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:472
+msgid "0"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:472
+msgid "cache=0"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:475
+msgid "**step**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:475
+msgid ""
+"Integer. What to add to the previous generated value, when generating a "
+"new value"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:475
+msgid "step=-1"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:479
+msgid "**if_not_exists**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:479
+msgid ""
+"Boolean. If this is true and a sequence with this name exists already, "
+"ignore other options and use the existing values"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:479
+msgid "if_not_exists=true"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:485
+msgid ""
+"Once a sequence exists, it can be altered, dropped, reset, forced to "
+"generate the next value, or associated with an index."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:488
+msgid "For an initial example, we generate a sequence named 'S'."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:490
+msgid ""
+"tarantool> box.schema.sequence.create('S',{min=5, start=5})\n"
+"---\n"
+"- step: 1\n"
+"  id: 5\n"
+"  min: 5\n"
+"  cache: 0\n"
+"  uid: 1\n"
+"  max: 9223372036854775807\n"
+"  cycle: false\n"
+"  name: S\n"
+"  start: 5\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:505
+msgid ""
+"The result shows that the new sequence has all default values, except for"
+" the two that were specified, ``min`` and ``start``."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:508
+msgid "Then we get the next value, with the ``next()`` function."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:510
+msgid ""
+"tarantool> box.sequence.S:next()\n"
+"---\n"
+"- 5\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:517
+msgid ""
+"The result is the same as the start value. If we called ``next()`` again,"
+" we would get 6 (because the previous value plus the step value is 6), "
+"and so on."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:521
+msgid ""
+"Then we create a new table, and say that its primary key may be generated"
+" from the sequence."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:524
+msgid ""
+"tarantool> "
+"s=box.schema.space.create('T');s:create_index('I',{sequence='S'})\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:530
+msgid "Then we insert a tuple, without specifying a value for the primary key."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:532
+msgid ""
+"tarantool> box.space.T:insert{nil,'other stuff'}\n"
+"---\n"
+"- [6, 'other stuff']\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:539
+msgid ""
+"The result is a new tuple where the first field has a value of 6. This "
+"arrangement, where the system automatically generates the values for a "
+"primary key, is sometimes called \"auto-incrementing\" or \"identity\"."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:544
+msgid ""
+"For syntax and implementation details, see the reference for "
+":ref:`box.schema.sequence <box_schema-sequence>`."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:551
+msgid "Persistence"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:553
+msgid ""
+"In Tarantool, updates to the database are recorded in the so-called "
+":ref:`write ahead log (WAL) <internals-wal>` files. This ensures data "
+"persistence. When a power outage occurs or the Tarantool instance is "
+"killed incidentally, the in-memory database is lost. In this situation, "
+"WAL files are used to restore the data. Namely, Tarantool reads the WAL "
+"files and redoes the requests (this is called the \"recovery process\"). "
+"You can change the timing of the WAL writer, or turn it off, by setting "
+":ref:`wal_mode <cfg_binary_logging_snapshots-wal_mode>`."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:562
+msgid ""
+"Tarantool also maintains a set of :ref:`snapshot files <internals-"
+"snapshot>`. These files contain an on-disk copy of the entire data set "
+"for a given moment. Instead of reading every WAL file since the databases"
+" were created, the recovery process can load the latest snapshot file and"
+" then read only those WAL files that were produced after the snapshot "
+"file was made. After checkpointing, old WAL files can be removed to free "
+"up space."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:569
+msgid ""
+"To force immediate creation of a snapshot file, you can use Tarantool's "
+":ref:`box.snapshot() <box-snapshot>` request. To enable automatic "
+"creation of snapshot files, you can use Tarantool's :ref:`checkpoint "
+"daemon <book_cfg_checkpoint_daemon>`. The checkpoint daemon sets "
+"intervals for forced checkpoints. It makes sure that the states of both "
+"memtx and vinyl storage engines are synchronized and saved to disk, and "
+"automatically removes old WAL files."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:577
+msgid "Snapshot files can be created even if there is no WAL file."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:581
+msgid ""
+"The memtx engine makes only regular checkpoints with the interval set in "
+":ref:`checkpoint daemon <book_cfg_checkpoint_daemon>` configuration."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:584
+msgid "The vinyl engine runs checkpointing in the background at all times."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:586
+msgid ""
+"See the :ref:`Internals <internals-data_persistence>` section for more "
+"details about the WAL writer and the recovery process."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:593
+msgid "Operations"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:599
+msgid "Data operations"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:601
+msgid "The basic data operations supported in Tarantool are:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:603
+msgid ""
+"five data-manipulation operations (INSERT, UPDATE, UPSERT, DELETE, "
+"REPLACE), and"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:604
+msgid "one data-retrieval operation (SELECT)."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:606
+msgid ""
+"All of them are implemented as functions in :ref:`box.space <box_space>` "
+"submodule."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:608
+msgid "**Examples:**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:610
+msgid ":ref:`INSERT <box_space-insert>`: Add a new tuple to space 'tester'."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:612
+msgid "The first field, field[1], will be 999 (MsgPack type is `integer`)."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:614
+msgid "The second field, field[2], will be 'Taranto' (MsgPack type is `string`)."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:616
+msgid "tarantool> box.space.tester:insert{999, 'Taranto'}"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:620
+msgid ""
+":ref:`UPDATE <box_space-update>`: Update the tuple, changing field "
+"field[2]."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:622
+msgid ""
+"The clause \"{999}\", which has the value to look up in the index of the "
+"tuple's primary-key field, is mandatory, because ``update()`` requests "
+"must always have a clause that specifies a unique key, which in this case"
+" is field[1]."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:626
+msgid ""
+"The clause \"{{'=', 2, 'Tarantino'}}\" specifies that assignment will "
+"happen to field[2] with the new value."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:629
+msgid "tarantool> box.space.tester:update({999}, {{'=', 2, 'Tarantino'}})"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:633
+msgid ""
+":ref:`UPSERT <box_space-upsert>`: Upsert the tuple, changing field "
+"field[2] again."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:636
+msgid ""
+"The syntax of ``upsert()`` is similar to the syntax of ``update()``. "
+"However, the execution logic of these two requests is different. UPSERT "
+"is either UPDATE or INSERT, depending on the database's state. Also, "
+"UPSERT execution is postponed until after transaction commit, so, unlike "
+"``update()``, ``upsert()`` doesn't return data back."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:642
+msgid ""
+"tarantool> box.space.tester:upsert({999, 'Taranted'}, {{'=', 2, "
+"'Tarantism'}})"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:646
+msgid ":ref:`REPLACE <box_space-replace>`: Replace the tuple, adding a new field."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:648
+msgid ""
+"This is also possible with the ``update()`` request, but the ``update()``"
+" request is usually more complicated."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:651
+msgid "tarantool> box.space.tester:replace{999, 'Tarantella', 'Tarantula'}"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:655
+msgid ":ref:`SELECT <box_space-select>`: Retrieve the tuple."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:657
+msgid ""
+"The clause \"{999}\" is still mandatory, although it does not have to "
+"mention the primary key."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:660
+msgid "tarantool> box.space.tester:select{999}"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:664
+msgid ":ref:`DELETE <box_space-delete>`: Delete the tuple."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:666
+msgid "In this example, we identify the primary-key field."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:668
+msgid "tarantool> box.space.tester:delete{999}"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:672
+msgid "Summarizing the examples:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:674
+msgid ""
+"Functions ``insert`` and ``replace`` accept a tuple (where a primary key "
+"comes as part of the tuple)."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:676
+msgid ""
+"Function ``upsert`` accepts a tuple (where a primary key comes as part of"
+" the tuple), and also the update operations to execute."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:679
+msgid ""
+"Function ``delete`` accepts a full key of any unique index (primary or "
+"secondary)."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:681
+msgid ""
+"Function ``update`` accepts a full key of any unique index (primary or "
+"secondary), and also the operations to execute."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:684
+msgid ""
+"Function ``select`` accepts any key: primary/secondary, unique/non-"
+"unique, full/partial."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:687
+msgid ""
+"See reference on ``box.space`` for more :ref:`details on using data "
+"operations <box_space-operations-detailed-examples>`."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:692
+msgid ""
+"Besides Lua, you can use :ref:`Perl, PHP, Python or other programming "
+"language connectors <index-box_connectors>`. The client server protocol "
+"is open and documented. See this :ref:`annotated BNF <box_protocol-"
+"iproto_protocol>`."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:701
+msgid "Index operations"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:703
+msgid ""
+"Index operations are automatic: if a data-manipulation request changes a "
+"tuple, then it also changes the index keys defined for the tuple."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:706
+msgid "The simple index-creation operation that we've illustrated before is:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:745
+msgid ":samp:`box.space.{space-name}:create_index('{index-name}')`"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:713
+msgid ""
+"This creates a unique TREE index on the first field of all tuples (often "
+"called \"Field#1\"), which is assumed to be numeric."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:716
+msgid "The simple SELECT request that we've illustrated before is:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:755
+msgid ":extsamp:`box.space.{*{space-name}*}:select({*{value}*})`"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:723
+msgid ""
+"This looks for a single tuple via the first index. Since the first index "
+"is always unique, the maximum number of returned tuples will be: one."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:726
+msgid "The following SELECT variations exist:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:728
+msgid "The search can use comparisons other than equality."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:767
+msgid ":extsamp:`box.space.{*{space-name}*}:select(value, {iterator = 'GT'})`"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:735
+msgid ""
+"The :ref:`comparison operators <box_index-iterator-types>` are LT, LE, "
+"EQ, REQ, GE, GT (for \"less than\", \"less than or equal\", \"equal\", "
+"\"reversed equal\", \"greater than or equal\", \"greater than\" "
+"respectively). Comparisons make sense if and only if the index type is "
+"‘TREE'."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:740
+msgid ""
+"This type of search may return more than one tuple; if so, the tuples "
+"will be in descending order by key when the comparison operator is LT or "
+"LE or REQ, otherwise in ascending order."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:744
+msgid "The search can use a secondary index."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:783
+msgid ":extsamp:`box.space.{*{space-name}*}.index.{*{index-name}*}:select(value)`"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:751
+msgid ""
+"For a primary-key search, it is optional to specify an index name. For a "
+"secondary-key search, it is mandatory."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:754
+msgid "The search may be for some or all key parts."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:793
+msgid ""
+"-- Suppose an index has two parts\n"
+":samp:`tarantool> box.space.{space-name}.index.{index-name}.parts`\n"
+"---\n"
+"- - type: unsigned\n"
+"    fieldno: 1\n"
+"  - type: string\n"
+"    fieldno: 2\n"
+"...\n"
+"-- Suppose the space has three tuples\n"
+":samp:`box.space.{space-name}:select()`\n"
+"---\n"
+"- - [1, 'A']\n"
+"  - [1, 'B']\n"
+"  - [2, '']\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:775
+msgid "The search may be for all fields, using a table for the value:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:814
+msgid ":extsamp:`box.space.{*{space-name}*}:select({1, 'A'})`"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:782
+msgid "or the search can be for one field, using a table or a scalar:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:821
+msgid ":samp:`box.space.{space-name}:select(1)`"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:789
+msgid ""
+"In the second case, the result will be two tuples: ``{1, 'A'}`` and ``{1,"
+" 'B'}``."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:792
+msgid ""
+"You can specify even zero fields, causing all three tuples to be "
+"returned. (Notice that partial key searches are available only in TREE "
+"indexes.)"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:795
+msgid "**Examples**"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:797
+msgid "BITSET example:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:799
+msgid ""
+"tarantool> box.schema.space.create('bitset_example')\n"
+"tarantool> box.space.bitset_example:create_index('primary')\n"
+"tarantool> "
+"box.space.bitset_example:create_index('bitset',{unique=false,type='BITSET',"
+" parts={2,'unsigned'}})\n"
+"tarantool> box.space.bitset_example:insert{1,1}\n"
+"tarantool> box.space.bitset_example:insert{2,4}\n"
+"tarantool> box.space.bitset_example:insert{3,7}\n"
+"tarantool> box.space.bitset_example:insert{4,3}\n"
+"tarantool> box.space.bitset_example.index.bitset:select(2, "
+"{iterator='BITS_ANY_SET'})"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:810 ../doc/book/box/data_model.rst:832
+msgid "The result will be:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:812
+msgid ""
+"---\n"
+"- - [3, 7]\n"
+"  - [4, 3]\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:819
+msgid "because (7 AND 2) is not equal to 0, and (3 AND 2) is not equal to 0."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:821
+msgid "RTREE example:"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:823
+msgid ""
+"tarantool> box.schema.space.create('rtree_example')\n"
+"tarantool> box.space.rtree_example:create_index('primary')\n"
+"tarantool> "
+"box.space.rtree_example:create_index('rtree',{unique=false,type='RTREE', "
+"parts={2,'ARRAY'}})\n"
+"tarantool> box.space.rtree_example:insert{1, {3, 5, 9, 10}}\n"
+"tarantool> box.space.rtree_example:insert{2, {10, 11}}\n"
+"tarantool> box.space.rtree_example.index.rtree:select({4, 7, 5, 9}, "
+"{iterator = 'GT'})"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:834
+msgid ""
+"---\n"
+"- - [1, [3, 5, 9, 10]]\n"
+"..."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:840
+msgid ""
+"because a rectangle whose corners are at coordinates ``4,7,5,9`` is "
+"entirely within a rectangle whose corners are at coordinates "
+"``3,5,9,10``."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:843
+msgid ""
+"Additionally, there exist :ref:`index iterator operations <box_index-"
+"index_pairs>`. They can only be used with code in Lua and C/C++. Index "
+"iterators are for traversing indexes one key at a time, taking advantage "
+"of features that are specific to an index type, for example evaluating "
+"Boolean expressions when traversing BITSET indexes, or going in "
+"descending order when traversing TREE indexes."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:849
+msgid ""
+"See also other index operations like :ref:`alter() <box_index-alter>` and"
+" :ref:`drop() <box_index-drop>` in reference for :ref:`box.index "
+"<box_index>` submodule."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:854
+msgid "Complexity factors"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:856
+msgid ""
+"In reference for :ref:`box.space <box_space>` and :ref:`box.index "
+"<box_index>` submodules, there are notes about which complexity factors "
+"might affect the resource usage of each function."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:866
+msgid "Complexity factor"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:866
+msgid "Effect"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:869
+msgid "Index size"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:869
+msgid ""
+"The number of index keys is the same as the number of tuples in the data "
+"set. For a TREE index, if there are more keys, then the lookup time will "
+"be greater, although of course the effect is not linear. For a HASH "
+"index, if there are more keys, then there is more RAM used, but the "
+"number of low-level steps tends to remain constant."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:877
+msgid ""
+"Typically, a HASH index is faster than a TREE index if the number of "
+"tuples in the space is greater than one."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:881
+msgid "Number of indexes accessed"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:881
+msgid ""
+"Ordinarily, only one index is accessed to retrieve one tuple. But to "
+"update the tuple, there must be N accesses if the space has N different "
+"indexes."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:885
+msgid ""
+"Note re storage engine: Vinyl optimizes away such accesses if secondary "
+"index fields are unchanged by the update. So, this complexity factor "
+"applies only to memtx, since it always makes a full-tuple copy on every "
+"update."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:891
+msgid "Number of tuples accessed"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:891
+msgid ""
+"A few requests, for example SELECT, can retrieve multiple tuples. This "
+"factor is usually less important than the others."
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:895
+msgid "WAL settings"
+msgstr ""
+
+#: ../doc/book/box/data_model.rst:895
+msgid ""
+"The important setting for the write-ahead log is :ref:`wal_mode "
+"<cfg_binary_logging_snapshots-wal_mode>`. If the setting causes no "
+"writing or delayed writing, this factor is unimportant. If the setting "
+"causes every data-change request to wait for writing to finish on a slow "
+"device, this factor is more important than all the others."
+msgstr ""
+
