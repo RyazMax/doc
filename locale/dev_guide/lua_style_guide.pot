@@ -1,0 +1,698 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-04 10:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../doc/dev_guide/lua_style_guide.rst:3
+msgid "Lua Style Guide"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:5
+msgid "Inspiration:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:7
+msgid "https://github.com/Olivine-Labs/lua-style-guide"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:8
+msgid "http://dev.minetest.net/Lua_code_style_guidelines"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:9
+msgid "http://sputnik.freewisdom.org/en/Coding_Standard"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:11
+msgid "Programming style is an art. There is some arbitrariness to the rules, but there are sound rationales for them. It is useful not only to provide sound advice on style but to understand the underlying rationale and human aspect of why the style recommendations are formed:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:16
+msgid "http://mindprod.com/jgloss/unmain.html"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:17
+msgid "http://www.oreilly.com/catalog/perlbp/"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:18
+msgid "http://books.google.com/books?id=QnghAQAAIAAJ"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:20
+msgid "Zen of Python is good; understand it and use wisely:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Beautiful is better than ugly."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Explicit is better than implicit."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Simple is better than complex."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Complex is better than complicated."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Flat is better than nested."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Sparse is better than dense."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Readability counts."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Special cases aren't special enough to break the rules."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Although practicality beats purity."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Errors should never pass silently."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Unless explicitly silenced."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "In the face of ambiguity, refuse the temptation to guess."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "There should be one -- and preferably only one -- obvious way to do it."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Although that way may not be obvious at first unless you're Dutch."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Now is better than never."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Although never is often better than *right* now."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "If the implementation is hard to explain, it's a bad idea."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "If the implementation is easy to explain, it may be a good idea."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "Namespaces are one honking great idea -- let's do more of those!"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:0
+msgid "https://www.python.org/dev/peps/pep-0020/"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:46
+msgid "Indentation and Formatting"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:48
+msgid "4 spaces instead tabs. PIL suggests using of two spaces, but programmer looks at code 4 up to 8 hours a day, so it's simplier to distinguish indentation with 4 spaces. Why spaces? Similar representation everywhere."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:52
+msgid "You can use vim modelines:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:54
+msgid "-- vim:ts=4 ss=4 sw=4 expandtab"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:58
+msgid "A file should ends w/ one newline symbol, but shouldn't ends w/ blank line (two newline symbols)."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:61
+msgid "Every do/while/for/if/function should indent 4 spaces."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:63
+msgid "related ``or``/``and`` in ``if`` must be enclosed in the round brackets (). Example:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:65
+msgid "if (a == true and b == false) or (a == false and b == true) then\n"
+"    <...>\n"
+"end -- good\n"
+"\n"
+"if a == true and b == false or a == false and b == true then\n"
+"    <...>\n"
+"end -- bad\n"
+"\n"
+"if a ^ b == true then\n"
+"end -- good, but not explicit"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:78
+msgid "Type conversion"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:80
+msgid "Do not use concatenation to convert to string or addition to convert to number (use ``tostring``/``tonumber`` instead):"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:83
+msgid "local a = 123\n"
+"a = a .. ''\n"
+"-- bad\n"
+"\n"
+"local a = 123\n"
+"a = tostring(a)\n"
+"-- good\n"
+"\n"
+"local a = '123'\n"
+"a = a + 5 -- 128\n"
+"-- bad\n"
+"\n"
+"local a = '123'\n"
+"a = tonumber(a) + 5 -- 128\n"
+"-- good"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:101
+msgid "Try to avoid multiple nested ``if``'s with common body:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:103
+msgid "if (a == true and b == false) or (a == false and b == true) then\n"
+"    do_something()\n"
+"end\n"
+"-- good\n"
+"\n"
+"if a == true then\n"
+"    if b == false then\n"
+"        do_something()\n"
+"    end\n"
+"if b == true then\n"
+"    if a == false then\n"
+"        do_something()\n"
+"    end\n"
+"end\n"
+"-- bad"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:121
+msgid "Avoid multiple concatenations in one statement, use ``string.format`` instead:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:123
+msgid "function say_greeting(period, name)\n"
+"    local a = \"good  \" .. period .. \", \" .. name\n"
+"end\n"
+"-- bad\n"
+"\n"
+"function say_greeting(period, name)\n"
+"    local a = string.format(\"good %s, %s\", period, name)\n"
+"end\n"
+"-- good\n"
+"\n"
+"local say_greeting_fmt = \"good %s, %s\"\n"
+"function say_greeting(period, name)\n"
+"    local a = say_greeting_fmt:format(period, name)\n"
+"end\n"
+"-- best"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:141
+msgid "Use ``and``/``or`` for default variable values"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:143
+msgid "function(input)\n"
+"    input = input or 'default_value'\n"
+"end -- good\n"
+"\n"
+"function(input)\n"
+"    if input == nil then\n"
+"        input = 'default_value'\n"
+"    end\n"
+"end -- ok, but excessive"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:155
+msgid "``if``'s and return statements:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:157
+msgid "if a == true then\n"
+"    return do_something()\n"
+"end\n"
+"do_other_thing() -- good\n"
+"\n"
+"if a == true then\n"
+"    return do_something()\n"
+"else\n"
+"    do_other_thing()\n"
+"end -- bad"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:170
+msgid "Using spaces:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:172
+msgid "one shouldn't use spaces between function name and opening round bracket, but arguments must be splitted with one whitespace charachter"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:175
+msgid "function name (arg1,arg2,...)\n"
+"end -- bad\n"
+"\n"
+"function name(arg1, arg2, ...)\n"
+"end -- good"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:183
+msgid "use space after comment marker"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:185
+msgid "while true do -- inline comment\n"
+"-- comment\n"
+"do_something()\n"
+"end\n"
+"--[[\n"
+"  multiline\n"
+"  comment\n"
+"]]--"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:196
+msgid "surrounding operators"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:198
+msgid "local thing=1\n"
+"thing = thing-1\n"
+"thing = thing*1\n"
+"thing = 'string'..'s'\n"
+"-- bad\n"
+"\n"
+"local thing = 1\n"
+"thing = thing - 1\n"
+"thing = thing * 1\n"
+"thing = 'string' .. 's'\n"
+"-- good"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:212
+msgid "use space after commas in tables"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:214
+msgid "local thing = {1,2,3}\n"
+"thing = {1 , 2 , 3}\n"
+"thing = {1 ,2 ,3}\n"
+"-- bad\n"
+"\n"
+"local thing = {1, 2, 3}\n"
+"-- good"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:224
+msgid "use space in map definitions around equality sign and commas"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:226
+msgid "return {1,2,3,4} -- bad\n"
+"return {\n"
+"    key1 = val1,key2=val2\n"
+"} -- bad\n"
+"\n"
+"return {\n"
+"    1, 2, 3, 4\n"
+"    key1 = val1, key2 = val2,\n"
+"    key3 = vallll\n"
+"} -- good"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:239
+msgid "also, you may use alignment:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:241
+msgid "return {\n"
+"    long_key  = 'vaaaaalue',\n"
+"    key       = 'val',\n"
+"    something = 'even better'\n"
+"}"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:249
+msgid "extra blank lines may be used (sparingly) to separate groups of related functions. Blank lines may be omitted between a bunch of related one-liners (e.g. a set of dummy implementations)"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:253
+msgid "use blank lines in function, sparingly, to indicate logical sections"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:255
+msgid "if thing then\n"
+"    -- ...stuff...\n"
+"end\n"
+"function derp()\n"
+"    -- ...stuff...\n"
+"end\n"
+"local wat = 7\n"
+"-- bad\n"
+"\n"
+"if thing then\n"
+"    -- ...stuff...\n"
+"end\n"
+"\n"
+"function derp()\n"
+"    -- ...stuff...\n"
+"end\n"
+"\n"
+"local wat = 7\n"
+"-- good"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:277
+msgid "Delete whitespace at EOL (strongly forbidden. Use ``:s/\\s\\+$//gc`` in vim to delete them)"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:282
+msgid "Avoid global variable"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:284
+msgid "You must avoid global variables. If you have an exceptional case, use ``_G`` variable to set it, add prefix or add table instead of prefix:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:287
+msgid "function bad_global_example()\n"
+"end -- very, very bad\n"
+"\n"
+"function good_local_example()\n"
+"end\n"
+"_G.modulename_good_local_example = good_local_example -- good\n"
+"_G.modulename = {}\n"
+"_G.modulename.good_local_example = good_local_example -- better"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:298
+msgid "Always use prefix to avoid name clash"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:302
+msgid "Naming"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:304
+msgid "names of variables/\"objects\" and \"methods\"/functions: snake_case"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:305
+msgid "names of \"classes\": CamelCase"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:306
+msgid "private variables/methods (properties in the future) of object starts with underscores ``<object>._<name>``. Avoid using of ``local function private_methods(self) end``"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:309
+msgid "boolean - naming ``is_<...>``, ``isnt_<...>``, ``has_``, ``hasnt_`` is a good style."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:310
+msgid "for \"very local\" variables: - ``t`` is for tables - ``i``, ``j`` are for indexing - ``n`` is for counting - ``k``, ``v`` is what you get out of ``pairs()`` (are acceptable, ``_`` if unused) - ``i``, ``v`` is what you get out of ``ipairs()`` (are acceptable, ``_`` if unused) - ``k``/``key`` is for table keys - ``v``/``val``/``value`` is for values that are passed around - ``x``/``y``/``z`` is for generic math quantities - ``s``/``str``/``string`` is for strings - ``c`` is for 1-char strings - ``f``/``func``/``cb`` are for functions - ``status, <rv>..`` or ``ok, <rv>..`` is what you get out of pcall/xpcall - ``buf, sz`` is a (buffer, size) pair - ``<name>_p`` is for pointers - ``t0``.. is for timestamps - ``err`` is for errors"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:327
+msgid "abbrevations are acceptable if they're unambigous and if you'll document (or they're too common) them."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:329
+msgid "global variables are written with ALL_CAPS. If it's some system variable, then they're using underscore to define it (``_G``/``_VERSION``/..)"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:331
+msgid "module naming snake_case (avoid underscores and dashes) - 'luasql', instead of 'Lua-SQL'"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:333
+msgid "``*_mt`` and ``*_methods`` defines metatable and methods table"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:337
+msgid "Idioms and patterns"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:339
+msgid "Always use round brackets in call of functions except multiple cases (common lua style idioms):"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:342
+msgid "``*.cfg{ }`` functions (``box.cfg``/``memcached.cfg``/..)"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:343
+msgid "``ffi.cdef[[ ]]`` function"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:345
+msgid "Avoid these kind of constructions:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:347
+msgid "<func>'<name>' (strongly avoid require'..')"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:348
+msgid "``function object:method() end`` (use ``functon object.method(self) end`` instead)"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:349
+msgid "do not use semicolon as table separator (only comma)"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:350
+msgid "semicolons at the end of line (only to split multiple statements on one line)"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:351
+msgid "try to avoid unnecessary function creation (closures/..)"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:355
+msgid "Modules"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:357
+msgid "Don't start modules with license/authors/descriptions, you can write it in LICENSE/AUTHORS/README files. For writing modules use one of the two patterns (dont use ``modules()``):"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:361
+msgid "local M = {}\n"
+"\n"
+"function M.foo()\n"
+"...\n"
+"end\n"
+"\n"
+"function M.bar()\n"
+"...\n"
+"end\n"
+"\n"
+"return M"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:375
+msgid "or"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:377
+msgid "local function foo()\n"
+"...\n"
+"end\n"
+"\n"
+"local function bar()\n"
+"...\n"
+"end\n"
+"\n"
+"return {\n"
+"foo = foo,\n"
+"bar = bar,\n"
+"}"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:394
+msgid "Commenting"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:396
+msgid "You should write code the way it shouldn't be described, but don't forget about commenting it. You shouldn't comment Lua syntax (assume that reader already knows Lua language). Try to tell about functions/variable names/etc."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:400
+msgid "Multiline comments: use matching (``--[[ ]]--``) instead of simple (``--[[ ]]``)."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:403
+msgid "Public function comments (??):"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:405
+msgid "--- Copy any table (shallow and deep version)\n"
+"-- * deepcopy: copies all levels\n"
+"-- * shallowcopy: copies only first level\n"
+"-- Supports __copy metamethod for copying custom tables with metatables\n"
+"-- @function gsplit\n"
+"-- @table         inp  original table\n"
+"-- @shallow[opt]  sep  flag for shallow copy\n"
+"-- @returns            table (copy)"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:418
+msgid "Testing"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:420
+msgid "Use ``tap`` module for writing efficient tests. Example of test file:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:422
+msgid "#!/usr/bin/env tarantool\n"
+"\n"
+"local test = require('tap').test('table')\n"
+"test:plan(31)\n"
+"\n"
+"do -- check basic table.copy (deepcopy)\n"
+"    local example_table = {\n"
+"        {1, 2, 3},\n"
+"        {\"help, I'm very nested\", {{{ }}} }\n"
+"    }\n"
+"\n"
+"    local copy_table = table.copy(example_table)\n"
+"\n"
+"    test:is_deeply(\n"
+"        example_table,\n"
+"        copy_table,\n"
+"        \"checking, that deepcopy behaves ok\"\n"
+"    )\n"
+"    test:isnt(\n"
+"        example_table,\n"
+"        copy_table,\n"
+"        \"checking, that tables are different\"\n"
+"    )\n"
+"    test:isnt(\n"
+"        example_table[1],\n"
+"        copy_table[1],\n"
+"        \"checking, that tables are different\"\n"
+"    )\n"
+"    test:isnt(\n"
+"        example_table[2],\n"
+"        copy_table[2],\n"
+"        \"checking, that tables are different\"\n"
+"    )\n"
+"    test:isnt(\n"
+"        example_table[2][2],\n"
+"        copy_table[2][2],\n"
+"        \"checking, that tables are different\"\n"
+"    )\n"
+"    test:isnt(\n"
+"        example_table[2][2][1],\n"
+"        copy_table[2][2][1],\n"
+"        \"checking, that tables are different\"\n"
+"    )\n"
+"end\n"
+"\n"
+"<...>\n"
+"\n"
+"os.exit(test:check() == true and 0 or 1)"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:473
+msgid "When you'll test your code output will be something like this:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:475
+msgid "TAP version 13\n"
+"1..31\n"
+"ok - checking, that deepcopy behaves ok\n"
+"ok - checking, that tables are different\n"
+"ok - checking, that tables are different\n"
+"ok - checking, that tables are different\n"
+"ok - checking, that tables are different\n"
+"ok - checking, that tables are different\n"
+"..."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:489
+msgid "Error Handling"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:491
+msgid "Be generous in what you accept and strict in what you return."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:493
+msgid "With error handling this means that you must provide an error object as second multi-return value in case of error. The error object can be a string, a Lua table or cdata, in the latter cases it must have ``__tostring`` metamethod defined."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:498
+msgid "In case of error, use ``nil`` for the first return value. This makes the error hard to ignore."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:501
+msgid "When checking function return values, check the first argument first. If it's ``nil``, look for error in the second argument:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:504
+msgid "local data, err = foo()\n"
+"if not data\n"
+"    return nil, err\n"
+"end\n"
+"return bar(data)"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:512
+msgid "Unless performance of your code is paramount, try to avoid using more than two return values."
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:515
+msgid "In rare cases you may want to return ``nil`` as a legal return value. In this case it's OK to check for error first, and return second:"
+msgstr ""
+
+#: ../doc/dev_guide/lua_style_guide.rst:518
+msgid "local data, err = foo()\n"
+"if not err\n"
+"    return data\n"
+"end\n"
+"return nil, err"
+msgstr ""
+

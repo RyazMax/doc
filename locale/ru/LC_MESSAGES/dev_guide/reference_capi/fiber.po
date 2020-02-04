@@ -1,0 +1,416 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-04 10:02+0000\n"
+"PO-Revision-Date: 2019-12-20 21:24+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:3
+msgid "Module `fiber`"
+msgstr "Модуль `fiber`"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:7
+msgid ""
+"Fiber - contains information about a :ref:`fiber <atomic-"
+"threads_fibers_yields>`."
+msgstr ""
+"Файбер -- содержит информацию о :ref:`файбере <atomic-"
+"threads_fibers_yields>`."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:11
+msgid "Function to run inside a fiber."
+msgstr "Функции для выполнения в файбере."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:15
+msgid "Create a new fiber."
+msgstr "Создание нового файбера."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:17
+msgid ""
+"Takes a fiber from the fiber cache, if it's not empty. Can fail only if "
+"there is not enough memory for the fiber structure or fiber stack."
+msgstr ""
+"Берет файбер из кэша файберов, если в нем что-то есть. Может не сработать, "
+"только если недостаточно памяти для структуры файбера или стека файбера."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:20
+msgid ""
+"The created fiber automatically returns itself to the fiber cache when its "
+"\"main\" function completes."
+msgstr ""
+"Созданный файбер автоматически возвращается в кэш файберов, когда выполнена "
+"его основная функция."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:0
+msgid "Parameters"
+msgstr "Параметры"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:23
+#: ../doc/dev_guide/reference_capi/fiber.rst:39
+msgid "string with fiber name"
+msgstr "строка с именем файбера"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:24
+msgid "func for run inside fiber"
+msgstr "функция для выполнения в файбере"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:26
+#: ../doc/dev_guide/reference_capi/fiber.rst:43
+msgid "See also: :ref:`fiber_start()<c_api-fiber-fiber_start>`"
+msgstr "См. также :ref:`fiber_start()<c_api-fiber-fiber_start>`"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:30
+msgid "Create a new fiber with defined attributes."
+msgstr "Создание нового файбера с заданными атрибутами."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:32
+msgid ""
+"Can fail only if there is not enough memory for the fiber structure or fiber "
+"stack."
+msgstr ""
+"Может не сработать, только если недостаточно памяти для структуры файбера "
+"или стека файбера."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:35
+msgid ""
+"The created fiber automatically returns itself to the fiber cache if has a "
+"default stack size when its \"main\" function completes."
+msgstr ""
+"Созданный файбер автоматически возвращается в кэш файберов, если у него "
+"размер стека по умолчанию, когда выполнена его основная функция."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:40
+#: ../doc/dev_guide/reference_capi/fiber.rst:163
+#: ../doc/dev_guide/reference_capi/fiber.rst:169
+msgid "fiber attributes container"
+msgstr "контейнер с атрибутами файбера"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:41
+msgid "function to run inside the fiber"
+msgstr "функция для выполнения в файбере"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:49
+msgid "Start execution of created fiber."
+msgstr "Запуск созданного файбера."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:51
+msgid "fiber to start"
+msgstr "запускаемый файбер"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:52
+msgid "arguments to start the fiber with"
+msgstr "аргументы для запуска файбера"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:56
+msgid "Return control to another fiber and wait until it'll be woken."
+msgstr "Передача управления другому файберу и ожидание его пробуждения."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:58
+msgid "See also: :ref:`fiber_wakeup()<c_api-fiber-fiber_wakeup>`"
+msgstr "См. также :ref:`fiber_wakeup()<c_api-fiber-fiber_wakeup>`"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:64
+msgid "Interrupt a synchronous wait of a fiber"
+msgstr "Прерывание синхронного ожидания файбера"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:66
+#: ../doc/dev_guide/reference_capi/fiber.rst:104
+msgid "fiber to be woken up"
+msgstr "пробуждаемый файбер"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:72
+msgid "Cancel the subject fiber (set ``FIBER_IS_CANCELLED`` flag)"
+msgstr "Отмена файбера (установка флага ``FIBER_IS_CANCELLED``)"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:74
+msgid ""
+"If target fiber's flag ``FIBER_IS_CANCELLABLE`` set, then it would be woken "
+"up (maybe prematurely). Then current fiber yields until the target fiber is "
+"dead (or is woken up by :ref:`fiber_wakeup()<c_api-fiber-fiber_wakeup>`)."
+msgstr ""
+"Если на нужном файбере установлен флаг ``FIBER_IS_CANCELLABLE``, он "
+"возобновит работу (возможно досрочно). Тогда текущий файбер передает "
+"управление до тех пор, пока нужный файбер не будет удален (или не возобновит "
+"работу с помощью :ref:`fiber_wakeup()<c_api-fiber-fiber_wakeup>`)."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:78
+msgid "fiber to be cancelled"
+msgstr "отменяемый файбер"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:82
+msgid ""
+"Make it possible or not possible to wakeup the current fiber immediately "
+"when it's cancelled."
+msgstr ""
+"Возможность или невозможность пробуждения текущего файбера сразу после его "
+"отмены."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:85
+#: ../doc/dev_guide/reference_capi/fiber.rst:96
+msgid "fiber"
+msgstr "файбер"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:86
+#: ../doc/dev_guide/reference_capi/fiber.rst:97
+msgid "status to set"
+msgstr "назначаемый статус"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:0
+msgid "Returns"
+msgstr "Возвращает"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:88
+msgid "previous state"
+msgstr "предыдущий статус"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:94
+msgid "Set fiber to be joinable (``false`` by default)."
+msgstr "Определение файбера как присоединяемого (по умолчанию ``false``)"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:101
+msgid ""
+"Wait until the fiber is dead and then move its execution status to the "
+"caller. The fiber must not be detached."
+msgstr ""
+"Ожидание удаления файбера, а затем передача статуса его выполнения "
+"вызывающему клиенту. Файбер не должен быть открепленным."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:106
+msgid "Before: ``FIBER_IS_JOINABLE`` flag is set."
+msgstr "Ранее: установлен флаг ``FIBER_IS_JOINABLE``."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:108
+msgid "See also: :ref:`fiber_set_joinable()<c_api-fiber-fiber_set_joinable>`"
+msgstr "См. также :ref:`fiber_set_joinable()<c_api-fiber-fiber_set_joinable>`"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:112
+msgid "Put the current fiber to sleep for at least 's' seconds."
+msgstr "Перевод текущего файбера в режим ожидания как минимум на 's' секунд."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:114
+msgid "time to sleep"
+msgstr "время ожидания"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:116
+msgid "Note: this is a cancellation point."
+msgstr "Примечание: это и есть точка отмены."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:118
+msgid "See also: :ref:`fiber_is_cancelled()<c_api-fiber-fiber_is_cancelled>`"
+msgstr "См. также :ref:`fiber_is_cancelled()<c_api-fiber-fiber_is_cancelled>`"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:124
+msgid "Check current fiber for cancellation (it must be checked manually)."
+msgstr "Проверка отмены текущего файбера (это делается вручную)."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:128
+msgid "Report loop begin time as double (cheap)."
+msgstr "Сообщение времени начала цикла в виде числа двойной точности."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:132
+msgid "Report loop begin time as 64-bit int."
+msgstr "Сообщение времени начала цикла в виде 64-битного целого числа."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:136
+msgid "Reschedule fiber to end of event loop cycle."
+msgstr "Перенос файбера для завершения событийного цикла."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:142
+msgid "Return ``slab_cache`` suitable to use with ``tarantool/small`` library"
+msgstr ""
+"Возврат ``slab_cache``, подходящего для использования с библиотекой "
+"``tarantool/small``"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:146
+msgid "Return the current fiber."
+msgstr "Возврат текущего файбера."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:152
+msgid ""
+"Create a new fiber attributes container and initialize it with default "
+"parameters."
+msgstr ""
+"Создание нового контейнера с атрибутами файбера и его инициализация с "
+"параметрами по умолчанию."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:155
+msgid ""
+"Can be used for creating many fibers: corresponding fibers will not take "
+"ownership."
+msgstr ""
+"Можно использовать для создания множества файберов: смена владельца не "
+"произойдет."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:160
+msgid ""
+"Delete the ``fiber_attr`` and free all allocated resources. This is safe "
+"when fibers created with this attribute still exist."
+msgstr ""
+"Удаление ``fiber_attr`` и освобождение всех выделенных ресурсов. "
+"Используется, когда есть файберы, созданные с данным атрибутом."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:167
+msgid "Set the fiber's stack size in the fiber attributes container."
+msgstr "Определение размера стека файбера в контейнере с атрибутами файбера."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:170
+msgid "stack size for new fibers (in bytes)"
+msgstr "размер стека для новых файберов (в байтах)"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:172
+msgid "0 on success"
+msgstr "0, если выполнено"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:173
+msgid ""
+"-1 on failure (if ``stack_size`` is smaller than the minimum allowable fiber "
+"stack size)"
+msgstr ""
+"-1, если не выполнено (если размер стека ``stack_size`` меньше минимально "
+"допустимого размера стека файбера)"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:178
+msgid "Get the fiber's stack size from the fiber attributes container."
+msgstr "Получение размера стека файбера из контейнера с атрибутами файбера."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:180
+msgid "fiber attributes container, or NULL for default"
+msgstr "контейнер с атрибутами файбера или NULL, по умолчанию"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:183
+msgid "stack size (in bytes)"
+msgstr "размер стека (в байтах)"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:189
+msgid ""
+"A conditional variable: a synchronization primitive that allow fibers in "
+"Tarantool's :ref:`cooperative multitasking <atomic-"
+"cooperative_multitasking>` environment to yield until some predicate is "
+"satisfied."
+msgstr ""
+"Условная переменная: примитив синхронизации, который позволяет файберам в "
+"среде :ref:`кооперативной многозадачности <atomic-cooperative_multitasking>` "
+"Tarantool'а передавать управление до выполнения какого-либо предиката."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:193
+msgid ""
+"Fiber conditions have two basic operations -- \"wait\" and \"signal\", -- "
+"where \"wait\" suspends the execution of a fiber (i.e. yields) until \"signal"
+"\" is called."
+msgstr ""
+"Условия работы файбера поддерживают две основные операции -- \"wait"
+"\" (ожидание) и \"signal\" (сигнал), -- где \"wait\" откладывает выполнение "
+"файбера (то есть передает управление) до тех пор, пока не будет вызван "
+"\"signal\"."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:197
+msgid ""
+"Unlike ``pthread_cond``, ``fiber_cond`` doesn't require mutex/latch wrapping."
+msgstr ""
+"В отличие от ``pthread_cond``, ``fiber_cond`` не требует функции-обертки в "
+"виде мьютекса или защелки."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:201
+msgid "Create a new conditional variable."
+msgstr "Создание новой условной переменной."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:205
+msgid "Delete the conditional variable."
+msgstr "Удаление условной переменной."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:207
+msgid ""
+"Note: behavior is undefined if there are fibers waiting for the conditional "
+"variable."
+msgstr ""
+"Примечание: поведение не определено, если есть файберы, ожидающие условной "
+"переменной."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:210
+msgid "conditional variable to delete"
+msgstr "удаляемая условная переменная"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:216
+msgid ""
+"Wake up **one** (any) of the fibers waiting for the conditional variable."
+msgstr ""
+"Пробуждение **одного** (любого) файбера, ожидающего условной переменной."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:218
+#: ../doc/dev_guide/reference_capi/fiber.rst:226
+msgid "Does nothing if no one is waiting."
+msgstr "Не делает ничего, если нет ожидающих файберов."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:220
+#: ../doc/dev_guide/reference_capi/fiber.rst:228
+#: ../doc/dev_guide/reference_capi/fiber.rst:244
+msgid "conditional variable"
+msgstr "условная переменная"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:224
+msgid "Wake up **all** fibers waiting for the conditional variable."
+msgstr "Пробуждение **всех** файберов, ожидающих условной переменной."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:234
+msgid ""
+"Suspend the execution of the current fiber (i.e. yield) until :ref:"
+"`fiber_cond_signal() <c_api-fiber_cond_signal>` is called."
+msgstr ""
+"Приостановление выполнения текущего файбера (т.е. передача управления) до "
+"вызова :ref:`fiber_cond_signal() <c_api-fiber_cond_signal>`."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:237
+msgid ""
+"Like ``pthread_cond``, ``fiber_cond`` can issue spurious wake ups caused by "
+"explicit :ref:`fiber_wakeup()<c_api-fiber-fiber_wakeup>` or :ref:"
+"`fiber_cancel()<c_api-fiber-fiber_cancel>` calls. It is highly recommended "
+"to wrap calls to this function into a loop and check the actual predicate "
+"and :ref:`fiber_is_cancelled()<c_api-fiber-fiber_is_cancelled>` on every "
+"iteration."
+msgstr ""
+"Как и ``pthread_cond``, ``fiber_cond`` может отправлять ложные сигналы "
+"пробуждения с помощью вызова :ref:`fiber_wakeup()<c_api-fiber-fiber_wakeup>` "
+"или :ref:`fiber_cancel()<c_api-fiber-fiber_cancel>`. Настоятельно "
+"рекомендуется заключать вызовы данной функции в цикл и проверять предикат и :"
+"ref:`fiber_is_cancelled()<c_api-fiber-fiber_is_cancelled>` при каждой "
+"итерации."
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:245
+msgid "timeout in seconds"
+msgstr "время ожидания в секундах"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:247
+msgid ""
+"0 on :ref:`fiber_cond_signal() <c_api-fiber_cond_signal>` call or a spurious "
+"wake up"
+msgstr ""
+"0 при вызове :ref:`fiber_cond_signal() <c_api-fiber_cond_signal>` или ложном "
+"пробуждении"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:249
+msgid "-1 on timeout, and the error code is set to 'TimedOut'"
+msgstr ""
+"-1 в случае ожидания, и задается код ошибки 'TimedOut' (истекло время "
+"ожидания)"
+
+#: ../doc/dev_guide/reference_capi/fiber.rst:253
+msgid ""
+"Shortcut for :ref:`fiber_cond_wait_timeout() <c_api-"
+"fiber_cond_wait_timeout>`."
+msgstr ""
+"Ускоренный метод для :ref:`fiber_cond_wait_timeout() <c_api-"
+"fiber_cond_wait_timeout>`."

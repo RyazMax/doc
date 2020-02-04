@@ -1,0 +1,676 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-04 10:02+0000\n"
+"PO-Revision-Date: 2019-12-06 16:16+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../doc/reference/reference_lua/digest.rst:5
+msgid "Module `digest`"
+msgstr "Модуль `digest`"
+
+#: ../doc/reference/reference_lua/digest.rst:11
+msgid "Overview"
+msgstr "Общие сведения"
+
+#: ../doc/reference/reference_lua/digest.rst:13
+msgid ""
+"A \"digest\" is a value which is returned by a function (usually a "
+"`Cryptographic hash function`_), applied against a string. Tarantool's "
+"``digest`` module supports several types of cryptographic hash functions "
+"(AES_, MD4_, MD5_, SHA-1_, SHA-2_, PBKDF2_) as well as a checksum function "
+"(CRC32_), two functions for base64_, and two non-cryptographic hash "
+"functions (guava_, murmur_). Some of the digest functionality is also "
+"present in the :ref:`crypto <crypto>`."
+msgstr ""
+"\"Дайджест\" -- это значение, которое возвращает функция (как правило, "
+"криптографическая хеш-функция -- `Cryptographic hash function`_), "
+"примененная к строке. Модуль``digest`` Tarantool'а поддерживает несколько "
+"типов криптографических хеш-функций  (AES_, MD4_, MD5_, SHA-1_, SHA-2_, "
+"PBKDF2_), а также функцию контрольного суммирования (CRC32_), две функции "
+"для base64_ и две некриптографические хеш-функции (guava_, murmur_). Часть "
+"функций модуля digest также включена в модуль :ref:`crypto <crypto>`."
+
+#: ../doc/reference/reference_lua/digest.rst:22
+msgid "Index"
+msgstr "Указатель"
+
+#: ../doc/reference/reference_lua/digest.rst:24
+msgid "Below is a list of all ``digest`` functions."
+msgstr "Ниже приведен перечень всех функций модуля ``digest``."
+
+#: ../doc/reference/reference_lua/digest.rst:32
+msgid "Name"
+msgstr "Имя"
+
+#: ../doc/reference/reference_lua/digest.rst:32
+msgid "Use"
+msgstr "Назначение"
+
+#: ../doc/reference/reference_lua/digest.rst:34
+msgid ":ref:`digest.aes256cbc.encrypt() <digest-aes>`"
+msgstr ":ref:`digest.aes256cbc.encrypt() <digest-aes>`"
+
+#: ../doc/reference/reference_lua/digest.rst:34
+msgid "Encrypt a string using AES"
+msgstr "Шифрование строки с использованием AES"
+
+#: ../doc/reference/reference_lua/digest.rst:37
+msgid ":ref:`digest.aes256cbc.decrypt() <digest-aes>`"
+msgstr ":ref:`digest.aes256cbc.decrypt() <digest-aes>`"
+
+#: ../doc/reference/reference_lua/digest.rst:37
+msgid "Decrypt a string using AES"
+msgstr "Расшифрование строки с использованием AES"
+
+#: ../doc/reference/reference_lua/digest.rst:40
+msgid ":ref:`digest.md4() <digest-md4>`"
+msgstr ":ref:`digest.md4() <digest-md4>`"
+
+#: ../doc/reference/reference_lua/digest.rst:40
+msgid "Get a digest made with MD4"
+msgstr "Получение дайджеста с помощью MD4"
+
+#: ../doc/reference/reference_lua/digest.rst:43
+msgid ":ref:`digest.md4_hex() <digest-md4_hex>`"
+msgstr ":ref:`digest.md4_hex() <digest-md4_hex>`"
+
+#: ../doc/reference/reference_lua/digest.rst:43
+msgid "Get a hexadecimal digest made with MD4"
+msgstr "Получение шестнадцатеричного дайджеста с помощью MD4"
+
+#: ../doc/reference/reference_lua/digest.rst:46
+msgid ":ref:`digest.md5() <digest-md5>`"
+msgstr ":ref:`digest.md5() <digest-md5>`"
+
+#: ../doc/reference/reference_lua/digest.rst:46
+msgid "Get a digest made with MD5"
+msgstr "Получение дайджеста с помощью MD5"
+
+#: ../doc/reference/reference_lua/digest.rst:49
+msgid ":ref:`digest.md5_hex() <digest-md5_hex>`"
+msgstr ":ref:`digest.md5_hex() <digest-md5_hex>`"
+
+#: ../doc/reference/reference_lua/digest.rst:49
+msgid "Get a hexadecimal digest made with MD5"
+msgstr "Получение шестнадцатеричного дайджеста с помощью MD5"
+
+#: ../doc/reference/reference_lua/digest.rst:52
+msgid ":ref:`digest.pbkdf2() <digest-pbkdf2>`"
+msgstr ":ref:`digest.pbkdf2() <digest-pbkdf2>`"
+
+#: ../doc/reference/reference_lua/digest.rst:52
+msgid "Get a digest made with PBKDF2"
+msgstr "Получение дайджеста с помощью PBKDF2"
+
+#: ../doc/reference/reference_lua/digest.rst:55
+msgid ":ref:`digest.sha1() <digest-sha1>`"
+msgstr ":ref:`digest.sha1() <digest-sha1>`"
+
+#: ../doc/reference/reference_lua/digest.rst:55
+msgid "Get a digest made with SHA-1"
+msgstr "Получение дайджеста с помощью SHA-1"
+
+#: ../doc/reference/reference_lua/digest.rst:58
+msgid ":ref:`digest.sha1_hex() <digest-sha1_hex>`"
+msgstr ":ref:`digest.sha1_hex() <digest-sha1_hex>`"
+
+#: ../doc/reference/reference_lua/digest.rst:58
+msgid "Get a hexadecimal digest made with SHA-1"
+msgstr "Получение шестнадцатеричного дайджеста с помощью SHA-1"
+
+#: ../doc/reference/reference_lua/digest.rst:61
+msgid ":ref:`digest.sha224() <digest-sha224>`"
+msgstr ":ref:`digest.sha224() <digest-sha224>`"
+
+#: ../doc/reference/reference_lua/digest.rst:61
+msgid "Get a 224-bit digest made with SHA-2"
+msgstr "Получение 224-битного дайджеста с помощью SHA-2"
+
+#: ../doc/reference/reference_lua/digest.rst:64
+msgid ":ref:`digest.sha224_hex() <digest-sha224_hex>`"
+msgstr ":ref:`digest.sha224_hex() <digest-sha224_hex>`"
+
+#: ../doc/reference/reference_lua/digest.rst:64
+msgid "Get a 56-byte hexadecimal digest made with SHA-2"
+msgstr "Получение 56-байтного шестнадцатеричного дайджеста с помощью SHA-2"
+
+#: ../doc/reference/reference_lua/digest.rst:67
+msgid ":ref:`digest.sha256() <digest-sha256>`"
+msgstr ":ref:`digest.sha256() <digest-sha256>`"
+
+#: ../doc/reference/reference_lua/digest.rst:67
+msgid "Get a 256-bit digest made with SHA-2"
+msgstr "Получение 256-битного дайджеста с помощью SHA-2"
+
+#: ../doc/reference/reference_lua/digest.rst:70
+msgid ":ref:`digest.sha256_hex() <digest-sha256_hex>`"
+msgstr ":ref:`digest.sha256_hex() <digest-sha256_hex>`"
+
+#: ../doc/reference/reference_lua/digest.rst:70
+msgid "Get a 64-byte hexadecimal digest made with SHA-2"
+msgstr "Получение 64-байтного шестнадцатеричного дайджеста с помощью SHA-2"
+
+#: ../doc/reference/reference_lua/digest.rst:73
+msgid ":ref:`digest.sha384() <digest-sha384>`"
+msgstr ":ref:`digest.sha384() <digest-sha384>`"
+
+#: ../doc/reference/reference_lua/digest.rst:73
+msgid "Get a 384-bit digest made with SHA-2"
+msgstr "Получение 384-битного дайджеста с помощью SHA-2"
+
+#: ../doc/reference/reference_lua/digest.rst:76
+msgid ":ref:`digest.sha384_hex() <digest-sha384_hex>`"
+msgstr ":ref:`digest.sha384_hex() <digest-sha384_hex>`"
+
+#: ../doc/reference/reference_lua/digest.rst:76
+msgid "Get a 96-byte hexadecimal digest made with SHA-2"
+msgstr "Получение 96-байтного шестнадцатеричного дайджеста с помощью SHA-2"
+
+#: ../doc/reference/reference_lua/digest.rst:79
+msgid ":ref:`digest.sha512() <digest-sha512>`"
+msgstr ":ref:`digest.sha512() <digest-sha512>`"
+
+#: ../doc/reference/reference_lua/digest.rst:79
+msgid "Get a 512-bit digest made with SHA-2"
+msgstr "Получение 512-битного дайджеста с помощью SHA-2"
+
+#: ../doc/reference/reference_lua/digest.rst:82
+msgid ":ref:`digest.sha512_hex() <digest-sha512_hex>`"
+msgstr ":ref:`digest.sha512_hex() <digest-sha512_hex>`"
+
+#: ../doc/reference/reference_lua/digest.rst:82
+msgid "Get a 128-byte hexadecimal digest made with SHA-2"
+msgstr "Получение 128-байтного шестнадцатеричного дайджеста с помощью SHA-2"
+
+#: ../doc/reference/reference_lua/digest.rst:85
+msgid ":ref:`digest.base64_encode() <digest-base64_encode>`"
+msgstr ":ref:`digest.base64_encode() <digest-base64_encode>`"
+
+#: ../doc/reference/reference_lua/digest.rst:85
+msgid "Encode a string to Base64"
+msgstr "Кодирование строки по стандарту Base64"
+
+#: ../doc/reference/reference_lua/digest.rst:88
+msgid ":ref:`digest.base64_decode() <digest-base64_decode>`"
+msgstr ":ref:`digest.base64_decode() <digest-base64_decode>`"
+
+#: ../doc/reference/reference_lua/digest.rst:88
+msgid "Decode a Base64-encoded string"
+msgstr "Декодирование строки по стандарту Base64"
+
+#: ../doc/reference/reference_lua/digest.rst:91
+msgid ":ref:`digest.urandom() <digest-urandom>`"
+msgstr ":ref:`digest.urandom() <digest-urandom>`"
+
+#: ../doc/reference/reference_lua/digest.rst:91
+msgid "Get an array of random bytes"
+msgstr "Получение массива случайных байтов"
+
+#: ../doc/reference/reference_lua/digest.rst:94
+msgid ":ref:`digest.crc32() <digest-crc32>`"
+msgstr ":ref:`digest.crc32() <digest-crc32>`"
+
+#: ../doc/reference/reference_lua/digest.rst:94
+msgid "Get a 32-bit checksum made with CRC32"
+msgstr "Получение 32-битной контрольной суммы с помощью CRC32"
+
+#: ../doc/reference/reference_lua/digest.rst:97
+msgid ":ref:`digest.crc32.new() <digest-crc32_new>`"
+msgstr ":ref:`digest.crc32.new() <digest-crc32_new>`"
+
+#: ../doc/reference/reference_lua/digest.rst:97
+msgid "Initiate incremental CRC32"
+msgstr "Запуск инкрементного вычисления CRC32"
+
+#: ../doc/reference/reference_lua/digest.rst:100
+msgid ":ref:`digest.guava() <digest-guava>`"
+msgstr ":ref:`digest.guava() <digest-guava>`"
+
+#: ../doc/reference/reference_lua/digest.rst:100
+msgid "Get a number made with a consistent hash"
+msgstr "Получение числа с помощью консистентного хеширования"
+
+#: ../doc/reference/reference_lua/digest.rst:103
+msgid ":ref:`digest.murmur() <digest-murmur>`"
+msgstr ":ref:`digest.murmur() <digest-murmur>`"
+
+#: ../doc/reference/reference_lua/digest.rst:103
+msgid "Get a digest made with MurmurHash"
+msgstr "Получение дайджеста с помощью MurmurHash"
+
+#: ../doc/reference/reference_lua/digest.rst:106
+msgid ":ref:`digest.murmur.new() <digest-murmur_new>`"
+msgstr ":ref:`digest.murmur.new() <digest-murmur_new>`"
+
+#: ../doc/reference/reference_lua/digest.rst:106
+msgid "Initiate incremental MurmurHash"
+msgstr "Запуск инкрементного вычисления с помощью MurmurHash"
+
+#: ../doc/reference/reference_lua/digest.rst:115
+msgid "Returns 256-bit binary string = digest made with AES."
+msgstr ""
+"Возврат 256-битной двоичной строки = дайджест, полученный с помощью AES."
+
+#: ../doc/reference/reference_lua/digest.rst:121
+msgid "Returns 128-bit binary string = digest made with MD4."
+msgstr ""
+"Возврат 128-битной двоичной строки = дайджест, полученный с помощью MD4."
+
+#: ../doc/reference/reference_lua/digest.rst:127
+msgid "Returns 32-byte string = hexadecimal of a digest calculated with md4."
+msgstr ""
+"Возврат 32-байтной строки = шестнадцатеричное значение дайджеста, "
+"вычисленного с помощью MD4."
+
+#: ../doc/reference/reference_lua/digest.rst:133
+msgid "Returns 128-bit binary string = digest made with MD5."
+msgstr ""
+"Возврат 128-битной двоичной строки = дайджест, полученный с помощью MD5."
+
+#: ../doc/reference/reference_lua/digest.rst:139
+msgid "Returns 32-byte string = hexadecimal of a digest calculated with md5."
+msgstr ""
+"Возврат 32-байтной строки = шестнадцатеричное значение дайджеста, "
+"вычисленного с помощью MD5."
+
+#: ../doc/reference/reference_lua/digest.rst:145
+msgid ""
+"Returns binary string = digest made with PBKDF2. |br| For effective "
+"encryption the ``iterations`` value should be at least several thousand. The "
+"``digest-length`` value determines the length of the resulting binary string."
+msgstr ""
+"Возврат двоичной строки = дайджест, полученный с помощью PBKDF2. |br| Для "
+"эффективности шифрования значение параметра количества итераций "
+"``iterations`` должно быть как минимум несколько тысяч. Значение параметра "
+"``digest-length`` определяет длину полученной двоичной строки."
+
+#: ../doc/reference/reference_lua/digest.rst:152
+msgid ""
+"``digest.pbkdf2()`` yields and should not be used in a transaction (between "
+"``box.begin()`` and ``box.commit()``/``box.rollback()``). PBKDF2 is a time-"
+"consuming hash algorithm. It runs in a separate coio thread. While "
+"calculations are performed, the fiber that calls ``digest.pbkdf2()`` yields "
+"and another fiber continues working in the tx thread."
+msgstr ""
+
+#: ../doc/reference/reference_lua/digest.rst:162
+msgid "Returns 160-bit binary string = digest made with SHA-1."
+msgstr ""
+"Возврат 160-битной двоичной строки = дайджест, полученный с помощью SHA-1."
+
+#: ../doc/reference/reference_lua/digest.rst:168
+msgid "Returns 40-byte string = hexadecimal of a digest calculated with sha1."
+msgstr ""
+"Возврат 40-байтной строки = шестнадцатеричное значение дайджеста, "
+"вычисленного с помощью SHA-1."
+
+#: ../doc/reference/reference_lua/digest.rst:174
+msgid "Returns 224-bit binary string = digest made with SHA-2."
+msgstr ""
+"Возврат 224-битной двоичной строки = дайджест, полученный с помощью SHA-2."
+
+#: ../doc/reference/reference_lua/digest.rst:180
+msgid ""
+"Returns 56-byte string = hexadecimal of a digest calculated with sha224."
+msgstr ""
+"Возврат 56-байтной строки = шестнадцатеричное значение дайджеста, "
+"вычисленного с помощью SHA-224."
+
+#: ../doc/reference/reference_lua/digest.rst:186
+msgid "Returns 256-bit binary string =  digest made with SHA-2."
+msgstr ""
+"Возврат 256-битной двоичной строки = дайджест, полученный с помощью SHA-2."
+
+#: ../doc/reference/reference_lua/digest.rst:192
+msgid ""
+"Returns 64-byte string = hexadecimal of a digest calculated with sha256."
+msgstr ""
+"Возврат 64-байтной строки = шестнадцатеричное значение дайджеста, "
+"вычисленного с помощью SHA-256."
+
+#: ../doc/reference/reference_lua/digest.rst:198
+msgid "Returns 384-bit binary string =  digest made with SHA-2."
+msgstr ""
+"Возврат 384-битной двоичной строки = дайджест, полученный с помощью SHA-2."
+
+#: ../doc/reference/reference_lua/digest.rst:204
+msgid ""
+"Returns 96-byte string = hexadecimal of a digest calculated with sha384."
+msgstr ""
+"Возврат 96-байтной строки = шестнадцатеричное значение дайджеста, "
+"вычисленного с помощью SHA-384."
+
+#: ../doc/reference/reference_lua/digest.rst:210
+msgid "Returns 512-bit binary tring = digest made with SHA-2."
+msgstr ""
+"Возврат 512-битной двоичной строки = дайджест, полученный с помощью SHA-2."
+
+#: ../doc/reference/reference_lua/digest.rst:216
+msgid ""
+"Returns 128-byte string = hexadecimal of a digest calculated with sha512."
+msgstr ""
+"Возврат 128-байтной строки = шестнадцатеричное значение дайджеста, "
+"вычисленного с помощью SHA-512."
+
+#: ../doc/reference/reference_lua/digest.rst:222
+msgid "Returns base64 encoding from a regular string."
+msgstr "Возврат кодированного по base64 значения обычной строки."
+
+#: ../doc/reference/reference_lua/digest.rst:224
+msgid "The possible options are:"
+msgstr "Возможные опции:"
+
+#: ../doc/reference/reference_lua/digest.rst:226
+msgid "``nopad`` -- result must not include '=' for padding at the end,"
+msgstr ""
+"``nopad`` -- результат не должен включать в себя '=' для заполнения "
+"символами в конце,"
+
+#: ../doc/reference/reference_lua/digest.rst:227
+msgid ""
+"``nowrap`` -- result must not include line feed for splitting lines after 72 "
+"characters,"
+msgstr ""
+"``nowrap`` -- результат не должен включать в себя символ переноса строки для "
+"разделения строк после 72 символов,"
+
+#: ../doc/reference/reference_lua/digest.rst:229
+msgid ""
+"``urlsafe`` -- result must not include '=' or line feed, and may contain '-' "
+"or '_' instead of '+' or '/' for positions 62 and 63 in the index table."
+msgstr ""
+"``urlsafe`` -- результат не должен включать в себя '=' или символ переноса "
+"строки и может содержать '-' или '_' взамен '+' или '/' в качестве 62 и 63 "
+"символа в схеме."
+
+#: ../doc/reference/reference_lua/digest.rst:233
+msgid "Options may be ``true`` or ``false``, the default value is ``false``."
+msgstr ""
+"Значения параметров могут быть ``true`` (правда) или ``false`` (ложь), по "
+"умолчанию используется ``false``."
+
+#: ../doc/reference/reference_lua/digest.rst:235
+msgid "For example:"
+msgstr "Пример:"
+
+#: ../doc/reference/reference_lua/digest.rst:237
+msgid "digest.base64_encode(string_variable,{nopad=true})"
+msgstr "digest.base64_encode(string_variable,{nopad=true})"
+
+#: ../doc/reference/reference_lua/digest.rst:245
+msgid "Returns a regular string from a base64 encoding."
+msgstr "Возврат обычной строки из кодированного по base64 значения."
+
+#: ../doc/reference/reference_lua/digest.rst:251
+msgid "Returns array of random bytes with length = integer."
+msgstr "Возврат массива случайных байтов с длиной = целому числу."
+
+#: ../doc/reference/reference_lua/digest.rst:257
+msgid "Returns 32-bit checksum made with CRC32."
+msgstr "Возврат 32-битной контрольной суммы с помощью CRC32."
+
+#: ../doc/reference/reference_lua/digest.rst:259
+msgid ""
+"The ``crc32`` and ``crc32_update`` functions use the `Cyclic Redundancy "
+"Check`_ polynomial value: ``0x1EDC6F41`` / ``4812730177``. (Other settings "
+"are: input = reflected, output = reflected, initial value = 0xFFFFFFFF, "
+"final xor value = 0x0.) If it is necessary to be compatible with other "
+"checksum functions in other programming languages, ensure that the other "
+"functions use the same polynomial value."
+msgstr ""
+"Функции ``crc32`` и ``crc32_update`` используют значение многочлена `Cyclic "
+"Redundancy Check`_ : ``0x1EDC6F41`` / ``4812730177``. (Другие используемые "
+"значения: ввод = отраженное значение, вывод = отраженное значение, начальное "
+"значение = 0xFFFFFFFF, финальное xor-значение = 0x0.) Если необходима "
+"совместимость с другими функциями контрольной суммы на другом языке "
+"программирования, убедитесь, что другие функции используют то же значение "
+"многочлена."
+
+#: ../doc/reference/reference_lua/digest.rst:266
+msgid "For example, in Python, install the ``crcmod`` package and say:"
+msgstr "Например, в Python установите пакет ``crcmod`` и введите команду:"
+
+#: ../doc/reference/reference_lua/digest.rst:268
+msgid ""
+">>> import crcmod\n"
+">>> fun = crcmod.mkCrcFun('4812730177')\n"
+">>> fun('string')\n"
+"3304160206L"
+msgstr ""
+">>> import crcmod\n"
+">>> fun = crcmod.mkCrcFun('4812730177')\n"
+">>> fun('string')\n"
+"3304160206L"
+
+#: ../doc/reference/reference_lua/digest.rst:275
+msgid "In Perl, install the ``Digest::CRC`` module and run the following code:"
+msgstr "В Perl установите модуль ``Digest::CRC`` и выполните следующий код:"
+
+#: ../doc/reference/reference_lua/digest.rst:277
+msgid ""
+"use Digest::CRC;\n"
+"$d = Digest::CRC->new(width => 32, poly => 0x1EDC6F41, init => 0xFFFFFFFF, "
+"refin => 1, refout => 1);\n"
+"$d->add('string');\n"
+"print $d->digest;"
+msgstr ""
+"use Digest::CRC;\n"
+"$d = Digest::CRC->new(width => 32, poly => 0x1EDC6F41, init => 0xFFFFFFFF, "
+"refin => 1, refout => 1);\n"
+"$d->add('string');\n"
+"print $d->digest;"
+
+#: ../doc/reference/reference_lua/digest.rst:284
+msgid "(the expected output is 3304160206)."
+msgstr "(ожидается выходное значение: 3304160206)."
+
+#: ../doc/reference/reference_lua/digest.rst:290
+msgid ""
+"Initiates incremental crc32. See :ref:`incremental methods <digest-"
+"incremental_digests>` notes."
+msgstr ""
+"Запуск инкрементного вычисления CRC32. См. примечания по :ref:`инкрементным "
+"методам <digest-incremental_digests>`."
+
+#: ../doc/reference/reference_lua/digest.rst:297
+msgid "Returns a number made with consistent hash."
+msgstr "Возврат числа с помощью консистентного хеширования."
+
+#: ../doc/reference/reference_lua/digest.rst:299
+msgid ""
+"The guava function uses the `Consistent Hashing`_ algorithm of the Google "
+"guava library. The first parameter should be a hash code; the second "
+"parameter should be the number of buckets; the returned value will be an "
+"integer between 0 and the number of buckets. For example,"
+msgstr ""
+"Функция guava использует алгоритм консистентного хеширование (`Consistent "
+"Hashing`_) из библиотеки guava от Google. Первым параметром должен быть хеш-"
+"код; вторым параметром должно быть число слотов; возвращается значение в "
+"виде целого числа в диапазоне от 0 до указанного числа слотов. Например,"
+
+#: ../doc/reference/reference_lua/digest.rst:304
+msgid ""
+"tarantool> digest.guava(10863919174838991, 11)\n"
+"---\n"
+"- 8\n"
+"..."
+msgstr ""
+"tarantool> digest.guava(10863919174838991, 11)\n"
+"---\n"
+"- 8\n"
+"..."
+
+#: ../doc/reference/reference_lua/digest.rst:315
+msgid "Returns 32-bit binary string = digest made with MurmurHash."
+msgstr ""
+"Возврат 32-битной двоичной строки = дайджест, полученный с помощью "
+"MurmurHash."
+
+#: ../doc/reference/reference_lua/digest.rst:321
+msgid ""
+"Initiates incremental MurmurHash. See :ref:`incremental methods <digest-"
+"incremental_digests>` notes. For example:"
+msgstr ""
+"Запуск инкрементного вычисления с помощью MurmurHash. См. примечания по :ref:"
+"`инкрементным методам <digest-incremental_digests>`. Например:"
+
+#: ../doc/reference/reference_lua/digest.rst:325
+msgid "murmur.new({seed=0})"
+msgstr "murmur.new({seed=0})"
+
+#: ../doc/reference/reference_lua/digest.rst:333
+msgid "Incremental methods in the ``digest`` module"
+msgstr "Инкрементальные методы в модуле ``digest``"
+
+#: ../doc/reference/reference_lua/digest.rst:335
+msgid ""
+"Suppose that a digest is done for a string 'A', then a new part 'B' is "
+"appended to the string, then a new digest is required. The new digest could "
+"be recomputed for the whole string 'AB', but it is faster to take what was "
+"computed before for 'A' and apply changes based on the new part 'B'. This is "
+"called multi-step or \"incremental\" digesting, which Tarantool supports "
+"with crc32 and with murmur..."
+msgstr ""
+"Предположим, что вычислен дайджест для строки 'A', затем часть 'B' "
+"добавляется в строку, необходим новый дайджест. Новый дайджест можно "
+"пересчитать для всей строки 'AB', но быстрее будет взять вычисленный "
+"дайджест для 'A' и внести изменения на основании добавленной части 'B'. Это "
+"называется многошаговым процессом или \"инкрементным\" хеш-суммированием, "
+"которое поддерживает Tarantool поддерживает для crc32 и murmur..."
+
+#: ../doc/reference/reference_lua/digest.rst:341
+msgid ""
+"digest = require('digest')\n"
+"\n"
+"-- print crc32 of 'AB', with one step, then incrementally\n"
+"print(digest.crc32('AB'))\n"
+"c = digest.crc32.new()\n"
+"c:update('A')\n"
+"c:update('B')\n"
+"print(c:result())\n"
+"\n"
+"-- print murmur hash of 'AB', with one step, then incrementally\n"
+"print(digest.murmur('AB'))\n"
+"m = digest.murmur.new()\n"
+"m:update('A')\n"
+"m:update('B')\n"
+"print(m:result())"
+msgstr ""
+"digest = require('digest')\n"
+"\n"
+"-- вывести дайджест 'AB' по crc32 пошагово, затем с инкрементом\n"
+"print(digest.crc32('AB'))\n"
+"c = digest.crc32.new()\n"
+"c:update('A')\n"
+"c:update('B')\n"
+"print(c:result())\n"
+"\n"
+"-- вывести дайджест 'AB' по murmur hash пошагово, затем с инкрементом\n"
+"print(digest.murmur('AB'))\n"
+"m = digest.murmur.new()\n"
+"m:update('A')\n"
+"m:update('B')\n"
+"print(m:result())"
+
+#: ../doc/reference/reference_lua/digest.rst:361
+msgid "Example"
+msgstr "Пример"
+
+#: ../doc/reference/reference_lua/digest.rst:363
+msgid ""
+"In the following example, the user creates two functions, "
+"``password_insert()`` which inserts a SHA-1_ digest of the word "
+"\"**^S^e^c^ret Wordpass**\" into a tuple set, and ``password_check()`` which "
+"requires input of a password."
+msgstr ""
+"В следующем примере пользователь создает две функции: функцию "
+"``password_insert()``, которая вставляет дайджест слова \"**^S^e^c^ret "
+"Wordpass**\" по SHA-1_ в набор кортежей, и функцию ``password_check()``, "
+"которая требует ввод пароля."
+
+#: ../doc/reference/reference_lua/digest.rst:367
+msgid ""
+"tarantool> digest = require('digest')\n"
+"---\n"
+"...\n"
+"tarantool> function password_insert()\n"
+"         >   box.space.tester:insert{1234, digest.sha1('^S^e^c^ret "
+"Wordpass')}\n"
+"         >   return 'OK'\n"
+"         > end\n"
+"---\n"
+"...\n"
+"tarantool> function password_check(password)\n"
+"         >   local t = box.space.tester:select{12345}\n"
+"         >   if digest.sha1(password) == t[2] then\n"
+"         >     return 'Password is valid'\n"
+"         >   else\n"
+"         >     return 'Password is not valid'\n"
+"         >   end\n"
+"         > end\n"
+"---\n"
+"...\n"
+"tarantool> password_insert()\n"
+"---\n"
+"- 'OK'\n"
+"..."
+msgstr ""
+"tarantool> digest = require('digest')\n"
+"---\n"
+"...\n"
+"tarantool> function password_insert()\n"
+"         >   box.space.tester:insert{1234, digest.sha1('^S^e^c^ret "
+"Wordpass')}\n"
+"         >   return 'OK'\n"
+"         > end\n"
+"---\n"
+"...\n"
+"tarantool> function password_check(password)\n"
+"         >   local t = box.space.tester:select{12345}\n"
+"         >   if digest.sha1(password) == t[2] then\n"
+"         >     return 'Password is valid'\n"
+"         >   else\n"
+"         >     return 'Password is not valid'\n"
+"         >   end\n"
+"         > end\n"
+"---\n"
+"...\n"
+"tarantool> password_insert()\n"
+"---\n"
+"- 'OK'\n"
+"..."
+
+#: ../doc/reference/reference_lua/digest.rst:393
+msgid ""
+"If a later user calls the ``password_check()`` function and enters the wrong "
+"password, the result is an error."
+msgstr ""
+"Если затем пользователь вызовет функцию ``password_check()`` и вводит "
+"неверный пароль, результатом будет ошибка."
+
+#: ../doc/reference/reference_lua/digest.rst:396
+msgid ""
+"tarantool> password_check('Secret Password')\n"
+"---\n"
+"- 'Password is not valid'\n"
+"..."
+msgstr ""
+"tarantool> password_check('Secret Password')\n"
+"---\n"
+"- 'Password is not valid'\n"
+"..."

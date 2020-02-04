@@ -1,0 +1,211 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 1.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-04 10:02+0000\n"
+"PO-Revision-Date: 2019-12-20 21:24+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:5
+msgid "SQL protocol"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:7
+msgid ""
+"Tarantool's SQL protocol regulates how to build SQL requests and parse "
+"responses using Tarantool's common binary protocol."
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:10
+msgid "Special SQL keys:"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:12
+msgid ""
+"<metadata>      ::= 0x32\n"
+"<sql_text>      ::= 0x40\n"
+"<sql_bind>      ::= 0x41\n"
+"<sql_info>      ::= 0x42"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:20
+msgid "Special SQL commands:"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:22
+msgid "<execute> ::= 11"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:28
+#, fuzzy
+msgid "Request packet body"
+msgstr "Пакет приветствия"
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:30
+msgid "An SQL request has the type ``EXECUTE=11``."
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:32
+msgid ""
+"EXECUTE REQUEST BODY:\n"
+"                         MAP\n"
+"+=====================+===============================+\n"
+"|                     |                               |\n"
+"|   0x40: SQL_TEXT    |     0x41: SQL_BIND            |\n"
+"| MP_STR: SQL request | MP_ARRAY: array of parameters |\n"
+"|                     |                               |\n"
+"+=====================+===============================+"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:43
+msgid ""
+"**SQL_TEXT** is a single non-empty SQL statement. For SQL syntax, see "
+"https://sqlite.org/lang.html"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:45
+msgid ""
+"**SQL_BIND** is an optional array of bindings (parameters). Each parameter "
+"value is a scalar: number, string, binary, null."
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:48
+msgid ""
+"A parameter can be *ordinal* or *named*. An ordinal parameter is encoded as "
+"a message pack scalar value (MP_UINT, INT, DOUBLE, FLOAT, STR, BIN, EXT, "
+"NIL). A named parameter is encoded as a map with one string key -- its name. "
+"For bindings syntax, see https://sqlite.org/lang_expr.html#varparam"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:54
+#, fuzzy
+msgid "**Examples:**"
+msgstr "**Пример:**"
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:56
+msgid ""
+":code:`[100, 'abc', NULL, -345.6] = MP_ARRAY[ MP_UINT, MP_STR, MP_NIL, "
+"MP_DOUBLE ]`"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:57
+msgid ""
+":code:`[1, 2, {'name': 300}] = MP_ARRAY[ MP_UINT, MP_UINT, MP_MAP{ MP_STR : "
+"MP_UINT } ]`"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:61
+#, fuzzy
+msgid "Response packet body"
+msgstr "Структура пакета ответа"
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:63
+msgid "Body structure depends on the type of the SQL request."
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:65
+msgid "If the SQL request is SELECT, the response contains:"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:67
+msgid ""
+"metadata for columns (metadata for a single column contains only the "
+"column's name and type) and"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:69
+msgid "result rows."
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:71
+msgid ""
+"EXECUTE SELECT RESPONSE BODY:\n"
+"                              MAP\n"
+"+======================================+===========================+\n"
+"|                                      |                           |\n"
+"|     0x32: METADATA                   |                           |\n"
+"| MP_ARRAY: array of maps:             |                           |\n"
+"|           +~~~~~~~~~~~~~~~~~~~~~~~~+ |                           |\n"
+"|           | +~~~~~~~~~~~~~~~~~~~~+ | |     0x30: DATA            |\n"
+"|           | |   0x00: FIELD_NAME | | | MP_ARRAY: array of tuples |\n"
+"|           | | MP_STR: field name | | |                           |\n"
+"|           | |   0x01: FIELD_TYPE | | |                           |\n"
+"|           | | MP_STR: field type | | |                           |\n"
+"|           | +~~~~~~~~~~~~~~~~~~~~+ | |                           |\n"
+"|           |        MP_MAP          | |                           |\n"
+"|           +~~~~~~~~~~~~~~~~~~~~~~~~+ |                           |\n"
+"|                   MP_ARRAY           |                           |\n"
+"|                                      |                           |\n"
+"+======================================+===========================+"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:92
+msgid "**Example:**"
+msgstr "**Пример:**"
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:94
+msgid "Request: :code:`SELECT x, y FROM test_space;`"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:96
+msgid "Response:"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:98
+msgid ""
+"BODY = {\n"
+"    METADATA = [\n"
+"    { FIELD_NAME: 'X', FIELD_TYPE: 'TEXT'}, { FIELD_NAME: 'Y', FIELD_TYPE: "
+"'INTEGER'},\n"
+"    DATA = [ ['a', 1], ['c', 2], ['e', 5], ... ]\n"
+"}"
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:106
+msgid ""
+"If the SQL request is not SELECT, the response body contains only SQL_INFO. "
+"Usually SQL_INFO is a map with only one key -- SQL_INFO_ROW_COUNT (0) -- "
+"which is the number of changed rows. For example, if the request is :code:"
+"`INSERT INTO test VALUES (1), (2), (3)`, the response body contains an "
+"SQL_INFO map with SQL_INFO_ROW_COUNT = 3. SQL_INFO_ROW_COUNT can be 0 for "
+"statements that do not change rows, such as CREATE TABLE."
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:113
+msgid ""
+"The SQL_INFO map may contain a second key -- SQL_INFO_AUTO_INCREMENT_IDS (1) "
+"-- which is the new primary-key value for an INSERT in a table defined with "
+"PRIMARY KEY AUTOINCREMENT. In this case the MP_MAP will have two keys, and  "
+"one of the two keys will be 0x01: SQL_INFO_AUTO_INCREMENT_IDS, which is an "
+"array of unsigned integers."
+msgstr ""
+
+#: ../doc/dev_guide/internals/sql_protocol.rst:118
+msgid ""
+"EXECUTE NOT-SELECT RESPONSE BODY:\n"
+"\n"
+"+=========================================================+\n"
+"|                                                         |\n"
+"|   0x42: SQL_INFO                                        |\n"
+"| MP_MAP: usually 1 key   +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+ |\n"
+"|                         |                             | |\n"
+"|                         |    0x00: SQL_INFO_ROW_COUNT | |\n"
+"|                         | MP_UINT: changed row count  | |\n"
+"|                         |                             | |\n"
+"|                         +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+ |\n"
+"|                                                         |\n"
+"+=========================================================+"
+msgstr ""

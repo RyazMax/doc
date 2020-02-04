@@ -1,0 +1,1607 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the Tarantool package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tarantool 2.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-04 10:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../doc/reference/reference_lua/fiber.rst:5
+msgid "Module `fiber`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:9
+msgid "Overview"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:11
+msgid "With the ``fiber`` module, you can:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:13
+msgid "create, run and manage :ref:`fibers <fiber-fibers>`,"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:14
+msgid ""
+"send and receive messages between different processes (i.e. different "
+"connections, sessions, or fibers) via :ref:`channels <fiber_ipc-"
+"channel>`, and"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:16
+msgid ""
+"use a :ref:`synchronization mechanism <fiber_ipc-cond_var>` for fibers, "
+"similar to \"condition variables\" and similar to operating-system "
+"functions such as ``pthread_cond_wait()`` plus ``pthread_cond_signal()``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:22
+msgid "Index"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:24
+msgid "Below is a list of all ``fiber`` functions and members."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:32
+msgid "Name"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:32
+msgid "Use"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:34
+msgid ":ref:`fiber.create() <fiber-create>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:34
+msgid "Create and start a fiber"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:37
+msgid ":ref:`fiber.new() <fiber-new>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:37
+msgid "Create but do not start a fiber"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:40
+msgid ":ref:`fiber.self() <fiber-self>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:40
+msgid "Get a fiber object"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:43
+msgid ":ref:`fiber.channel() <fiber-channel>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:43
+msgid "Create a communication channel"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:46
+msgid ":ref:`channel_object:close() <channel_object-close>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:46
+msgid "Close a channel"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:49
+msgid ":ref:`channel_object:count() <channel_object-count>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:49
+msgid "Count messages in a channel"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:52
+msgid ":ref:`channel_object:get() <channel_object-get>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:52
+msgid "Fetch a message from a channel"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:55
+msgid ":ref:`channel_object:has_readers() <channel_object-has_readers>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:55
+msgid "Check if an empty channel has any readers waiting"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:58
+msgid ":ref:`channel_object:has_writers() <channel_object-has_writers>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:58
+msgid "Check if a full channel has any writers waiting"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:61
+msgid ":ref:`channel_object:is_closed() <channel_object-is_closed>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:61
+msgid "Check if a channel is closed"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:64
+msgid ":ref:`channel_object:is_empty() <channel_object-is_empty>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:64
+msgid "Check if a channel is empty"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:67
+msgid ":ref:`channel_object:is_full() <channel_object-is_full>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:67
+msgid "Check if a channel is full"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:70
+msgid ":ref:`channel_object:put() <channel_object-put>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:70
+msgid "Send a message via a channel"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:73
+msgid ":ref:`fiber.cond() <fiber-cond>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:73
+msgid "Create a condition variable"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:76
+msgid ":ref:`cond_object:broadcast() <cond_object-broadcast>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:76
+msgid "Wake up all fibers"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:79
+msgid ":ref:`cond_object:signal() <cond_object-signal>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:79
+msgid "Wake up a single fiber"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:82
+msgid ":ref:`cond_object:wait() <cond_object-wait>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:82
+msgid "Make a fiber go to sleep until woken by another fiber"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:85
+msgid ":ref:`fiber.find() <fiber-find>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:85
+msgid "Get a fiber object by ID"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:88
+msgid ":ref:`fiber.info() <fiber-info>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:88
+msgid "Get information about all fibers"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:91
+msgid ":ref:`fiber.kill() <fiber-kill>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:91
+#: ../doc/reference/reference_lua/fiber.rst:94
+msgid "Cancel a fiber"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:94
+msgid ":ref:`fiber_object:cancel() <fiber_object-cancel>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:97
+msgid ":ref:`fiber_object:id() <fiber_object-id>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:97
+msgid "Get a fiber's ID"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:100
+msgid ":ref:`fiber_object:join() <fiber_object-join>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:100
+msgid "Wait for a fiber's state to become 'dead'"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:103
+msgid ":ref:`fiber_object:name() <fiber_object-name_get>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:103
+msgid "Get a fiber's name"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:106
+msgid ":ref:`fiber_object:name(name) <fiber_object-name_set>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:106
+msgid "Set a fiber's name"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:109
+msgid ":ref:`fiber_object:set_joinable() <fiber_object-set_joinable>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:109
+msgid "Make it possible for a new fiber to join"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:112
+msgid ":ref:`fiber_object:status() <fiber_object-status>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:112
+msgid "Get a fiber's status"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:115
+msgid ":ref:`fiber_object.storage <fiber_object-storage>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:115
+msgid "Local storage within the fiber"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:118
+msgid ":ref:`fiber.sleep() <fiber-sleep>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:118
+msgid "Make a fiber go to sleep"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:121
+msgid ":ref:`fiber.status() <fiber-status>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:121
+msgid "Get the current fiber's status"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:124
+msgid ":ref:`fiber.time() <fiber-time>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:124
+msgid "Get the system time in seconds"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:127
+msgid ":ref:`fiber.time64() <fiber-time64>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:127
+msgid "Get the system time in microseconds"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:130
+msgid ":ref:`fiber.testcancel() <fiber-testcancel>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:130
+msgid "Check if the current fiber has been cancelled"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:133
+msgid ":ref:`fiber.top() <fiber-top>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:133
+msgid "Return a table of alive fibers and show their CPU consumption"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:136
+msgid ":ref:`fiber.yield() <fiber-yield>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:136
+msgid "Yield control"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:144
+msgid "Fibers"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:146
+msgid ""
+"A **fiber** is a set of instructions which are executed with cooperative "
+"multitasking. Fibers managed by the fiber module are associated with a "
+"user-supplied function called the *fiber function*."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:150
+msgid ""
+"A fiber has three possible states: **running**, **suspended** or "
+"**dead**. When a fiber is created with :ref:`fiber.create() <fiber-"
+"create>`, it is running. When a fiber is created with :ref:`fiber.new() "
+"<fiber-new>` or yields control with :ref:`fiber.sleep() <fiber-sleep>`, "
+"it is suspended. When a fiber ends (because the fiber function ends), it "
+"is dead."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:156
+msgid ""
+"All fibers are part of the fiber registry. This registry can be searched "
+"with :ref:`fiber.find() <fiber-find>` - via fiber id (fid), which is a "
+"numeric identifier."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:160
+msgid ""
+"A runaway fiber can be stopped with :ref:`fiber_object.cancel "
+"<fiber_object-cancel>`. However, :ref:`fiber_object.cancel <fiber_object-"
+"cancel>` is advisory — it works only if the runaway fiber calls "
+":ref:`fiber.testcancel() <fiber-testcancel>` occasionally. Most ``box.*``"
+" functions, such as :ref:`box.space...delete() <box_space-delete>` or "
+":ref:`box.space...update() <box_space-update>`, do call "
+":ref:`fiber.testcancel() <fiber-testcancel>` but "
+":ref:`box.space...select{} <box_space-select>` does not. In practice, a "
+"runaway fiber can only become unresponsive if it does many computations "
+"and does not check whether it has been cancelled."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:171
+msgid ""
+"The other potential problem comes from fibers which never get scheduled, "
+"because they are not subscribed to any events, or because no relevant "
+"events occur. Such morphing fibers can be killed with :ref:`fiber.kill() "
+"<fiber-kill>` at any time, since :ref:`fiber.kill() <fiber-kill>` sends "
+"an asynchronous wakeup event to the fiber, and :ref:`fiber.testcancel() "
+"<fiber-testcancel>` is checked whenever such a wakeup event occurs."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:178
+msgid ""
+"Like all Lua objects, dead fibers are garbage collected. The Lua garbage "
+"collector frees pool allocator memory owned by the fiber, resets all "
+"fiber data, and returns the fiber (now called a fiber carcass) to the "
+"fiber pool. The carcass can be reused when another fiber is created."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:183
+msgid ""
+"A fiber has all the features of a Lua coroutine_ and all the programming "
+"concepts that apply for Lua coroutines will apply for fibers as well. "
+"However, Tarantool has made some enhancements for fibers and has used "
+"fibers internally. So, although use of coroutines is possible and "
+"supported, use of fibers is recommended."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:195
+msgid ""
+"Create and start a fiber. The fiber is created and begins to run "
+"immediately."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst
+msgid "Parameters"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:197
+#: ../doc/reference/reference_lua/fiber.rst:238
+msgid "the function to be associated with the fiber"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:198
+#: ../doc/reference/reference_lua/fiber.rst:239
+msgid "what will be passed to function"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst
+msgid "Return"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:200
+#: ../doc/reference/reference_lua/fiber.rst:241
+msgid "created fiber object"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst
+msgid "Rtype"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:201
+#: ../doc/reference/reference_lua/fiber.rst:242
+#: ../doc/reference/reference_lua/fiber.rst:269
+#: ../doc/reference/reference_lua/fiber.rst:289
+msgid "userdata"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:203
+#: ../doc/reference/reference_lua/fiber.rst:244
+#: ../doc/reference/reference_lua/fiber.rst:271
+#: ../doc/reference/reference_lua/fiber.rst:291
+#: ../doc/reference/reference_lua/fiber.rst:311
+#: ../doc/reference/reference_lua/fiber.rst:326
+#: ../doc/reference/reference_lua/fiber.rst:345
+#: ../doc/reference/reference_lua/fiber.rst:364
+#: ../doc/reference/reference_lua/fiber.rst:476
+#: ../doc/reference/reference_lua/fiber.rst:502
+#: ../doc/reference/reference_lua/fiber.rst:526
+#: ../doc/reference/reference_lua/fiber.rst:551
+#: ../doc/reference/reference_lua/fiber.rst:578
+#: ../doc/reference/reference_lua/fiber.rst:601
+#: ../doc/reference/reference_lua/fiber.rst:628
+#: ../doc/reference/reference_lua/fiber.rst:659
+#: ../doc/reference/reference_lua/fiber.rst:727
+#: ../doc/reference/reference_lua/fiber.rst:777
+#: ../doc/reference/reference_lua/fiber.rst:810
+#: ../doc/reference/reference_lua/fiber.rst:829
+msgid "**Example:**"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:205
+msgid ""
+"tarantool> fiber = require('fiber')\n"
+"---\n"
+"...\n"
+"tarantool> function function_name()\n"
+"         >   print(\"I'm a fiber\")\n"
+"         > end\n"
+"---\n"
+"...\n"
+"tarantool> fiber_object = fiber.create(function_name); print(\"Fiber "
+"started\")\n"
+"I'm a fiber\n"
+"Fiber started\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:225
+msgid ""
+"Create but do not start a fiber: the fiber is created but does not begin "
+"to run immediately -- it starts after the fiber creator (that is, the job"
+" that is calling ``fiber.new()``) yields, under :ref:`transaction control"
+" <atomic-atomic_execution>`. The initial fiber state is 'suspended'. Thus"
+" ``fiber.new()`` differs slightly from :ref:`fiber.create() <fiber-"
+"create>`."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:233
+msgid ""
+"Ordinarily ``fiber.new()`` is used in conjunction with "
+":ref:`fiber_object:set_joinable() <fiber_object-set_joinable>` and "
+":ref:`fiber_object:join() <fiber_object-join>`."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:246
+msgid ""
+"tarantool> fiber = require('fiber')\n"
+"---\n"
+"...\n"
+"tarantool> function function_name()\n"
+"         >   print(\"I'm a fiber\")\n"
+"         > end\n"
+"---\n"
+"...\n"
+"tarantool> fiber_object = fiber.new(function_name); print(\"Fiber not "
+"started yet\")\n"
+"Fiber not started yet\n"
+"---\n"
+"...\n"
+"tarantool> I'm a fiber\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:268
+msgid "fiber object for the currently scheduled fiber."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:273
+msgid ""
+"tarantool> fiber.self()\n"
+"---\n"
+"- status: running\n"
+"  name: interactive\n"
+"  id: 101\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:286
+msgid "numeric identifier of the fiber."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:288
+msgid "fiber object for the specified fiber."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:293
+msgid ""
+"tarantool> fiber.find(101)\n"
+"---\n"
+"- status: running\n"
+"  name: interactive\n"
+"  id: 101\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:306
+msgid ""
+"Yield control to the scheduler and sleep for the specified number of "
+"seconds. Only the current fiber can be made to sleep."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:309
+msgid "number of seconds to sleep."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:313
+msgid ""
+"tarantool> fiber.sleep(1.5)\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:323
+msgid ""
+"Yield control to the scheduler. Equivalent to :ref:`fiber.sleep(0) "
+"<fiber-sleep>`, except that `fiber.sleep(0)` depends on a timer, "
+"`fiber.yield()` does not."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:328
+msgid ""
+"tarantool> fiber.yield()\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:338
+msgid ""
+"Return the status of the current fiber. Or, if optional fiber_object is "
+"passed, return the status of the specified fiber."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:342
+msgid "the status of ``fiber``. One of: “dead”, “suspended”, or “running”."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:343
+#: ../doc/reference/reference_lua/fiber.rst:547
+#: ../doc/reference/reference_lua/fiber.rst:597
+msgid "string"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:347
+msgid ""
+"tarantool> fiber.status()\n"
+"---\n"
+"- running\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:358
+msgid "Return information about all fibers."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:360
+msgid ""
+"number of context switches, backtrace, id, total memory, used memory, "
+"name for each fiber."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:362
+msgid "table"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:366
+msgid ""
+"tarantool> fiber.info()\n"
+"---\n"
+"- 101:\n"
+"    csw: 7\n"
+"    backtrace: []\n"
+"    fid: 101\n"
+"    memory:\n"
+"      total: 65776\n"
+"      used: 0\n"
+"    name: interactive\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:384
+msgid "Show all alive fibers and their CPU consumption."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:386
+msgid "a table with two entries: ``cpu`` and ``cpu_misses``"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:388
+msgid ""
+"``cpu`` itself is a table whose keys are strings containing fiber ids and"
+" names. The three metrics available for each fiber are:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:391
+msgid ""
+"``instant`` (in per cent), which indicates the share of time the fiber "
+"was executing during the previous event loop iteration."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:394
+msgid ""
+"``average`` (in per cent), which is calculated as an exponential moving "
+"average of instant values over all the previous event loop iterations."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:397
+msgid ""
+"``time`` (in seconds), which estimates how much CPU time each fiber spent"
+" processing during its lifetime."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:400
+msgid ""
+"The ``time`` entry is also added to each fiber's output in "
+"``fiber.info()`` (it duplicates the ``time`` entry from "
+"``fiber.top().cpu`` per fiber)."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:403
+msgid "Note that ``time`` is only counted while ``fiber.top()`` is enabled."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:405
+msgid ""
+"``cpu_misses`` indicates the number of times the TX thread detected it "
+"was rescheduled on a different CPU core during the last event loop "
+"iteration. ``fiber.top()`` uses the CPU timestamp counter to measure each"
+" fiber's execution time. However, each CPU core may have its own counter "
+"value (you can only rely on counter deltas if both measurements were "
+"taken on the same core, otherwise the delta may even get negative). When "
+"the TX thread is rescheduled to a different CPU core, Tarantool just "
+"assumes the CPU delta was zero for the latest measurement. This lowers "
+"the precision of our computations, so the bigger ``cpu misses`` value the"
+" lower the precision of ``fiber.top()`` results."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:415
+msgid "Let's take a look at the example:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:417
+msgid "**Example**"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:419
+msgid ""
+"tarantool> fiber.top()\n"
+"---\n"
+"- cpu:\n"
+"    107/lua:\n"
+"      instant: 30.967324490456\n"
+"      time: 0.351821993\n"
+"      average: 25.582738345233\n"
+"    104/lua:\n"
+"      instant: 9.6473633128437\n"
+"      time: 0.110869897\n"
+"      average: 7.9693406131877\n"
+"    101/on_shutdown:\n"
+"      instant: 0\n"
+"      time: 0\n"
+"      average: 0\n"
+"    103/lua:\n"
+"      instant: 9.8026528631511\n"
+"      time: 0.112641118\n"
+"      average: 18.138387232255\n"
+"    106/lua:\n"
+"      instant: 20.071174377224\n"
+"      time: 0.226901357\n"
+"      average: 17.077908441831\n"
+"    102/interactive:\n"
+"      instant: 0\n"
+"      time: 9.6858e-05\n"
+"      average: 0\n"
+"    105/lua:\n"
+"      instant: 9.2461986412164\n"
+"      time: 0.10657528\n"
+"      average: 7.7068458630827\n"
+"    1/sched:\n"
+"      instant: 20.265286315108\n"
+"      time: 0.237095335\n"
+"      average: 23.141537169257\n"
+"  cpu_misses: 0\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:461
+msgid ""
+"Enabling ``fiber.top()`` slows down fiber switching by about 15%, so it "
+"is disabled by default. To enable it, say ``fiber.top_enable()``. To "
+"disable it after you finished debugging, with ``fiber.top_disable()``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:469
+msgid ""
+"Locate a fiber by its numeric id and cancel it. In other words, "
+":ref:`fiber.kill() <fiber-kill>` combines :ref:`fiber.find() <fiber-"
+"find>` and :ref:`fiber_object:cancel() <fiber_object-cancel>`."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:473
+msgid "the id of the fiber to be cancelled."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst
+msgid "Exception"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:474
+msgid "the specified fiber does not exist or cancel is not permitted."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:478
+msgid ""
+"tarantool> fiber.kill(fiber.id()) -- kill self, may make program end\n"
+"---\n"
+"- error: fiber is cancelled\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:490
+msgid ""
+"Check if the current fiber has been cancelled and throw an exception if "
+"this is the case."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:495
+msgid ""
+"Even if you catch the exception, the fiber will remain cancelled. Most "
+"types of calls will check ``fiber.testcancel()``. However, some functions"
+" (``id``, ``status``, ``join`` etc.) will return no error. We recommend "
+"application developers to implement occasional checks with "
+":ref:`fiber.testcancel() <fiber-testcancel>` and to end fiber's execution"
+" as soon as possible in case it has been cancelled."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:504
+msgid ""
+"tarantool> fiber.testcancel()\n"
+"---\n"
+"- error: fiber is cancelled\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:517
+#: ../doc/reference/reference_lua/fiber.rst:542
+#: ../doc/reference/reference_lua/fiber.rst:570
+#: ../doc/reference/reference_lua/fiber.rst:592
+#: ../doc/reference/reference_lua/fiber.rst:620
+msgid ""
+"generally this is an object referenced in the return from "
+":ref:`fiber.create <fiber-create>` or :ref:`fiber.self <fiber-self>` or "
+":ref:`fiber.find <fiber-find>`"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:521
+msgid "id of the fiber."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:522
+#: ../doc/reference/reference_lua/fiber.rst:995
+msgid "number"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:524
+msgid "``fiber.self():id()`` can also be expressed as ``fiber.id()``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:528
+msgid ""
+"tarantool> fiber_object = fiber.self()\n"
+"---\n"
+"...\n"
+"tarantool> fiber_object:id()\n"
+"---\n"
+"- 101\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:546
+msgid "name of the fiber."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:549
+msgid "``fiber.self():name()`` can also be expressed as ``fiber.name()``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:553
+msgid ""
+"tarantool> fiber.self():name()\n"
+"---\n"
+"- interactive\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:564
+msgid ""
+"Change the fiber name. By default a Tarantool server's interactive-mode "
+"fiber is named 'interactive' and new fibers created due to "
+":ref:`fiber.create <fiber-create>` are named 'lua'. Giving fibers "
+"distinct names makes it easier to distinguish them when using "
+":ref:`fiber.info <fiber-info>`."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:574
+msgid "the new name of the fiber."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:576
+#: ../doc/reference/reference_lua/fiber.rst:624
+#: ../doc/reference/reference_lua/fiber.rst:725
+#: ../doc/reference/reference_lua/fiber.rst:1155
+#: ../doc/reference/reference_lua/fiber.rst:1163
+msgid "nil"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:580
+msgid ""
+"tarantool> fiber.self():name('non-interactive')\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:590
+msgid "Return the status of the specified fiber."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:596
+msgid "the status of fiber. One of: “dead”, “suspended”, or “running”."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:599
+msgid "``fiber.self():status(`` can also be expressed as ``fiber.status()``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:603
+msgid ""
+"tarantool> fiber.self():status()\n"
+"---\n"
+"- running\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:614
+msgid ""
+"Cancel a fiber. Running and suspended fibers can be cancelled. After a "
+"fiber has been cancelled, attempts to operate on it will cause errors, "
+"for example :ref:`fiber_object:name() <fiber_object-name_get>` will cause"
+" ``error: the fiber is dead``. But a dead fiber can still report its id "
+"and status."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:626
+msgid "Possible errors: cancel is not permitted for the specified fiber object."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:630
+msgid ""
+"tarantool> fiber.self():cancel() -- kill self, may make program end\n"
+"---\n"
+"...\n"
+"tarantool> fiber.self():cancel()\n"
+"---\n"
+"- error: fiber is cancelled\n"
+"...\n"
+"tarantool> fiber.self:id()\n"
+"---\n"
+"- 163\n"
+"...\n"
+"tarantool> fiber.self:status()\n"
+"---\n"
+"- dead\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:652
+msgid ""
+"Local storage within the fiber. The storage can contain any number of "
+"named values, subject to memory limitations. Naming may be done with "
+":samp:`{fiber_object}.storage.{name}` or "
+":samp:`{fiber_object}.storage['{name}'].` or with a number "
+":samp:`{fiber_object}.storage[{number}]`. Values may be either numbers or"
+" strings. The Lua garbage collector will mark or free the local storage "
+"when :samp:`{fiber_object}:cancel()` happens."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:661
+msgid ""
+"tarantool> fiber = require('fiber')\n"
+"---\n"
+"...\n"
+"tarantool> function f () fiber.sleep(1000); end\n"
+"---\n"
+"...\n"
+"tarantool> fiber_function = fiber.create(f)\n"
+"---\n"
+"...\n"
+"tarantool> fiber_function.storage.str1 = 'string'\n"
+"---\n"
+"...\n"
+"tarantool> fiber_function.storage['str1']\n"
+"---\n"
+"- string\n"
+"...\n"
+"tarantool> fiber_function:cancel()\n"
+"---\n"
+"...\n"
+"tarantool> fiber_function.storage['str1']\n"
+"---\n"
+"- error: '[string \"return fiber_function.storage[''str1'']\"]:1: the "
+"fiber is dead'\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:687
+msgid "See also :ref:`box.session.storage <box_session-storage>`."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:693
+msgid ""
+"``fiber_object:set_joinable(true)`` makes a fiber joinable; "
+"``fiber_object:set_joinable(false)`` makes a fiber not joinable; the "
+"default is false."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:697
+msgid ""
+"A joinable fiber can be waited for, with :ref:`fiber_object:join() "
+"<fiber_object-join>`."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:700
+msgid ""
+"Best practice is to call ``fiber_object:set_joinable()`` before the fiber"
+" function begins to execute, because otherwise the fiber could become "
+"'dead' before ``fiber_object:set_joinable()`` takes effect. The usual "
+"sequence could be:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:705
+msgid ""
+"Call ``fiber.new()`` instead of ``fiber.create()`` to create a new "
+"fiber_object."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:708
+msgid ""
+"Do not yield at this point, because that will cause the fiber function to"
+" begin."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:711
+msgid ""
+"Call ``fiber_object:set_joinable(true)`` to make the new fiber_object "
+"joinable."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:714
+msgid "Now it is safe to yield."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:716
+msgid "Call ``fiber_object:join()``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:718
+msgid ""
+"Usually ``fiber_object:join()`` should be called, otherwise the fiber's "
+"status may become 'suspended' when the fiber function ends, instead of "
+"'dead'."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:722
+msgid "the boolean value that changes the ``set_joinable`` flag"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:729
+#: ../doc/reference/reference_lua/fiber.rst:779
+msgid "The result of the following sequence of requests is:"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:731
+msgid ""
+"the global variable ``d`` will be 6 (which proves that the function was "
+"not executed until after ``d`` was set to 1, when ``fiber.sleep(1)`` "
+"caused a yield);"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:734
+msgid ""
+"``fiber.status(fi2)`` will be 'suspended' (which proves that after the "
+"function was executed the fiber status did not change to 'dead')."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:737
+msgid ""
+"fiber=require('fiber')\n"
+"d=0\n"
+"function fu2() d=d+5 end\n"
+"fi2=fiber.new(fu2) fi2:set_joinable(true) d=1 fiber.sleep(1)\n"
+"print(d)\n"
+"fiber.status(fi2)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:750
+msgid ""
+"\"Join\" a joinable fiber. That is, let the fiber's function run and wait"
+" until the fiber's status is 'dead' (normally a status becomes 'dead' "
+"when the function execution finishes). Joining will cause a yield, "
+"therefore, if the fiber is currently in a suspended state, execution of "
+"its fiber function will resume."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:758
+msgid ""
+"This kind of waiting is more convenient than going into a loop and "
+"periodically checking the status; however, it works only if the fiber was"
+" created with :ref:`fiber.new() <fiber-new>` and was made joinable with "
+":ref:`fiber_object:set_joinable() <fiber_object-set_joinable>`."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:765
+msgid ""
+"two values. The first value is boolean. If the first value is true, then "
+"the join succeeded because the fiber's function ended normally and the "
+"second result has the return value from the fiber's function. If the "
+"first value is false, then the join succeeded because the fiber's "
+"function ended abnormally and the second result has the details about the"
+" error, which one can unpack in the same way that one unpacks :ref:`a "
+"pcall result <error_handling>`."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:775
+msgid "boolean +result type, or boolean + struct error"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:781
+msgid "the first ``fiber.status()`` call returns 'suspended',"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:782
+msgid "the ``join()`` call returns true,"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:783
+msgid "the elapsed time is usually 5 seconds, and"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:784
+msgid "the second ``fiber.status()`` call returns 'dead'."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:786
+msgid ""
+"This proves that the ``join()`` does not return until the function -- "
+"which sleeps 5 seconds -- is 'dead'."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:789
+msgid ""
+"fiber=require('fiber')\n"
+"function fu2() fiber.sleep(5) end\n"
+"fi2=fiber.new(fu2) fi2:set_joinable(true)\n"
+"start_time = os.time()\n"
+"fiber.status(fi2)\n"
+"fi2:join()\n"
+"print('elapsed = ' .. os.time() - start_time)\n"
+"fiber.status(fi2)"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:804
+msgid ""
+"current system time (in seconds since the epoch) as a Lua number. The "
+"time is taken from the event loop clock, which makes this call very "
+"cheap, but still useful for constructing artificial tuple keys."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:808
+#: ../doc/reference/reference_lua/fiber.rst:827
+msgid "num"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:812
+msgid ""
+"tarantool> fiber.time(), fiber.time()\n"
+"---\n"
+"- 1448466279.2415\n"
+"- 1448466279.2415\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:824
+msgid ""
+"current system time (in microseconds since the epoch) as a 64-bit "
+"integer. The time is taken from the event loop clock."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:831
+msgid ""
+"tarantool> fiber.time(), fiber.time64()\n"
+"---\n"
+"- 1448466351.2708\n"
+"- 1448466351270762\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:841
+#: ../doc/reference/reference_lua/fiber.rst:1038
+#: ../doc/reference/reference_lua/fiber.rst:1167
+msgid "Example"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:843
+msgid ""
+"Make the function which will be associated with the fiber. This function "
+"contains an infinite loop. Each iteration of the loop adds 1 to a global "
+"variable named gvar, then goes to sleep for 2 seconds. The sleep causes "
+"an implicit :ref:`fiber.yield() <fiber-yield>`."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:848
+msgid ""
+"tarantool> fiber = require('fiber')\n"
+"tarantool> function function_x()\n"
+"         >   gvar = 0\n"
+"         >   while true do\n"
+"         >     gvar = gvar + 1\n"
+"         >     fiber.sleep(2)\n"
+"         >   end\n"
+"         > end\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:861
+msgid ""
+"Make a fiber, associate function_x with the fiber, and start function_x. "
+"It will immediately \"detach\" so it will be running independently of the"
+" caller."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:864
+msgid ""
+"tarantool> gvar = 0\n"
+"\n"
+"tarantool> fiber_of_x = fiber.create(function_x)\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:872
+msgid "Get the id of the fiber (fid), to be used in later displays."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:874
+msgid ""
+"tarantool> fid = fiber_of_x:id()\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:880
+msgid ""
+"Pause for a while, while the detached function runs. Then ... Display the"
+" fiber id, the fiber status, and gvar (gvar will have gone up a bit "
+"depending how long the pause lasted). The status is suspended because the"
+" fiber spends almost all its time sleeping or yielding."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:885
+msgid ""
+"tarantool> print('#', fid, '. ', fiber_of_x:status(), '. gvar=', gvar)\n"
+"# 102 .  suspended . gvar= 399\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:892
+msgid ""
+"Pause for a while, while the detached function runs. Then ... Cancel the "
+"fiber. Then, once again ... Display the fiber id, the fiber status, and "
+"gvar (gvar will have gone up a bit more depending how long the pause "
+"lasted). This time the status is dead because the cancel worked."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:897
+msgid ""
+"tarantool> fiber_of_x:cancel()\n"
+"---\n"
+"...\n"
+"tarantool> print('#', fid, '. ', fiber_of_x:status(), '. gvar=', gvar)\n"
+"# 102 .  dead . gvar= 421\n"
+"---\n"
+"..."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:913
+msgid "Channels"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:915
+msgid ""
+"Call ``fiber.channel()`` to allocate space and get a channel object, "
+"which will be called channel for examples in this section."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:918
+msgid ""
+"Call the other routines, via channel, to send messages, receive messages,"
+" or check channel status."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:921
+msgid ""
+"Message exchange is synchronous. The Lua garbage collector will mark or "
+"free the channel when no one is using it, as with any other Lua object. "
+"Use object-oriented syntax, for example ``channel:put(message)`` rather "
+"than ``fiber.channel.put(message)``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:930
+msgid "Create a new communication channel."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:932
+msgid ""
+"the maximum number of slots (spaces for ``channel:put`` messages) that "
+"can be in use at once. The default is 0."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst
+msgid "return"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:936
+msgid "new channel."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst
+msgid "rtype"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:937
+msgid "userdata, possibly including the string \"channel ...\"."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:945
+msgid ""
+"Send a message using a channel. If the channel is full, ``channel:put()``"
+" waits until there is a free slot in the channel."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:948
+msgid "what will be sent, usually a string or number or table"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:949
+msgid "maximum number of seconds to wait for a slot to become free"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:950
+msgid ""
+"If timeout is specified, and there is no free slot in the channel for the"
+" duration of the timeout, then the return value is ``false``. If the "
+"channel is closed, then the return value is ``false``. Otherwise, the "
+"return value is ``true``, indicating success."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:954
+#: ../doc/reference/reference_lua/fiber.rst:986
+#: ../doc/reference/reference_lua/fiber.rst:1006
+#: ../doc/reference/reference_lua/fiber.rst:1016
+#: ../doc/reference/reference_lua/fiber.rst:1026
+#: ../doc/reference/reference_lua/fiber.rst:1034
+#: ../doc/reference/reference_lua/fiber.rst:1146
+msgid "boolean"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:960
+msgid ""
+"Close the channel. All waiters in the channel will stop waiting. All "
+"following ``channel:get()`` operations will return ``nil``, and all "
+"following ``channel:put()`` operations will return ``false``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:968
+msgid ""
+"Fetch and remove a message from a channel. If the channel is empty, "
+"``channel:get()`` waits for a message."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:971
+msgid "maximum number of seconds to wait for a message"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:972
+msgid ""
+"If timeout is specified, and there is no message in the channel for the "
+"duration of the timeout, then the return value is ``nil``. If the channel"
+" is closed, then the return value is ``nil``. Otherwise, the return value"
+" is the message placed on the channel by ``channel:put()``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:977
+msgid "usually string or number or table, as determined by ``channel:put``"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:983
+msgid "Check whether the channel is empty (has no messages)."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:985
+msgid "``true`` if the channel is empty. Otherwise ``false``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:992
+msgid "Find out how many messages are in the channel."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:994
+msgid "the number of messages."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1001
+msgid "Check whether the channel is full."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1003
+msgid ""
+"``true`` if the channel is full (the number of messages in the channel "
+"equals the number of slots so there is no room for a new message). "
+"Otherwise ``false``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1012
+msgid ""
+"Check whether readers are waiting for a message because they have issued "
+"``channel:get()`` and the channel is empty."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1015
+msgid "``true`` if readers are waiting. Otherwise ``false``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1022
+msgid ""
+"Check whether writers are waiting because they have issued "
+"``channel:put()`` and the channel is full."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1025
+msgid "``true`` if writers are waiting. Otherwise ``false``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1032
+msgid "``true`` if the channel is already closed. Otherwise ``false``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1040
+msgid ""
+"This example should give a rough idea of what some functions for fibers "
+"should look like. It's assumed that the functions would be referenced in "
+":ref:`fiber.create() <fiber-create>`."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1044
+msgid ""
+"fiber = require('fiber')\n"
+"channel = fiber.channel(10)\n"
+"function consumer_fiber()\n"
+"    while true do\n"
+"        local task = channel:get()\n"
+"        ...\n"
+"    end\n"
+"end\n"
+"\n"
+"function consumer2_fiber()\n"
+"    while true do\n"
+"        -- 10 seconds\n"
+"        local task = channel:get(10)\n"
+"        if task ~= nil then\n"
+"            ...\n"
+"        else\n"
+"            -- timeout\n"
+"        end\n"
+"    end\n"
+"end\n"
+"\n"
+"function producer_fiber()\n"
+"    while true do\n"
+"        task = box.space...:select{...}\n"
+"        ...\n"
+"        if channel:is_empty() then\n"
+"            -- channel is empty\n"
+"        end\n"
+"\n"
+"        if channel:is_full() then\n"
+"            -- channel is full\n"
+"        end\n"
+"\n"
+"        ...\n"
+"        if channel:has_readers() then\n"
+"            -- there are some fibers\n"
+"            -- that are waiting for data\n"
+"        end\n"
+"        ...\n"
+"\n"
+"        if channel:has_writers() then\n"
+"            -- there are some fibers\n"
+"            -- that are waiting for readers\n"
+"        end\n"
+"        channel:put(task)\n"
+"    end\n"
+"end\n"
+"\n"
+"function producer2_fiber()\n"
+"    while true do\n"
+"        task = box.space...select{...}\n"
+"        -- 10 seconds\n"
+"        if channel:put(task, 10) then\n"
+"            ...\n"
+"        else\n"
+"            -- timeout\n"
+"        end\n"
+"    end\n"
+"end"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1110
+msgid "Condition variables"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1112
+msgid ""
+"Call ``fiber.cond()`` to create a named condition variable, which will be"
+" called 'cond' for examples in this section."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1115
+msgid ""
+"Call ``cond:wait()`` to make a fiber wait for a signal via a condition "
+"variable."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1117
+msgid ""
+"Call ``cond:signal()`` to send a signal to wake up a single fiber that "
+"has executed ``cond:wait()``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1120
+msgid ""
+"Call ``cond:broadcast()`` to send a signal to all fibers that have "
+"executed ``cond:wait()``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1127
+msgid "Create a new condition variable."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1129
+msgid "new condition variable."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1130
+msgid "Lua object"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1138
+msgid ""
+"Make the current fiber go to sleep, waiting until another fiber invokes "
+"the ``signal()`` or ``broadcast()`` method on the cond object. The sleep "
+"causes an implicit :ref:`fiber.yield() <fiber-yield>`."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1142
+msgid "number of seconds to wait, default = forever."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1143
+msgid ""
+"If timeout is provided, and a signal doesn't happen for the duration of "
+"the timeout, ``wait()`` returns false. If a signal or broadcast happens, "
+"``wait()`` returns true."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1152
+msgid "Wake up a single fiber that has executed ``wait()`` for the same variable."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1161
+msgid "Wake up all fibers that have executed ``wait()`` for the same variable."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1169
+msgid ""
+"Assume that a tarantool instance is running and listening for connections"
+" on localhost port 3301. Assume that guest users have privileges to "
+"connect. We will use the tarantoolctl utility to start two clients."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1173
+msgid "On terminal #1, say"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1175
+msgid ""
+"$ tarantoolctl connect '3301'\n"
+"tarantool> fiber = require('fiber')\n"
+"tarantool> cond = fiber.cond()\n"
+"tarantool> cond:wait()"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1182
+msgid ""
+"The job will hang because ``cond:wait()`` -- without an optional timeout "
+"argument -- will go to sleep until the condition variable changes."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1185
+msgid "On terminal #2, say"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1187
+msgid ""
+"$ tarantoolctl connect '3301'\n"
+"tarantool> cond:signal()"
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1192
+msgid ""
+"Now look again at terminal #1. It will show that the waiting stopped, and"
+" the ``cond:wait()`` function returned ``true``."
+msgstr ""
+
+#: ../doc/reference/reference_lua/fiber.rst:1195
+msgid ""
+"This example depended on the use of a global conditional variable with "
+"the arbitrary name ``cond``. In real life, programmers would make sure to"
+" use different conditional variable names for different applications."
+msgstr ""
+
